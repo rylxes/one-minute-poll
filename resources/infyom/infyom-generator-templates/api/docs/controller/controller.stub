@@ -1,0 +1,5 @@
+/**
+ * Class $MODEL_NAME$Controller
+ * @group $MODEL_NAME_HUMAN$
+ * @package $NAMESPACE_API_CONTROLLER$
+ */
