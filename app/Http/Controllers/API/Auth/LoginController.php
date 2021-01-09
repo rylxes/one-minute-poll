@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\API\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\API\LoginRequest;
 use App\Providers\RouteServiceProvider;
+use App\Traits\ResponseTrait;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +29,7 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+    use ResponseTrait;
 
     /**
      * Where to redirect users after login.
@@ -51,7 +54,8 @@ class LoginController extends Controller
      *
      */
 
-    public function login(Request $request)
+    //public function login(Request $request)
+    public function login(LoginRequest $request)
     {
         $this->validateLogin($request);
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
@@ -95,7 +99,7 @@ class LoginController extends Controller
 
         $data = [];
         $message = 'Successful Logout';
-        return response()->json(compact('data', 'message'));
+        return $this->sendResponse($data, $message);
     }
 
     protected function sendLoginResponse(Request $request)
@@ -117,7 +121,7 @@ class LoginController extends Controller
         $data->accessToken = $this->accessToken;
 
         $message = 'Successful Login';
-        return response()->json(compact('data', 'message'));
+        return $this->sendResponse($data, $message);
     }
 
 
@@ -125,6 +129,6 @@ class LoginController extends Controller
     {
         $data = [];
         $message = trans('auth.failed');
-        return response()->json(compact('data', 'message'));
+        return $this->sendError($message);
     }
 }

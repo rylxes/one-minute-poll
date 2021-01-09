@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/companies" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptatum","description":"quia","email":"labore","phone":"consequuntur","created_at":{},"updated_at":{}}'
+    -d '{"name":"vero","description":"aut","email":"laudantium","phone":"qui","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -91,10 +91,10 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptatum",
-    "description": "quia",
-    "email": "labore",
-    "phone": "consequuntur",
+    "name": "vero",
+    "description": "aut",
+    "email": "laudantium",
+    "phone": "qui",
     "created_at": {},
     "updated_at": {}
 }
@@ -170,14 +170,14 @@ GET|HEAD /companies/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/companies/et" \
+    -G "http://localhost/api/companies/error" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/et"
+    "http://localhost/api/companies/error"
 );
 
 let headers = {
@@ -238,16 +238,16 @@ PUT/PATCH /companies/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/companies/odio" \
+    "http://localhost/api/companies/quidem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"qui","description":"repellat","email":"facere","phone":"illum","created_at":{},"updated_at":{}}'
+    -d '{"name":"maxime","description":"reprehenderit","email":"qui","phone":"nihil","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/odio"
+    "http://localhost/api/companies/quidem"
 );
 
 let headers = {
@@ -256,10 +256,10 @@ let headers = {
 };
 
 let body = {
-    "name": "qui",
-    "description": "repellat",
-    "email": "facere",
-    "phone": "illum",
+    "name": "maxime",
+    "description": "reprehenderit",
+    "email": "qui",
+    "phone": "nihil",
     "created_at": {},
     "updated_at": {}
 }
@@ -345,14 +345,14 @@ DELETE /companies/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/companies/distinctio" \
+    "http://localhost/api/companies/minus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/distinctio"
+    "http://localhost/api/companies/minus"
 );
 
 let headers = {

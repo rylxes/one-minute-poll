@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":3,"url":"doloremque","name":"in","is_lock":false,"is_favourite":false,"created_at":{},"updated_at":{}}'
+    -d '{"library_id":9,"url":"eos","name":"assumenda","is_lock":false,"is_favourite":false,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -91,9 +91,9 @@ let headers = {
 };
 
 let body = {
-    "library_id": 3,
-    "url": "doloremque",
-    "name": "in",
+    "library_id": 9,
+    "url": "eos",
+    "name": "assumenda",
     "is_lock": false,
     "is_favourite": false,
     "created_at": {},
@@ -178,14 +178,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/qui" \
+    -G "http://localhost/api/files/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/qui"
+    "http://localhost/api/files/ut"
 );
 
 let headers = {
@@ -246,16 +246,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/molestias" \
+    "http://localhost/api/files/nihil" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":4,"url":"autem","name":"ad","is_lock":false,"is_favourite":false,"created_at":{},"updated_at":{}}'
+    -d '{"library_id":8,"url":"nesciunt","name":"voluptas","is_lock":false,"is_favourite":false,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/molestias"
+    "http://localhost/api/files/nihil"
 );
 
 let headers = {
@@ -264,9 +264,9 @@ let headers = {
 };
 
 let body = {
-    "library_id": 4,
-    "url": "autem",
-    "name": "ad",
+    "library_id": 8,
+    "url": "nesciunt",
+    "name": "voluptas",
     "is_lock": false,
     "is_favourite": false,
     "created_at": {},
@@ -361,14 +361,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/qui" \
+    "http://localhost/api/files/dignissimos" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/qui"
+    "http://localhost/api/files/dignissimos"
 );
 
 let headers = {

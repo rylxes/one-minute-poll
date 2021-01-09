@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ea","colour":"voluptas","company_id":3,"created_at":{},"updated_at":{}}'
+    -d '{"name":"mollitia","colour":"et","company_id":17,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -91,9 +91,9 @@ let headers = {
 };
 
 let body = {
-    "name": "ea",
-    "colour": "voluptas",
-    "company_id": 3,
+    "name": "mollitia",
+    "colour": "et",
+    "company_id": 17,
     "created_at": {},
     "updated_at": {}
 }
@@ -164,14 +164,14 @@ GET|HEAD /tags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/tags/similique" \
+    -G "http://localhost/api/tags/officiis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/similique"
+    "http://localhost/api/tags/officiis"
 );
 
 let headers = {
@@ -232,16 +232,16 @@ PUT/PATCH /tags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/tags/eveniet" \
+    "http://localhost/api/tags/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"eos","colour":"rem","company_id":9,"created_at":{},"updated_at":{}}'
+    -d '{"name":"nam","colour":"iste","company_id":18,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/eveniet"
+    "http://localhost/api/tags/qui"
 );
 
 let headers = {
@@ -250,9 +250,9 @@ let headers = {
 };
 
 let body = {
-    "name": "eos",
-    "colour": "rem",
-    "company_id": 9,
+    "name": "nam",
+    "colour": "iste",
+    "company_id": 18,
     "created_at": {},
     "updated_at": {}
 }
@@ -333,14 +333,14 @@ DELETE /tags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/tags/deserunt" \
+    "http://localhost/api/tags/quae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/deserunt"
+    "http://localhost/api/tags/quae"
 );
 
 let headers = {

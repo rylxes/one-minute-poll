@@ -12,7 +12,9 @@
 curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
+    -H "Accept: application/json" \
+    -d '{"email":"angelo45@example.org","password":"mollitia"}'
+
 ```
 
 ```javascript
@@ -25,10 +27,15 @@ let headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "email": "angelo45@example.org",
+    "password": "mollitia"
+}
 
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -52,6 +59,18 @@ fetch(url, {
 <small class="badge badge-black">POST</small>
  <b><code>api/login</code></b>
 </p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-login" data-component="body" required  hidden>
+<br>
+The value must be a valid email address.</p>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password" data-endpoint="POSTapi-login" data-component="body" required  hidden>
+<br>
+</p>
+
 </form>
 
 
@@ -120,7 +139,9 @@ fetch(url, {
 curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
+    -H "Accept: application/json" \
+    -d '{"first_name":"rerum","last_name":"voluptate","email":"ford94@example.net","password":"tempore","password_confirmation":"placeat"}'
+
 ```
 
 ```javascript
@@ -133,10 +154,18 @@ let headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "first_name": "rerum",
+    "last_name": "voluptate",
+    "email": "ford94@example.net",
+    "password": "tempore",
+    "password_confirmation": "placeat"
+}
 
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -160,6 +189,33 @@ fetch(url, {
 <small class="badge badge-black">POST</small>
  <b><code>api/register</code></b>
 </p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>first_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="first_name" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>last_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="last_name" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+The value must be a valid email address.</p>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password_confirmation" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+</p>
+
 </form>
 
 
@@ -174,7 +230,9 @@ fetch(url, {
 curl -X POST \
     "http://localhost/api/password/email" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
+    -H "Accept: application/json" \
+    -d '{"email":"isai60@example.org"}'
+
 ```
 
 ```javascript
@@ -187,10 +245,14 @@ let headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "email": "isai60@example.org"
+}
 
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -214,6 +276,13 @@ fetch(url, {
 <small class="badge badge-black">POST</small>
  <b><code>api/password/email</code></b>
 </p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-password-email" data-component="body" required  hidden>
+<br>
+The value must be a valid email address.</p>
+
 </form>
 
 
@@ -226,14 +295,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/totam" \
+    -G "http://localhost/api/password/reset/sint" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/totam"
+    "http://localhost/api/password/reset/sint"
 );
 
 let headers = {
@@ -298,8 +367,8 @@ fetch(url, {
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="http://localhost/password/reset">
-            <input type="hidden" name="_token" value="j26z7PAEZ7bB4fTpzLREQ87Z3P5oEsZGI2tYodDn">
-            <input type="hidden" name="token" value="totam">
+            <input type="hidden" name="_token" value="vOc4VdIY5WQAZlrKPboJ1xHM17qK0OEr1h7H6Ljo">
+            <input type="hidden" name="token" value="sint">
 
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -495,14 +564,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/facilis/eos" \
+    -G "http://localhost/api/email/verify/voluptas/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/facilis/eos"
+    "http://localhost/api/email/verify/voluptas/est"
 );
 
 let headers = {

@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"quas","company_id":15,"is_encrypted":false,"is_favourite":false,"created_at":{},"updated_at":{},"deleted_at":{}}'
+    -d '{"name":"molestiae","company_id":13,"is_encrypted":false,"is_favourite":false,"created_at":{},"updated_at":{},"deleted_at":{}}'
 
 ```
 
@@ -91,8 +91,8 @@ let headers = {
 };
 
 let body = {
-    "name": "quas",
-    "company_id": 15,
+    "name": "molestiae",
+    "company_id": 13,
     "is_encrypted": false,
     "is_favourite": false,
     "created_at": {},
@@ -178,14 +178,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/eos" \
+    -G "http://localhost/api/libraries/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/eos"
+    "http://localhost/api/libraries/qui"
 );
 
 let headers = {
@@ -246,16 +246,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/quia" \
+    "http://localhost/api/libraries/suscipit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"incidunt","company_id":16,"is_encrypted":false,"is_favourite":false,"created_at":{},"updated_at":{},"deleted_at":{}}'
+    -d '{"name":"omnis","company_id":15,"is_encrypted":false,"is_favourite":false,"created_at":{},"updated_at":{},"deleted_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/quia"
+    "http://localhost/api/libraries/suscipit"
 );
 
 let headers = {
@@ -264,8 +264,8 @@ let headers = {
 };
 
 let body = {
-    "name": "incidunt",
-    "company_id": 16,
+    "name": "omnis",
+    "company_id": 15,
     "is_encrypted": false,
     "is_favourite": false,
     "created_at": {},
@@ -361,14 +361,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/ad" \
+    "http://localhost/api/libraries/cum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/ad"
+    "http://localhost/api/libraries/cum"
 );
 
 let headers = {

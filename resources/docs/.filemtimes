@@ -1,11 +1,11 @@
 # GENERATED. YOU SHOULDN'T MODIFY OR DELETE THIS FILE.
 # Scribe uses this file to know when you change something manually in your docs.
-resources/docs/groups/endpoints.md=1609022617
-resources/docs/index.md=1609022617
-resources/docs/authentication.md=1609022617
+resources/docs/groups/endpoints.md=1610186545
+resources/docs/index.md=1610186545
+resources/docs/authentication.md=1610186545
 resources/docs/groups/club-assesment.md=1608892119
 resources/docs/groups/health-predictor.md=1608892119
-resources/docs/groups/auth.md=1609022617
+resources/docs/groups/auth.md=1610186545
 resources/docs/groups/personal-details.md=1608892119
 resources/docs/groups/psych-predictor.md=1608892119
 resources/docs/groups/skill-report.md=1608892119
@@ -13,10 +13,10 @@ resources/docs/groups/skill-test.md=1608892119
 resources/docs/groups/sport.md=1608892119
 resources/docs/groups/video.md=1608892119
 resources/docs/groups/video-type.md=1608892119
-resources/docs/groups/company.md=1609022617
-resources/docs/groups/file.md=1609022617
-resources/docs/groups/folder.md=1609022617
-resources/docs/groups/library.md=1609022617
-resources/docs/groups/profile.md=1609022617
-resources/docs/groups/setting.md=1609022617
-resources/docs/groups/tag.md=1609022617
+resources/docs/groups/company.md=1610186545
+resources/docs/groups/file.md=1610186545
+resources/docs/groups/folder.md=1610186545
+resources/docs/groups/library.md=1610186545
+resources/docs/groups/profile.md=1610186545
+resources/docs/groups/setting.md=1610186545
+resources/docs/groups/tag.md=1610186545

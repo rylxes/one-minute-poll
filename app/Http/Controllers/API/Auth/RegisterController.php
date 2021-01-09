@@ -1,6 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\API\Auth;
+
+use App\Http\Requests\API\RegisterRequest;
+use App\Repositories\PersonalDetailsRepository;
+use App\Traits\ResponseTrait;
 use Illuminate\Auth\Events\Registered;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -29,6 +33,7 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    use ResponseTrait;
 
     /**
      * Where to redirect users after registration.
@@ -37,11 +42,10 @@ class RegisterController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
+
+
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -50,7 +54,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -65,7 +69,7 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \App\Models\User
      */
     protected function create(array $data)
@@ -83,16 +87,33 @@ class RegisterController extends Controller
      *
      */
 
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
         $data = [];
-        $validator = $this->validator($request->all());
+        $data = $request->all();
+        $data['name'] = $request->input('last_name') . " " . $request->input('first_name');
+        $validator = $this->validator($data);
+
         if ($validator->fails()) {
-            $data = $validator->errors()->all();
+            $data = collect($validator->errors()->all());
+            $data = $data->flatten();
             $message = "There was Error in your form";
             return response()->json(compact('data', 'message'));
         }
-        event(new Registered($user = $this->create($request->all())));
+        $data = $request->all();
+        $data['name'] = $request->input('last_name') . " " . $request->input('first_name');
+
+        event(new Registered($user = $this->create($data)));
+        $data['user_id'] = $user->id;
+
+       // dd($data);
+        unset($data['password']);
+        unset($data['password_confirmation']);
+        unset($data['name']);
+
+       // dd($data);
+       // $this->personalDetailsRepository->create($data);
+
 
         $this->guard()->login($user);
 
@@ -102,6 +123,6 @@ class RegisterController extends Controller
 
         $data = $user;
         $message = "Successful Registration";
-        return response()->json(compact('data', 'message'));
+        return $this->sendResponse($data, $message);
     }
 }

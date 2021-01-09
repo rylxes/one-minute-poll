@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"aperiam","last_name":"error","user_id":12,"avatar":"consequatur","created_at":{},"updated_at":{}}'
+    -d '{"first_name":"architecto","last_name":"delectus","user_id":8,"avatar":"fugiat","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -91,10 +91,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "aperiam",
-    "last_name": "error",
-    "user_id": 12,
-    "avatar": "consequatur",
+    "first_name": "architecto",
+    "last_name": "delectus",
+    "user_id": 8,
+    "avatar": "fugiat",
     "created_at": {},
     "updated_at": {}
 }
@@ -170,14 +170,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/consectetur" \
+    -G "http://localhost/api/profiles/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/consectetur"
+    "http://localhost/api/profiles/voluptatem"
 );
 
 let headers = {
@@ -238,16 +238,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/voluptatum" \
+    "http://localhost/api/profiles/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"accusamus","last_name":"libero","user_id":10,"avatar":"deserunt","created_at":{},"updated_at":{}}'
+    -d '{"first_name":"sequi","last_name":"ex","user_id":16,"avatar":"laudantium","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/voluptatum"
+    "http://localhost/api/profiles/quia"
 );
 
 let headers = {
@@ -256,10 +256,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "accusamus",
-    "last_name": "libero",
-    "user_id": 10,
-    "avatar": "deserunt",
+    "first_name": "sequi",
+    "last_name": "ex",
+    "user_id": 16,
+    "avatar": "laudantium",
     "created_at": {},
     "updated_at": {}
 }
@@ -345,14 +345,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/fuga" \
+    "http://localhost/api/profiles/dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/fuga"
+    "http://localhost/api/profiles/dolores"
 );
 
 let headers = {

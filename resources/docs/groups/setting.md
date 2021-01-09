@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"nihil","value":"iure","company_id":7,"created_at":{},"updated_at":{}}'
+    -d '{"type":"nulla","value":"nulla","company_id":18,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -91,9 +91,9 @@ let headers = {
 };
 
 let body = {
-    "type": "nihil",
-    "value": "iure",
-    "company_id": 7,
+    "type": "nulla",
+    "value": "nulla",
+    "company_id": 18,
     "created_at": {},
     "updated_at": {}
 }
@@ -164,14 +164,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/id" \
+    -G "http://localhost/api/settings/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/id"
+    "http://localhost/api/settings/quia"
 );
 
 let headers = {
@@ -232,16 +232,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/tempore" \
+    "http://localhost/api/settings/cupiditate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"dolor","value":"nemo","company_id":16,"created_at":{},"updated_at":{}}'
+    -d '{"type":"voluptates","value":"qui","company_id":15,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/tempore"
+    "http://localhost/api/settings/cupiditate"
 );
 
 let headers = {
@@ -250,9 +250,9 @@ let headers = {
 };
 
 let body = {
-    "type": "dolor",
-    "value": "nemo",
-    "company_id": 16,
+    "type": "voluptates",
+    "value": "qui",
+    "company_id": 15,
     "created_at": {},
     "updated_at": {}
 }
@@ -333,14 +333,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/itaque" \
+    "http://localhost/api/settings/nesciunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/itaque"
+    "http://localhost/api/settings/nesciunt"
 );
 
 let headers = {
