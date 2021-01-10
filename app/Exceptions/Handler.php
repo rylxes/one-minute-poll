@@ -42,6 +42,7 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
+        // dd($exception->getMessage());
         if ($request->wantsJson()) {   //add Accept: application/json in request
             return $this->handleApiException($request, $exception);
         } else {
@@ -104,7 +105,9 @@ class Handler extends ExceptionHandler
                 break;
             case 422:
                 $response['message'] = $exception->original['message'];
-                $response['errors'] = $exception->original['errors'];
+                $errors = $exception->original['errors'];
+                $data = collect($errors);
+                $response['errors'] = $data->flatten();
                 break;
             default:
                 $response['message'] = ($statusCode == 500) ? 'Whoops, looks like something went wrong' : $exception->getMessage();
