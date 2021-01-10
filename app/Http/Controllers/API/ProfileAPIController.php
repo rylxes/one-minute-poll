@@ -8,6 +8,7 @@ use App\Models\Profile;
 use App\Repositories\ProfileRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 /**
@@ -93,6 +94,7 @@ class ProfileAPIController extends AppBaseController
     public function update($id, UpdateProfileAPIRequest $request)
     {
         $input = $request->all();
+        DB::beginTransaction();
 
         /** @var Profile $profile */
        // $profile = $this->profileRepository->find($id);
@@ -102,8 +104,18 @@ class ProfileAPIController extends AppBaseController
         }
         unset($input['user_id']);
         $profile = $this->profileRepository->update($input, $profile->id);
-
-
+        if (!empty($request->file('file'))) {
+            try {
+                $profile->addMedia($request->file('file'))->toMediaCollection('avatar');
+                $mediaItems = $profile->getMedia('avatar');
+                $input['avatar'] = $mediaItems[0]->getFullUrl();
+                $this->profileRepository->update($input, $profile->id);
+            } catch (\Exception $exception) {
+                DB::rollBack();
+                return $this->sendError($exception->getMessage());
+            }
+        }
+        DB::commit();
         return $this->sendResponse($profile->toArray(), 'Profile updated successfully');
     }
 

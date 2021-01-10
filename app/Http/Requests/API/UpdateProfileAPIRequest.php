@@ -24,8 +24,15 @@ class UpdateProfileAPIRequest extends APIRequest
      */
     public function rules()
     {
-        $rules = Profile::$rules;
-        
-        return $rules;
+        $rules = [];
+        if (!empty($this->file('file'))) {
+            $rules['file'] = 'file|mimes:jpg,jpeg';
+        }
+        $otherRules = [
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'user_id' => 'required|integer',
+        ];
+        return array_merge($rules, $otherRules);
     }
 }

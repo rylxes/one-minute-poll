@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"yabshire@example.com","password":"velit"}'
+    -d '{"email":"keira.kunze@example.org","password":"explicabo"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "email": "yabshire@example.com",
-    "password": "velit"
+    "email": "keira.kunze@example.org",
+    "password": "explicabo"
 }
 
 fetch(url, {
@@ -140,7 +140,7 @@ curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"voluptatem","last_name":"et","company_name":"sint","company_phone":"fuga","company_description":"iste","email":"jennie.wyman@example.com","password":"error","password_confirmation":"illum"}'
+    -d '{"first_name":"voluptas","last_name":"sunt","company_name":"dolorem","company_phone":"excepturi","company_description":"similique","email":"letha.douglas@example.net","password":"delectus","password_confirmation":"fugiat"}'
 
 ```
 
@@ -155,14 +155,14 @@ let headers = {
 };
 
 let body = {
-    "first_name": "voluptatem",
-    "last_name": "et",
-    "company_name": "sint",
-    "company_phone": "fuga",
-    "company_description": "iste",
-    "email": "jennie.wyman@example.com",
-    "password": "error",
-    "password_confirmation": "illum"
+    "first_name": "voluptas",
+    "last_name": "sunt",
+    "company_name": "dolorem",
+    "company_phone": "excepturi",
+    "company_description": "similique",
+    "email": "letha.douglas@example.net",
+    "password": "delectus",
+    "password_confirmation": "fugiat"
 }
 
 fetch(url, {
@@ -249,7 +249,7 @@ curl -X POST \
     "http://localhost/api/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"terrance.watsica@example.net"}'
+    -d '{"email":"parisian.frida@example.com"}'
 
 ```
 
@@ -264,7 +264,7 @@ let headers = {
 };
 
 let body = {
-    "email": "terrance.watsica@example.net"
+    "email": "parisian.frida@example.com"
 }
 
 fetch(url, {
@@ -313,14 +313,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/sed" \
+    -G "http://localhost/api/password/reset/quae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/sed"
+    "http://localhost/api/password/reset/quae"
 );
 
 let headers = {
@@ -385,8 +385,8 @@ fetch(url, {
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="http://localhost/password/reset">
-            <input type="hidden" name="_token" value="wJ8Ow39fwPbVGFFCOvLruP4FZKyfwFrpkLaDl4zQ">
-            <input type="hidden" name="token" value="sed">
+            <input type="hidden" name="_token" value="yi4FK59p0BAgz7wggwoTIwiasnCL2InSzEObuuPO">
+            <input type="hidden" name="token" value="quae">
 
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -582,14 +582,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/voluptate/officiis" \
+    -G "http://localhost/api/email/verify/qui/eos" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/voluptate/officiis"
+    "http://localhost/api/email/verify/qui/eos"
 );
 
 let headers = {

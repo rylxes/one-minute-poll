@@ -7,6 +7,8 @@ use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * Class Profile
@@ -18,10 +20,11 @@ use Illuminate\Support\Facades\Auth;
  * @property integer $user_id
  * @property string $avatar
  */
-class Profile extends Model
+class Profile extends Model implements HasMedia
 {
 
     use HasFactory;
+    use InteractsWithMedia;
 
     public $table = 'profiles';
 

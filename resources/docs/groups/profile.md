@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"ea","last_name":"iste","user_id":7,"avatar":"et"}'
+    -d '{"first_name":"qui","last_name":"iste","user_id":6,"avatar":"fuga"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "ea",
+    "first_name": "qui",
     "last_name": "iste",
-    "user_id": 7,
-    "avatar": "et"
+    "user_id": 6,
+    "avatar": "fuga"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/voluptas" \
+    -G "http://localhost/api/profiles/harum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/voluptas"
+    "http://localhost/api/profiles/harum"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/sit" \
+    "http://localhost/api/profiles/modi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"omnis","last_name":"quia","user_id":2,"avatar":"aliquid"}'
+    -d '{"first_name":"dolorum","last_name":"alias","user_id":13}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/sit"
+    "http://localhost/api/profiles/modi"
 );
 
 let headers = {
@@ -243,10 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "omnis",
-    "last_name": "quia",
-    "user_id": 2,
-    "avatar": "aliquid"
+    "first_name": "dolorum",
+    "last_name": "alias",
+    "user_id": 13
 }
 
 fetch(url, {
@@ -302,11 +301,6 @@ fetch(url, {
 <input type="number" name="user_id" data-endpoint="PUTapi-profiles--profile-" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>avatar</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="avatar" data-endpoint="PUTapi-profiles--profile-" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -320,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/quibusdam" \
+    "http://localhost/api/profiles/commodi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/quibusdam"
+    "http://localhost/api/profiles/commodi"
 );
 
 let headers = {
