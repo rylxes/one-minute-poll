@@ -33,13 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [],
-    "message": "Companies retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-companies" hidden>
@@ -76,7 +75,7 @@ curl -X POST \
     "http://localhost/api/companies" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"facere","description":"aliquam","email":"sed","phone":"et"}'
+    -d '{"name":"sed","description":"blanditiis","email":"ab","phone":"ut"}'
 
 ```
 
@@ -91,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "facere",
-    "description": "aliquam",
-    "email": "sed",
-    "phone": "et"
+    "name": "sed",
+    "description": "blanditiis",
+    "email": "ab",
+    "phone": "ut"
 }
 
 fetch(url, {
@@ -158,14 +157,14 @@ GET|HEAD /companies/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/companies/facilis" \
+    -G "http://localhost/api/companies/illum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/facilis"
+    "http://localhost/api/companies/illum"
 );
 
 let headers = {
@@ -181,12 +180,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "Company not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-companies--company-" hidden>
@@ -226,16 +225,16 @@ PUT/PATCH /companies/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/companies/natus" \
+    "http://localhost/api/companies/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"error","description":"perferendis","email":"optio","phone":"excepturi"}'
+    -d '{"name":"porro","description":"aut","email":"autem","phone":"dicta"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/natus"
+    "http://localhost/api/companies/sit"
 );
 
 let headers = {
@@ -244,10 +243,10 @@ let headers = {
 };
 
 let body = {
-    "name": "error",
-    "description": "perferendis",
-    "email": "optio",
-    "phone": "excepturi"
+    "name": "porro",
+    "description": "aut",
+    "email": "autem",
+    "phone": "dicta"
 }
 
 fetch(url, {
@@ -321,14 +320,14 @@ DELETE /companies/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/companies/ratione" \
+    "http://localhost/api/companies/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/ratione"
+    "http://localhost/api/companies/sed"
 );
 
 let headers = {

@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"stefan61@example.com","password":"consequuntur"}'
+    -d '{"email":"xander.sipes@example.org","password":"et"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "email": "stefan61@example.com",
-    "password": "consequuntur"
+    "email": "xander.sipes@example.org",
+    "password": "et"
 }
 
 fetch(url, {
@@ -140,7 +140,7 @@ curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"itaque","last_name":"quam","email":"htremblay@example.org","password":"quia","password_confirmation":"ipsa"}'
+    -d '{"first_name":"et","last_name":"corrupti","company_name":"maiores","company_phone":"ut","company_description":"ut","email":"iva24@example.org","password":"et","password_confirmation":"vel"}'
 
 ```
 
@@ -155,11 +155,14 @@ let headers = {
 };
 
 let body = {
-    "first_name": "itaque",
-    "last_name": "quam",
-    "email": "htremblay@example.org",
-    "password": "quia",
-    "password_confirmation": "ipsa"
+    "first_name": "et",
+    "last_name": "corrupti",
+    "company_name": "maiores",
+    "company_phone": "ut",
+    "company_description": "ut",
+    "email": "iva24@example.org",
+    "password": "et",
+    "password_confirmation": "vel"
 }
 
 fetch(url, {
@@ -201,6 +204,21 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>company_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="company_name" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>company_phone</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="company_phone" data-endpoint="POSTapi-register" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>company_description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="company_description" data-endpoint="POSTapi-register" data-component="body"  hidden>
+<br>
+</p>
+<p>
 <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="email" data-endpoint="POSTapi-register" data-component="body" required  hidden>
 <br>
@@ -231,7 +249,7 @@ curl -X POST \
     "http://localhost/api/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"hansen.rylan@example.com"}'
+    -d '{"email":"jones.adonis@example.org"}'
 
 ```
 
@@ -246,7 +264,7 @@ let headers = {
 };
 
 let body = {
-    "email": "hansen.rylan@example.com"
+    "email": "jones.adonis@example.org"
 }
 
 fetch(url, {
@@ -295,14 +313,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/est" \
+    -G "http://localhost/api/password/reset/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/est"
+    "http://localhost/api/password/reset/omnis"
 );
 
 let headers = {
@@ -367,8 +385,8 @@ fetch(url, {
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="http://localhost/password/reset">
-            <input type="hidden" name="_token" value="pZ8681usiiMUpgFC8FAmIvRiP877wXDgLVVzHHW1">
-            <input type="hidden" name="token" value="est">
+            <input type="hidden" name="_token" value="5B89lrk3joSbJXcO2UdmlQogF8NOs3JiXZx1kin6">
+            <input type="hidden" name="token" value="omnis">
 
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -564,14 +582,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/aut/et" \
+    -G "http://localhost/api/email/verify/est/similique" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/aut/et"
+    "http://localhost/api/email/verify/est/similique"
 );
 
 let headers = {

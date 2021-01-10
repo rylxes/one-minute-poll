@@ -33,13 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [],
-    "message": "Settings retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-settings" hidden>
@@ -76,7 +75,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"quo","value":"nihil","company_id":17}'
+    -d '{"type":"molestiae","value":"itaque","company_id":3}'
 
 ```
 
@@ -91,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "type": "quo",
-    "value": "nihil",
-    "company_id": 17
+    "type": "molestiae",
+    "value": "itaque",
+    "company_id": 3
 }
 
 fetch(url, {
@@ -152,14 +151,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/totam" \
+    -G "http://localhost/api/settings/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/totam"
+    "http://localhost/api/settings/sunt"
 );
 
 let headers = {
@@ -175,12 +174,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "Setting not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-settings--setting-" hidden>
@@ -220,16 +219,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/voluptatem" \
+    "http://localhost/api/settings/beatae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"doloremque","value":"enim","company_id":18}'
+    -d '{"type":"expedita","value":"sit","company_id":7}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/voluptatem"
+    "http://localhost/api/settings/beatae"
 );
 
 let headers = {
@@ -238,9 +237,9 @@ let headers = {
 };
 
 let body = {
-    "type": "doloremque",
-    "value": "enim",
-    "company_id": 18
+    "type": "expedita",
+    "value": "sit",
+    "company_id": 7
 }
 
 fetch(url, {
@@ -309,14 +308,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/temporibus" \
+    "http://localhost/api/settings/iste" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/temporibus"
+    "http://localhost/api/settings/iste"
 );
 
 let headers = {

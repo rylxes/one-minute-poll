@@ -33,13 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [],
-    "message": "Profiles retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-profiles" hidden>
@@ -76,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sunt","last_name":"sunt","user_id":9,"avatar":"modi"}'
+    -d '{"first_name":"sint","last_name":"vel","user_id":20,"avatar":"eos"}'
 
 ```
 
@@ -91,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sunt",
-    "last_name": "sunt",
-    "user_id": 9,
-    "avatar": "modi"
+    "first_name": "sint",
+    "last_name": "vel",
+    "user_id": 20,
+    "avatar": "eos"
 }
 
 fetch(url, {
@@ -158,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/perspiciatis" \
+    -G "http://localhost/api/profiles/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/perspiciatis"
+    "http://localhost/api/profiles/sunt"
 );
 
 let headers = {
@@ -181,12 +180,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "Profile not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-profiles--profile-" hidden>
@@ -226,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/molestiae" \
+    "http://localhost/api/profiles/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"deleniti","last_name":"id","user_id":6,"avatar":"totam"}'
+    -d '{"first_name":"vel","last_name":"ipsa","user_id":7,"avatar":"reiciendis"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/molestiae"
+    "http://localhost/api/profiles/qui"
 );
 
 let headers = {
@@ -244,10 +243,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "deleniti",
-    "last_name": "id",
-    "user_id": 6,
-    "avatar": "totam"
+    "first_name": "vel",
+    "last_name": "ipsa",
+    "user_id": 7,
+    "avatar": "reiciendis"
 }
 
 fetch(url, {
@@ -321,14 +320,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/nihil" \
+    "http://localhost/api/profiles/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/nihil"
+    "http://localhost/api/profiles/et"
 );
 
 let headers = {

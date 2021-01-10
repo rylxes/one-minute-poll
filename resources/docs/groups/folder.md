@@ -33,13 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [],
-    "message": "Folders retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-folders" hidden>
@@ -76,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folders" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aut","_lft":6,"_rgt":15,"parent_id":3,"company_id":5}'
+    -d '{"name":"beatae","_lft":15,"_rgt":11,"parent_id":6,"company_id":7}'
 
 ```
 
@@ -91,11 +90,11 @@ let headers = {
 };
 
 let body = {
-    "name": "aut",
-    "_lft": 6,
-    "_rgt": 15,
-    "parent_id": 3,
-    "company_id": 5
+    "name": "beatae",
+    "_lft": 15,
+    "_rgt": 11,
+    "parent_id": 6,
+    "company_id": 7
 }
 
 fetch(url, {
@@ -164,14 +163,14 @@ GET|HEAD /folders/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folders/iusto" \
+    -G "http://localhost/api/folders/veritatis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/iusto"
+    "http://localhost/api/folders/veritatis"
 );
 
 let headers = {
@@ -187,12 +186,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "Folder not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-folders--folder-" hidden>
@@ -232,16 +231,16 @@ PUT/PATCH /folders/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folders/asperiores" \
+    "http://localhost/api/folders/minus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"vel","_lft":1,"_rgt":9,"parent_id":4,"company_id":15}'
+    -d '{"name":"dolore","_lft":18,"_rgt":5,"parent_id":3,"company_id":9}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/asperiores"
+    "http://localhost/api/folders/minus"
 );
 
 let headers = {
@@ -250,11 +249,11 @@ let headers = {
 };
 
 let body = {
-    "name": "vel",
-    "_lft": 1,
-    "_rgt": 9,
-    "parent_id": 4,
-    "company_id": 15
+    "name": "dolore",
+    "_lft": 18,
+    "_rgt": 5,
+    "parent_id": 3,
+    "company_id": 9
 }
 
 fetch(url, {
@@ -333,14 +332,14 @@ DELETE /folders/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folders/quia" \
+    "http://localhost/api/folders/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/quia"
+    "http://localhost/api/folders/est"
 );
 
 let headers = {

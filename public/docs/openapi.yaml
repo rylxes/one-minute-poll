@@ -39,11 +39,11 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: stefan61@example.com
+                                    example: xander.sipes@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: consequuntur
+                                    example: et
                             required:
                                 - email
                                 - password
@@ -103,26 +103,40 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: itaque
+                                    example: et
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: quam
+                                    example: corrupti
+                                company_name:
+                                    type: string
+                                    description: ''
+                                    example: maiores
+                                company_phone:
+                                    type: string
+                                    description: ''
+                                    example: ut
+                                company_description:
+                                    type: string
+                                    description: ''
+                                    example: ut
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: htremblay@example.org
+                                    example: iva24@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: quia
+                                    example: et
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: ipsa
+                                    example: vel
                             required:
                                 - first_name
                                 - last_name
+                                - company_name
+                                - company_phone
                                 - email
                                 - password
                                 - password_confirmation
@@ -159,7 +173,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: hansen.rylan@example.com
+                                    example: jones.adonis@example.org
                             required:
                                 - email
             security: []
@@ -189,7 +203,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"pZ8681usiiMUpgFC8FAmIvRiP877wXDgLVVzHHW1\">\n            <input type=\"hidden\" name=\"token\" value=\"est\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
+                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"5B89lrk3joSbJXcO2UdmlQogF8NOs3JiXZx1kin6\">\n            <input type=\"hidden\" name=\"token\" value=\"omnis\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
             tags:
                 - Auth
             security: []
@@ -198,7 +212,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: est
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -288,7 +302,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: aut
+                example: est
                 required: true
                 schema:
                     type: string
@@ -296,7 +310,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: et
+                example: similique
                 required: true
                 schema:
                     type: string
@@ -343,20 +357,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Companies retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Companies retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Company
             security: []
@@ -391,19 +403,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: facere
+                                    example: sed
                                 description:
                                     type: string
                                     description: ''
-                                    example: aliquam
+                                    example: blanditiis
                                 email:
                                     type: string
                                     description: ''
-                                    example: sed
+                                    example: ab
                                 phone:
                                     type: string
                                     description: ''
-                                    example: et
+                                    example: ut
                             required:
                                 - name
             security: []
@@ -427,18 +439,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'Company not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'Company not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Company
             security: []
@@ -473,19 +485,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: error
+                                    example: porro
                                 description:
                                     type: string
                                     description: ''
-                                    example: perferendis
+                                    example: aut
                                 email:
                                     type: string
                                     description: ''
-                                    example: optio
+                                    example: autem
                                 phone:
                                     type: string
                                     description: ''
-                                    example: excepturi
+                                    example: dicta
                             required:
                                 - name
             security: []
@@ -516,7 +528,7 @@ paths:
                 in: path
                 name: company
                 description: ''
-                example: facilis
+                example: illum
                 required: true
                 schema:
                     type: string
@@ -685,7 +697,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: quisquam
+                example: excepturi
                 required: true
                 schema:
                     type: string
@@ -819,7 +831,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: corrupti
+                example: dolorum
                 required: true
                 schema:
                     type: string
@@ -943,7 +955,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: voluptate
+                example: sint
                 required: true
                 schema:
                     type: string
@@ -1067,20 +1079,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Files retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Files retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - File
             security: []
@@ -1115,11 +1125,11 @@ paths:
                                 url:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: omnis
                                 name:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: odit
                                 is_lock:
                                     type: boolean
                                     description: ''
@@ -1127,7 +1137,7 @@ paths:
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 16
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1159,18 +1169,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'File not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'File not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - File
             security: []
@@ -1205,11 +1215,11 @@ paths:
                                 url:
                                     type: string
                                     description: ''
-                                    example: exercitationem
+                                    example: ut
                                 name:
                                     type: string
                                     description: ''
-                                    example: similique
+                                    example: quisquam
                                 is_lock:
                                     type: boolean
                                     description: ''
@@ -1217,7 +1227,7 @@ paths:
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 14
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1256,7 +1266,7 @@ paths:
                 in: path
                 name: file
                 description: ''
-                example: eligendi
+                example: illo
                 required: true
                 schema:
                     type: string
@@ -1280,20 +1290,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Folders retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Folders retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Folder
             security: []
@@ -1328,23 +1336,23 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: beatae
                                 _lft:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 15
                                 _rgt:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 11
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 6
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 5
+                                    example: 7
                             required:
                                 - name
                                 - _lft
@@ -1371,18 +1379,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'Folder not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'Folder not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Folder
             security: []
@@ -1417,23 +1425,23 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: vel
+                                    example: dolore
                                 _lft:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 18
                                 _rgt:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 5
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 4
+                                    example: 3
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 9
                             required:
                                 - name
                                 - _lft
@@ -1467,7 +1475,7 @@ paths:
                 in: path
                 name: folder
                 description: ''
-                example: iusto
+                example: veritatis
                 required: true
                 schema:
                     type: string
@@ -1491,20 +1499,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Libraries retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Libraries retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Library
             security: []
@@ -1539,11 +1545,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: architecto
+                                    example: at
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 14
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -1578,18 +1584,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'Library not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'Library not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Library
             security: []
@@ -1624,11 +1630,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: omnis
+                                    example: temporibus
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 7
+                                    example: 13
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -1670,7 +1676,7 @@ paths:
                 in: path
                 name: library
                 description: ''
-                example: vitae
+                example: voluptatem
                 required: true
                 schema:
                     type: string
@@ -1694,20 +1700,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Profiles retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Profiles retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Profile
             security: []
@@ -1742,19 +1746,19 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: sunt
+                                    example: sint
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: sunt
+                                    example: vel
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 20
                                 avatar:
                                     type: string
                                     description: ''
-                                    example: modi
+                                    example: eos
                             required:
                                 - first_name
                                 - last_name
@@ -1780,18 +1784,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'Profile not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'Profile not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Profile
             security: []
@@ -1826,19 +1830,19 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: deleniti
+                                    example: vel
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: id
+                                    example: ipsa
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 7
                                 avatar:
                                     type: string
                                     description: ''
-                                    example: totam
+                                    example: reiciendis
                             required:
                                 - first_name
                                 - last_name
@@ -1871,7 +1875,7 @@ paths:
                 in: path
                 name: profile
                 description: ''
-                example: perspiciatis
+                example: sunt
                 required: true
                 schema:
                     type: string
@@ -1895,20 +1899,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Settings retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Settings retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Setting
             security: []
@@ -1943,15 +1945,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: quo
+                                    example: molestiae
                                 value:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: itaque
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 3
                             required:
                                 - company_id
             security: []
@@ -1975,18 +1977,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'Setting not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'Setting not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Setting
             security: []
@@ -2021,15 +2023,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: doloremque
+                                    example: expedita
                                 value:
                                     type: string
                                     description: ''
-                                    example: enim
+                                    example: sit
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 7
                             required:
                                 - company_id
             security: []
@@ -2060,7 +2062,7 @@ paths:
                 in: path
                 name: setting
                 description: ''
-                example: totam
+                example: sunt
                 required: true
                 schema:
                     type: string
@@ -2084,20 +2086,18 @@ paths:
                     schema:
                         type: string
             responses:
-                200:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: true
-                                    data: []
-                                    message: 'Tags retrieved successfully'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
-                                    message: { type: string, example: 'Tags retrieved successfully' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Tag
             security: []
@@ -2132,15 +2132,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: repellendus
+                                    example: vero
                                 colour:
                                     type: string
                                     description: ''
-                                    example: possimus
+                                    example: rem
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 3
                             required:
                                 - name
                                 - company_id
@@ -2165,18 +2165,18 @@ paths:
                     schema:
                         type: string
             responses:
-                404:
+                401:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    success: false
-                                    message: 'Tag not found'
+                                    message: Unauthorized
+                                    status: 401
                                 properties:
-                                    success: { type: boolean, example: false }
-                                    message: { type: string, example: 'Tag not found' }
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
             tags:
                 - Tag
             security: []
@@ -2211,15 +2211,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: ex
+                                    example: quis
                                 colour:
                                     type: string
                                     description: ''
-                                    example: velit
+                                    example: cumque
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 4
+                                    example: 19
                             required:
                                 - name
                                 - company_id
@@ -2251,7 +2251,7 @@ paths:
                 in: path
                 name: tag
                 description: ''
-                example: consequatur
+                example: modi
                 required: true
                 schema:
                     type: string

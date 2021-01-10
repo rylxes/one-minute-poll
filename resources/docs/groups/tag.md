@@ -33,13 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [],
-    "message": "Tags retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-tags" hidden>
@@ -76,7 +75,7 @@ curl -X POST \
     "http://localhost/api/tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"repellendus","colour":"possimus","company_id":18}'
+    -d '{"name":"vero","colour":"rem","company_id":3}'
 
 ```
 
@@ -91,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "repellendus",
-    "colour": "possimus",
-    "company_id": 18
+    "name": "vero",
+    "colour": "rem",
+    "company_id": 3
 }
 
 fetch(url, {
@@ -152,14 +151,14 @@ GET|HEAD /tags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/tags/consequatur" \
+    -G "http://localhost/api/tags/modi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/consequatur"
+    "http://localhost/api/tags/modi"
 );
 
 let headers = {
@@ -175,12 +174,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "Tag not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-tags--tag-" hidden>
@@ -220,16 +219,16 @@ PUT/PATCH /tags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/tags/in" \
+    "http://localhost/api/tags/quae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ex","colour":"velit","company_id":4}'
+    -d '{"name":"quis","colour":"cumque","company_id":19}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/in"
+    "http://localhost/api/tags/quae"
 );
 
 let headers = {
@@ -238,9 +237,9 @@ let headers = {
 };
 
 let body = {
-    "name": "ex",
-    "colour": "velit",
-    "company_id": 4
+    "name": "quis",
+    "colour": "cumque",
+    "company_id": 19
 }
 
 fetch(url, {
@@ -309,14 +308,14 @@ DELETE /tags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/tags/enim" \
+    "http://localhost/api/tags/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/enim"
+    "http://localhost/api/tags/voluptatem"
 );
 
 let headers = {

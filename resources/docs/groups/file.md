@@ -33,13 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [],
-    "message": "Files retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-files" hidden>
@@ -76,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"url":"eos","name":"eos","is_lock":false,"company_id":9,"is_favourite":false}'
+    -d '{"url":"omnis","name":"odit","is_lock":false,"company_id":16,"is_favourite":false}'
 
 ```
 
@@ -91,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "url": "eos",
-    "name": "eos",
+    "url": "omnis",
+    "name": "odit",
     "is_lock": false,
-    "company_id": 9,
+    "company_id": 16,
     "is_favourite": false
 }
 
@@ -166,14 +165,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/eligendi" \
+    -G "http://localhost/api/files/illo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/eligendi"
+    "http://localhost/api/files/illo"
 );
 
 let headers = {
@@ -189,12 +188,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "File not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-files--file-" hidden>
@@ -234,16 +233,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/aut" \
+    "http://localhost/api/files/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"url":"exercitationem","name":"similique","is_lock":false,"company_id":17,"is_favourite":false}'
+    -d '{"url":"ut","name":"quisquam","is_lock":false,"company_id":14,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/aut"
+    "http://localhost/api/files/reiciendis"
 );
 
 let headers = {
@@ -252,10 +251,10 @@ let headers = {
 };
 
 let body = {
-    "url": "exercitationem",
-    "name": "similique",
+    "url": "ut",
+    "name": "quisquam",
     "is_lock": false,
-    "company_id": 17,
+    "company_id": 14,
     "is_favourite": false
 }
 
@@ -337,14 +336,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/corrupti" \
+    "http://localhost/api/files/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/corrupti"
+    "http://localhost/api/files/rerum"
 );
 
 let headers = {
