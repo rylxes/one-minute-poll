@@ -102,6 +102,8 @@ class ProfileAPIController extends AppBaseController
         }
         unset($input['user_id']);
         $profile = $this->profileRepository->update($input, $profile->id);
+
+
         return $this->sendResponse($profile->toArray(), 'Profile updated successfully');
     }
 

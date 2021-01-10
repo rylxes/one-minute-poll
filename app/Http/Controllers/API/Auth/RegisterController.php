@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\Auth;
 
 use App\Http\Requests\API\RegisterRequest;
+use App\Repositories\CompanyRepository;
 use App\Repositories\PersonalDetailsRepository;
 use App\Repositories\ProfileRepository;
 use App\Traits\ResponseTrait;
@@ -47,9 +48,10 @@ class RegisterController extends Controller
 
 
 
-    public function __construct(ProfileRepository $profileRepo)
+    public function __construct(ProfileRepository $profileRepo, CompanyRepository $companyRepo)
     {
         $this->profileRepository = $profileRepo;
+        $this->companyRepository = $companyRepo;
         $this->middleware('guest');
     }
 
@@ -113,8 +115,16 @@ class RegisterController extends Controller
         unset($data['password_confirmation']);
         unset($data['name']);
 
-       // dd($data);
+
        $this->profileRepository->create($data);
+        $input['name'] = $data['company_name'];
+        $input['phone'] = $data['company_phone'];
+        $input['email'] = $data['email'];
+        $input['description'] = @$data['company_description'];
+        $company = $this->companyRepository->create($input);
+        $user->company()->create([
+            'company_id' => $company->id
+        ]);
 
 
         $this->guard()->login($user);
