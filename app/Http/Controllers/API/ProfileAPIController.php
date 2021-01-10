@@ -8,6 +8,7 @@ use App\Models\Profile;
 use App\Repositories\ProfileRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Response;
 
@@ -36,13 +37,10 @@ class ProfileAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $profiles = $this->profileRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
-
-        return $this->sendResponse($profiles->toArray(), 'Profiles retrieved successfully');
+        $id = Auth::user()->id;
+        $profile = Profile::where('user_id',$id)->with(['user.theCompany'])->first();
+        //$profile = $this->profileRepository->find($id)->with('user.company');
+        return $this->sendResponse($profile->toArray(), 'Profiles retrieved successfully');
     }
 
     /**
@@ -73,8 +71,7 @@ class ProfileAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Profile $profile */
-        $profile = $this->profileRepository->find($id);
-
+        $profile = $this->profileRepository->find($id)->with('user.company');
         if (empty($profile)) {
             return $this->sendError('Profile not found');
         }

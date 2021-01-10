@@ -67,6 +67,11 @@ class Profile extends Model implements HasMedia
 
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::Class);
+    }
+
 
     protected static function boot()
     {
