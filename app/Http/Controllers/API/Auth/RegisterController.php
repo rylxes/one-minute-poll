@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\Auth;
 
 use App\Http\Requests\API\RegisterRequest;
 use App\Repositories\PersonalDetailsRepository;
+use App\Repositories\ProfileRepository;
 use App\Traits\ResponseTrait;
 use Illuminate\Auth\Events\Registered;
 use App\Http\Controllers\Controller;
@@ -46,8 +47,9 @@ class RegisterController extends Controller
 
 
 
-    public function __construct()
+    public function __construct(ProfileRepository $profileRepo)
     {
+        $this->profileRepository = $profileRepo;
         $this->middleware('guest');
     }
 
@@ -112,7 +114,7 @@ class RegisterController extends Controller
         unset($data['name']);
 
        // dd($data);
-       // $this->personalDetailsRepository->create($data);
+       $this->profileRepository->create($data);
 
 
         $this->guard()->login($user);

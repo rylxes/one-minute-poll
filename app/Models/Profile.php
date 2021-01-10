@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Scopes\UserScope;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Profile
@@ -61,6 +63,24 @@ class Profile extends Model
         'avatar' => 'nullable|string|max:255',
 
     ];
+
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new UserScope());
+        self::creating(function ($model) {
+            if (Auth::check()) {
+                $model->user_id = Auth::user()->id;
+            }
+        });
+        self::saving(function ($model) {
+            if (Auth::check()) {
+                $model->user_id = Auth::user()->id;
+            }
+        });
+    }
+
 
 
 }

@@ -95,14 +95,13 @@ class ProfileAPIController extends AppBaseController
         $input = $request->all();
 
         /** @var Profile $profile */
-        $profile = $this->profileRepository->find($id);
-
+       // $profile = $this->profileRepository->find($id);
+        $profile = Profile::all()->first();
         if (empty($profile)) {
             return $this->sendError('Profile not found');
         }
-
-        $profile = $this->profileRepository->update($input, $id);
-
+        unset($input['user_id']);
+        $profile = $this->profileRepository->update($input, $profile->id);
         return $this->sendResponse($profile->toArray(), 'Profile updated successfully');
     }
 
