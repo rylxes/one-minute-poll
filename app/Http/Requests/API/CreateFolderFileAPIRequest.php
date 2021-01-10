@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\File;
+use App\Models\FolderFile;
 use InfyOm\Generator\Request\APIRequest;
 
-class CreateFileAPIRequest extends APIRequest
+class CreateFolderFileAPIRequest extends APIRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,14 +24,6 @@ class CreateFileAPIRequest extends APIRequest
      */
     public function rules()
     {
-        $rules = [];
-        if (!empty($this->file('file'))) {
-            $rules['file'] = 'file|mimes:jpg,jpeg,pdf';
-        }
-        $otherRules = [
-            'name' => 'required|string|max:255',
-            'folder_id' => 'required|exists:folders,id',
-        ];
-        return array_merge($rules, $otherRules);
+        return FolderFile::$rules;
     }
 }

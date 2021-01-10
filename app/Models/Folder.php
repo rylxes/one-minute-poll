@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Scopes\CompanyScope;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
 use Kalnoy\Nestedset\NodeTrait;
 /**
  * Class Folder
@@ -60,11 +62,25 @@ class Folder extends Model
      */
     public static $rules = [
         'name' => 'required|string|max:255',
-        '_lft' => 'required|integer',
-        '_rgt' => 'required|integer',
-        'parent_id' => 'nullable|integer',
-        'company_id' => 'required|integer'
+        'parent_id' => 'nullable|integer'
     ];
+
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new CompanyScope());
+        self::creating(function ($model) {
+            if (Auth::check()) {
+                $model->company_id = Auth::user()->company->id;
+            }
+        });
+        self::saving(function ($model) {
+            if (Auth::check()) {
+                $model->company_id = Auth::user()->company->id;
+            }
+        });
+    }
 
 
 }

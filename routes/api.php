@@ -41,6 +41,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('tags', App\Http\Controllers\API\TagAPIController::class);
 
         Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
+        Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
 
         Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
 
@@ -55,3 +56,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
 
+
+
+Route::resource('folder_files', App\Http\Controllers\API\FolderFileAPIController::class);

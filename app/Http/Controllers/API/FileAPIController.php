@@ -8,6 +8,7 @@ use App\Models\File;
 use App\Repositories\FileRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 /**
@@ -54,12 +55,38 @@ class FileAPIController extends AppBaseController
      */
     public function store(CreateFileAPIRequest $request)
     {
+        DB::beginTransaction();
         $input = $request->all();
-
         $file = $this->fileRepository->create($input);
 
+        if (!empty($request->file('file'))) {
+            try {
+                $file->addMedia($request->file('file'))->toMediaCollection('Documents');
+                $mediaItems = $file->getMedia('Documents');
+                $input['url'] = $mediaItems[0]->getFullUrl();
+                $this->fileRepository->update($input, $file->id);
+            } catch (\Exception $exception) {
+                DB::rollBack();
+                return $this->sendError($exception->getMessage());
+            }
+        }
+        $file->folder()->attach($input['folder_id']);
+        DB::commit();
         return $this->sendResponse($file->toArray(), 'File saved successfully');
     }
+
+
+    public function byFolder($id)
+    {
+        $res = File::whereHas('folder',function ($q) use ($id){
+            $q->where('folder_id',$id);
+        })->get();
+        if ($res->isEmpty()) {
+            return $this->sendError('Files not found');
+        }
+        return $this->sendResponse($res->toArray(), 'Files retrieved successfully');
+    }
+
 
     /**
      * Display the specified File.

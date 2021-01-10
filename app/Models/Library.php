@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Scopes\CompanyScope;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Library
@@ -61,6 +63,23 @@ class Library extends Model
         'is_favourite' => 'required|boolean',
 
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new CompanyScope());
+        self::creating(function ($model) {
+            if (Auth::check()) {
+                $model->company_id = Auth::user()->company->id;
+            }
+        });
+        self::saving(function ($model) {
+            if (Auth::check()) {
+                $model->company_id = Auth::user()->company->id;
+            }
+        });
+    }
+
 
 
 }

@@ -296,14 +296,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/tokens/excepturi" \
+    "http://localhost/oauth/tokens/delectus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/tokens/excepturi"
+    "http://localhost/oauth/tokens/delectus"
 );
 
 let headers = {
@@ -526,14 +526,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/oauth/clients/dolorum" \
+    "http://localhost/oauth/clients/beatae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/dolorum"
+    "http://localhost/oauth/clients/beatae"
 );
 
 let headers = {
@@ -586,14 +586,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/clients/sequi" \
+    "http://localhost/oauth/clients/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/sequi"
+    "http://localhost/oauth/clients/aut"
 );
 
 let headers = {
@@ -824,14 +824,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/personal-access-tokens/sint" \
+    "http://localhost/oauth/personal-access-tokens/vel" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens/sint"
+    "http://localhost/oauth/personal-access-tokens/vel"
 );
 
 let headers = {
@@ -1084,7 +1084,7 @@ fetch(url, {
                         </div>
                     </div>
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v8.20.1 (PHP v7.4.12)
+                        Laravel v8.21.0 (PHP v7.4.12)
                     </div>
                 </div>
             </div>

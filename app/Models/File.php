@@ -2,9 +2,14 @@
 
 namespace App\Models;
 
+use App\Scopes\CompanyScope;
+use App\Scopes\UserScope;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * Class File
@@ -17,17 +22,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property boolean $is_lock
  * @property boolean $is_favourite
  */
-class File extends Model
+class File extends Model implements HasMedia
 {
 
+    use InteractsWithMedia;
     use HasFactory;
 
     public $table = 'file';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-
 
 
     public $fillable = [
@@ -58,12 +62,35 @@ class File extends Model
      * @var array
      */
     public static $rules = [
-        'url' => 'required|string|max:255',
+        'url' => 'nullable|string|max:255',
         'name' => 'required|string|max:255',
-        'is_lock' => 'required|boolean',
+        'is_lock' => 'nullable|boolean',
         'company_id' => 'required|integer',
-        'is_favourite' => 'required|boolean'
+        'is_favourite' => 'nullable|boolean'
     ];
+
+
+    public function folder()
+    {
+        return $this->belongsToMany(Folder::class, 'folders_file');
+    }
+
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope(new CompanyScope());
+        self::creating(function ($model) {
+            if (Auth::check()) {
+                $model->company_id = Auth::user()->company->id;
+            }
+        });
+        self::saving(function ($model) {
+            if (Auth::check()) {
+                $model->company_id = Auth::user()->company->id;
+            }
+        });
+    }
 
 
 }

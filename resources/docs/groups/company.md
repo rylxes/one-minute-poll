@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/companies" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sed","description":"blanditiis","email":"ab","phone":"ut"}'
+    -d '{"name":"quae","description":"excepturi","email":"aut","phone":"id"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "sed",
-    "description": "blanditiis",
-    "email": "ab",
-    "phone": "ut"
+    "name": "quae",
+    "description": "excepturi",
+    "email": "aut",
+    "phone": "id"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /companies/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/companies/illum" \
+    -G "http://localhost/api/companies/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/illum"
+    "http://localhost/api/companies/sed"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /companies/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/companies/sit" \
+    "http://localhost/api/companies/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"porro","description":"aut","email":"autem","phone":"dicta"}'
+    -d '{"name":"non","description":"placeat","email":"qui","phone":"dolorem"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/sit"
+    "http://localhost/api/companies/reiciendis"
 );
 
 let headers = {
@@ -243,10 +243,10 @@ let headers = {
 };
 
 let body = {
-    "name": "porro",
-    "description": "aut",
-    "email": "autem",
-    "phone": "dicta"
+    "name": "non",
+    "description": "placeat",
+    "email": "qui",
+    "phone": "dolorem"
 }
 
 fetch(url, {
@@ -320,14 +320,14 @@ DELETE /companies/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/companies/sed" \
+    "http://localhost/api/companies/quae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/sed"
+    "http://localhost/api/companies/quae"
 );
 
 let headers = {

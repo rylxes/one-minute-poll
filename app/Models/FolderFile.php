@@ -7,19 +7,19 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Class CompanyUser
+ * Class FolderFile
  * @package App\Models
- * @version December 26, 2020, 10:40 pm UTC
+ * @version January 10, 2021, 1:16 pm UTC
  *
- * @property integer $company_id
- * @property integer $user_id
+ * @property integer $file_id
+ * @property integer $folder_id
  */
-class CompanyUser extends Model
+class FolderFile extends Model
 {
 
     use HasFactory;
 
-    public $table = 'company_user';
+    public $table = 'folders_file';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -28,8 +28,8 @@ class CompanyUser extends Model
 
 
     public $fillable = [
-        'company_id',
-        'user_id'
+        'file_id',
+        'folder_id'
     ];
 
     /**
@@ -39,8 +39,8 @@ class CompanyUser extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'company_id' => 'integer',
-        'user_id' => 'integer'
+        'file_id' => 'integer',
+        'folder_id' => 'integer'
     ];
 
     /**
@@ -49,11 +49,9 @@ class CompanyUser extends Model
      * @var array
      */
     public static $rules = [
-        'company_id' => 'required|integer',
-        'user_id' => 'required|integer',
-
+        'file_id' => 'required|integer',
+        'folder_id' => 'required|integer',
     ];
-
 
 
 }

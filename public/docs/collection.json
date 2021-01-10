@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "E-DMS App API Documentation",
-        "_postman_id": "2303b7e7-8310-498f-a199-d2fb53e67e34",
+        "_postman_id": "0bc446d4-29c9-4e54-9a40-a630ec6ec899",
         "description": "E-DMS App API Documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"xander.sipes@example.org\",\n    \"password\": \"et\"\n}"
+                            "raw": "{\n    \"email\": \"xmonahan@example.net\",\n    \"password\": \"dolorum\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -103,7 +103,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"et\",\n    \"last_name\": \"corrupti\",\n    \"company_name\": \"maiores\",\n    \"company_phone\": \"ut\",\n    \"company_description\": \"ut\",\n    \"email\": \"iva24@example.org\",\n    \"password\": \"et\",\n    \"password_confirmation\": \"vel\"\n}"
+                            "raw": "{\n    \"first_name\": \"sed\",\n    \"last_name\": \"sint\",\n    \"company_name\": \"quos\",\n    \"company_phone\": \"eveniet\",\n    \"company_description\": \"temporibus\",\n    \"email\": \"boehm.tyrell@example.org\",\n    \"password\": \"et\",\n    \"password_confirmation\": \"nostrum\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -135,7 +135,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"jones.adonis@example.org\"\n}"
+                            "raw": "{\n    \"email\": \"yking@example.com\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -157,7 +157,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "omnis",
+                                    "value": "fuga",
                                     "description": ""
                                 }
                             ]
@@ -252,13 +252,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "est",
+                                    "value": "sed",
                                     "description": ""
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "similique",
+                                    "value": "distinctio",
                                     "description": ""
                                 }
                             ]
@@ -369,7 +369,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sed\",\n    \"description\": \"blanditiis\",\n    \"email\": \"ab\",\n    \"phone\": \"ut\"\n}"
+                            "raw": "{\n    \"name\": \"quae\",\n    \"description\": \"excepturi\",\n    \"email\": \"aut\",\n    \"phone\": \"id\"\n}"
                         },
                         "description": "POST \/companies",
                         "auth": {
@@ -391,7 +391,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "illum",
+                                    "value": "sed",
                                     "description": ""
                                 }
                             ]
@@ -428,7 +428,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "sit",
+                                    "value": "reiciendis",
                                     "description": ""
                                 }
                             ]
@@ -446,7 +446,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"porro\",\n    \"description\": \"aut\",\n    \"email\": \"autem\",\n    \"phone\": \"dicta\"\n}"
+                            "raw": "{\n    \"name\": \"non\",\n    \"description\": \"placeat\",\n    \"email\": \"qui\",\n    \"phone\": \"dolorem\"\n}"
                         },
                         "description": "PUT\/PATCH \/companies\/{id}",
                         "auth": {
@@ -468,7 +468,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "sed",
+                                    "value": "quae",
                                     "description": ""
                                 }
                             ]
@@ -656,7 +656,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "excepturi",
+                                    "value": "delectus",
                                     "description": ""
                                 }
                             ]
@@ -780,7 +780,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "dolorum",
+                                    "value": "beatae",
                                     "description": ""
                                 }
                             ]
@@ -817,7 +817,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "sequi",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -941,7 +941,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "sint",
+                                    "value": "vel",
                                     "description": ""
                                 }
                             ]
@@ -1110,7 +1110,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"url\": \"omnis\",\n    \"name\": \"odit\",\n    \"is_lock\": false,\n    \"company_id\": 16,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"ut\",\n    \"folder_id\": \"saepe\"\n}"
                         },
                         "description": "POST \/files",
                         "auth": {
@@ -1132,7 +1132,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "illo",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -1169,7 +1169,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "reiciendis",
+                                    "value": "soluta",
                                     "description": ""
                                 }
                             ]
@@ -1187,7 +1187,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"url\": \"ut\",\n    \"name\": \"quisquam\",\n    \"is_lock\": false,\n    \"company_id\": 14,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"url\": \"vel\",\n    \"name\": \"omnis\",\n    \"is_lock\": false,\n    \"company_id\": 17,\n    \"is_favourite\": false\n}"
                         },
                         "description": "PUT\/PATCH \/files\/{id}",
                         "auth": {
@@ -1209,7 +1209,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "rerum",
+                                    "value": "quasi",
                                     "description": ""
                                 }
                             ]
@@ -1227,6 +1227,43 @@
                         ],
                         "body": null,
                         "description": "DELETE \/files\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/files\/byFolder\/{id}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/files\/byFolder\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/files\/byFolder\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "inventore",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
                         "auth": {
                             "type": "noauth"
                         }
@@ -1291,7 +1328,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"beatae\",\n    \"_lft\": 15,\n    \"_rgt\": 11,\n    \"parent_id\": 6,\n    \"company_id\": 7\n}"
+                            "raw": "{\n    \"name\": \"laudantium\",\n    \"parent_id\": 5\n}"
                         },
                         "description": "POST \/folders",
                         "auth": {
@@ -1313,7 +1350,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "veritatis",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -1350,7 +1387,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "minus",
+                                    "value": "eveniet",
                                     "description": ""
                                 }
                             ]
@@ -1368,7 +1405,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"dolore\",\n    \"_lft\": 18,\n    \"_rgt\": 5,\n    \"parent_id\": 3,\n    \"company_id\": 9\n}"
+                            "raw": "{\n    \"name\": \"et\",\n    \"parent_id\": 13\n}"
                         },
                         "description": "PUT\/PATCH \/folders\/{id}",
                         "auth": {
@@ -1390,7 +1427,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "est",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -1408,6 +1445,187 @@
                         ],
                         "body": null,
                         "description": "DELETE \/folders\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Folder File",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the FolderFile.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/folder_files",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/folder_files"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/folderFiles",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created FolderFile in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/folder_files",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/folder_files"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"file_id\": 18,\n    \"folder_id\": 15\n}"
+                        },
+                        "description": "POST \/folderFiles",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified FolderFile.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/folder_files\/:folder_file",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/folder_files\/:folder_file",
+                            "variable": [
+                                {
+                                    "id": "folder_file",
+                                    "key": "folder_file",
+                                    "value": "dolorum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/folderFiles\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified FolderFile in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/folder_files\/:folder_file",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/folder_files\/:folder_file",
+                            "variable": [
+                                {
+                                    "id": "folder_file",
+                                    "key": "folder_file",
+                                    "value": "dolor",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"file_id\": 9,\n    \"folder_id\": 10\n}"
+                        },
+                        "description": "PUT\/PATCH \/folderFiles\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified FolderFile from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/folder_files\/:folder_file",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/folder_files\/:folder_file",
+                            "variable": [
+                                {
+                                    "id": "folder_file",
+                                    "key": "folder_file",
+                                    "value": "ea",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "DELETE \/folderFiles\/{id}",
                         "auth": {
                             "type": "noauth"
                         }
@@ -1472,7 +1690,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"at\",\n    \"company_id\": 14,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"et\",\n    \"company_id\": 16,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
                         },
                         "description": "POST \/libraries",
                         "auth": {
@@ -1494,7 +1712,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "voluptatem",
+                                    "value": "at",
                                     "description": ""
                                 }
                             ]
@@ -1531,7 +1749,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "quas",
+                                    "value": "possimus",
                                     "description": ""
                                 }
                             ]
@@ -1549,7 +1767,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"temporibus\",\n    \"company_id\": 13,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"debitis\",\n    \"company_id\": 9,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
                         },
                         "description": "PUT\/PATCH \/libraries\/{id}",
                         "auth": {
@@ -1571,7 +1789,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "minima",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1653,7 +1871,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"sint\",\n    \"last_name\": \"vel\",\n    \"user_id\": 20,\n    \"avatar\": \"eos\"\n}"
+                            "raw": "{\n    \"first_name\": \"in\",\n    \"last_name\": \"magnam\",\n    \"user_id\": 11,\n    \"avatar\": \"recusandae\"\n}"
                         },
                         "description": "POST \/profiles",
                         "auth": {
@@ -1675,7 +1893,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "sunt",
+                                    "value": "aspernatur",
                                     "description": ""
                                 }
                             ]
@@ -1712,7 +1930,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "qui",
+                                    "value": "aspernatur",
                                     "description": ""
                                 }
                             ]
@@ -1730,7 +1948,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"vel\",\n    \"last_name\": \"ipsa\",\n    \"user_id\": 7,\n    \"avatar\": \"reiciendis\"\n}"
+                            "raw": "{\n    \"first_name\": \"rerum\",\n    \"last_name\": \"deleniti\",\n    \"user_id\": 19,\n    \"avatar\": \"est\"\n}"
                         },
                         "description": "PUT\/PATCH \/profiles\/{id}",
                         "auth": {
@@ -1752,7 +1970,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "et",
+                                    "value": "reiciendis",
                                     "description": ""
                                 }
                             ]
@@ -1834,7 +2052,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"molestiae\",\n    \"value\": \"itaque\",\n    \"company_id\": 3\n}"
+                            "raw": "{\n    \"type\": \"perspiciatis\",\n    \"value\": \"asperiores\",\n    \"company_id\": 18\n}"
                         },
                         "description": "POST \/settings",
                         "auth": {
@@ -1856,7 +2074,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "sunt",
+                                    "value": "consectetur",
                                     "description": ""
                                 }
                             ]
@@ -1893,7 +2111,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "beatae",
+                                    "value": "quidem",
                                     "description": ""
                                 }
                             ]
@@ -1911,7 +2129,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"expedita\",\n    \"value\": \"sit\",\n    \"company_id\": 7\n}"
+                            "raw": "{\n    \"type\": \"et\",\n    \"value\": \"doloremque\",\n    \"company_id\": 17\n}"
                         },
                         "description": "PUT\/PATCH \/settings\/{id}",
                         "auth": {
@@ -1933,7 +2151,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "iste",
+                                    "value": "quisquam",
                                     "description": ""
                                 }
                             ]
@@ -2015,7 +2233,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"vero\",\n    \"colour\": \"rem\",\n    \"company_id\": 3\n}"
+                            "raw": "{\n    \"name\": \"voluptatum\",\n    \"colour\": \"facere\",\n    \"company_id\": 2\n}"
                         },
                         "description": "POST \/tags",
                         "auth": {
@@ -2037,7 +2255,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "modi",
+                                    "value": "mollitia",
                                     "description": ""
                                 }
                             ]
@@ -2074,7 +2292,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "quae",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -2092,7 +2310,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"quis\",\n    \"colour\": \"cumque\",\n    \"company_id\": 19\n}"
+                            "raw": "{\n    \"name\": \"minus\",\n    \"colour\": \"ratione\",\n    \"company_id\": 2\n}"
                         },
                         "description": "PUT\/PATCH \/tags\/{id}",
                         "auth": {
@@ -2114,7 +2332,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "voluptatem",
+                                    "value": "sapiente",
                                     "description": ""
                                 }
                             ]

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sint","last_name":"vel","user_id":20,"avatar":"eos"}'
+    -d '{"first_name":"in","last_name":"magnam","user_id":11,"avatar":"recusandae"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sint",
-    "last_name": "vel",
-    "user_id": 20,
-    "avatar": "eos"
+    "first_name": "in",
+    "last_name": "magnam",
+    "user_id": 11,
+    "avatar": "recusandae"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/sunt" \
+    -G "http://localhost/api/profiles/aspernatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/sunt"
+    "http://localhost/api/profiles/aspernatur"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/qui" \
+    "http://localhost/api/profiles/aspernatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"vel","last_name":"ipsa","user_id":7,"avatar":"reiciendis"}'
+    -d '{"first_name":"rerum","last_name":"deleniti","user_id":19,"avatar":"est"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/qui"
+    "http://localhost/api/profiles/aspernatur"
 );
 
 let headers = {
@@ -243,10 +243,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "vel",
-    "last_name": "ipsa",
-    "user_id": 7,
-    "avatar": "reiciendis"
+    "first_name": "rerum",
+    "last_name": "deleniti",
+    "user_id": 19,
+    "avatar": "est"
 }
 
 fetch(url, {
@@ -320,14 +320,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/et" \
+    "http://localhost/api/profiles/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/et"
+    "http://localhost/api/profiles/reiciendis"
 );
 
 let headers = {

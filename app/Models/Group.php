@@ -9,20 +9,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Class Setting
+ * Class Group
  * @package App\Models
- * @version December 26, 2020, 10:32 pm UTC
+ * @version January 10, 2021, 12:36 pm UTC
  *
- * @property string $type
- * @property string $value
+ * @property string $name
+ * @property string $description
  * @property integer $company_id
  */
-class Setting extends Model
+class Group extends Model
 {
 
     use HasFactory;
 
-    public $table = 'settings';
+    public $table = 'groups';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -31,8 +31,8 @@ class Setting extends Model
 
 
     public $fillable = [
-        'type',
-        'value',
+        'name',
+        'description',
         'company_id'
     ];
 
@@ -43,8 +43,8 @@ class Setting extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'type' => 'string',
-        'value' => 'string',
+        'name' => 'string',
+        'description' => 'string',
         'company_id' => 'integer'
     ];
 
@@ -54,10 +54,9 @@ class Setting extends Model
      * @var array
      */
     public static $rules = [
-        'type' => 'nullable|string|max:255',
-        'value' => 'nullable|string|max:255',
+        'name' => 'required|string|max:255',
+        'description' => 'nullable|string|max:255',
         'company_id' => 'required|integer',
-
     ];
 
 

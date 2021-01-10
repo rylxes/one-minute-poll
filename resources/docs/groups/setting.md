@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"molestiae","value":"itaque","company_id":3}'
+    -d '{"type":"perspiciatis","value":"asperiores","company_id":18}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "type": "molestiae",
-    "value": "itaque",
-    "company_id": 3
+    "type": "perspiciatis",
+    "value": "asperiores",
+    "company_id": 18
 }
 
 fetch(url, {
@@ -151,14 +151,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/sunt" \
+    -G "http://localhost/api/settings/consectetur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/sunt"
+    "http://localhost/api/settings/consectetur"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/beatae" \
+    "http://localhost/api/settings/quidem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"expedita","value":"sit","company_id":7}'
+    -d '{"type":"et","value":"doloremque","company_id":17}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/beatae"
+    "http://localhost/api/settings/quidem"
 );
 
 let headers = {
@@ -237,9 +237,9 @@ let headers = {
 };
 
 let body = {
-    "type": "expedita",
-    "value": "sit",
-    "company_id": 7
+    "type": "et",
+    "value": "doloremque",
+    "company_id": 17
 }
 
 fetch(url, {
@@ -308,14 +308,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/iste" \
+    "http://localhost/api/settings/quisquam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/iste"
+    "http://localhost/api/settings/quisquam"
 );
 
 let headers = {

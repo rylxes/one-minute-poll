@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"at","company_id":14,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"et","company_id":16,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "at",
-    "company_id": 14,
+    "name": "et",
+    "company_id": 16,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -159,14 +159,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/voluptatem" \
+    -G "http://localhost/api/libraries/at" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/voluptatem"
+    "http://localhost/api/libraries/at"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/quas" \
+    "http://localhost/api/libraries/possimus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"temporibus","company_id":13,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"debitis","company_id":9,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/quas"
+    "http://localhost/api/libraries/possimus"
 );
 
 let headers = {
@@ -245,8 +245,8 @@ let headers = {
 };
 
 let body = {
-    "name": "temporibus",
-    "company_id": 13,
+    "name": "debitis",
+    "company_id": 9,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -324,14 +324,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/minima" \
+    "http://localhost/api/libraries/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/minima"
+    "http://localhost/api/libraries/et"
 );
 
 let headers = {
