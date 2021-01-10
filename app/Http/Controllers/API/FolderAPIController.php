@@ -57,7 +57,7 @@ class FolderAPIController extends AppBaseController
         $input = $request->all();
 
         $folder = $this->folderRepository->create($input);
-
+        $folder->library()->attach($input['library_id']);
         return $this->sendResponse($folder->toArray(), 'Folder saved successfully');
     }
 

@@ -24,6 +24,10 @@ class CreateFolderAPIRequest extends APIRequest
      */
     public function rules()
     {
-        return Folder::$rules;
+        return [
+            'name' => 'required|string|max:255',
+            'library_id' => 'required|exists:library,id',
+            'parent_id' => 'nullable|integer'
+        ];
     }
 }

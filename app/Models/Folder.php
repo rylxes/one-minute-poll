@@ -66,6 +66,11 @@ class Folder extends Model
     ];
 
 
+    public function library()
+    {
+        return $this->belongsToMany(Library::class, 'library_folder');
+    }
+
     protected static function boot()
     {
         parent::boot();
