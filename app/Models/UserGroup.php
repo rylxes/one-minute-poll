@@ -20,7 +20,7 @@ class UserGroup extends Model
     use HasFactory;
 
     public $table = 'user_groups';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -51,9 +51,8 @@ class UserGroup extends Model
     public static $rules = [
         'user_id' => 'required|integer',
         'group_id' => 'required|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

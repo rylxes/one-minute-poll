@@ -21,7 +21,7 @@ class LibraryUsers extends Model
     use HasFactory;
 
     public $table = 'library_users';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -55,9 +55,8 @@ class LibraryUsers extends Model
         'user_id' => 'required|integer',
         'library_id' => 'required|integer',
         'is_shared' => 'required|boolean',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

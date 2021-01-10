@@ -22,7 +22,7 @@ class Company extends Model
     use HasFactory;
 
     public $table = 'companies';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -59,9 +59,7 @@ class Company extends Model
         'description' => 'nullable|string|max:255',
         'email' => 'nullable|string|max:255',
         'phone' => 'nullable|string|max:255',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
     ];
 
-    
+
 }

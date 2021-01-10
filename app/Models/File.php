@@ -23,7 +23,7 @@ class File extends Model
     use HasFactory;
 
     public $table = 'file';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -31,9 +31,9 @@ class File extends Model
 
 
     public $fillable = [
-        'library_id',
         'url',
         'name',
+        'company_id',
         'is_lock',
         'is_favourite'
     ];
@@ -45,10 +45,10 @@ class File extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'library_id' => 'integer',
         'url' => 'string',
         'name' => 'string',
         'is_lock' => 'boolean',
+        'company_id' => 'boolean',
         'is_favourite' => 'boolean'
     ];
 
@@ -58,14 +58,12 @@ class File extends Model
      * @var array
      */
     public static $rules = [
-        'library_id' => 'required|integer',
         'url' => 'required|string|max:255',
         'name' => 'required|string|max:255',
         'is_lock' => 'required|boolean',
-        'is_favourite' => 'required|boolean',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+        'company_id' => 'required|integer',
+        'is_favourite' => 'required|boolean'
     ];
 
-    
+
 }

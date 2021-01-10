@@ -21,7 +21,7 @@ class Setting extends Model
     use HasFactory;
 
     public $table = 'settings';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -55,9 +55,8 @@ class Setting extends Model
         'type' => 'nullable|string|max:255',
         'value' => 'nullable|string|max:255',
         'company_id' => 'required|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

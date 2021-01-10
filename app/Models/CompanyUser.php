@@ -20,7 +20,7 @@ class CompanyUser extends Model
     use HasFactory;
 
     public $table = 'company_user';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -51,9 +51,8 @@ class CompanyUser extends Model
     public static $rules = [
         'company_id' => 'required|integer',
         'user_id' => 'required|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

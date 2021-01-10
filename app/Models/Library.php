@@ -22,7 +22,7 @@ class Library extends Model
     use HasFactory;
 
     public $table = 'library';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -59,10 +59,8 @@ class Library extends Model
         'company_id' => 'required|integer',
         'is_encrypted' => 'required|boolean',
         'is_favourite' => 'required|boolean',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable',
-        'deleted_at' => 'nullable'
+
     ];
 
-    
+
 }

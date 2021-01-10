@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"molestiae","company_id":13,"is_encrypted":false,"is_favourite":false,"created_at":{},"updated_at":{},"deleted_at":{}}'
+    -d '{"name":"architecto","company_id":1,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -91,13 +91,10 @@ let headers = {
 };
 
 let body = {
-    "name": "molestiae",
-    "company_id": 13,
+    "name": "architecto",
+    "company_id": 1,
     "is_encrypted": false,
-    "is_favourite": false,
-    "created_at": {},
-    "updated_at": {},
-    "deleted_at": {}
+    "is_favourite": false
 }
 
 fetch(url, {
@@ -150,21 +147,6 @@ fetch(url, {
 <label data-endpoint="POSTapi-libraries" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="POSTapi-libraries" data-component="body" required ><code>false</code></label>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-libraries" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-libraries" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>deleted_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="deleted_at" data-endpoint="POSTapi-libraries" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -178,14 +160,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/qui" \
+    -G "http://localhost/api/libraries/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/qui"
+    "http://localhost/api/libraries/vitae"
 );
 
 let headers = {
@@ -246,16 +228,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/suscipit" \
+    "http://localhost/api/libraries/culpa" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"omnis","company_id":15,"is_encrypted":false,"is_favourite":false,"created_at":{},"updated_at":{},"deleted_at":{}}'
+    -d '{"name":"omnis","company_id":7,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/suscipit"
+    "http://localhost/api/libraries/culpa"
 );
 
 let headers = {
@@ -265,12 +247,9 @@ let headers = {
 
 let body = {
     "name": "omnis",
-    "company_id": 15,
+    "company_id": 7,
     "is_encrypted": false,
-    "is_favourite": false,
-    "created_at": {},
-    "updated_at": {},
-    "deleted_at": {}
+    "is_favourite": false
 }
 
 fetch(url, {
@@ -333,21 +312,6 @@ fetch(url, {
 <label data-endpoint="PUTapi-libraries--library-" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="PUTapi-libraries--library-" data-component="body" required ><code>false</code></label>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-libraries--library-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-libraries--library-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>deleted_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="deleted_at" data-endpoint="PUTapi-libraries--library-" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -361,14 +325,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/cum" \
+    "http://localhost/api/libraries/incidunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/cum"
+    "http://localhost/api/libraries/incidunt"
 );
 
 let headers = {

@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":9,"url":"eos","name":"assumenda","is_lock":false,"is_favourite":false,"created_at":{},"updated_at":{}}'
+    -d '{"url":"eos","name":"eos","is_lock":false,"company_id":9,"is_favourite":false}'
 
 ```
 
@@ -91,13 +91,11 @@ let headers = {
 };
 
 let body = {
-    "library_id": 9,
     "url": "eos",
-    "name": "assumenda",
+    "name": "eos",
     "is_lock": false,
-    "is_favourite": false,
-    "created_at": {},
-    "updated_at": {}
+    "company_id": 9,
+    "is_favourite": false
 }
 
 fetch(url, {
@@ -129,11 +127,6 @@ fetch(url, {
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>library_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="library_id" data-endpoint="POSTapi-files" data-component="body" required  hidden>
-<br>
-</p>
-<p>
 <b><code>url</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="url" data-endpoint="POSTapi-files" data-component="body" required  hidden>
 <br>
@@ -150,19 +143,14 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="company_id" data-endpoint="POSTapi-files" data-component="body" required  hidden>
+<br>
+</p>
+<p>
 <b><code>is_favourite</code></b>&nbsp;&nbsp;<small>boolean</small>  &nbsp;
 <label data-endpoint="POSTapi-files" hidden><input type="radio" name="is_favourite" value="true" data-endpoint="POSTapi-files" data-component="body" required ><code>true</code></label>
 <label data-endpoint="POSTapi-files" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="POSTapi-files" data-component="body" required ><code>false</code></label>
-<br>
-</p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-files" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-files" data-component="body"  hidden>
 <br>
 </p>
 
@@ -178,14 +166,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/ut" \
+    -G "http://localhost/api/files/eligendi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/ut"
+    "http://localhost/api/files/eligendi"
 );
 
 let headers = {
@@ -246,16 +234,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/nihil" \
+    "http://localhost/api/files/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":8,"url":"nesciunt","name":"voluptas","is_lock":false,"is_favourite":false,"created_at":{},"updated_at":{}}'
+    -d '{"url":"exercitationem","name":"similique","is_lock":false,"company_id":17,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/nihil"
+    "http://localhost/api/files/aut"
 );
 
 let headers = {
@@ -264,13 +252,11 @@ let headers = {
 };
 
 let body = {
-    "library_id": 8,
-    "url": "nesciunt",
-    "name": "voluptas",
+    "url": "exercitationem",
+    "name": "similique",
     "is_lock": false,
-    "is_favourite": false,
-    "created_at": {},
-    "updated_at": {}
+    "company_id": 17,
+    "is_favourite": false
 }
 
 fetch(url, {
@@ -312,11 +298,6 @@ fetch(url, {
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>library_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="library_id" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
-<br>
-</p>
-<p>
 <b><code>url</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="url" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
 <br>
@@ -333,19 +314,14 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="company_id" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
+<br>
+</p>
+<p>
 <b><code>is_favourite</code></b>&nbsp;&nbsp;<small>boolean</small>  &nbsp;
 <label data-endpoint="PUTapi-files--file-" hidden><input type="radio" name="is_favourite" value="true" data-endpoint="PUTapi-files--file-" data-component="body" required ><code>true</code></label>
 <label data-endpoint="PUTapi-files--file-" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="PUTapi-files--file-" data-component="body" required ><code>false</code></label>
-<br>
-</p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-files--file-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-files--file-" data-component="body"  hidden>
 <br>
 </p>
 
@@ -361,14 +337,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/dignissimos" \
+    "http://localhost/api/files/corrupti" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/dignissimos"
+    "http://localhost/api/files/corrupti"
 );
 
 let headers = {

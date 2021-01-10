@@ -21,7 +21,7 @@ class LibraryGroup extends Model
     use HasFactory;
 
     public $table = 'library_groups';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -55,9 +55,8 @@ class LibraryGroup extends Model
         'library_id' => 'required|integer',
         'group_id' => 'required|integer',
         'is_shared' => 'required|boolean',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

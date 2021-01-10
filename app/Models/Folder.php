@@ -33,9 +33,9 @@ class Folder extends Model
 
     public $fillable = [
         'name',
-        'file_id',
         '_lft',
         '_rgt',
+        'company_id',
         'parent_id'
     ];
 
@@ -47,10 +47,10 @@ class Folder extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
-        'file_id' => 'integer',
         '_lft' => 'integer',
         '_rgt' => 'integer',
-        'parent_id' => 'integer'
+        'parent_id' => 'integer',
+        'company_id' => 'integer'
     ];
 
     /**
@@ -60,12 +60,10 @@ class Folder extends Model
      */
     public static $rules = [
         'name' => 'required|string|max:255',
-        'file_id' => 'required|integer',
         '_lft' => 'required|integer',
         '_rgt' => 'required|integer',
         'parent_id' => 'nullable|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+        'company_id' => 'required|integer'
     ];
 
 

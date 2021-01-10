@@ -20,7 +20,7 @@ class FileComments extends Model
     use HasFactory;
 
     public $table = 'file_comments';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -51,9 +51,8 @@ class FileComments extends Model
     public static $rules = [
         'file_id' => 'required|integer',
         'comment' => 'required|string|max:255',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

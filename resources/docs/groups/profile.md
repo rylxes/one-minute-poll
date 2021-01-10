@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"architecto","last_name":"delectus","user_id":8,"avatar":"fugiat","created_at":{},"updated_at":{}}'
+    -d '{"first_name":"sunt","last_name":"sunt","user_id":9,"avatar":"modi"}'
 
 ```
 
@@ -91,12 +91,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "architecto",
-    "last_name": "delectus",
-    "user_id": 8,
-    "avatar": "fugiat",
-    "created_at": {},
-    "updated_at": {}
+    "first_name": "sunt",
+    "last_name": "sunt",
+    "user_id": 9,
+    "avatar": "modi"
 }
 
 fetch(url, {
@@ -147,16 +145,6 @@ fetch(url, {
 <input type="text" name="avatar" data-endpoint="POSTapi-profiles" data-component="body"  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-profiles" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-profiles" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -170,14 +158,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/voluptatem" \
+    -G "http://localhost/api/profiles/perspiciatis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/voluptatem"
+    "http://localhost/api/profiles/perspiciatis"
 );
 
 let headers = {
@@ -238,16 +226,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/quia" \
+    "http://localhost/api/profiles/molestiae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sequi","last_name":"ex","user_id":16,"avatar":"laudantium","created_at":{},"updated_at":{}}'
+    -d '{"first_name":"deleniti","last_name":"id","user_id":6,"avatar":"totam"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/quia"
+    "http://localhost/api/profiles/molestiae"
 );
 
 let headers = {
@@ -256,12 +244,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sequi",
-    "last_name": "ex",
-    "user_id": 16,
-    "avatar": "laudantium",
-    "created_at": {},
-    "updated_at": {}
+    "first_name": "deleniti",
+    "last_name": "id",
+    "user_id": 6,
+    "avatar": "totam"
 }
 
 fetch(url, {
@@ -322,16 +308,6 @@ fetch(url, {
 <input type="text" name="avatar" data-endpoint="PUTapi-profiles--profile-" data-component="body"  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-profiles--profile-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-profiles--profile-" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -345,14 +321,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/dolores" \
+    "http://localhost/api/profiles/nihil" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/dolores"
+    "http://localhost/api/profiles/nihil"
 );
 
 let headers = {

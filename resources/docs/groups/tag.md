@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"mollitia","colour":"et","company_id":17,"created_at":{},"updated_at":{}}'
+    -d '{"name":"repellendus","colour":"possimus","company_id":18}'
 
 ```
 
@@ -91,11 +91,9 @@ let headers = {
 };
 
 let body = {
-    "name": "mollitia",
-    "colour": "et",
-    "company_id": 17,
-    "created_at": {},
-    "updated_at": {}
+    "name": "repellendus",
+    "colour": "possimus",
+    "company_id": 18
 }
 
 fetch(url, {
@@ -141,16 +139,6 @@ fetch(url, {
 <input type="number" name="company_id" data-endpoint="POSTapi-tags" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-tags" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-tags" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -164,14 +152,14 @@ GET|HEAD /tags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/tags/officiis" \
+    -G "http://localhost/api/tags/consequatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/officiis"
+    "http://localhost/api/tags/consequatur"
 );
 
 let headers = {
@@ -232,16 +220,16 @@ PUT/PATCH /tags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/tags/qui" \
+    "http://localhost/api/tags/in" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nam","colour":"iste","company_id":18,"created_at":{},"updated_at":{}}'
+    -d '{"name":"ex","colour":"velit","company_id":4}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/qui"
+    "http://localhost/api/tags/in"
 );
 
 let headers = {
@@ -250,11 +238,9 @@ let headers = {
 };
 
 let body = {
-    "name": "nam",
-    "colour": "iste",
-    "company_id": 18,
-    "created_at": {},
-    "updated_at": {}
+    "name": "ex",
+    "colour": "velit",
+    "company_id": 4
 }
 
 fetch(url, {
@@ -310,16 +296,6 @@ fetch(url, {
 <input type="number" name="company_id" data-endpoint="PUTapi-tags--tag-" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-tags--tag-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-tags--tag-" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -333,14 +309,14 @@ DELETE /tags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/tags/quae" \
+    "http://localhost/api/tags/enim" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/quae"
+    "http://localhost/api/tags/enim"
 );
 
 let headers = {

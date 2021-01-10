@@ -22,7 +22,7 @@ class Profile extends Model
     use HasFactory;
 
     public $table = 'profiles';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -59,9 +59,8 @@ class Profile extends Model
         'last_name' => 'required|string|max:255',
         'user_id' => 'required|integer',
         'avatar' => 'nullable|string|max:255',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

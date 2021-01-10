@@ -20,7 +20,7 @@ class FileTags extends Model
     use HasFactory;
 
     public $table = 'file_tags';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -51,9 +51,8 @@ class FileTags extends Model
     public static $rules = [
         'file_id' => 'required|integer',
         'tag_id' => 'required|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

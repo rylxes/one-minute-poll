@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"nulla","value":"nulla","company_id":18,"created_at":{},"updated_at":{}}'
+    -d '{"type":"quo","value":"nihil","company_id":17}'
 
 ```
 
@@ -91,11 +91,9 @@ let headers = {
 };
 
 let body = {
-    "type": "nulla",
-    "value": "nulla",
-    "company_id": 18,
-    "created_at": {},
-    "updated_at": {}
+    "type": "quo",
+    "value": "nihil",
+    "company_id": 17
 }
 
 fetch(url, {
@@ -141,16 +139,6 @@ fetch(url, {
 <input type="number" name="company_id" data-endpoint="POSTapi-settings" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-settings" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-settings" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -164,14 +152,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/quia" \
+    -G "http://localhost/api/settings/totam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/quia"
+    "http://localhost/api/settings/totam"
 );
 
 let headers = {
@@ -232,16 +220,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/cupiditate" \
+    "http://localhost/api/settings/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"voluptates","value":"qui","company_id":15,"created_at":{},"updated_at":{}}'
+    -d '{"type":"doloremque","value":"enim","company_id":18}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/cupiditate"
+    "http://localhost/api/settings/voluptatem"
 );
 
 let headers = {
@@ -250,11 +238,9 @@ let headers = {
 };
 
 let body = {
-    "type": "voluptates",
-    "value": "qui",
-    "company_id": 15,
-    "created_at": {},
-    "updated_at": {}
+    "type": "doloremque",
+    "value": "enim",
+    "company_id": 18
 }
 
 fetch(url, {
@@ -310,16 +296,6 @@ fetch(url, {
 <input type="number" name="company_id" data-endpoint="PUTapi-settings--setting-" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-settings--setting-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-settings--setting-" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -333,14 +309,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/nesciunt" \
+    "http://localhost/api/settings/temporibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/nesciunt"
+    "http://localhost/api/settings/temporibus"
 );
 
 let headers = {

@@ -21,7 +21,7 @@ class Tag extends Model
     use HasFactory;
 
     public $table = 'tags';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -55,9 +55,8 @@ class Tag extends Model
         'name' => 'required|string|max:255',
         'colour' => 'nullable|string|max:255',
         'company_id' => 'required|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

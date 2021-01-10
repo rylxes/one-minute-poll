@@ -76,7 +76,7 @@ curl -X POST \
     "http://localhost/api/folders" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"repellat","file_id":15,"_lft":7,"_rgt":20,"parent_id":4,"created_at":{},"updated_at":{}}'
+    -d '{"name":"aut","_lft":6,"_rgt":15,"parent_id":3,"company_id":5}'
 
 ```
 
@@ -91,13 +91,11 @@ let headers = {
 };
 
 let body = {
-    "name": "repellat",
-    "file_id": 15,
-    "_lft": 7,
-    "_rgt": 20,
-    "parent_id": 4,
-    "created_at": {},
-    "updated_at": {}
+    "name": "aut",
+    "_lft": 6,
+    "_rgt": 15,
+    "parent_id": 3,
+    "company_id": 5
 }
 
 fetch(url, {
@@ -134,11 +132,6 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>file_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="file_id" data-endpoint="POSTapi-folders" data-component="body" required  hidden>
-<br>
-</p>
-<p>
 <b><code>_lft</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
 <input type="number" name="_lft" data-endpoint="POSTapi-folders" data-component="body" required  hidden>
 <br>
@@ -154,13 +147,8 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-folders" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-folders" data-component="body"  hidden>
+<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="company_id" data-endpoint="POSTapi-folders" data-component="body" required  hidden>
 <br>
 </p>
 
@@ -176,14 +164,14 @@ GET|HEAD /folders/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folders/necessitatibus" \
+    -G "http://localhost/api/folders/iusto" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/necessitatibus"
+    "http://localhost/api/folders/iusto"
 );
 
 let headers = {
@@ -244,16 +232,16 @@ PUT/PATCH /folders/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folders/nihil" \
+    "http://localhost/api/folders/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ex","file_id":12,"_lft":8,"_rgt":11,"parent_id":19,"created_at":{},"updated_at":{}}'
+    -d '{"name":"vel","_lft":1,"_rgt":9,"parent_id":4,"company_id":15}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/nihil"
+    "http://localhost/api/folders/asperiores"
 );
 
 let headers = {
@@ -262,13 +250,11 @@ let headers = {
 };
 
 let body = {
-    "name": "ex",
-    "file_id": 12,
-    "_lft": 8,
-    "_rgt": 11,
-    "parent_id": 19,
-    "created_at": {},
-    "updated_at": {}
+    "name": "vel",
+    "_lft": 1,
+    "_rgt": 9,
+    "parent_id": 4,
+    "company_id": 15
 }
 
 fetch(url, {
@@ -315,11 +301,6 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>file_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="file_id" data-endpoint="PUTapi-folders--folder-" data-component="body" required  hidden>
-<br>
-</p>
-<p>
 <b><code>_lft</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
 <input type="number" name="_lft" data-endpoint="PUTapi-folders--folder-" data-component="body" required  hidden>
 <br>
@@ -335,13 +316,8 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-folders--folder-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-folders--folder-" data-component="body"  hidden>
+<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="company_id" data-endpoint="PUTapi-folders--folder-" data-component="body" required  hidden>
 <br>
 </p>
 
@@ -357,14 +333,14 @@ DELETE /folders/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folders/ut" \
+    "http://localhost/api/folders/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/ut"
+    "http://localhost/api/folders/quia"
 );
 
 let headers = {
