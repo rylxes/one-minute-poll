@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folders" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"laudantium","parent_id":5}'
+    -d '{"name":"nulla","library_id":"sit","parent_id":14}'
 
 ```
 
@@ -90,8 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "laudantium",
-    "parent_id": 5
+    "name": "nulla",
+    "library_id": "sit",
+    "parent_id": 14
 }
 
 fetch(url, {
@@ -128,6 +129,11 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>library_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="library_id" data-endpoint="POSTapi-folders" data-component="body" required  hidden>
+<br>
+</p>
+<p>
 <b><code>parent_id</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
 <input type="number" name="parent_id" data-endpoint="POSTapi-folders" data-component="body"  hidden>
 <br>
@@ -145,14 +151,14 @@ GET|HEAD /folders/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folders/velit" \
+    -G "http://localhost/api/folders/minus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/velit"
+    "http://localhost/api/folders/minus"
 );
 
 let headers = {
@@ -213,16 +219,16 @@ PUT/PATCH /folders/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folders/eveniet" \
+    "http://localhost/api/folders/fugiat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"et","parent_id":13}'
+    -d '{"name":"facilis","parent_id":17}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/eveniet"
+    "http://localhost/api/folders/fugiat"
 );
 
 let headers = {
@@ -231,8 +237,8 @@ let headers = {
 };
 
 let body = {
-    "name": "et",
-    "parent_id": 13
+    "name": "facilis",
+    "parent_id": 17
 }
 
 fetch(url, {
@@ -296,14 +302,14 @@ DELETE /folders/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folders/ut" \
+    "http://localhost/api/folders/molestias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/ut"
+    "http://localhost/api/folders/molestias"
 );
 
 let headers = {

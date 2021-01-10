@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"et","company_id":16,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"molestiae","company_id":8,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "et",
-    "company_id": 16,
+    "name": "molestiae",
+    "company_id": 8,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -159,14 +159,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/at" \
+    -G "http://localhost/api/libraries/enim" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/at"
+    "http://localhost/api/libraries/enim"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/possimus" \
+    "http://localhost/api/libraries/nesciunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"debitis","company_id":9,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"rerum","company_id":8,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/possimus"
+    "http://localhost/api/libraries/nesciunt"
 );
 
 let headers = {
@@ -245,8 +245,8 @@ let headers = {
 };
 
 let body = {
-    "name": "debitis",
-    "company_id": 9,
+    "name": "rerum",
+    "company_id": 8,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -324,14 +324,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/et" \
+    "http://localhost/api/libraries/labore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/et"
+    "http://localhost/api/libraries/labore"
 );
 
 let headers = {

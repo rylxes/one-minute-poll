@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ut","folder_id":"saepe"}'
+    -d '{"name":"minima","folder_id":"laudantium"}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "ut",
-    "folder_id": "saepe"
+    "name": "minima",
+    "folder_id": "laudantium"
 }
 
 fetch(url, {
@@ -145,14 +145,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/est" \
+    -G "http://localhost/api/files/distinctio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/est"
+    "http://localhost/api/files/distinctio"
 );
 
 let headers = {
@@ -213,16 +213,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/soluta" \
+    "http://localhost/api/files/dolorem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"url":"vel","name":"omnis","is_lock":false,"company_id":17,"is_favourite":false}'
+    -d '{"url":"occaecati","name":"exercitationem","is_lock":false,"company_id":14,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/soluta"
+    "http://localhost/api/files/dolorem"
 );
 
 let headers = {
@@ -231,10 +231,10 @@ let headers = {
 };
 
 let body = {
-    "url": "vel",
-    "name": "omnis",
+    "url": "occaecati",
+    "name": "exercitationem",
     "is_lock": false,
-    "company_id": 17,
+    "company_id": 14,
     "is_favourite": false
 }
 
@@ -316,14 +316,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/quasi" \
+    "http://localhost/api/files/eum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/quasi"
+    "http://localhost/api/files/eum"
 );
 
 let headers = {
@@ -376,14 +376,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/inventore" \
+    -G "http://localhost/api/files/byFolder/ea" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/inventore"
+    "http://localhost/api/files/byFolder/ea"
 );
 
 let headers = {

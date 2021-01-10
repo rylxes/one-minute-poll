@@ -91,7 +91,7 @@ curl -X POST \
     "http://localhost/api/folder_files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":18,"folder_id":15}'
+    -d '{"file_id":19,"folder_id":11}'
 
 ```
 
@@ -106,8 +106,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 18,
-    "folder_id": 15
+    "file_id": 19,
+    "folder_id": 11
 }
 
 fetch(url, {
@@ -161,14 +161,14 @@ GET|HEAD /folderFiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_files/dolorum" \
+    -G "http://localhost/api/folder_files/esse" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/dolorum"
+    "http://localhost/api/folder_files/esse"
 );
 
 let headers = {
@@ -229,16 +229,16 @@ PUT/PATCH /folderFiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_files/dolor" \
+    "http://localhost/api/folder_files/ipsa" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":9,"folder_id":10}'
+    -d '{"file_id":4,"folder_id":19}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/dolor"
+    "http://localhost/api/folder_files/ipsa"
 );
 
 let headers = {
@@ -247,8 +247,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 9,
-    "folder_id": 10
+    "file_id": 4,
+    "folder_id": 19
 }
 
 fetch(url, {
@@ -312,14 +312,14 @@ DELETE /folderFiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_files/ea" \
+    "http://localhost/api/folder_files/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/ea"
+    "http://localhost/api/folder_files/omnis"
 );
 
 let headers = {
