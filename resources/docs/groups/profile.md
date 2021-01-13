@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"qui","last_name":"iste","user_id":6,"avatar":"fuga"}'
+    -d '{"first_name":"magnam","last_name":"qui","user_id":10,"avatar":"modi"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "qui",
-    "last_name": "iste",
-    "user_id": 6,
-    "avatar": "fuga"
+    "first_name": "magnam",
+    "last_name": "qui",
+    "user_id": 10,
+    "avatar": "modi"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/harum" \
+    -G "http://localhost/api/profiles/quod" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/harum"
+    "http://localhost/api/profiles/quod"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/modi" \
+    "http://localhost/api/profiles/nesciunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"dolorum","last_name":"alias","user_id":13}'
+    -d '{"first_name":"atque","last_name":"vitae","user_id":13}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/modi"
+    "http://localhost/api/profiles/nesciunt"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "first_name": "dolorum",
-    "last_name": "alias",
+    "first_name": "atque",
+    "last_name": "vitae",
     "user_id": 13
 }
 
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/commodi" \
+    "http://localhost/api/profiles/ad" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/commodi"
+    "http://localhost/api/profiles/ad"
 );
 
 let headers = {

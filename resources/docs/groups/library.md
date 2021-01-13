@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aperiam","company_id":2,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"nam","company_id":14,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "aperiam",
-    "company_id": 2,
+    "name": "nam",
+    "company_id": 14,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -159,14 +159,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/dolorem" \
+    -G "http://localhost/api/libraries/laboriosam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/dolorem"
+    "http://localhost/api/libraries/laboriosam"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/omnis" \
+    "http://localhost/api/libraries/odit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"similique","company_id":12,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"et","company_id":15,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/omnis"
+    "http://localhost/api/libraries/odit"
 );
 
 let headers = {
@@ -245,8 +245,8 @@ let headers = {
 };
 
 let body = {
-    "name": "similique",
-    "company_id": 12,
+    "name": "et",
+    "company_id": 15,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -324,14 +324,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/rerum" \
+    "http://localhost/api/libraries/quidem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/rerum"
+    "http://localhost/api/libraries/quidem"
 );
 
 let headers = {

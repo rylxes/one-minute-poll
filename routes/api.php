@@ -34,6 +34,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('email/resend', 'App\Http\Controllers\API\Auth\VerificationController@resend')->name('verification.resend');
 
     Route::middleware('auth:api')->group(function () {
+        Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
         Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
 
         Route::resource('settings', App\Http\Controllers\API\SettingAPIController::class);
