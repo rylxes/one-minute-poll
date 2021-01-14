@@ -29,6 +29,7 @@ class RegisterRequest extends FormRequest
             'company_name' => 'required|string|max:255',
             'company_phone' => 'required|string|max:15',
             'company_description' => 'nullable|string|max:255',
+            'has2fa' => 'nullable|boolean',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'password_confirmation' => ['required', 'string', 'min:8'],

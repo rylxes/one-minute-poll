@@ -24,10 +24,13 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'two_factor_secret',
+        'has2fa',
         'email',
         'password',
     ];
 
+    protected $fields = ['two_factor'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -35,8 +38,46 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+        'two_factor_secret',
         'remember_token',
     ];
+
+
+    /**
+     * Ecrypt the user's google_2fa secret.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function setTwoFactorSecretAttribute($value)
+    {
+        $this->attributes['two_factor_secret'] = encrypt($value);
+    }
+
+
+    /**
+     * Decrypt the user's google_2fa secret.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getTwoFactorAttribute()
+    {
+        return decrypt($this->attributes['two_factor_secret']);
+    }
+
+
+    /**
+     * Decrypt the user's google_2fa secret.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getTwoFactorSecretAttribute($value)
+    {
+        return decrypt($value);
+    }
+
 
     /**
      * The attributes that should be cast to native types.

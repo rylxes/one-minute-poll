@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nam","company_id":14,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"officiis","company_id":15,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "nam",
-    "company_id": 14,
+    "name": "officiis",
+    "company_id": 15,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -159,14 +159,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/laboriosam" \
+    -G "http://localhost/api/libraries/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/laboriosam"
+    "http://localhost/api/libraries/velit"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/odit" \
+    "http://localhost/api/libraries/tempore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"et","company_id":15,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"aut","company_id":9,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/odit"
+    "http://localhost/api/libraries/tempore"
 );
 
 let headers = {
@@ -245,8 +245,8 @@ let headers = {
 };
 
 let body = {
-    "name": "et",
-    "company_id": 15,
+    "name": "aut",
+    "company_id": 9,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -324,14 +324,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/quidem" \
+    "http://localhost/api/libraries/eligendi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/quidem"
+    "http://localhost/api/libraries/eligendi"
 );
 
 let headers = {

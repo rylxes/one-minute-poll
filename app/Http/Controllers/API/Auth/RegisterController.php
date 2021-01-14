@@ -43,9 +43,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-
-
-
+    protected $twoFactor = null;
 
 
     public function __construct(ProfileRepository $profileRepo, CompanyRepository $companyRepo)
@@ -78,11 +76,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $array = [
             'name' => $data['name'],
             'email' => $data['email'],
+            'has2fa' => $data['has2fa'],
             'password' => Hash::make($data['password']),
-        ]);
+        ];
+        if ($data['has2fa']) {
+            $array =  array_merge($array, [
+                'two_factor_secret' => $data['two_factor_secret'],
+            ]);
+        }
+        return User::create($array);
     }
 
 
@@ -105,18 +110,23 @@ class RegisterController extends Controller
             return response()->json(compact('data', 'message'));
         }
         $data = $request->all();
+        if ($request->input('has2fa')) {
+            $google2fa = app('pragmarx.google2fa');
+            $this->twoFactor = $google2fa->generateSecretKey();
+            $data["two_factor_secret"] = $this->twoFactor;
+        }
+        $data["has2fa"] = $request->input('has2fa');
         $data['name'] = $request->input('last_name') . " " . $request->input('first_name');
-
-        event(new Registered($user = $this->create($data)));
+        $user = $this->create($data);
         $data['user_id'] = $user->id;
 
-       // dd($data);
+        // dd($data);
         unset($data['password']);
         unset($data['password_confirmation']);
         unset($data['name']);
 
 
-       $this->profileRepository->create($data);
+        $this->profileRepository->create($data);
         $input['name'] = $data['company_name'];
         $input['phone'] = $data['company_phone'];
         $input['email'] = $data['email'];
@@ -126,7 +136,7 @@ class RegisterController extends Controller
             'company_id' => $company->id
         ]);
 
-
+        event(new Registered($user));
         $this->guard()->login($user);
 
         if ($response = $this->registered($request, $user)) {
@@ -134,6 +144,7 @@ class RegisterController extends Controller
         }
 
         $data = $user;
+        $data->two_factor_token = $this->twoFactor;
         $message = "Successful Registration";
         return $this->sendResponse($data, $message);
     }

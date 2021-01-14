@@ -48,6 +48,21 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            $this->username() => 'required|string',
+            'password' => 'required|string',
+        ]);
+    }
+
+    protected function validate2FA(Request $request)
+    {
+        $request->validate([
+            'secret' => 'required',
+        ]);
+    }
+
 
     /**
      * Handle a login request to the application.
@@ -58,6 +73,7 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $this->validateLogin($request);
+
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
             $this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
@@ -112,12 +128,25 @@ class LoginController extends Controller
         if ($response = $this->authenticated($request, $this->guard()->user())) {
             return $response;
         }
+        $user = Auth::user();
+        if ($user->has2fa) {
+            $this->validate2FA($request);
+            $google2fa = app('pragmarx.google2fa');
+            $secret = $request->input('secret');
+            $window = 8; // 8 keys (respectively 4 minutes) past and future
+            $valid = $google2fa->verifyKey($user->two_factor_secret, $secret, $window);
+            if(!$valid){
+                $message = "Invalid Authentication code !";
+                return $this->sendError($message);
+            }
+        }
+
 
         //dd(Auth::user());
-        $this->accessToken = Auth::user()->createToken(config('app.name'))->accessToken;
+        $this->accessToken = $user->createToken(config('app.name'))->accessToken;
 
         $data = new \stdClass();
-        $data->user = Auth::user();
+        $data->user = $user;
         $data->accessToken = $this->accessToken;
 
         $message = 'Successful Login';
