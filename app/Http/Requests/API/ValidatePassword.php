@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Library;
-use InfyOm\Generator\Request\APIRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class CreateLibraryAPIRequest extends APIRequest
+class ValidatePassword extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,11 +24,8 @@ class CreateLibraryAPIRequest extends APIRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'company_id' => 'required|integer',
-            'is_encrypted' => 'required|boolean',
-            'is_favourite' => 'required|boolean',
+            'password' => 'required|min:8',
+            'library_id' => 'required|exists:library,id',
         ];
     }
 }

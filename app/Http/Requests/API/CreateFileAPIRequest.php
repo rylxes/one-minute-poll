@@ -26,7 +26,8 @@ class CreateFileAPIRequest extends APIRequest
     {
         $rules = [];
         if (!empty($this->file('file'))) {
-            $rules['file'] = 'file|mimes:jpg,jpeg,pdf';
+            //$rules['file'] = 'file|mimes:jpg,jpeg,pdf';
+            $rules['file'] = 'file';
         }
         $otherRules = [
             'name' => 'required|string|max:255',

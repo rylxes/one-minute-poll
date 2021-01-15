@@ -33,9 +33,15 @@ class Library extends Model
 
     public $fillable = [
         'name',
+        'password',
+        'description',
         'company_id',
         'is_encrypted',
         'is_favourite'
+    ];
+
+    protected $hidden = [
+        'password'
     ];
 
     /**
@@ -46,6 +52,8 @@ class Library extends Model
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
+        'password' => 'string',
+        'description' => 'string',
         'company_id' => 'integer',
         'is_encrypted' => 'boolean',
         'is_favourite' => 'boolean'
@@ -58,10 +66,11 @@ class Library extends Model
      */
     public static $rules = [
         'name' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'password' => 'nullable|string',
         'company_id' => 'required|integer',
         'is_encrypted' => 'required|boolean',
         'is_favourite' => 'required|boolean',
-
     ];
 
     protected static function boot()

@@ -4,10 +4,12 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateLibraryAPIRequest;
 use App\Http\Requests\API\UpdateLibraryAPIRequest;
+use App\Http\Requests\API\ValidatePassword;
 use App\Models\Library;
 use App\Repositories\LibraryRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Hash;
 use Response;
 
 /**
@@ -15,7 +17,6 @@ use Response;
  * @group Library
  * @package App\Http\Controllers\API
  */
-
 class LibraryAPIController extends AppBaseController
 {
     /** @var  LibraryRepository */
@@ -56,9 +57,46 @@ class LibraryAPIController extends AppBaseController
     {
         $input = $request->all();
 
+        if ($input['is_encrypted']) {
+            $request->validate($this->passwordRules(), []);
+            $input['password'] = Hash::make($input['password']);
+        }
+
         $library = $this->libraryRepository->create($input);
 
         return $this->sendResponse($library->toArray(), 'Library saved successfully');
+    }
+
+
+    /**
+     * Validate Library's password.
+     *
+     *
+     */
+    public function validatePassword(ValidatePassword $request)
+    {
+        $input = $request->all();
+        /** @var Library $library */
+        $library = $this->libraryRepository->find($input['library_id']);
+        if (empty($library)) {
+            return $this->sendError('Library not found');
+        }
+        $isChecked =  Hash::check(
+            $input['password'], $library->password
+        );
+        if(!$isChecked){
+            return $this->sendError("The Password is Incorrect");
+        }
+        return $this->sendResponse([], 'success');
+    }
+
+
+
+    protected function passwordRules()
+    {
+        return [
+            'password' => 'required|min:8',
+        ];
     }
 
     /**
@@ -112,9 +150,9 @@ class LibraryAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sit","last_name":"et","user_id":8,"avatar":"maiores"}'
+    -d '{"first_name":"quibusdam","last_name":"omnis","user_id":9,"avatar":"laudantium"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sit",
-    "last_name": "et",
-    "user_id": 8,
-    "avatar": "maiores"
+    "first_name": "quibusdam",
+    "last_name": "omnis",
+    "user_id": 9,
+    "avatar": "laudantium"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/deleniti" \
+    -G "http://localhost/api/profiles/perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/deleniti"
+    "http://localhost/api/profiles/perferendis"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/ipsum" \
+    "http://localhost/api/profiles/enim" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"possimus","last_name":"earum","user_id":1}'
+    -d '{"first_name":"inventore","last_name":"placeat","user_id":10}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/ipsum"
+    "http://localhost/api/profiles/enim"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "possimus",
-    "last_name": "earum",
-    "user_id": 1
+    "first_name": "inventore",
+    "last_name": "placeat",
+    "user_id": 10
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/architecto" \
+    "http://localhost/api/profiles/aliquid" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/architecto"
+    "http://localhost/api/profiles/aliquid"
 );
 
 let headers = {

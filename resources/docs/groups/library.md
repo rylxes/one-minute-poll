@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"officiis","company_id":15,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"ratione","description":"iste","company_id":11,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,8 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "officiis",
-    "company_id": 15,
+    "name": "ratione",
+    "description": "iste",
+    "company_id": 11,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -130,6 +131,11 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="description" data-endpoint="POSTapi-libraries" data-component="body"  hidden>
+<br>
+</p>
+<p>
 <b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
 <input type="number" name="company_id" data-endpoint="POSTapi-libraries" data-component="body" required  hidden>
 <br>
@@ -159,14 +165,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/velit" \
+    -G "http://localhost/api/libraries/necessitatibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/velit"
+    "http://localhost/api/libraries/necessitatibus"
 );
 
 let headers = {
@@ -227,16 +233,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/tempore" \
+    "http://localhost/api/libraries/eaque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aut","company_id":9,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"aut","description":"eaque","password":"autem","company_id":9,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/tempore"
+    "http://localhost/api/libraries/eaque"
 );
 
 let headers = {
@@ -246,6 +252,8 @@ let headers = {
 
 let body = {
     "name": "aut",
+    "description": "eaque",
+    "password": "autem",
     "company_id": 9,
     "is_encrypted": false,
     "is_favourite": false
@@ -295,6 +303,16 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="description" data-endpoint="PUTapi-libraries--library-" data-component="body"  hidden>
+<br>
+</p>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="password" data-endpoint="PUTapi-libraries--library-" data-component="body"  hidden>
+<br>
+</p>
+<p>
 <b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
 <input type="number" name="company_id" data-endpoint="PUTapi-libraries--library-" data-component="body" required  hidden>
 <br>
@@ -324,14 +342,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/eligendi" \
+    "http://localhost/api/libraries/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/eligendi"
+    "http://localhost/api/libraries/aut"
 );
 
 let headers = {

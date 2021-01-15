@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nobis","folder_id":"enim"}'
+    -d '{"name":"qui","folder_id":"repellat"}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "nobis",
-    "folder_id": "enim"
+    "name": "qui",
+    "folder_id": "repellat"
 }
 
 fetch(url, {
@@ -145,14 +145,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/earum" \
+    -G "http://localhost/api/files/cumque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/earum"
+    "http://localhost/api/files/cumque"
 );
 
 let headers = {
@@ -213,16 +213,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/iusto" \
+    "http://localhost/api/files/enim" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"url":"et","name":"qui","is_lock":false,"company_id":8,"is_favourite":false}'
+    -d '{"url":"cumque","name":"cumque","is_lock":false,"company_id":4,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/iusto"
+    "http://localhost/api/files/enim"
 );
 
 let headers = {
@@ -231,10 +231,10 @@ let headers = {
 };
 
 let body = {
-    "url": "et",
-    "name": "qui",
+    "url": "cumque",
+    "name": "cumque",
     "is_lock": false,
-    "company_id": 8,
+    "company_id": 4,
     "is_favourite": false
 }
 
@@ -316,14 +316,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/architecto" \
+    "http://localhost/api/files/voluptas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/architecto"
+    "http://localhost/api/files/voluptas"
 );
 
 let headers = {
@@ -376,14 +376,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/dolorum" \
+    -G "http://localhost/api/files/byFolder/quas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/dolorum"
+    "http://localhost/api/files/byFolder/quas"
 );
 
 let headers = {

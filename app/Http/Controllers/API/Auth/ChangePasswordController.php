@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\ChangePassword;
 use App\Http\Requests\API\ResetPassword;
+use App\Http\Requests\API\ValidatePassword;
 use App\Providers\RouteServiceProvider;
 use App\Traits\ResponseTrait;
 use Illuminate\Foundation\Auth\ResetsPasswords;
@@ -46,6 +47,8 @@ class ChangePasswordController extends Controller
             'password' => 'required|confirmed|min:8',
         ];
     }
+
+
 
     /**
      * Change user's password.
