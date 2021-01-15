@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"qui","folder_id":"repellat"}'
+    -d '{"name":"repellat","folder_id":"voluptas"}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "qui",
-    "folder_id": "repellat"
+    "name": "repellat",
+    "folder_id": "voluptas"
 }
 
 fetch(url, {
@@ -145,14 +145,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/cumque" \
+    -G "http://localhost/api/files/quibusdam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/cumque"
+    "http://localhost/api/files/quibusdam"
 );
 
 let headers = {
@@ -213,16 +213,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/enim" \
+    "http://localhost/api/files/consequatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"url":"cumque","name":"cumque","is_lock":false,"company_id":4,"is_favourite":false}'
+    -d '{"url":"ipsam","name":"esse","is_lock":false,"company_id":1,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/enim"
+    "http://localhost/api/files/consequatur"
 );
 
 let headers = {
@@ -231,10 +231,10 @@ let headers = {
 };
 
 let body = {
-    "url": "cumque",
-    "name": "cumque",
+    "url": "ipsam",
+    "name": "esse",
     "is_lock": false,
-    "company_id": 4,
+    "company_id": 1,
     "is_favourite": false
 }
 
@@ -316,14 +316,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/voluptas" \
+    "http://localhost/api/files/perspiciatis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/voluptas"
+    "http://localhost/api/files/perspiciatis"
 );
 
 let headers = {
@@ -376,14 +376,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/quas" \
+    -G "http://localhost/api/files/byFolder/amet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/quas"
+    "http://localhost/api/files/byFolder/amet"
 );
 
 let headers = {

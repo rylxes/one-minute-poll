@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ratione","description":"iste","company_id":11,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"atque","description":"molestias","company_id":20,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "ratione",
-    "description": "iste",
-    "company_id": 11,
+    "name": "atque",
+    "description": "molestias",
+    "company_id": 20,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -165,14 +165,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/necessitatibus" \
+    -G "http://localhost/api/libraries/reprehenderit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/necessitatibus"
+    "http://localhost/api/libraries/reprehenderit"
 );
 
 let headers = {
@@ -233,16 +233,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/eaque" \
+    "http://localhost/api/libraries/porro" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aut","description":"eaque","password":"autem","company_id":9,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"quae","description":"pariatur","password":"temporibus","company_id":16,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/eaque"
+    "http://localhost/api/libraries/porro"
 );
 
 let headers = {
@@ -251,10 +251,10 @@ let headers = {
 };
 
 let body = {
-    "name": "aut",
-    "description": "eaque",
-    "password": "autem",
-    "company_id": 9,
+    "name": "quae",
+    "description": "pariatur",
+    "password": "temporibus",
+    "company_id": 16,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -342,14 +342,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/aut" \
+    "http://localhost/api/libraries/consequuntur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/aut"
+    "http://localhost/api/libraries/consequuntur"
 );
 
 let headers = {
@@ -390,6 +390,79 @@ fetch(url, {
 <input type="text" name="library" data-endpoint="DELETEapi-libraries--library-" data-component="url" required  hidden>
 <br>
 </p>
+</form>
+
+
+## Validate Library&#039;s password.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/libraries/validate" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"password":"eos","library_id":"inventore"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/libraries/validate"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "password": "eos",
+    "library_id": "inventore"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-libraries-validate" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-libraries-validate"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-libraries-validate"></code></pre>
+</div>
+<div id="execution-error-POSTapi-libraries-validate" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-libraries-validate"></code></pre>
+</div>
+<form id="form-POSTapi-libraries-validate" data-method="POST" data-path="api/libraries/validate" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-libraries-validate', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-libraries-validate" onclick="tryItOut('POSTapi-libraries-validate');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-libraries-validate" onclick="cancelTryOut('POSTapi-libraries-validate');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-libraries-validate" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/libraries/validate</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password" data-endpoint="POSTapi-libraries-validate" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>library_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="library_id" data-endpoint="POSTapi-libraries-validate" data-component="body" required  hidden>
+<br>
+</p>
+
 </form>
 
 

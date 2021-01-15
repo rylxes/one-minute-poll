@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"doloribus","colour":"reprehenderit","company_id":2}'
+    -d '{"name":"culpa","colour":"provident","company_id":10}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "doloribus",
-    "colour": "reprehenderit",
-    "company_id": 2
+    "name": "culpa",
+    "colour": "provident",
+    "company_id": 10
 }
 
 fetch(url, {
@@ -151,14 +151,14 @@ GET|HEAD /tags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/tags/possimus" \
+    -G "http://localhost/api/tags/tempora" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/possimus"
+    "http://localhost/api/tags/tempora"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /tags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/tags/dicta" \
+    "http://localhost/api/tags/consequuntur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"dolor","colour":"sequi","company_id":5}'
+    -d '{"name":"et","colour":"deleniti","company_id":6}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/dicta"
+    "http://localhost/api/tags/consequuntur"
 );
 
 let headers = {
@@ -237,9 +237,9 @@ let headers = {
 };
 
 let body = {
-    "name": "dolor",
-    "colour": "sequi",
-    "company_id": 5
+    "name": "et",
+    "colour": "deleniti",
+    "company_id": 6
 }
 
 fetch(url, {
@@ -308,14 +308,14 @@ DELETE /tags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/tags/voluptatibus" \
+    "http://localhost/api/tags/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/tags/voluptatibus"
+    "http://localhost/api/tags/aut"
 );
 
 let headers = {

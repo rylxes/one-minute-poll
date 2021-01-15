@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"quibusdam","last_name":"omnis","user_id":9,"avatar":"laudantium"}'
+    -d '{"first_name":"ullam","last_name":"minima","user_id":6,"avatar":"quia"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "quibusdam",
-    "last_name": "omnis",
-    "user_id": 9,
-    "avatar": "laudantium"
+    "first_name": "ullam",
+    "last_name": "minima",
+    "user_id": 6,
+    "avatar": "quia"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/perferendis" \
+    -G "http://localhost/api/profiles/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/perferendis"
+    "http://localhost/api/profiles/sunt"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/enim" \
+    "http://localhost/api/profiles/maiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"inventore","last_name":"placeat","user_id":10}'
+    -d '{"first_name":"iure","last_name":"suscipit","user_id":7}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/enim"
+    "http://localhost/api/profiles/maiores"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "inventore",
-    "last_name": "placeat",
-    "user_id": 10
+    "first_name": "iure",
+    "last_name": "suscipit",
+    "user_id": 7
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/aliquid" \
+    "http://localhost/api/profiles/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/aliquid"
+    "http://localhost/api/profiles/quis"
 );
 
 let headers = {
