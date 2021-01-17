@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "E-DMS App API Documentation",
-        "_postman_id": "2e6bf4a6-c418-457c-882e-c486f0c89820",
+        "_postman_id": "85097df7-fd19-496b-8080-6ac1f6b75b7b",
         "description": "E-DMS App API Documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"geraldine.braun@example.org\",\n    \"secret\": {},\n    \"password\": \"sint\"\n}"
+                            "raw": "{\n    \"email\": \"alia.collier@example.net\",\n    \"secret\": {},\n    \"password\": \"praesentium\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -103,7 +103,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"omnis\",\n    \"last_name\": \"soluta\",\n    \"company_name\": \"blanditiis\",\n    \"company_phone\": \"vel\",\n    \"company_description\": \"quasi\",\n    \"has2fa\": false,\n    \"email\": \"kokuneva@example.net\",\n    \"password\": \"at\",\n    \"password_confirmation\": \"natus\"\n}"
+                            "raw": "{\n    \"first_name\": \"rerum\",\n    \"last_name\": \"in\",\n    \"company_name\": \"iure\",\n    \"company_phone\": \"blanditiis\",\n    \"company_description\": \"rerum\",\n    \"has2fa\": false,\n    \"email\": \"cristina92@example.com\",\n    \"password\": \"asperiores\",\n    \"password_confirmation\": \"nihil\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -135,7 +135,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"hackett.yadira@example.org\"\n}"
+                            "raw": "{\n    \"email\": \"fae58@example.net\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -157,7 +157,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "enim",
+                                    "value": "officia",
                                     "description": ""
                                 }
                             ]
@@ -204,7 +204,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"myra08@example.org\",\n    \"password\": \"dolorum\"\n}"
+                            "raw": "{\n    \"email\": \"lucious41@example.org\",\n    \"password\": \"voluptates\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -255,13 +255,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatibus",
+                                    "value": "voluptate",
                                     "description": ""
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "aliquam",
+                                    "value": "vero",
                                     "description": ""
                                 }
                             ]
@@ -337,7 +337,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"huel.adela@example.net\",\n    \"old_password\": \"fugiat\",\n    \"password\": \"cupiditate\"\n}"
+                            "raw": "{\n    \"email\": \"pbartoletti@example.org\",\n    \"old_password\": \"libero\",\n    \"password\": \"reiciendis\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -404,7 +404,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"iste\",\n    \"description\": \"vero\",\n    \"email\": \"provident\",\n    \"phone\": \"voluptatibus\"\n}"
+                            "raw": "{\n    \"name\": \"fuga\",\n    \"description\": \"ipsum\",\n    \"email\": \"voluptatem\",\n    \"phone\": \"veritatis\"\n}"
                         },
                         "description": "POST \/companies",
                         "auth": {
@@ -426,7 +426,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "fuga",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -463,7 +463,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "tempora",
+                                    "value": "ex",
                                     "description": ""
                                 }
                             ]
@@ -481,7 +481,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"a\",\n    \"description\": \"veniam\",\n    \"email\": \"qui\",\n    \"phone\": \"odio\"\n}"
+                            "raw": "{\n    \"name\": \"ipsa\",\n    \"description\": \"corporis\",\n    \"email\": \"voluptatem\",\n    \"phone\": \"minima\"\n}"
                         },
                         "description": "PUT\/PATCH \/companies\/{id}",
                         "auth": {
@@ -503,7 +503,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "aperiam",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]
@@ -691,7 +691,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "ipsa",
+                                    "value": "fuga",
                                     "description": ""
                                 }
                             ]
@@ -815,7 +815,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "asperiores",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -852,7 +852,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "consequatur",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -976,7 +976,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "a",
+                                    "value": "quas",
                                     "description": ""
                                 }
                             ]
@@ -1145,7 +1145,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"in\",\n    \"folder_id\": \"culpa\"\n}"
+                            "raw": "{\n    \"name\": \"animi\",\n    \"folder_id\": \"error\"\n}"
                         },
                         "description": "POST \/files",
                         "auth": {
@@ -1167,7 +1167,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "aliquid",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -1204,7 +1204,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "id",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]
@@ -1222,7 +1222,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"url\": \"ullam\",\n    \"name\": \"eius\",\n    \"is_lock\": false,\n    \"company_id\": 7,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"url\": \"molestiae\",\n    \"name\": \"repellat\",\n    \"is_lock\": false,\n    \"company_id\": 8,\n    \"is_favourite\": false\n}"
                         },
                         "description": "PUT\/PATCH \/files\/{id}",
                         "auth": {
@@ -1244,7 +1244,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "eaque",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -1269,7 +1269,7 @@
                     "response": []
                 },
                 {
-                    "name": "api\/files\/byFolder\/{id}",
+                    "name": "Get All Files By Folder.",
                     "request": {
                         "url": {
                             "protocol": "http",
@@ -1281,7 +1281,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "vel",
+                                    "value": "nesciunt",
                                     "description": ""
                                 }
                             ]
@@ -1363,7 +1363,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"et\",\n    \"library_id\": \"ab\",\n    \"parent_id\": 17\n}"
+                            "raw": "{\n    \"name\": \"explicabo\",\n    \"library_id\": \"mollitia\",\n    \"parent_id\": 3\n}"
                         },
                         "description": "POST \/folders",
                         "auth": {
@@ -1385,7 +1385,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "nobis",
+                                    "value": "corrupti",
                                     "description": ""
                                 }
                             ]
@@ -1422,7 +1422,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "similique",
+                                    "value": "illum",
                                     "description": ""
                                 }
                             ]
@@ -1440,7 +1440,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"ea\",\n    \"parent_id\": 18\n}"
+                            "raw": "{\n    \"name\": \"perferendis\",\n    \"parent_id\": 13\n}"
                         },
                         "description": "PUT\/PATCH \/folders\/{id}",
                         "auth": {
@@ -1462,7 +1462,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "ut",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -1544,7 +1544,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"file_id\": 10,\n    \"folder_id\": 7\n}"
+                            "raw": "{\n    \"file_id\": 11,\n    \"folder_id\": 14\n}"
                         },
                         "description": "POST \/folderFiles",
                         "auth": {
@@ -1566,7 +1566,7 @@
                                 {
                                     "id": "folder_file",
                                     "key": "folder_file",
-                                    "value": "aspernatur",
+                                    "value": "alias",
                                     "description": ""
                                 }
                             ]
@@ -1603,7 +1603,7 @@
                                 {
                                     "id": "folder_file",
                                     "key": "folder_file",
-                                    "value": "optio",
+                                    "value": "quae",
                                     "description": ""
                                 }
                             ]
@@ -1621,7 +1621,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"file_id\": 11,\n    \"folder_id\": 17\n}"
+                            "raw": "{\n    \"file_id\": 15,\n    \"folder_id\": 15\n}"
                         },
                         "description": "PUT\/PATCH \/folderFiles\/{id}",
                         "auth": {
@@ -1643,7 +1643,7 @@
                                 {
                                     "id": "folder_file",
                                     "key": "folder_file",
-                                    "value": "quasi",
+                                    "value": "optio",
                                     "description": ""
                                 }
                             ]
@@ -1725,7 +1725,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sunt\",\n    \"description\": \"voluptatem\",\n    \"password\": \"voluptas\",\n    \"company_id\": 19,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"beatae\",\n    \"description\": \"esse\",\n    \"password\": \"voluptatem\",\n    \"company_id\": 17,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
                         },
                         "description": "POST \/libraries",
                         "auth": {
@@ -1747,7 +1747,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "quisquam",
+                                    "value": "omnis",
                                     "description": ""
                                 }
                             ]
@@ -1784,7 +1784,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "tempora",
+                                    "value": "id",
                                     "description": ""
                                 }
                             ]
@@ -1802,7 +1802,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"ab\",\n    \"description\": \"et\",\n    \"password\": \"molestias\",\n    \"company_id\": 13,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"eos\",\n    \"description\": \"voluptatem\",\n    \"password\": \"placeat\",\n    \"company_id\": 6,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
                         },
                         "description": "PUT\/PATCH \/libraries\/{id}",
                         "auth": {
@@ -1824,7 +1824,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "omnis",
+                                    "value": "quidem",
                                     "description": ""
                                 }
                             ]
@@ -1871,7 +1871,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"password\": \"aut\",\n    \"library_id\": \"laudantium\"\n}"
+                            "raw": "{\n    \"password\": \"qui\",\n    \"library_id\": \"voluptatem\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -1938,7 +1938,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"ab\",\n    \"last_name\": \"ut\",\n    \"user_id\": 4,\n    \"avatar\": \"ex\"\n}"
+                            "raw": "{\n    \"first_name\": \"perspiciatis\",\n    \"last_name\": \"doloribus\",\n    \"user_id\": 9,\n    \"avatar\": \"enim\"\n}"
                         },
                         "description": "POST \/profiles",
                         "auth": {
@@ -1960,7 +1960,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "vero",
+                                    "value": "possimus",
                                     "description": ""
                                 }
                             ]
@@ -1997,7 +1997,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "iusto",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -2015,7 +2015,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"eveniet\",\n    \"last_name\": \"laborum\",\n    \"user_id\": 13\n}"
+                            "raw": "{\n    \"first_name\": \"commodi\",\n    \"last_name\": \"et\",\n    \"user_id\": 8\n}"
                         },
                         "description": "PUT\/PATCH \/profiles\/{id}",
                         "auth": {
@@ -2037,7 +2037,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "dolores",
+                                    "value": "omnis",
                                     "description": ""
                                 }
                             ]
@@ -2119,7 +2119,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"aperiam\",\n    \"value\": \"sint\",\n    \"company_id\": 5\n}"
+                            "raw": "{\n    \"type\": \"magnam\",\n    \"value\": \"aliquam\",\n    \"company_id\": 1\n}"
                         },
                         "description": "POST \/settings",
                         "auth": {
@@ -2141,7 +2141,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "non",
+                                    "value": "consequuntur",
                                     "description": ""
                                 }
                             ]
@@ -2178,7 +2178,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "amet",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -2196,7 +2196,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"dolorem\",\n    \"value\": \"molestiae\",\n    \"company_id\": 15\n}"
+                            "raw": "{\n    \"type\": \"molestiae\",\n    \"value\": \"molestias\",\n    \"company_id\": 13\n}"
                         },
                         "description": "PUT\/PATCH \/settings\/{id}",
                         "auth": {
@@ -2218,7 +2218,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "iste",
+                                    "value": "ipsam",
                                     "description": ""
                                 }
                             ]
@@ -2300,7 +2300,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"aut\",\n    \"colour\": \"consequuntur\",\n    \"company_id\": 13\n}"
+                            "raw": "{\n    \"name\": \"deserunt\",\n    \"colour\": \"ratione\",\n    \"company_id\": 13\n}"
                         },
                         "description": "POST \/tags",
                         "auth": {
@@ -2322,7 +2322,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "quia",
+                                    "value": "magni",
                                     "description": ""
                                 }
                             ]
@@ -2359,7 +2359,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "vitae",
+                                    "value": "harum",
                                     "description": ""
                                 }
                             ]
@@ -2377,7 +2377,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"voluptatem\",\n    \"colour\": \"voluptas\",\n    \"company_id\": 19\n}"
+                            "raw": "{\n    \"name\": \"hic\",\n    \"colour\": \"assumenda\",\n    \"company_id\": 1\n}"
                         },
                         "description": "PUT\/PATCH \/tags\/{id}",
                         "auth": {
@@ -2399,7 +2399,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "dolore",
+                                    "value": "sint",
                                     "description": ""
                                 }
                             ]

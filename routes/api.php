@@ -36,6 +36,10 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
         Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
+        Route::get('folders/byLibrary/{id}', 'App\Http\Controllers\API\FileAPIController@byLibrary');
+
+
+
 
         Route::resource('settings', App\Http\Controllers\API\SettingAPIController::class);
 

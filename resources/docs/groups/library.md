@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sunt","description":"voluptatem","password":"voluptas","company_id":19,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"beatae","description":"esse","password":"voluptatem","company_id":17,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "sunt",
-    "description": "voluptatem",
-    "password": "voluptas",
-    "company_id": 19,
+    "name": "beatae",
+    "description": "esse",
+    "password": "voluptatem",
+    "company_id": 17,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -171,14 +171,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/quisquam" \
+    -G "http://localhost/api/libraries/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/quisquam"
+    "http://localhost/api/libraries/omnis"
 );
 
 let headers = {
@@ -239,16 +239,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/tempora" \
+    "http://localhost/api/libraries/id" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ab","description":"et","password":"molestias","company_id":13,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"eos","description":"voluptatem","password":"placeat","company_id":6,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/tempora"
+    "http://localhost/api/libraries/id"
 );
 
 let headers = {
@@ -257,10 +257,10 @@ let headers = {
 };
 
 let body = {
-    "name": "ab",
-    "description": "et",
-    "password": "molestias",
-    "company_id": 13,
+    "name": "eos",
+    "description": "voluptatem",
+    "password": "placeat",
+    "company_id": 6,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -348,14 +348,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/omnis" \
+    "http://localhost/api/libraries/quidem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/omnis"
+    "http://localhost/api/libraries/quidem"
 );
 
 let headers = {
@@ -411,7 +411,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"aut","library_id":"laudantium"}'
+    -d '{"password":"qui","library_id":"voluptatem"}'
 
 ```
 
@@ -426,8 +426,8 @@ let headers = {
 };
 
 let body = {
-    "password": "aut",
-    "library_id": "laudantium"
+    "password": "qui",
+    "library_id": "voluptatem"
 }
 
 fetch(url, {

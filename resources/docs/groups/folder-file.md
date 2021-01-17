@@ -52,6 +52,13 @@ fetch(url, {
             "folder_id": 1,
             "created_at": null,
             "updated_at": null
+        },
+        {
+            "id": 3,
+            "file_id": 10,
+            "folder_id": 1,
+            "created_at": null,
+            "updated_at": null
         }
     ],
     "message": "Folder Files retrieved successfully"
@@ -91,7 +98,7 @@ curl -X POST \
     "http://localhost/api/folder_files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":10,"folder_id":7}'
+    -d '{"file_id":11,"folder_id":14}'
 
 ```
 
@@ -106,8 +113,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 10,
-    "folder_id": 7
+    "file_id": 11,
+    "folder_id": 14
 }
 
 fetch(url, {
@@ -161,14 +168,14 @@ GET|HEAD /folderFiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_files/aspernatur" \
+    -G "http://localhost/api/folder_files/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/aspernatur"
+    "http://localhost/api/folder_files/alias"
 );
 
 let headers = {
@@ -229,16 +236,16 @@ PUT/PATCH /folderFiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_files/optio" \
+    "http://localhost/api/folder_files/quae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":11,"folder_id":17}'
+    -d '{"file_id":15,"folder_id":15}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/optio"
+    "http://localhost/api/folder_files/quae"
 );
 
 let headers = {
@@ -247,8 +254,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 11,
-    "folder_id": 17
+    "file_id": 15,
+    "folder_id": 15
 }
 
 fetch(url, {
@@ -312,14 +319,14 @@ DELETE /folderFiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_files/quasi" \
+    "http://localhost/api/folder_files/optio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/quasi"
+    "http://localhost/api/folder_files/optio"
 );
 
 let headers = {

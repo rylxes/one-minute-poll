@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"aperiam","value":"sint","company_id":5}'
+    -d '{"type":"magnam","value":"aliquam","company_id":1}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "type": "aperiam",
-    "value": "sint",
-    "company_id": 5
+    "type": "magnam",
+    "value": "aliquam",
+    "company_id": 1
 }
 
 fetch(url, {
@@ -151,14 +151,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/non" \
+    -G "http://localhost/api/settings/consequuntur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/non"
+    "http://localhost/api/settings/consequuntur"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/amet" \
+    "http://localhost/api/settings/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"dolorem","value":"molestiae","company_id":15}'
+    -d '{"type":"molestiae","value":"molestias","company_id":13}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/amet"
+    "http://localhost/api/settings/voluptatem"
 );
 
 let headers = {
@@ -237,9 +237,9 @@ let headers = {
 };
 
 let body = {
-    "type": "dolorem",
-    "value": "molestiae",
-    "company_id": 15
+    "type": "molestiae",
+    "value": "molestias",
+    "company_id": 13
 }
 
 fetch(url, {
@@ -308,14 +308,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/iste" \
+    "http://localhost/api/settings/ipsam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/iste"
+    "http://localhost/api/settings/ipsam"
 );
 
 let headers = {

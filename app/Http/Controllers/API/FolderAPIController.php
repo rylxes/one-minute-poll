@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateFolderAPIRequest;
 use App\Http\Requests\API\UpdateFolderAPIRequest;
+use App\Models\File;
 use App\Models\Folder;
 use App\Repositories\FolderRepository;
 use Illuminate\Http\Request;
@@ -59,6 +60,24 @@ class FolderAPIController extends AppBaseController
         $folder = $this->folderRepository->create($input);
         $folder->library()->attach($input['library_id']);
         return $this->sendResponse($folder->toArray(), 'Folder saved successfully');
+    }
+
+
+
+    /**
+     * Get All Folders By Library.
+     */
+
+
+    public function byLibrary($id)
+    {
+        $res = Folder::whereHas('library',function ($q) use ($id){
+            $q->where('library_id',$id);
+        })->get();
+        if ($res->isEmpty()) {
+            return $this->sendError('Folder not found');
+        }
+        return $this->sendResponse($res->toArray(), 'Folder retrieved successfully');
     }
 
     /**

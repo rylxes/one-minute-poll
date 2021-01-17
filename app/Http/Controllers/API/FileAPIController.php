@@ -16,7 +16,6 @@ use Response;
  * @group File
  * @package App\Http\Controllers\API
  */
-
 class FileAPIController extends AppBaseController
 {
     /** @var  FileRepository */
@@ -65,6 +64,10 @@ class FileAPIController extends AppBaseController
                 $mediaItems = $file->getMedia('Documents');
                 $input['url'] = $mediaItems[0]->getFullUrl();
                 $this->fileRepository->update($input, $file->id);
+                if (empty($file->media)) {
+                    DB::rollBack();
+                    return $this->sendError("There was an issue uploading your file");
+                }
             } catch (\Exception $exception) {
                 DB::rollBack();
                 return $this->sendError($exception->getMessage());
@@ -75,11 +78,19 @@ class FileAPIController extends AppBaseController
         return $this->sendResponse($file->toArray(), 'File saved successfully');
     }
 
+    /**
+     * Get All Files By Folder.
+     *
+     *
+     *
+     *
+     *
+     */
 
     public function byFolder($id)
     {
-        $res = File::whereHas('folder',function ($q) use ($id){
-            $q->where('folder_id',$id);
+        $res = File::whereHas('folder', function ($q) use ($id) {
+            $q->where('folder_id', $id);
         })->get();
         if ($res->isEmpty()) {
             return $this->sendError('Files not found');
@@ -139,19 +150,19 @@ class FileAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {
         /** @var File $file */
         $file = $this->fileRepository->find($id);
-
         if (empty($file)) {
             return $this->sendError('File not found');
         }
-
+        $mediaItem = $file->getMedia()->first();
+        $file->deleteMedia($mediaItem);
         $file->delete();
 
         return $this->sendSuccess('File deleted successfully');
