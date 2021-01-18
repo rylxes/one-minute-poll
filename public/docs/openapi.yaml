@@ -39,7 +39,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: alia.collier@example.net
+                                    example: qdavis@example.net
                                 secret:
                                     type: string
                                     description: ''
@@ -47,7 +47,7 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: praesentium
+                                    example: autem
                             required:
                                 - email
                                 - password
@@ -107,23 +107,23 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: rerum
+                                    example: quis
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: in
+                                    example: non
                                 company_name:
                                     type: string
                                     description: ''
-                                    example: iure
+                                    example: consequatur
                                 company_phone:
                                     type: string
                                     description: ''
-                                    example: blanditiis
+                                    example: fuga
                                 company_description:
                                     type: string
                                     description: ''
-                                    example: rerum
+                                    example: id
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -131,15 +131,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: cristina92@example.com
+                                    example: kolson@example.com
                                 password:
                                     type: string
                                     description: ''
-                                    example: asperiores
+                                    example: possimus
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: minus
                             required:
                                 - first_name
                                 - last_name
@@ -181,7 +181,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: fae58@example.net
+                                    example: lschneider@example.com
                             required:
                                 - email
             security: []
@@ -211,7 +211,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"zGBlI52yx9BpusGHwcqlrcFlS5VVlSVwUgzVtBsd\">\n            <input type=\"hidden\" name=\"token\" value=\"officia\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
+                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"z5TJqzEg1pxiylRBqBLPkE7JA8GRlPCrItE1rBSH\">\n            <input type=\"hidden\" name=\"token\" value=\"aperiam\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
             tags:
                 - Auth
             security: []
@@ -220,7 +220,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: officia
+                example: aperiam
                 required: true
                 schema:
                     type: string
@@ -256,11 +256,11 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: lucious41@example.org
+                                    example: fschmidt@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: voluptates
+                                    example: qui
                             required:
                                 - email
                                 - password
@@ -328,7 +328,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: voluptate
+                example: rerum
                 required: true
                 schema:
                     type: string
@@ -336,7 +336,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: vero
+                example: quis
                 required: true
                 schema:
                     type: string
@@ -395,15 +395,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: pbartoletti@example.org
+                                    example: vweimann@example.net
                                 old_password:
                                     type: string
                                     description: ''
-                                    example: libero
+                                    example: eum
                                 password:
                                     type: string
                                     description: ''
-                                    example: reiciendis
+                                    example: culpa
                             required:
                                 - email
                                 - old_password
@@ -475,19 +475,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: fuga
+                                    example: omnis
                                 description:
                                     type: string
                                     description: ''
-                                    example: ipsum
+                                    example: aut
                                 email:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: illum
                                 phone:
                                     type: string
                                     description: ''
-                                    example: veritatis
+                                    example: voluptas
                             required:
                                 - name
             security: []
@@ -557,19 +557,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: ipsa
+                                    example: qui
                                 description:
                                     type: string
                                     description: ''
-                                    example: corporis
+                                    example: beatae
                                 email:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: est
                                 phone:
                                     type: string
                                     description: ''
-                                    example: minima
+                                    example: enim
                             required:
                                 - name
             security: []
@@ -600,7 +600,7 @@ paths:
                 in: path
                 name: company
                 description: ''
-                example: et
+                example: suscipit
                 required: true
                 schema:
                     type: string
@@ -769,7 +769,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: fuga
+                example: officiis
                 required: true
                 schema:
                     type: string
@@ -903,7 +903,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: est
+                example: tempore
                 required: true
                 schema:
                     type: string
@@ -1027,7 +1027,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: quas
+                example: totam
                 required: true
                 schema:
                     type: string
@@ -1197,11 +1197,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: animi
+                                    example: temporibus
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: error
+                                    example: maiores
                             required:
                                 - name
                                 - folder_id
@@ -1272,11 +1272,11 @@ paths:
                                 url:
                                     type: string
                                     description: ''
-                                    example: molestiae
+                                    example: error
                                 name:
                                     type: string
                                     description: ''
-                                    example: repellat
+                                    example: incidunt
                                 is_lock:
                                     type: boolean
                                     description: ''
@@ -1284,7 +1284,7 @@ paths:
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 8
+                                    example: 7
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1320,7 +1320,7 @@ paths:
                 in: path
                 name: file
                 description: ''
-                example: velit
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -1364,7 +1364,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: nesciunt
+                example: a
                 required: true
                 schema:
                     type: string
@@ -1434,15 +1434,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: explicabo
+                                    example: sunt
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: mollitia
+                                    example: nemo
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 20
                             required:
                                 - name
                                 - library_id
@@ -1513,11 +1513,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: perferendis
+                                    example: omnis
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 19
                             required:
                                 - name
             security: []
@@ -1548,7 +1548,7 @@ paths:
                 in: path
                 name: folder
                 description: ''
-                example: corrupti
+                example: quaerat
                 required: true
                 schema:
                     type: string
@@ -1620,11 +1620,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 7
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 14
+                                    example: 1
                             required:
                                 - file_id
                                 - folder_id
@@ -1695,11 +1695,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 3
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 20
                             required:
                                 - file_id
                                 - folder_id
@@ -1731,7 +1731,7 @@ paths:
                 in: path
                 name: folder_file
                 description: ''
-                example: alias
+                example: et
                 required: true
                 schema:
                     type: string
@@ -1801,19 +1801,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: beatae
+                                    example: qui
                                 description:
                                     type: string
                                     description: ''
-                                    example: esse
+                                    example: excepturi
                                 password:
                                     type: string
                                     description: ''
-                                    example: voluptatem
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 17
+                                    example: praesentium
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -1824,7 +1820,6 @@ paths:
                                     example: false
                             required:
                                 - name
-                                - company_id
                                 - is_encrypted
                                 - is_favourite
             security: []
@@ -1894,19 +1889,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: omnis
                                 description:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: necessitatibus
                                 password:
                                     type: string
                                     description: ''
-                                    example: placeat
+                                    example: iste
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 15
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -1948,7 +1943,7 @@ paths:
                 in: path
                 name: library
                 description: ''
-                example: omnis
+                example: aut
                 required: true
                 schema:
                     type: string
@@ -1984,11 +1979,11 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: voluptatem
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: voluptatum
                             required:
                                 - password
                                 - library_id
@@ -2059,19 +2054,19 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: perspiciatis
+                                    example: sequi
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: doloribus
+                                    example: quo
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 5
                                 avatar:
                                     type: string
                                     description: ''
-                                    example: enim
+                                    example: et
                             required:
                                 - first_name
                                 - last_name
@@ -2143,15 +2138,15 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: commodi
+                                    example: natus
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: et
+                                    example: quibusdam
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 8
+                                    example: 18
                             required:
                                 - first_name
                                 - last_name
@@ -2184,7 +2179,7 @@ paths:
                 in: path
                 name: profile
                 description: ''
-                example: possimus
+                example: ut
                 required: true
                 schema:
                     type: string
@@ -2254,15 +2249,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: magnam
+                                    example: id
                                 value:
                                     type: string
                                     description: ''
-                                    example: aliquam
+                                    example: cumque
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 13
                             required:
                                 - company_id
             security: []
@@ -2332,15 +2327,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: molestiae
+                                    example: veniam
                                 value:
                                     type: string
                                     description: ''
-                                    example: molestias
+                                    example: laboriosam
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 20
                             required:
                                 - company_id
             security: []
@@ -2371,7 +2366,7 @@ paths:
                 in: path
                 name: setting
                 description: ''
-                example: consequuntur
+                example: qui
                 required: true
                 schema:
                     type: string
@@ -2441,15 +2436,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: deserunt
+                                    example: omnis
                                 colour:
                                     type: string
                                     description: ''
-                                    example: ratione
+                                    example: enim
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 16
                             required:
                                 - name
                                 - company_id
@@ -2520,15 +2515,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: hic
+                                    example: quis
                                 colour:
                                     type: string
                                     description: ''
-                                    example: assumenda
+                                    example: molestiae
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 9
                             required:
                                 - name
                                 - company_id
@@ -2560,7 +2555,7 @@ paths:
                 in: path
                 name: tag
                 description: ''
-                example: magni
+                example: accusantium
                 required: true
                 schema:
                     type: string

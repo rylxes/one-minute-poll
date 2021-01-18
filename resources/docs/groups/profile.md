@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"perspiciatis","last_name":"doloribus","user_id":9,"avatar":"enim"}'
+    -d '{"first_name":"sequi","last_name":"quo","user_id":5,"avatar":"et"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "perspiciatis",
-    "last_name": "doloribus",
-    "user_id": 9,
-    "avatar": "enim"
+    "first_name": "sequi",
+    "last_name": "quo",
+    "user_id": 5,
+    "avatar": "et"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/possimus" \
+    -G "http://localhost/api/profiles/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/possimus"
+    "http://localhost/api/profiles/ut"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/aut" \
+    "http://localhost/api/profiles/voluptatum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"commodi","last_name":"et","user_id":8}'
+    -d '{"first_name":"natus","last_name":"quibusdam","user_id":18}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/aut"
+    "http://localhost/api/profiles/voluptatum"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "commodi",
-    "last_name": "et",
-    "user_id": 8
+    "first_name": "natus",
+    "last_name": "quibusdam",
+    "user_id": 18
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/omnis" \
+    "http://localhost/api/profiles/labore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/omnis"
+    "http://localhost/api/profiles/labore"
 );
 
 let headers = {

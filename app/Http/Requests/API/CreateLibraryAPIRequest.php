@@ -28,7 +28,6 @@ class CreateLibraryAPIRequest extends APIRequest
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'password' => 'nullable|string',
-            'company_id' => 'required|integer',
             'is_encrypted' => 'required|boolean',
             'is_favourite' => 'required|boolean',
         ];

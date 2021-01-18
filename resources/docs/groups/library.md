@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"beatae","description":"esse","password":"voluptatem","company_id":17,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"qui","description":"excepturi","password":"praesentium","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,10 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "beatae",
-    "description": "esse",
-    "password": "voluptatem",
-    "company_id": 17,
+    "name": "qui",
+    "description": "excepturi",
+    "password": "praesentium",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -142,11 +141,6 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="company_id" data-endpoint="POSTapi-libraries" data-component="body" required  hidden>
-<br>
-</p>
-<p>
 <b><code>is_encrypted</code></b>&nbsp;&nbsp;<small>boolean</small>  &nbsp;
 <label data-endpoint="POSTapi-libraries" hidden><input type="radio" name="is_encrypted" value="true" data-endpoint="POSTapi-libraries" data-component="body" required ><code>true</code></label>
 <label data-endpoint="POSTapi-libraries" hidden><input type="radio" name="is_encrypted" value="false" data-endpoint="POSTapi-libraries" data-component="body" required ><code>false</code></label>
@@ -171,14 +165,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/omnis" \
+    -G "http://localhost/api/libraries/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/omnis"
+    "http://localhost/api/libraries/aut"
 );
 
 let headers = {
@@ -239,16 +233,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/id" \
+    "http://localhost/api/libraries/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"eos","description":"voluptatem","password":"placeat","company_id":6,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"omnis","description":"necessitatibus","password":"iste","company_id":15,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/id"
+    "http://localhost/api/libraries/sunt"
 );
 
 let headers = {
@@ -257,10 +251,10 @@ let headers = {
 };
 
 let body = {
-    "name": "eos",
-    "description": "voluptatem",
-    "password": "placeat",
-    "company_id": 6,
+    "name": "omnis",
+    "description": "necessitatibus",
+    "password": "iste",
+    "company_id": 15,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -348,14 +342,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/quidem" \
+    "http://localhost/api/libraries/pariatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/quidem"
+    "http://localhost/api/libraries/pariatur"
 );
 
 let headers = {
@@ -411,7 +405,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"qui","library_id":"voluptatem"}'
+    -d '{"password":"voluptatem","library_id":"voluptatum"}'
 
 ```
 
@@ -426,8 +420,8 @@ let headers = {
 };
 
 let body = {
-    "password": "qui",
-    "library_id": "voluptatem"
+    "password": "voluptatem",
+    "library_id": "voluptatum"
 }
 
 fetch(url, {
