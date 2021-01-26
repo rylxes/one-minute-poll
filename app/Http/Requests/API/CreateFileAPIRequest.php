@@ -31,6 +31,8 @@ class CreateFileAPIRequest extends APIRequest
         }
         $otherRules = [
             'name' => 'required|string|max:255',
+            'is_favourite' => 'nullable|boolean',
+            'is_lock' => 'nullable|boolean',
             'folder_id' => 'required|exists:folders,id',
         ];
         return array_merge($rules, $otherRules);

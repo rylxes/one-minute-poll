@@ -20,6 +20,7 @@ class FileAPIController extends AppBaseController
 {
     /** @var  FileRepository */
     private $fileRepository;
+    private $isFileSuccess = false;
 
     public function __construct(FileRepository $fileRepo)
     {
@@ -58,12 +59,26 @@ class FileAPIController extends AppBaseController
         $input = $request->all();
         $file = $this->fileRepository->create($input);
 
+        $__response = $this->uploadFile($request, $file);
+        if(!$this->isFileSuccess){
+            return $__response;
+        }
+        $file->folder()->attach($input['folder_id']);
+        DB::commit();
+        return $this->sendResponse($file->toArray(), 'File saved successfully');
+    }
+
+
+    function uploadFile(Request $request, File $file){
+        $this->isFileSuccess = false;
         if (!empty($request->file('file'))) {
+            $this->deleteFile($file);
             try {
                 $file->addMedia($request->file('file'))->toMediaCollection('Documents');
                 $mediaItems = $file->getMedia('Documents');
                 $input['url'] = $mediaItems[0]->getFullUrl();
                 $this->fileRepository->update($input, $file->id);
+                $this->isFileSuccess = true;
                 if (empty($file->media)) {
                     DB::rollBack();
                     return $this->sendError("There was an issue uploading your file");
@@ -73,9 +88,6 @@ class FileAPIController extends AppBaseController
                 return $this->sendError($exception->getMessage());
             }
         }
-        $file->folder()->attach($input['folder_id']);
-        DB::commit();
-        return $this->sendResponse($file->toArray(), 'File saved successfully');
     }
 
     /**
@@ -134,12 +146,17 @@ class FileAPIController extends AppBaseController
 
         /** @var File $file */
         $file = $this->fileRepository->find($id);
-
         if (empty($file)) {
             return $this->sendError('File not found');
         }
-
+        DB::beginTransaction();
         $file = $this->fileRepository->update($input, $id);
+        $__response = $this->uploadFile($request, $file);
+        if(!$this->isFileSuccess){
+            return $__response;
+        }
+        $file->folder()->attach($input['folder_id']);
+        DB::commit();
 
         return $this->sendResponse($file->toArray(), 'File updated successfully');
     }
@@ -161,10 +178,17 @@ class FileAPIController extends AppBaseController
         if (empty($file)) {
             return $this->sendError('File not found');
         }
-        $mediaItem = $file->getMedia()->first();
-        $file->deleteMedia($mediaItem);
-        $file->delete();
-
+        $this->deleteFile($file);
         return $this->sendSuccess('File deleted successfully');
+    }
+
+    function deleteFile(File $file){
+        try{
+            $mediaItem = $file->getMedia()->first();
+            $file->deleteMedia($mediaItem);
+            $file->delete();
+        }catch (\Exception $exception){
+
+        }
     }
 }
