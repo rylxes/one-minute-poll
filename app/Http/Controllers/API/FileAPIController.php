@@ -4,11 +4,15 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateFileAPIRequest;
 use App\Http\Requests\API\UpdateFileAPIRequest;
+use App\Http\Requests\API\ValidateFilePassword;
+use App\Http\Requests\API\ValidatePassword;
 use App\Models\File;
+use App\Models\Library;
 use App\Repositories\FileRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Response;
 
 /**
@@ -57,8 +61,13 @@ class FileAPIController extends AppBaseController
     {
         DB::beginTransaction();
         $input = $request->all();
-        $file = $this->fileRepository->create($input);
 
+        if ($input['is_lock']) {
+            $request->validate($this->passwordRules(), []);
+            $input['password'] = Hash::make($input['password']);
+        }
+
+        $file = $this->fileRepository->create($input);
         $__response = $this->uploadFile($request, $file);
         if(!$this->isFileSuccess){
             return $__response;
@@ -66,6 +75,13 @@ class FileAPIController extends AppBaseController
         $file->folder()->attach($input['folder_id']);
         DB::commit();
         return $this->sendResponse($file->toArray(), 'File saved successfully');
+    }
+
+    protected function passwordRules()
+    {
+        return [
+            'password' => 'required|min:8',
+        ];
     }
 
 
@@ -132,6 +148,29 @@ class FileAPIController extends AppBaseController
     }
 
     /**
+     * Validate File's password.
+     *
+     *
+     */
+    public function validatePassword(ValidateFilePassword $request)
+    {
+        $input = $request->all();
+        /** @var File $file */
+        $file = $this->fileRepository->find($input['library_id']);
+        if (empty($file)) {
+            return $this->sendError('File not found');
+        }
+
+        $isChecked =  Hash::check(
+            $input['password'], $file->password
+        );
+        if(!$isChecked){
+            return $this->sendError("The Password is Incorrect");
+        }
+        return $this->sendResponse([], 'success');
+    }
+
+    /**
      * Update the specified File in storage.
      * PUT/PATCH /files/{id}
      *
@@ -150,6 +189,10 @@ class FileAPIController extends AppBaseController
             return $this->sendError('File not found');
         }
         DB::beginTransaction();
+        if ($input['is_lock']) {
+            $request->validate($this->passwordRules(), []);
+            $input['password'] = Hash::make($input['password']);
+        }
         $file = $this->fileRepository->update($input, $id);
         $__response = $this->uploadFile($request, $file);
         if(!$this->isFileSuccess){

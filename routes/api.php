@@ -47,6 +47,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
         Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
+        Route::post('files/validate', 'App\Http\Controllers\API\FileAPIController@validatePassword');
 
         Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');

@@ -37,6 +37,7 @@ class File extends Model implements HasMedia
     public $fillable = [
         'url',
         'name',
+        'password',
         'company_id',
         'is_lock',
         'is_favourite'
@@ -51,6 +52,7 @@ class File extends Model implements HasMedia
         'id' => 'integer',
         'url' => 'string',
         'name' => 'string',
+        'password' => 'string',
         'is_lock' => 'boolean',
         'company_id' => 'boolean',
         'is_favourite' => 'boolean'
