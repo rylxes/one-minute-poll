@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"qui","description":"excepturi","password":"praesentium","is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"ad","description":"provident","password":"saepe","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "qui",
-    "description": "excepturi",
-    "password": "praesentium",
+    "name": "ad",
+    "description": "provident",
+    "password": "saepe",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -165,14 +165,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/aut" \
+    -G "http://localhost/api/libraries/aliquid" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/aut"
+    "http://localhost/api/libraries/aliquid"
 );
 
 let headers = {
@@ -233,16 +233,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/sunt" \
+    "http://localhost/api/libraries/maxime" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"omnis","description":"necessitatibus","password":"iste","company_id":15,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"sed","description":"tempora","password":"in","company_id":5,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/sunt"
+    "http://localhost/api/libraries/maxime"
 );
 
 let headers = {
@@ -251,10 +251,10 @@ let headers = {
 };
 
 let body = {
-    "name": "omnis",
-    "description": "necessitatibus",
-    "password": "iste",
-    "company_id": 15,
+    "name": "sed",
+    "description": "tempora",
+    "password": "in",
+    "company_id": 5,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -342,14 +342,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/pariatur" \
+    "http://localhost/api/libraries/neque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/pariatur"
+    "http://localhost/api/libraries/neque"
 );
 
 let headers = {
@@ -405,7 +405,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"voluptatem","library_id":"voluptatum"}'
+    -d '{"password":"vitae","library_id":"dolores"}'
 
 ```
 
@@ -420,8 +420,8 @@ let headers = {
 };
 
 let body = {
-    "password": "voluptatem",
-    "library_id": "voluptatum"
+    "password": "vitae",
+    "library_id": "dolores"
 }
 
 fetch(url, {

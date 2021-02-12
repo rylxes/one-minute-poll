@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 /**
  * Class Group
  * @package App\Models
- * @version January 10, 2021, 12:36 pm UTC
+ * @version February 12, 2021, 5:33 am UTC
  *
  * @property string $name
  * @property string $description
@@ -74,6 +74,11 @@ class Group extends Model
                 $model->company_id = Auth::user()->company->id;
             }
         });
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_groups');
     }
 
 

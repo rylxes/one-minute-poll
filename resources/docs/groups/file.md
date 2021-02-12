@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"temporibus","folder_id":"maiores"}'
+    -d '{"name":"sed","is_favourite":false,"is_lock":false,"folder_id":"quo"}'
 
 ```
 
@@ -90,8 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "temporibus",
-    "folder_id": "maiores"
+    "name": "sed",
+    "is_favourite": false,
+    "is_lock": false,
+    "folder_id": "quo"
 }
 
 fetch(url, {
@@ -128,6 +130,18 @@ fetch(url, {
 <br>
 </p>
 <p>
+<b><code>is_favourite</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+<label data-endpoint="POSTapi-files" hidden><input type="radio" name="is_favourite" value="true" data-endpoint="POSTapi-files" data-component="body" ><code>true</code></label>
+<label data-endpoint="POSTapi-files" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="POSTapi-files" data-component="body" ><code>false</code></label>
+<br>
+</p>
+<p>
+<b><code>is_lock</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+<label data-endpoint="POSTapi-files" hidden><input type="radio" name="is_lock" value="true" data-endpoint="POSTapi-files" data-component="body" ><code>true</code></label>
+<label data-endpoint="POSTapi-files" hidden><input type="radio" name="is_lock" value="false" data-endpoint="POSTapi-files" data-component="body" ><code>false</code></label>
+<br>
+</p>
+<p>
 <b><code>folder_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="folder_id" data-endpoint="POSTapi-files" data-component="body" required  hidden>
 <br>
@@ -145,14 +159,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/omnis" \
+    -G "http://localhost/api/files/laudantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/omnis"
+    "http://localhost/api/files/laudantium"
 );
 
 let headers = {
@@ -213,16 +227,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/a" \
+    "http://localhost/api/files/adipisci" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"url":"error","name":"incidunt","is_lock":false,"company_id":7,"is_favourite":false}'
+    -d '{"name":"molestiae","is_favourite":false,"is_lock":false,"folder_id":"ad"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/a"
+    "http://localhost/api/files/adipisci"
 );
 
 let headers = {
@@ -231,11 +245,10 @@ let headers = {
 };
 
 let body = {
-    "url": "error",
-    "name": "incidunt",
+    "name": "molestiae",
+    "is_favourite": false,
     "is_lock": false,
-    "company_id": 7,
-    "is_favourite": false
+    "folder_id": "ad"
 }
 
 fetch(url, {
@@ -277,13 +290,14 @@ fetch(url, {
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="url" data-endpoint="PUTapi-files--file-" data-component="body"  hidden>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
 <br>
 </p>
 <p>
-<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="name" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
+<b><code>is_favourite</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+<label data-endpoint="PUTapi-files--file-" hidden><input type="radio" name="is_favourite" value="true" data-endpoint="PUTapi-files--file-" data-component="body" ><code>true</code></label>
+<label data-endpoint="PUTapi-files--file-" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="PUTapi-files--file-" data-component="body" ><code>false</code></label>
 <br>
 </p>
 <p>
@@ -293,14 +307,8 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="company_id" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
-<br>
-</p>
-<p>
-<b><code>is_favourite</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
-<label data-endpoint="PUTapi-files--file-" hidden><input type="radio" name="is_favourite" value="true" data-endpoint="PUTapi-files--file-" data-component="body" ><code>true</code></label>
-<label data-endpoint="PUTapi-files--file-" hidden><input type="radio" name="is_favourite" value="false" data-endpoint="PUTapi-files--file-" data-component="body" ><code>false</code></label>
+<b><code>folder_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="folder_id" data-endpoint="PUTapi-files--file-" data-component="body" required  hidden>
 <br>
 </p>
 
@@ -316,14 +324,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/voluptatibus" \
+    "http://localhost/api/files/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/voluptatibus"
+    "http://localhost/api/files/ut"
 );
 
 let headers = {
@@ -376,14 +384,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/a" \
+    -G "http://localhost/api/files/byFolder/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/a"
+    "http://localhost/api/files/byFolder/qui"
 );
 
 let headers = {
@@ -432,6 +440,79 @@ fetch(url, {
 <input type="text" name="id" data-endpoint="GETapi-files-byFolder--id-" data-component="url" required  hidden>
 <br>
 </p>
+</form>
+
+
+## Validate File&#039;s password.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/files/validate" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"password":"adipisci","file_id":"ipsa"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/files/validate"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "password": "adipisci",
+    "file_id": "ipsa"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-files-validate" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-files-validate"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-files-validate"></code></pre>
+</div>
+<div id="execution-error-POSTapi-files-validate" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-files-validate"></code></pre>
+</div>
+<form id="form-POSTapi-files-validate" data-method="POST" data-path="api/files/validate" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-files-validate', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-files-validate" onclick="tryItOut('POSTapi-files-validate');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-files-validate" onclick="cancelTryOut('POSTapi-files-validate');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-files-validate" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/files/validate</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password" data-endpoint="POSTapi-files-validate" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>file_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="file_id" data-endpoint="POSTapi-files-validate" data-component="body" required  hidden>
+<br>
+</p>
+
 </form>
 
 

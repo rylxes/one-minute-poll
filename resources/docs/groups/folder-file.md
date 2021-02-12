@@ -33,35 +33,12 @@ fetch(url, {
 ```
 
 
-> Example response (200):
+> Example response (401):
 
 ```json
 {
-    "success": true,
-    "data": [
-        {
-            "id": 1,
-            "file_id": 8,
-            "folder_id": 1,
-            "created_at": null,
-            "updated_at": null
-        },
-        {
-            "id": 2,
-            "file_id": 9,
-            "folder_id": 1,
-            "created_at": null,
-            "updated_at": null
-        },
-        {
-            "id": 3,
-            "file_id": 10,
-            "folder_id": 1,
-            "created_at": null,
-            "updated_at": null
-        }
-    ],
-    "message": "Folder Files retrieved successfully"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-folder_files" hidden>
@@ -98,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folder_files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":7,"folder_id":1}'
+    -d '{"file_id":20,"folder_id":18}'
 
 ```
 
@@ -113,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 7,
-    "folder_id": 1
+    "file_id": 20,
+    "folder_id": 18
 }
 
 fetch(url, {
@@ -168,14 +145,14 @@ GET|HEAD /folderFiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_files/et" \
+    -G "http://localhost/api/folder_files/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/et"
+    "http://localhost/api/folder_files/voluptatem"
 );
 
 let headers = {
@@ -191,12 +168,12 @@ fetch(url, {
 ```
 
 
-> Example response (404):
+> Example response (401):
 
 ```json
 {
-    "success": false,
-    "message": "Folder File not found"
+    "message": "Unauthorized",
+    "status": 401
 }
 ```
 <div id="execution-results-GETapi-folder_files--folder_file-" hidden>
@@ -236,16 +213,16 @@ PUT/PATCH /folderFiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_files/reprehenderit" \
+    "http://localhost/api/folder_files/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":3,"folder_id":20}'
+    -d '{"file_id":17,"folder_id":7}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/reprehenderit"
+    "http://localhost/api/folder_files/voluptatem"
 );
 
 let headers = {
@@ -254,8 +231,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 3,
-    "folder_id": 20
+    "file_id": 17,
+    "folder_id": 7
 }
 
 fetch(url, {
@@ -319,14 +296,14 @@ DELETE /folderFiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_files/qui" \
+    "http://localhost/api/folder_files/ipsa" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/qui"
+    "http://localhost/api/folder_files/ipsa"
 );
 
 let headers = {

@@ -56,6 +56,16 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('companies', App\Http\Controllers\API\CompanyAPIController::class);
 
         Route::resource('profiles', App\Http\Controllers\API\ProfileAPIController::class);
+
+        Route::resource('folder_files', App\Http\Controllers\API\FolderFileAPIController::class);
+        Route::resource('groups', App\Http\Controllers\API\GroupAPIController::class);
+        Route::get('groups/byUser', 'App\Http\Controllers\API\GroupAPIController@byUser');
+        Route::get('groups/allUsersInGroup/{id}', 'App\Http\Controllers\API\GroupAPIController@allUsersInGroup');
+
+
+        Route::resource('plans', App\Http\Controllers\API\PlansAPIController::class);
+        Route::post('plans/subscribe', 'App\Http\Controllers\API\PlansAPIController@subscribe');
+        Route::get('plans/currentPlan', 'App\Http\Controllers\API\PlansAPIController@currentPlan');
     });
 
 });
@@ -66,4 +76,5 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
 
-Route::resource('folder_files', App\Http\Controllers\API\FolderFileAPIController::class);
+
+
