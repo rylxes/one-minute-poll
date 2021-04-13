@@ -9,6 +9,7 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
+
     /**
      * A list of the exception types that are not reported.
      *
@@ -42,14 +43,14 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
-        if(config('app.env') == 'local'){
-           // dd($exception->getMessage());
-        }
-        if ($request->wantsJson()) {   //add Accept: application/json in request
-            return $this->handleApiException($request, $exception);
-        } else {
-            $retval = parent::render($request, $exception);
-        }
+            if(config('app.env') == 'local'){
+               // dd($exception->getMessage());
+            }
+            if ($request->wantsJson()) {   //add Accept: application/json in request
+                return $this->handleApiException($request, $exception);
+            } else {
+                $retval = parent::render($request, $exception);
+            }
 
         return $retval;
     }
@@ -127,4 +128,20 @@ class Handler extends ExceptionHandler
         return response()->json($response, $statusCode);
     }
 
+    public function report(Throwable $exception)
+    {
+        if ($this->shouldReport($exception) && app()->bound('sentry')) {
+            app('sentry')->captureException($exception);
+        }
+        parent::report($exception);
+    }
+
+//    public function report(Throwable $exception)
+//    {
+//        if (app()->bound('sentry') && $this->shouldReport($exception)) {
+//            app('sentry')->captureException($exception);
+//        }
+//
+//        parent::report($exception);
+//    }
 }
