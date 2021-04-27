@@ -44,7 +44,7 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $exception)
     {
             if(config('app.env') == 'local'){
-               // dd($exception->getMessage());
+                dd($exception->getMessage());
             }
             if ($request->wantsJson()) {   //add Accept: application/json in request
                 return $this->handleApiException($request, $exception);

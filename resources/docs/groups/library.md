@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ad","description":"provident","password":"saepe","is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"illum","description":"qui","password":"consequatur","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "ad",
-    "description": "provident",
-    "password": "saepe",
+    "name": "illum",
+    "description": "qui",
+    "password": "consequatur",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -165,14 +165,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/aliquid" \
+    -G "http://localhost/api/libraries/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/aliquid"
+    "http://localhost/api/libraries/quis"
 );
 
 let headers = {
@@ -233,16 +233,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/maxime" \
+    "http://localhost/api/libraries/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sed","description":"tempora","password":"in","company_id":5,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"aut","description":"molestias","password":"molestias","company_id":16,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/maxime"
+    "http://localhost/api/libraries/est"
 );
 
 let headers = {
@@ -251,10 +251,10 @@ let headers = {
 };
 
 let body = {
-    "name": "sed",
-    "description": "tempora",
-    "password": "in",
-    "company_id": 5,
+    "name": "aut",
+    "description": "molestias",
+    "password": "molestias",
+    "company_id": 16,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -342,14 +342,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/neque" \
+    "http://localhost/api/libraries/minima" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/neque"
+    "http://localhost/api/libraries/minima"
 );
 
 let headers = {
@@ -405,7 +405,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"vitae","library_id":"dolores"}'
+    -d '{"password":"eos","library_id":"quia"}'
 
 ```
 
@@ -420,8 +420,8 @@ let headers = {
 };
 
 let body = {
-    "password": "vitae",
-    "library_id": "dolores"
+    "password": "eos",
+    "library_id": "quia"
 }
 
 fetch(url, {
@@ -460,6 +460,166 @@ fetch(url, {
 <p>
 <b><code>library_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="library_id" data-endpoint="POSTapi-libraries-validate" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Share Library to User.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/libraries/shareToUser" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"library_id":"harum","user_id":"cupiditate","password":false}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/libraries/shareToUser"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "library_id": "harum",
+    "user_id": "cupiditate",
+    "password": false
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-libraries-shareToUser" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-libraries-shareToUser"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-libraries-shareToUser"></code></pre>
+</div>
+<div id="execution-error-POSTapi-libraries-shareToUser" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-libraries-shareToUser"></code></pre>
+</div>
+<form id="form-POSTapi-libraries-shareToUser" data-method="POST" data-path="api/libraries/shareToUser" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-libraries-shareToUser', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-libraries-shareToUser" onclick="tryItOut('POSTapi-libraries-shareToUser');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-libraries-shareToUser" onclick="cancelTryOut('POSTapi-libraries-shareToUser');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-libraries-shareToUser" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/libraries/shareToUser</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>library_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="library_id" data-endpoint="POSTapi-libraries-shareToUser" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>user_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user_id" data-endpoint="POSTapi-libraries-shareToUser" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+<label data-endpoint="POSTapi-libraries-shareToUser" hidden><input type="radio" name="password" value="true" data-endpoint="POSTapi-libraries-shareToUser" data-component="body" ><code>true</code></label>
+<label data-endpoint="POSTapi-libraries-shareToUser" hidden><input type="radio" name="password" value="false" data-endpoint="POSTapi-libraries-shareToUser" data-component="body" ><code>false</code></label>
+<br>
+</p>
+
+</form>
+
+
+## Share Library to Group.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/libraries/shareToRole" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"library_id":"nemo","group_id":"magni","password":false}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/libraries/shareToRole"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "library_id": "nemo",
+    "group_id": "magni",
+    "password": false
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-libraries-shareToRole" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-libraries-shareToRole"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-libraries-shareToRole"></code></pre>
+</div>
+<div id="execution-error-POSTapi-libraries-shareToRole" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-libraries-shareToRole"></code></pre>
+</div>
+<form id="form-POSTapi-libraries-shareToRole" data-method="POST" data-path="api/libraries/shareToRole" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-libraries-shareToRole', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-libraries-shareToRole" onclick="tryItOut('POSTapi-libraries-shareToRole');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-libraries-shareToRole" onclick="cancelTryOut('POSTapi-libraries-shareToRole');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-libraries-shareToRole" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/libraries/shareToRole</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>library_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="library_id" data-endpoint="POSTapi-libraries-shareToRole" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>group_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="group_id" data-endpoint="POSTapi-libraries-shareToRole" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+<label data-endpoint="POSTapi-libraries-shareToRole" hidden><input type="radio" name="password" value="true" data-endpoint="POSTapi-libraries-shareToRole" data-component="body" ><code>true</code></label>
+<label data-endpoint="POSTapi-libraries-shareToRole" hidden><input type="radio" name="password" value="false" data-endpoint="POSTapi-libraries-shareToRole" data-component="body" ><code>false</code></label>
 <br>
 </p>
 

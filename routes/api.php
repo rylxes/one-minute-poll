@@ -35,6 +35,8 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
+        Route::post('invite', 'App\Http\Controllers\API\Auth\RegisterController@invite');
+        Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
         Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
         Route::get('folders/byLibrary/{id}', 'App\Http\Controllers\API\FileAPIController@byLibrary');
 
@@ -51,6 +53,8 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');
+        Route::post('libraries/shareToUser', 'App\Http\Controllers\API\LibraryAPIController@shareToUser');
+        Route::post('libraries/shareToRole', 'App\Http\Controllers\API\LibraryAPIController@shareToRole');
 
 
         Route::resource('companies', App\Http\Controllers\API\CompanyAPIController::class);
@@ -66,9 +70,23 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('plans', App\Http\Controllers\API\PlansAPIController::class);
         Route::post('plans/subscribe', 'App\Http\Controllers\API\PlansAPIController@subscribe');
         Route::get('plans/currentPlan', 'App\Http\Controllers\API\PlansAPIController@currentPlan');
+
+
+
+
+        Route::post('permissions/assign/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsAssign');
+        Route::post('permissions/assign/role', 'App\Http\Controllers\API\PermissionsAPIController@rolePermissionsAssign');
+        Route::resource('permissions', App\Http\Controllers\API\PermissionsAPIController::class);
+
+
+        Route::resource('roles', App\Http\Controllers\API\RolesAPIController::class);
+        Route::resource('notifications', App\Http\Controllers\API\NotificationsAPIController::class);
+        Route::resource('notification_types', App\Http\Controllers\API\NotificationTypeAPIController::class);
     });
 
 });
+
+
 
 
 

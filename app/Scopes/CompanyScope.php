@@ -22,16 +22,18 @@ class CompanyScope implements Scope
     {
         $table = $model->getTable();
         $user = auth()->user();
-        $compID = $user->company->id;
+        $compID = $user->theCompany->pluck('id')->toArray();
+
         $table = $model->getTable();
 
+        //dd($compID);
         $columns = $model
             ->getConnection()
             ->getSchemaBuilder()
             ->getColumnListing($table);
         $builder
             ->orderBy($table . '.created_at', 'desc')
-            ->where('company_id', $compID);
+            ->whereIn('company_id', $compID);
 
 
     }

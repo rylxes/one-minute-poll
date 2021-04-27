@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"samara.lakin@example.net","secret":{},"password":"illum"}'
+    -d '{"email":"amber10@example.org","secret":{},"password":"distinctio"}'
 
 ```
 
@@ -28,9 +28,9 @@ let headers = {
 };
 
 let body = {
-    "email": "samara.lakin@example.net",
+    "email": "amber10@example.org",
     "secret": {},
-    "password": "illum"
+    "password": "distinctio"
 }
 
 fetch(url, {
@@ -146,7 +146,7 @@ curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"consequatur","last_name":"voluptas","company_name":"fugiat","company_phone":"eum","company_description":"occaecati","has2fa":false,"email":"dooley.sarah@example.com","password":"voluptatum","password_confirmation":"reiciendis"}'
+    -d '{"first_name":"nisi","last_name":"qui","company_name":"laudantium","company_phone":"voluptatem","company_description":"placeat","has2fa":false,"email":"cdooley@example.com","password":"minima","password_confirmation":"quia"}'
 
 ```
 
@@ -161,15 +161,15 @@ let headers = {
 };
 
 let body = {
-    "first_name": "consequatur",
-    "last_name": "voluptas",
-    "company_name": "fugiat",
-    "company_phone": "eum",
-    "company_description": "occaecati",
+    "first_name": "nisi",
+    "last_name": "qui",
+    "company_name": "laudantium",
+    "company_phone": "voluptatem",
+    "company_description": "placeat",
     "has2fa": false,
-    "email": "dooley.sarah@example.com",
-    "password": "voluptatum",
-    "password_confirmation": "reiciendis"
+    "email": "cdooley@example.com",
+    "password": "minima",
+    "password_confirmation": "quia"
 }
 
 fetch(url, {
@@ -262,7 +262,7 @@ curl -X POST \
     "http://localhost/api/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"okon.rodrick@example.com"}'
+    -d '{"email":"berge.nicklaus@example.org"}'
 
 ```
 
@@ -277,7 +277,7 @@ let headers = {
 };
 
 let body = {
-    "email": "okon.rodrick@example.com"
+    "email": "berge.nicklaus@example.org"
 }
 
 fetch(url, {
@@ -326,14 +326,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/a" \
+    -G "http://localhost/api/password/reset/perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/a"
+    "http://localhost/api/password/reset/perferendis"
 );
 
 let headers = {
@@ -398,8 +398,8 @@ fetch(url, {
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="http://localhost/password/reset">
-            <input type="hidden" name="_token" value="XrSxjRJyxwZ58jbXjFo1iAseJsMm2sRwTBtV30HJ">
-            <input type="hidden" name="token" value="a">
+            <input type="hidden" name="_token" value="9Q0dQ04NOjStOffLE88DQLKemxUwNPQM43WF6XsL">
+            <input type="hidden" name="token" value="perferendis">
 
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -490,7 +490,7 @@ curl -X POST \
     "http://localhost/api/password/reset" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"oliver.borer@example.net","password":"velit"}'
+    -d '{"email":"bryon.predovic@example.com","password":"aut"}'
 
 ```
 
@@ -505,8 +505,8 @@ let headers = {
 };
 
 let body = {
-    "email": "oliver.borer@example.net",
-    "password": "velit"
+    "email": "bryon.predovic@example.com",
+    "password": "aut"
 }
 
 fetch(url, {
@@ -614,14 +614,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/inventore/id" \
+    -G "http://localhost/api/email/verify/facere/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/inventore/id"
+    "http://localhost/api/email/verify/facere/non"
 );
 
 let headers = {
@@ -744,7 +744,7 @@ curl -X POST \
     "http://localhost/api/password/change" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"golden.adams@example.net","old_password":"inventore","password":"optio"}'
+    -d '{"email":"king.ewald@example.com","old_password":"hic","password":"rerum"}'
 
 ```
 
@@ -759,9 +759,9 @@ let headers = {
 };
 
 let body = {
-    "email": "golden.adams@example.net",
-    "old_password": "inventore",
-    "password": "optio"
+    "email": "king.ewald@example.com",
+    "old_password": "hic",
+    "password": "rerum"
 }
 
 fetch(url, {
@@ -805,6 +805,189 @@ The value must be a valid email address.</p>
 <p>
 <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="password" data-endpoint="POSTapi-password-change" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Sends Invitation to Register.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/invite" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"company_id":"et","email":"serena.jacobs@example.org"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/invite"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "company_id": "et",
+    "email": "serena.jacobs@example.org"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-invite" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-invite"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-invite"></code></pre>
+</div>
+<div id="execution-error-POSTapi-invite" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-invite"></code></pre>
+</div>
+<form id="form-POSTapi-invite" data-method="POST" data-path="api/invite" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-invite', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-invite" onclick="tryItOut('POSTapi-invite');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-invite" onclick="cancelTryOut('POSTapi-invite');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-invite" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/invite</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>company_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="company_id" data-endpoint="POSTapi-invite" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-invite" data-component="body" required  hidden>
+<br>
+The value must be a valid email address.</p>
+
+</form>
+
+
+## This is used to register an invited user
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/registerInvite" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"company_id":"laudantium","user_id":{},"is_user":{},"name":"libero","has2fa":false,"email":"marlee.vandervort@example.org","password":"aliquam","password_confirmation":"autem"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/registerInvite"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "company_id": "laudantium",
+    "user_id": {},
+    "is_user": {},
+    "name": "libero",
+    "has2fa": false,
+    "email": "marlee.vandervort@example.org",
+    "password": "aliquam",
+    "password_confirmation": "autem"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-registerInvite" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-registerInvite"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-registerInvite"></code></pre>
+</div>
+<div id="execution-error-POSTapi-registerInvite" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-registerInvite"></code></pre>
+</div>
+<form id="form-POSTapi-registerInvite" data-method="POST" data-path="api/registerInvite" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-registerInvite', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-registerInvite" onclick="tryItOut('POSTapi-registerInvite');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-registerInvite" onclick="cancelTryOut('POSTapi-registerInvite');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-registerInvite" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/registerInvite</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>company_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="company_id" data-endpoint="POSTapi-registerInvite" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>user_id</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="user_id" data-endpoint="POSTapi-registerInvite" data-component="body"  hidden>
+<br>
+</p>
+<p>
+<b><code>is_user</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="is_user" data-endpoint="POSTapi-registerInvite" data-component="body"  hidden>
+<br>
+</p>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-registerInvite" data-component="body"  hidden>
+<br>
+</p>
+<p>
+<b><code>has2fa</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+<label data-endpoint="POSTapi-registerInvite" hidden><input type="radio" name="has2fa" value="true" data-endpoint="POSTapi-registerInvite" data-component="body" ><code>true</code></label>
+<label data-endpoint="POSTapi-registerInvite" hidden><input type="radio" name="has2fa" value="false" data-endpoint="POSTapi-registerInvite" data-component="body" ><code>false</code></label>
+<br>
+</p>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-registerInvite" data-component="body" required  hidden>
+<br>
+The value must be a valid email address.</p>
+<p>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password" data-endpoint="POSTapi-registerInvite" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="password_confirmation" data-endpoint="POSTapi-registerInvite" data-component="body" required  hidden>
 <br>
 </p>
 

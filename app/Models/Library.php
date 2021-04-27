@@ -29,8 +29,6 @@ class Library extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
-
     public $fillable = [
         'name',
         'password',
@@ -89,6 +87,20 @@ class Library extends Model
         });
     }
 
+    public function theUsers()
+    {
+        return $this->belongsToMany(User::class, 'library_users');
+    }
+
+    public function folders()
+    {
+        return $this->belongsToMany(Folder::class, 'library_folder');
+    }
+
+    public function theGroup()
+    {
+        return $this->belongsToMany(Group::class, 'library_groups');
+    }
 
 
 }

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "E-DMS App API Documentation",
-        "_postman_id": "13278069-e753-4d6e-b029-9f4cc5d10714",
+        "_postman_id": "718f20a6-503e-4001-b385-654a7edd2ab3",
         "description": "E-DMS App API Documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"samara.lakin@example.net\",\n    \"secret\": {},\n    \"password\": \"illum\"\n}"
+                            "raw": "{\n    \"email\": \"amber10@example.org\",\n    \"secret\": {},\n    \"password\": \"distinctio\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -103,7 +103,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"consequatur\",\n    \"last_name\": \"voluptas\",\n    \"company_name\": \"fugiat\",\n    \"company_phone\": \"eum\",\n    \"company_description\": \"occaecati\",\n    \"has2fa\": false,\n    \"email\": \"dooley.sarah@example.com\",\n    \"password\": \"voluptatum\",\n    \"password_confirmation\": \"reiciendis\"\n}"
+                            "raw": "{\n    \"first_name\": \"nisi\",\n    \"last_name\": \"qui\",\n    \"company_name\": \"laudantium\",\n    \"company_phone\": \"voluptatem\",\n    \"company_description\": \"placeat\",\n    \"has2fa\": false,\n    \"email\": \"cdooley@example.com\",\n    \"password\": \"minima\",\n    \"password_confirmation\": \"quia\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -135,7 +135,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"okon.rodrick@example.com\"\n}"
+                            "raw": "{\n    \"email\": \"berge.nicklaus@example.org\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -157,7 +157,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "a",
+                                    "value": "perferendis",
                                     "description": ""
                                 }
                             ]
@@ -204,7 +204,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"oliver.borer@example.net\",\n    \"password\": \"velit\"\n}"
+                            "raw": "{\n    \"email\": \"bryon.predovic@example.com\",\n    \"password\": \"aut\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -255,13 +255,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "inventore",
+                                    "value": "facere",
                                     "description": ""
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "id",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -337,7 +337,71 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"golden.adams@example.net\",\n    \"old_password\": \"inventore\",\n    \"password\": \"optio\"\n}"
+                            "raw": "{\n    \"email\": \"king.ewald@example.com\",\n    \"old_password\": \"hic\",\n    \"password\": \"rerum\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Sends Invitation to Register.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/invite",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/invite"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"company_id\": \"et\",\n    \"email\": \"serena.jacobs@example.org\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "This is used to register an invited user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/registerInvite",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/registerInvite"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"company_id\": \"laudantium\",\n    \"user_id\": {},\n    \"is_user\": {},\n    \"name\": \"libero\",\n    \"has2fa\": false,\n    \"email\": \"marlee.vandervort@example.org\",\n    \"password\": \"aliquam\",\n    \"password_confirmation\": \"autem\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -404,7 +468,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"omnis\",\n    \"description\": \"inventore\",\n    \"email\": \"eos\",\n    \"phone\": \"qui\"\n}"
+                            "raw": "{\n    \"name\": \"qui\",\n    \"description\": \"consectetur\",\n    \"email\": \"quam\",\n    \"phone\": \"libero\"\n}"
                         },
                         "description": "POST \/companies",
                         "auth": {
@@ -426,7 +490,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "repellendus",
+                                    "value": "ut",
                                     "description": ""
                                 }
                             ]
@@ -463,7 +527,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "molestias",
+                                    "value": "in",
                                     "description": ""
                                 }
                             ]
@@ -481,7 +545,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"consectetur\",\n    \"description\": \"itaque\",\n    \"email\": \"dolor\",\n    \"phone\": \"hic\"\n}"
+                            "raw": "{\n    \"name\": \"numquam\",\n    \"description\": \"ipsum\",\n    \"email\": \"quod\",\n    \"phone\": \"cumque\"\n}"
                         },
                         "description": "PUT\/PATCH \/companies\/{id}",
                         "auth": {
@@ -503,7 +567,7 @@
                                 {
                                     "id": "company",
                                     "key": "company",
-                                    "value": "quo",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -691,7 +755,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "soluta",
+                                    "value": "consequuntur",
                                     "description": ""
                                 }
                             ]
@@ -815,7 +879,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "ut",
+                                    "value": "quam",
                                     "description": ""
                                 }
                             ]
@@ -852,7 +916,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "temporibus",
+                                    "value": "iste",
                                     "description": ""
                                 }
                             ]
@@ -976,7 +1040,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "voluptas",
+                                    "value": "alias",
                                     "description": ""
                                 }
                             ]
@@ -1145,7 +1209,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sed\",\n    \"is_favourite\": false,\n    \"is_lock\": false,\n    \"folder_id\": \"quo\"\n}"
+                            "raw": "{\n    \"name\": \"perspiciatis\",\n    \"is_favourite\": false,\n    \"is_lock\": false,\n    \"folder_id\": \"consequatur\"\n}"
                         },
                         "description": "POST \/files",
                         "auth": {
@@ -1167,7 +1231,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "laudantium",
+                                    "value": "omnis",
                                     "description": ""
                                 }
                             ]
@@ -1204,7 +1268,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "adipisci",
+                                    "value": "consequatur",
                                     "description": ""
                                 }
                             ]
@@ -1222,7 +1286,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"molestiae\",\n    \"is_favourite\": false,\n    \"is_lock\": false,\n    \"folder_id\": \"ad\"\n}"
+                            "raw": "{\n    \"name\": \"ut\",\n    \"is_favourite\": false,\n    \"is_lock\": false,\n    \"folder_id\": \"odit\"\n}"
                         },
                         "description": "PUT\/PATCH \/files\/{id}",
                         "auth": {
@@ -1244,7 +1308,7 @@
                                 {
                                     "id": "file",
                                     "key": "file",
-                                    "value": "ut",
+                                    "value": "voluptatem",
                                     "description": ""
                                 }
                             ]
@@ -1281,7 +1345,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "nihil",
                                     "description": ""
                                 }
                             ]
@@ -1328,7 +1392,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"password\": \"adipisci\",\n    \"file_id\": \"ipsa\"\n}"
+                            "raw": "{\n    \"password\": \"totam\",\n    \"file_id\": \"eum\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -1395,7 +1459,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"aliquam\",\n    \"library_id\": \"aut\",\n    \"parent_id\": 6\n}"
+                            "raw": "{\n    \"name\": \"magnam\",\n    \"library_id\": \"minus\",\n    \"parent_id\": 2\n}"
                         },
                         "description": "POST \/folders",
                         "auth": {
@@ -1417,7 +1481,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "qui",
+                                    "value": "nobis",
                                     "description": ""
                                 }
                             ]
@@ -1454,7 +1518,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "qui",
+                                    "value": "quaerat",
                                     "description": ""
                                 }
                             ]
@@ -1472,7 +1536,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"est\",\n    \"parent_id\": 16\n}"
+                            "raw": "{\n    \"name\": \"adipisci\",\n    \"parent_id\": 2\n}"
                         },
                         "description": "PUT\/PATCH \/folders\/{id}",
                         "auth": {
@@ -1494,7 +1558,7 @@
                                 {
                                     "id": "folder",
                                     "key": "folder",
-                                    "value": "praesentium",
+                                    "value": "hic",
                                     "description": ""
                                 }
                             ]
@@ -1576,7 +1640,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"file_id\": 20,\n    \"folder_id\": 18\n}"
+                            "raw": "{\n    \"file_id\": 2,\n    \"folder_id\": 11\n}"
                         },
                         "description": "POST \/folderFiles",
                         "auth": {
@@ -1598,7 +1662,7 @@
                                 {
                                     "id": "folder_file",
                                     "key": "folder_file",
-                                    "value": "voluptatem",
+                                    "value": "officia",
                                     "description": ""
                                 }
                             ]
@@ -1635,7 +1699,7 @@
                                 {
                                     "id": "folder_file",
                                     "key": "folder_file",
-                                    "value": "voluptatem",
+                                    "value": "modi",
                                     "description": ""
                                 }
                             ]
@@ -1653,7 +1717,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"file_id\": 17,\n    \"folder_id\": 7\n}"
+                            "raw": "{\n    \"file_id\": 4,\n    \"folder_id\": 17\n}"
                         },
                         "description": "PUT\/PATCH \/folderFiles\/{id}",
                         "auth": {
@@ -1675,7 +1739,7 @@
                                 {
                                     "id": "folder_file",
                                     "key": "folder_file",
-                                    "value": "ipsa",
+                                    "value": "unde",
                                     "description": ""
                                 }
                             ]
@@ -1757,7 +1821,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"at\",\n    \"description\": \"voluptate\",\n    \"company_id\": 5\n}"
+                            "raw": "{\n    \"name\": \"illo\",\n    \"description\": \"dolore\",\n    \"company_id\": 9\n}"
                         },
                         "description": "POST \/groups",
                         "auth": {
@@ -1779,7 +1843,7 @@
                                 {
                                     "id": "group",
                                     "key": "group",
-                                    "value": "et",
+                                    "value": "eos",
                                     "description": ""
                                 }
                             ]
@@ -1816,7 +1880,7 @@
                                 {
                                     "id": "group",
                                     "key": "group",
-                                    "value": "exercitationem",
+                                    "value": "commodi",
                                     "description": ""
                                 }
                             ]
@@ -1834,7 +1898,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"quod\",\n    \"description\": \"porro\",\n    \"company_id\": 13\n}"
+                            "raw": "{\n    \"name\": \"tempore\",\n    \"description\": \"nemo\",\n    \"company_id\": 19\n}"
                         },
                         "description": "PUT\/PATCH \/groups\/{id}",
                         "auth": {
@@ -1856,7 +1920,7 @@
                                 {
                                     "id": "group",
                                     "key": "group",
-                                    "value": "est",
+                                    "value": "eos",
                                     "description": ""
                                 }
                             ]
@@ -1922,7 +1986,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "in",
+                                    "value": "nulla",
                                     "description": ""
                                 }
                             ]
@@ -2004,7 +2068,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"ad\",\n    \"description\": \"provident\",\n    \"password\": \"saepe\",\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"illum\",\n    \"description\": \"qui\",\n    \"password\": \"consequatur\",\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
                         },
                         "description": "POST \/libraries",
                         "auth": {
@@ -2026,7 +2090,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "aliquid",
+                                    "value": "quis",
                                     "description": ""
                                 }
                             ]
@@ -2063,7 +2127,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "maxime",
+                                    "value": "est",
                                     "description": ""
                                 }
                             ]
@@ -2081,7 +2145,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sed\",\n    \"description\": \"tempora\",\n    \"password\": \"in\",\n    \"company_id\": 5,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
+                            "raw": "{\n    \"name\": \"aut\",\n    \"description\": \"molestias\",\n    \"password\": \"molestias\",\n    \"company_id\": 16,\n    \"is_encrypted\": false,\n    \"is_favourite\": false\n}"
                         },
                         "description": "PUT\/PATCH \/libraries\/{id}",
                         "auth": {
@@ -2103,7 +2167,7 @@
                                 {
                                     "id": "library",
                                     "key": "library",
-                                    "value": "neque",
+                                    "value": "minima",
                                     "description": ""
                                 }
                             ]
@@ -2150,9 +2214,680 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"password\": \"vitae\",\n    \"library_id\": \"dolores\"\n}"
+                            "raw": "{\n    \"password\": \"eos\",\n    \"library_id\": \"quia\"\n}"
                         },
                         "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Share Library to User.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/libraries\/shareToUser",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/libraries\/shareToUser"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"library_id\": \"harum\",\n    \"user_id\": \"cupiditate\",\n    \"password\": false\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Share Library to Group.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/libraries\/shareToRole",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/libraries\/shareToRole"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"library_id\": \"nemo\",\n    \"group_id\": \"magni\",\n    \"password\": false\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Notification Type",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the NotificationType.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notification_types",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notification_types"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/notificationTypes",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created NotificationType in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notification_types",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notification_types"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"consequatur\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "POST \/notificationTypes",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified NotificationType.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notification_types\/:notification_type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notification_types\/:notification_type",
+                            "variable": [
+                                {
+                                    "id": "notification_type",
+                                    "key": "notification_type",
+                                    "value": "velit",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/notificationTypes\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified NotificationType in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notification_types\/:notification_type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notification_types\/:notification_type",
+                            "variable": [
+                                {
+                                    "id": "notification_type",
+                                    "key": "notification_type",
+                                    "value": "aut",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"doloremque\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "PUT\/PATCH \/notificationTypes\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified NotificationType from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notification_types\/:notification_type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notification_types\/:notification_type",
+                            "variable": [
+                                {
+                                    "id": "notification_type",
+                                    "key": "notification_type",
+                                    "value": "iste",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "DELETE \/notificationTypes\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Notifications",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the Notifications.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notifications"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/notifications",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created Notifications in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notifications"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"notification_type_id\": 16,\n    \"user_id\": 17,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "POST \/notifications",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified Notifications.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications\/:notification",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notifications\/:notification",
+                            "variable": [
+                                {
+                                    "id": "notification",
+                                    "key": "notification",
+                                    "value": "molestiae",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/notifications\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified Notifications in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications\/:notification",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notifications\/:notification",
+                            "variable": [
+                                {
+                                    "id": "notification",
+                                    "key": "notification",
+                                    "value": "sed",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"notification_type_id\": 11,\n    \"user_id\": 5,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "PUT\/PATCH \/notifications\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified Notifications from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications\/:notification",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/notifications\/:notification",
+                            "variable": [
+                                {
+                                    "id": "notification",
+                                    "key": "notification",
+                                    "value": "fuga",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "DELETE \/notifications\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Permissions",
+            "description": "",
+            "item": [
+                {
+                    "name": "Assigns Permissions to User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/assign\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions\/assign\/user"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": \"aut\",\n    \"permission_id\": \"ut\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Assigns Permissions to Role",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/assign\/role",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions\/assign\/role"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"role_id\": \"autem\",\n    \"permission_id\": \"aut\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the Permissions.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/permissions",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created Permissions in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"qui\",\n    \"guard_name\": \"vel\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "POST \/permissions",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified Permissions.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/:permission",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions\/:permission",
+                            "variable": [
+                                {
+                                    "id": "permission",
+                                    "key": "permission",
+                                    "value": "rerum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/permissions\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified Permissions in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/:permission",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions\/:permission",
+                            "variable": [
+                                {
+                                    "id": "permission",
+                                    "key": "permission",
+                                    "value": "autem",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"numquam\",\n    \"guard_name\": \"nulla\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "PUT\/PATCH \/permissions\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified Permissions from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/permissions\/:permission",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/permissions\/:permission",
+                            "variable": [
+                                {
+                                    "id": "permission",
+                                    "key": "permission",
+                                    "value": "quia",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "DELETE \/permissions\/{id}",
                         "auth": {
                             "type": "noauth"
                         }
@@ -2217,7 +2952,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"slug\": \"earum\",\n    \"name\": \"et\",\n    \"description\": \"et\",\n    \"is_active\": false,\n    \"price\": 208939.88562,\n    \"signup_fee\": 6993242.428,\n    \"currency\": \"tenetur\",\n    \"trial_period\": 12,\n    \"trial_interval\": \"day\",\n    \"invoice_period\": 13,\n    \"invoice_interval\": \"week\",\n    \"grace_period\": 1,\n    \"grace_interval\": \"month\",\n    \"sort_order\": 5,\n    \"prorate_day\": 10,\n    \"prorate_period\": 11,\n    \"prorate_extend_due\": 18,\n    \"active_subscribers_limit\": 8\n}"
+                            "raw": "{\n    \"slug\": \"minus\",\n    \"name\": \"ad\",\n    \"description\": \"quia\",\n    \"is_active\": false,\n    \"price\": 501243846.096491,\n    \"signup_fee\": 14689286.0900676,\n    \"currency\": \"sit\",\n    \"trial_period\": 6,\n    \"trial_interval\": \"month\",\n    \"invoice_period\": 11,\n    \"invoice_interval\": \"month\",\n    \"grace_period\": 4,\n    \"grace_interval\": \"week\",\n    \"sort_order\": 1,\n    \"prorate_day\": 11,\n    \"prorate_period\": 15,\n    \"prorate_extend_due\": 4,\n    \"active_subscribers_limit\": 13\n}"
                         },
                         "description": "POST \/plans",
                         "auth": {
@@ -2239,7 +2974,7 @@
                                 {
                                     "id": "plan",
                                     "key": "plan",
-                                    "value": "dolor",
+                                    "value": "quasi",
                                     "description": ""
                                 }
                             ]
@@ -2276,7 +3011,7 @@
                                 {
                                     "id": "plan",
                                     "key": "plan",
-                                    "value": "ut",
+                                    "value": "rerum",
                                     "description": ""
                                 }
                             ]
@@ -2294,7 +3029,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"slug\": \"numquam\",\n    \"name\": \"eum\",\n    \"description\": \"ut\",\n    \"is_active\": false,\n    \"price\": 11322992.2650499,\n    \"signup_fee\": 26.905849724,\n    \"currency\": \"ab\",\n    \"trial_period\": 15,\n    \"trial_interval\": \"week\",\n    \"invoice_period\": 11,\n    \"invoice_interval\": \"month\",\n    \"grace_period\": 10,\n    \"grace_interval\": \"week\",\n    \"sort_order\": 12,\n    \"prorate_day\": 15,\n    \"prorate_period\": 15,\n    \"prorate_extend_due\": 14,\n    \"active_subscribers_limit\": 12\n}"
+                            "raw": "{\n    \"slug\": \"minima\",\n    \"name\": \"fugiat\",\n    \"description\": \"nihil\",\n    \"is_active\": false,\n    \"price\": 18437112.75813,\n    \"signup_fee\": 580367880.0999,\n    \"currency\": \"et\",\n    \"trial_period\": 9,\n    \"trial_interval\": \"week\",\n    \"invoice_period\": 7,\n    \"invoice_interval\": \"hour\",\n    \"grace_period\": 1,\n    \"grace_interval\": \"day\",\n    \"sort_order\": 9,\n    \"prorate_day\": 18,\n    \"prorate_period\": 18,\n    \"prorate_extend_due\": 8,\n    \"active_subscribers_limit\": 20\n}"
                         },
                         "description": "PUT\/PATCH \/plans\/{id}",
                         "auth": {
@@ -2316,7 +3051,7 @@
                                 {
                                     "id": "plan",
                                     "key": "plan",
-                                    "value": "omnis",
+                                    "value": "sint",
                                     "description": ""
                                 }
                             ]
@@ -2363,7 +3098,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"plan_id\": \"fugit\"\n}"
+                            "raw": "{\n    \"plan_id\": \"magnam\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -2459,7 +3194,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"harum\",\n    \"last_name\": \"molestiae\",\n    \"user_id\": 3,\n    \"avatar\": \"voluptates\"\n}"
+                            "raw": "{\n    \"first_name\": \"atque\",\n    \"last_name\": \"voluptatem\",\n    \"user_id\": 3,\n    \"avatar\": \"itaque\"\n}"
                         },
                         "description": "POST \/profiles",
                         "auth": {
@@ -2481,7 +3216,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "excepturi",
+                                    "value": "dolorum",
                                     "description": ""
                                 }
                             ]
@@ -2518,7 +3253,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "ullam",
+                                    "value": "ipsa",
                                     "description": ""
                                 }
                             ]
@@ -2536,7 +3271,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"voluptas\",\n    \"last_name\": \"fuga\",\n    \"user_id\": 10\n}"
+                            "raw": "{\n    \"first_name\": \"fugiat\",\n    \"last_name\": \"id\",\n    \"user_id\": 2\n}"
                         },
                         "description": "PUT\/PATCH \/profiles\/{id}",
                         "auth": {
@@ -2558,7 +3293,7 @@
                                 {
                                     "id": "profile",
                                     "key": "profile",
-                                    "value": "ut",
+                                    "value": "ducimus",
                                     "description": ""
                                 }
                             ]
@@ -2576,6 +3311,187 @@
                         ],
                         "body": null,
                         "description": "DELETE \/profiles\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Roles",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the Roles.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/roles",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store a newly created Roles in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/roles"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"ipsum\",\n    \"guard_name\": \"aut\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "POST \/roles",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified Roles.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/roles\/:role",
+                            "variable": [
+                                {
+                                    "id": "role",
+                                    "key": "role",
+                                    "value": "minima",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "GET|HEAD \/roles\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified Roles in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/roles\/:role",
+                            "variable": [
+                                {
+                                    "id": "role",
+                                    "key": "role",
+                                    "value": "accusamus",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"numquam\",\n    \"guard_name\": \"est\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                        },
+                        "description": "PUT\/PATCH \/roles\/{id}",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified Roles from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/roles\/:role",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/roles\/:role",
+                            "variable": [
+                                {
+                                    "id": "role",
+                                    "key": "role",
+                                    "value": "laboriosam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "DELETE \/roles\/{id}",
                         "auth": {
                             "type": "noauth"
                         }
@@ -2640,7 +3556,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"rerum\",\n    \"value\": \"rerum\",\n    \"company_id\": 6\n}"
+                            "raw": "{\n    \"type\": \"voluptates\",\n    \"value\": \"cumque\",\n    \"company_id\": 10\n}"
                         },
                         "description": "POST \/settings",
                         "auth": {
@@ -2662,7 +3578,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "porro",
+                                    "value": "magni",
                                     "description": ""
                                 }
                             ]
@@ -2699,7 +3615,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "id",
+                                    "value": "ullam",
                                     "description": ""
                                 }
                             ]
@@ -2717,7 +3633,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"type\": \"necessitatibus\",\n    \"value\": \"aut\",\n    \"company_id\": 2\n}"
+                            "raw": "{\n    \"type\": \"quibusdam\",\n    \"value\": \"molestiae\",\n    \"company_id\": 15\n}"
                         },
                         "description": "PUT\/PATCH \/settings\/{id}",
                         "auth": {
@@ -2739,7 +3655,7 @@
                                 {
                                     "id": "setting",
                                     "key": "setting",
-                                    "value": "dignissimos",
+                                    "value": "iure",
                                     "description": ""
                                 }
                             ]
@@ -2821,7 +3737,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"qui\",\n    \"colour\": \"et\",\n    \"company_id\": 4\n}"
+                            "raw": "{\n    \"name\": \"eius\",\n    \"colour\": \"animi\",\n    \"company_id\": 8\n}"
                         },
                         "description": "POST \/tags",
                         "auth": {
@@ -2843,7 +3759,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "aut",
+                                    "value": "perferendis",
                                     "description": ""
                                 }
                             ]
@@ -2880,7 +3796,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "molestiae",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]
@@ -2898,7 +3814,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"nihil\",\n    \"colour\": \"quos\",\n    \"company_id\": 10\n}"
+                            "raw": "{\n    \"name\": \"eius\",\n    \"colour\": \"sint\",\n    \"company_id\": 20\n}"
                         },
                         "description": "PUT\/PATCH \/tags\/{id}",
                         "auth": {
@@ -2920,7 +3836,7 @@
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "dolorem",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]

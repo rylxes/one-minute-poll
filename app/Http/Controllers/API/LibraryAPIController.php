@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\InviteEvent;
 use App\Http\Requests\API\CreateLibraryAPIRequest;
+use App\Http\Requests\API\InviteRequest;
+use App\Http\Requests\API\ShareLibrary;
+use App\Http\Requests\API\ShareLibraryRole;
 use App\Http\Requests\API\UpdateLibraryAPIRequest;
 use App\Http\Requests\API\ValidatePassword;
+use App\Models\Company;
 use App\Models\Library;
 use App\Repositories\LibraryRepository;
 use Illuminate\Http\Request;
@@ -36,11 +41,15 @@ class LibraryAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $libraries = $this->libraryRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
+
+        $lib = new Library();
+        $libraries = $lib->whereHas('theUsers', function($query) {
+            $query->where('user_id', auth()->user()->id);
+        })->orWhereHas('theGroup', function($query) {
+            $groups = auth()->user()->groups->pluck('id')->toArray();
+            $query->whereIn('group_id', $groups);
+        })->get();
+
 
         return $this->sendResponse($libraries->toArray(), 'Libraries retrieved successfully');
     }
@@ -67,6 +76,37 @@ class LibraryAPIController extends AppBaseController
         return $this->sendResponse($library->toArray(), 'Library saved successfully');
     }
 
+    /**
+     * Share Library to Group.
+     *
+     */
+    public function shareToRole(ShareLibraryRole $request)
+    {
+        $data = $request->all();
+        $library = Library::find($data['library_id']);
+        if ($library->is_encrypted) {
+            $request->validate($this->passwordRules(), []);
+        }
+        $library->theGroup()->attach($data['group_id']);
+        $message = "Library shared";
+        return $this->sendResponse($data, $message);
+    }
+
+    /**
+     * Share Library to User.
+     *
+     */
+    public function shareToUser(ShareLibrary $request)
+    {
+        $data = $request->all();
+        $library = Library::find($data['library_id']);
+        if ($library->is_encrypted) {
+            $request->validate($this->passwordRules(), []);
+        }
+        $library->theUsers()->attach($data['user_id']);
+        $message = "Library shared";
+        return $this->sendResponse($data, $message);
+    }
 
     /**
      * Validate Library's password.
@@ -81,15 +121,14 @@ class LibraryAPIController extends AppBaseController
         if (empty($library)) {
             return $this->sendError('Library not found');
         }
-        $isChecked =  Hash::check(
+        $isChecked = Hash::check(
             $input['password'], $library->password
         );
-        if(!$isChecked){
+        if (!$isChecked) {
             return $this->sendError("The Password is Incorrect");
         }
         return $this->sendResponse([], 'success');
     }
-
 
 
     protected function passwordRules()

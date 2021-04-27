@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\InviteEvent;
 use App\Http\Requests\API\CreateFolderAPIRequest;
+use App\Http\Requests\API\InviteRequest;
 use App\Http\Requests\API\UpdateFolderAPIRequest;
+use App\Models\Company;
 use App\Models\File;
 use App\Models\Folder;
 use App\Repositories\FolderRepository;
@@ -44,6 +47,9 @@ class FolderAPIController extends AppBaseController
 
         return $this->sendResponse($folders->toArray(), 'Folders retrieved successfully');
     }
+
+
+
 
     /**
      * Store a newly created Folder in storage.
