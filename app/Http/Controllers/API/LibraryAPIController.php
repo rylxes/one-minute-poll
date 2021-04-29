@@ -72,6 +72,7 @@ class LibraryAPIController extends AppBaseController
         }
         //dd($input);
         $library = $this->libraryRepository->create($input);
+        $library->theUsers()->attach(auth()->user()->id);
 
         return $this->sendResponse($library->toArray(), 'Library saved successfully');
     }
