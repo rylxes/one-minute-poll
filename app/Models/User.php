@@ -88,6 +88,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function company()
+    {
+        return $this->hasOne(CompanyUser::Class);
+    }
+
     public function theCompany()
     {
         return $this->belongsToMany(Company::class, 'company_user');

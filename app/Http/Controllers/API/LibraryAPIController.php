@@ -70,7 +70,7 @@ class LibraryAPIController extends AppBaseController
             $request->validate($this->passwordRules(), []);
             $input['password'] = Hash::make($input['password']);
         }
-
+        //dd($input);
         $library = $this->libraryRepository->create($input);
 
         return $this->sendResponse($library->toArray(), 'Library saved successfully');
