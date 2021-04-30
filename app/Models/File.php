@@ -77,6 +77,11 @@ class File extends Model implements HasMedia
         return $this->belongsToMany(Folder::class, 'folders_file');
     }
 
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('Documents')
+            ->singleFile();
+    }
 
     protected static function boot()
     {
@@ -84,12 +89,12 @@ class File extends Model implements HasMedia
         static::addGlobalScope(new CompanyScope());
         self::creating(function ($model) {
             if (Auth::check()) {
-                $model->company_id = Auth::user()->company->id;
+                $model->company_id = Auth::user()->theCompany->first()->id;
             }
         });
         self::saving(function ($model) {
             if (Auth::check()) {
-                $model->company_id = Auth::user()->company->id;
+                $model->company_id = Auth::user()->theCompany->first()->id;
             }
         });
     }

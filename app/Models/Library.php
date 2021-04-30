@@ -77,12 +77,12 @@ class Library extends Model
         static::addGlobalScope(new CompanyScope());
         self::creating(function ($model) {
             if (Auth::check()) {
-                $model->company_id = Auth::user()->company->id;
+                $model->company_id = Auth::user()->theCompany->first()->id;
             }
         });
         self::saving(function ($model) {
             if (Auth::check()) {
-                $model->company_id = Auth::user()->company->id;
+                $model->company_id = Auth::user()->theCompany->first()->id;
             }
         });
     }

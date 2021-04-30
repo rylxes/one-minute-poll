@@ -62,18 +62,25 @@ class FileAPIController extends AppBaseController
         DB::beginTransaction();
         $input = $request->all();
 
-        if ($input['is_lock']) {
+
+        if (@$input['is_lock']) {
             $request->validate($this->passwordRules(), []);
             $input['password'] = Hash::make($input['password']);
         }
 
         $file = $this->fileRepository->create($input);
         $__response = $this->uploadFile($request, $file);
-        if(!$this->isFileSuccess){
+        if (!$this->isFileSuccess) {
             return $__response;
         }
         $file->folder()->attach($input['folder_id']);
         DB::commit();
+
+
+        $file = $this->fileRepository->find($file->id);
+        $mediaItems = $file->getMedia('Documents');
+        $input['url'] = $mediaItems[0]->getFullUrl();
+        $this->fileRepository->update($input, $file->id);
         return $this->sendResponse($file->toArray(), 'File saved successfully');
     }
 
@@ -85,21 +92,21 @@ class FileAPIController extends AppBaseController
     }
 
 
-    function uploadFile(Request $request, File $file){
+    function uploadFile(Request $request, File $file)
+    {
         $this->isFileSuccess = false;
         if (!empty($request->file('file'))) {
             $this->deleteFile($file);
             try {
-                $file->addMedia($request->file('file'))->toMediaCollection('Documents');
-                $mediaItems = $file->getMedia('Documents');
-                $input['url'] = $mediaItems[0]->getFullUrl();
-                $this->fileRepository->update($input, $file->id);
+                $file->addMedia($request->file('file'))
+                    ->toMediaCollection('Documents');
                 $this->isFileSuccess = true;
                 if (empty($file->media)) {
                     DB::rollBack();
                     return $this->sendError("There was an issue uploading your file");
                 }
-            } catch (\Exception $exception) {
+            } catch (\Throwable $exception) {
+                //dd($exception->getMessage());
                 DB::rollBack();
                 return $this->sendError($exception->getMessage());
             }
@@ -161,10 +168,10 @@ class FileAPIController extends AppBaseController
             return $this->sendError('File not found');
         }
 
-        $isChecked =  Hash::check(
+        $isChecked = Hash::check(
             $input['password'], $file->password
         );
-        if(!$isChecked){
+        if (!$isChecked) {
             return $this->sendError("The Password is Incorrect");
         }
         return $this->sendResponse([], 'success');
@@ -195,7 +202,7 @@ class FileAPIController extends AppBaseController
         }
         $file = $this->fileRepository->update($input, $id);
         $__response = $this->uploadFile($request, $file);
-        if(!$this->isFileSuccess){
+        if (!$this->isFileSuccess) {
             return $__response;
         }
         $file->folder()->attach($input['folder_id']);
@@ -225,12 +232,13 @@ class FileAPIController extends AppBaseController
         return $this->sendSuccess('File deleted successfully');
     }
 
-    function deleteFile(File $file){
-        try{
+    function deleteFile(File $file)
+    {
+        try {
             $mediaItem = $file->getMedia()->first();
             $file->deleteMedia($mediaItem);
             $file->delete();
-        }catch (\Exception $exception){
+        } catch (\Exception $exception) {
 
         }
     }
