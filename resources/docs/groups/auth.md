@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"amber10@example.org","secret":{},"password":"distinctio"}'
+    -d '{"email":"demond40@example.com","secret":{},"password":"voluptatem"}'
 
 ```
 
@@ -28,9 +28,9 @@ let headers = {
 };
 
 let body = {
-    "email": "amber10@example.org",
+    "email": "demond40@example.com",
     "secret": {},
-    "password": "distinctio"
+    "password": "voluptatem"
 }
 
 fetch(url, {
@@ -134,6 +134,69 @@ fetch(url, {
 </form>
 
 
+## Log the user out of the application.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+{
+    "success": true,
+    "data": [],
+    "message": "Successful Logout"
+}
+```
+<div id="execution-results-GETapi-logout" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-logout"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-logout"></code></pre>
+</div>
+<div id="execution-error-GETapi-logout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-logout"></code></pre>
+</div>
+<form id="form-GETapi-logout" data-method="GET" data-path="api/logout" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-logout', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-logout" onclick="tryItOut('GETapi-logout');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-logout" onclick="cancelTryOut('GETapi-logout');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-logout" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/logout</code></b>
+</p>
+</form>
+
+
 ## Handle a registration request for the application.
 
 
@@ -146,7 +209,7 @@ curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"nisi","last_name":"qui","company_name":"laudantium","company_phone":"voluptatem","company_description":"placeat","has2fa":false,"email":"cdooley@example.com","password":"minima","password_confirmation":"quia"}'
+    -d '{"first_name":"odio","last_name":"cumque","company_name":"ut","company_phone":"illo","company_description":"beatae","has2fa":false,"email":"alf75@example.com","password":"quo","password_confirmation":"rerum"}'
 
 ```
 
@@ -161,15 +224,15 @@ let headers = {
 };
 
 let body = {
-    "first_name": "nisi",
-    "last_name": "qui",
-    "company_name": "laudantium",
-    "company_phone": "voluptatem",
-    "company_description": "placeat",
+    "first_name": "odio",
+    "last_name": "cumque",
+    "company_name": "ut",
+    "company_phone": "illo",
+    "company_description": "beatae",
     "has2fa": false,
-    "email": "cdooley@example.com",
-    "password": "minima",
-    "password_confirmation": "quia"
+    "email": "alf75@example.com",
+    "password": "quo",
+    "password_confirmation": "rerum"
 }
 
 fetch(url, {
@@ -262,7 +325,7 @@ curl -X POST \
     "http://localhost/api/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"berge.nicklaus@example.org"}'
+    -d '{"email":"igoodwin@example.com"}'
 
 ```
 
@@ -277,7 +340,7 @@ let headers = {
 };
 
 let body = {
-    "email": "berge.nicklaus@example.org"
+    "email": "igoodwin@example.com"
 }
 
 fetch(url, {
@@ -326,14 +389,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/perferendis" \
+    -G "http://localhost/api/password/reset/iure" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/perferendis"
+    "http://localhost/api/password/reset/iure"
 );
 
 let headers = {
@@ -398,8 +461,8 @@ fetch(url, {
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="http://localhost/password/reset">
-            <input type="hidden" name="_token" value="9Q0dQ04NOjStOffLE88DQLKemxUwNPQM43WF6XsL">
-            <input type="hidden" name="token" value="perferendis">
+            <input type="hidden" name="_token" value="rcFYWJ1Q4LzloluGHdh8hq7fEuz02eJzxoCgiECg">
+            <input type="hidden" name="token" value="iure">
 
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -478,79 +541,6 @@ fetch(url, {
 </form>
 
 
-## Reset the given user&#039;s password.
-
-
-
-
-> Example request:
-
-```bash
-curl -X POST \
-    "http://localhost/api/password/reset" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json" \
-    -d '{"email":"bryon.predovic@example.com","password":"aut"}'
-
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/password/reset"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "bryon.predovic@example.com",
-    "password": "aut"
-}
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response => response.json());
-```
-
-
-<div id="execution-results-POSTapi-password-reset" hidden>
-    <blockquote>Received response<span id="execution-response-status-POSTapi-password-reset"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-password-reset"></code></pre>
-</div>
-<div id="execution-error-POSTapi-password-reset" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-password-reset"></code></pre>
-</div>
-<form id="form-POSTapi-password-reset" data-method="POST" data-path="api/password/reset" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-password-reset', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-password-reset" onclick="tryItOut('POSTapi-password-reset');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-password-reset" onclick="cancelTryOut('POSTapi-password-reset');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-password-reset" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-black">POST</small>
- <b><code>api/password/reset</code></b>
-</p>
-<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-<p>
-<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="email" data-endpoint="POSTapi-password-reset" data-component="body" required  hidden>
-<br>
-The value must be a valid email address.</p>
-<p>
-<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="password" data-endpoint="POSTapi-password-reset" data-component="body" required  hidden>
-<br>
-</p>
-
-</form>
-
-
 ## Confirm the given user&#039;s password.
 
 
@@ -614,14 +604,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/facere/non" \
+    -G "http://localhost/api/email/verify/molestiae/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/facere/non"
+    "http://localhost/api/email/verify/molestiae/ut"
 );
 
 let headers = {
@@ -732,6 +722,142 @@ fetch(url, {
 </form>
 
 
+## Display the form to request a password reset link.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/password/email" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/password/email"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>E-DMS</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css">
+
+    <!-- iCheck -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="http://localhost/home"><b>InfyOm </b>Generator</a>
+    </div>
+
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Enter Email to reset password</p>
+
+        
+        <form method="post" action="http://localhost/password/email">
+            <input type="hidden" name="_token" value="rcFYWJ1Q4LzloluGHdh8hq7fEuz02eJzxoCgiECg">
+            <div class="form-group has-feedback ">
+                <input type="email" class="form-control" name="email" value="" placeholder="Email">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary pull-right">
+                        <i class="fa fa-btn fa-envelope"></i> Send Password Reset Link
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+</body>
+</html>
+
+```
+<div id="execution-results-GETapi-password-email" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-password-email"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-password-email"></code></pre>
+</div>
+<div id="execution-error-GETapi-password-email" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-password-email"></code></pre>
+</div>
+<form id="form-GETapi-password-email" data-method="GET" data-path="api/password/email" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-password-email', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-password-email" onclick="tryItOut('GETapi-password-email');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-password-email" onclick="cancelTryOut('GETapi-password-email');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-password-email" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/password/email</code></b>
+</p>
+</form>
+
+
 ## Change user&#039;s password.
 
 
@@ -744,7 +870,7 @@ curl -X POST \
     "http://localhost/api/password/change" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"king.ewald@example.com","old_password":"hic","password":"rerum"}'
+    -d '{"email":"mosciski.joany@example.org","old_password":"nam","password":"quo"}'
 
 ```
 
@@ -759,9 +885,9 @@ let headers = {
 };
 
 let body = {
-    "email": "king.ewald@example.com",
-    "old_password": "hic",
-    "password": "rerum"
+    "email": "mosciski.joany@example.org",
+    "old_password": "nam",
+    "password": "quo"
 }
 
 fetch(url, {
@@ -823,7 +949,7 @@ curl -X POST \
     "http://localhost/api/invite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"et","email":"serena.jacobs@example.org"}'
+    -d '{"company_id":"fugit","email":"morar.henriette@example.com"}'
 
 ```
 
@@ -838,8 +964,8 @@ let headers = {
 };
 
 let body = {
-    "company_id": "et",
-    "email": "serena.jacobs@example.org"
+    "company_id": "fugit",
+    "email": "morar.henriette@example.com"
 }
 
 fetch(url, {
@@ -884,6 +1010,60 @@ The value must be a valid email address.</p>
 </form>
 
 
+## Delete Current User Profile
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/delete" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/delete"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-delete" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-delete"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-delete"></code></pre>
+</div>
+<div id="execution-error-POSTapi-delete" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-delete"></code></pre>
+</div>
+<form id="form-POSTapi-delete" data-method="POST" data-path="api/delete" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-delete', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-delete" onclick="tryItOut('POSTapi-delete');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-delete" onclick="cancelTryOut('POSTapi-delete');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-delete" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/delete</code></b>
+</p>
+</form>
+
+
 ## This is used to register an invited user
 
 
@@ -896,7 +1076,7 @@ curl -X POST \
     "http://localhost/api/registerInvite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"laudantium","user_id":{},"is_user":{},"name":"libero","has2fa":false,"email":"marlee.vandervort@example.org","password":"aliquam","password_confirmation":"autem"}'
+    -d '{"company_id":"velit","user_id":{},"is_user":{},"name":"animi","has2fa":false,"email":"eryn76@example.net","password":"et","password_confirmation":"non"}'
 
 ```
 
@@ -911,14 +1091,14 @@ let headers = {
 };
 
 let body = {
-    "company_id": "laudantium",
+    "company_id": "velit",
     "user_id": {},
     "is_user": {},
-    "name": "libero",
+    "name": "animi",
     "has2fa": false,
-    "email": "marlee.vandervort@example.org",
-    "password": "aliquam",
-    "password_confirmation": "autem"
+    "email": "eryn76@example.net",
+    "password": "et",
+    "password_confirmation": "non"
 }
 
 fetch(url, {

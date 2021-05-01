@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":16,"user_id":17,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":6,"user_id":12,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 16,
-    "user_id": 17,
+    "notification_type_id": 6,
+    "user_id": 12,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /notifications/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notifications/molestiae" \
+    -G "http://localhost/api/notifications/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/molestiae"
+    "http://localhost/api/notifications/omnis"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /notifications/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notifications/sed" \
+    "http://localhost/api/notifications/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":11,"user_id":5,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":11,"user_id":8,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/sed"
+    "http://localhost/api/notifications/est"
 );
 
 let headers = {
@@ -244,7 +244,7 @@ let headers = {
 
 let body = {
     "notification_type_id": 11,
-    "user_id": 5,
+    "user_id": 8,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /notifications/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notifications/fuga" \
+    "http://localhost/api/notifications/perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/fuga"
+    "http://localhost/api/notifications/perferendis"
 );
 
 let headers = {
