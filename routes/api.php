@@ -100,8 +100,8 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
 
-        Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
         Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
+        Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
         Route::resource('file_comments', App\Http\Controllers\API\FileCommentAPIController::class);
         Route::resource('folder_tags', App\Http\Controllers\API\FolderTagAPIController::class);
         Route::resource('file_tags', App\Http\Controllers\API\FileTagAPIController::class);

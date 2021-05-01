@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nesciunt","description":"asperiores","password":"ex","is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"et","description":"sunt","password":"odit","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "nesciunt",
-    "description": "asperiores",
-    "password": "ex",
+    "name": "et",
+    "description": "sunt",
+    "password": "odit",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -165,14 +165,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/qui" \
+    -G "http://localhost/api/libraries/doloremque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/qui"
+    "http://localhost/api/libraries/doloremque"
 );
 
 let headers = {
@@ -233,16 +233,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/sed" \
+    "http://localhost/api/libraries/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"labore","description":"laudantium","password":"ipsum","company_id":13,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"corrupti","description":"molestias","password":"odit","company_id":8,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/sed"
+    "http://localhost/api/libraries/quia"
 );
 
 let headers = {
@@ -251,10 +251,10 @@ let headers = {
 };
 
 let body = {
-    "name": "labore",
-    "description": "laudantium",
-    "password": "ipsum",
-    "company_id": 13,
+    "name": "corrupti",
+    "description": "molestias",
+    "password": "odit",
+    "company_id": 8,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -342,14 +342,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/magni" \
+    "http://localhost/api/libraries/quas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/magni"
+    "http://localhost/api/libraries/quas"
 );
 
 let headers = {
@@ -405,7 +405,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"architecto","library_id":"molestiae"}'
+    -d '{"password":"necessitatibus","library_id":"rerum"}'
 
 ```
 
@@ -420,8 +420,8 @@ let headers = {
 };
 
 let body = {
-    "password": "architecto",
-    "library_id": "molestiae"
+    "password": "necessitatibus",
+    "library_id": "rerum"
 }
 
 fetch(url, {
@@ -478,7 +478,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"sapiente","user_id":"dolorem","password":false}'
+    -d '{"library_id":"nam","user_id":"consectetur","password":false}'
 
 ```
 
@@ -493,8 +493,8 @@ let headers = {
 };
 
 let body = {
-    "library_id": "sapiente",
-    "user_id": "dolorem",
+    "library_id": "nam",
+    "user_id": "consectetur",
     "password": false
 }
 
@@ -558,7 +558,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToRole" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"facere","group_id":"saepe","password":false}'
+    -d '{"library_id":"delectus","group_id":"molestiae","password":false}'
 
 ```
 
@@ -573,8 +573,8 @@ let headers = {
 };
 
 let body = {
-    "library_id": "facere",
-    "group_id": "saepe",
+    "library_id": "delectus",
+    "group_id": "molestiae",
     "password": false
 }
 
@@ -623,6 +623,68 @@ fetch(url, {
 <br>
 </p>
 
+</form>
+
+
+## my Favourites.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/libraries/myFavourites" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/libraries/myFavourites"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-libraries-myFavourites" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-libraries-myFavourites"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-libraries-myFavourites"></code></pre>
+</div>
+<div id="execution-error-GETapi-libraries-myFavourites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-libraries-myFavourites"></code></pre>
+</div>
+<form id="form-GETapi-libraries-myFavourites" data-method="GET" data-path="api/libraries/myFavourites" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-libraries-myFavourites', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-libraries-myFavourites" onclick="tryItOut('GETapi-libraries-myFavourites');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-libraries-myFavourites" onclick="cancelTryOut('GETapi-libraries-myFavourites');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-libraries-myFavourites" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/libraries/myFavourites</code></b>
+</p>
 </form>
 
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
@@ -96,27 +97,27 @@ class GenerateDocumentationNew extends Command
             $route = $routeItem->getRoute();
 
             $routeControllerAndMethod = u::getRouteClassAndMethodNames($route);
-            if (! $this->isValidRoute($routeControllerAndMethod)) {
-                c::warn('Skipping invalid route: '. c::getRouteRepresentation($route));
+            if (!$this->isValidRoute($routeControllerAndMethod)) {
+                c::warn('Skipping invalid route: ' . c::getRouteRepresentation($route));
                 continue;
             }
 
-            if (! $this->doesControllerMethodExist($routeControllerAndMethod)) {
-                c::warn('Skipping route: '. c::getRouteRepresentation($route).' - Controller method does not exist.');
+            if (!$this->doesControllerMethodExist($routeControllerAndMethod)) {
+                c::warn('Skipping route: ' . c::getRouteRepresentation($route) . ' - Controller method does not exist.');
                 continue;
             }
 
             if ($this->isRouteHiddenFromDocumentation($routeControllerAndMethod)) {
-                c::warn('Skipping route: '. c::getRouteRepresentation($route). ': @hideFromAPIDocumentation was specified.');
+                c::warn('Skipping route: ' . c::getRouteRepresentation($route) . ': @hideFromAPIDocumentation was specified.');
                 continue;
             }
 
             try {
-                c::info('Processing route: '. c::getRouteRepresentation($route));
+                c::info('Processing route: ' . c::getRouteRepresentation($route));
                 $parsedRoutes[] = $generator->processRoute($route, $routeItem->getRules());
-                c::success('Processed route: '. c::getRouteRepresentation($route));
+                c::success('Processed route: ' . c::getRouteRepresentation($route));
             } catch (\Exception $exception) {
-                c::error('Failed processing route: '. c::getRouteRepresentation($route) . ' - Exception encountered.');
+                c::error('Failed processing route: ' . c::getRouteRepresentation($route) . ' - Exception encountered.');
                 e::dumpExceptionIfVerbose($exception);
             }
         }
@@ -139,42 +140,44 @@ class GenerateDocumentationNew extends Command
             $routeControllerAndMethod = $classOrObject . '@' . $method;
         }
 
-        return ! is_callable($routeControllerAndMethod) && ! is_null($routeControllerAndMethod);
+        return !is_callable($routeControllerAndMethod) && !is_null($routeControllerAndMethod);
     }
 
     /**
      * @param array $routeControllerAndMethod
      *
+     * @return bool
      * @throws ReflectionException
      *
-     * @return bool
      */
     private function doesControllerMethodExist(array $routeControllerAndMethod)
     {
-       try{
-           [$class, $method] = $routeControllerAndMethod;
-           $reflection = new \ReflectionClass($class);
+        try {
+            [$class, $method] = $routeControllerAndMethod;
+            $reflection = new \ReflectionClass($class);
 
-           if ($reflection->hasMethod($method)) {
-               return true;
-           }
+            if ($reflection->hasMethod($method)) {
+                return true;
+            }
 
-           return false;
-       }catch (\Throwable $exception){
-           return false;
-       }
+            return false;
+        } catch (\Throwable $exception) {
+
+            $this->info(" ROUTES >> " . implode(',', $routeControllerAndMethod));
+            return false;
+        }
     }
 
     /**
      * @param array $routeControllerAndMethod
      *
+     * @return bool
      * @throws ReflectionException
      *
-     * @return bool
      */
     private function isRouteHiddenFromDocumentation(array $routeControllerAndMethod)
     {
-        if (! ($class = $routeControllerAndMethod[0]) instanceof \Closure) {
+        if (!($class = $routeControllerAndMethod[0]) instanceof \Closure) {
             $classDocBlock = new DocBlock((new \ReflectionClass($class))->getDocComment() ?: '');
             $shouldIgnoreClass = collect($classDocBlock->getTags())
                 ->filter(function (Tag $tag) {

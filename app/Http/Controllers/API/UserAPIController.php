@@ -46,22 +46,7 @@ class UserAPIController extends AppBaseController
         return $this->sendResponse(UserResource::collection($users), 'Users retrieved successfully');
     }
 
-    /**
-     * Store a newly created User in storage.
-     * POST /users
-     *
-     * @param CreateUserAPIRequest $request
-     *
-     * @return Response
-     */
-    public function store(CreateUserAPIRequest $request)
-    {
-        $input = $request->all();
 
-        $user = $this->userRepository->create($input);
-
-        return $this->sendResponse(new UserResource($user), 'User saved successfully');
-    }
 
     /**
      * My Activities.
@@ -94,30 +79,7 @@ class UserAPIController extends AppBaseController
         return $this->sendResponse(new UserResource($user), 'User retrieved successfully');
     }
 
-    /**
-     * Update the specified User in storage.
-     * PUT/PATCH /users/{id}
-     *
-     * @param int $id
-     * @param UpdateUserAPIRequest $request
-     *
-     * @return Response
-     */
-    public function update($id, UpdateUserAPIRequest $request)
-    {
-        $input = $request->all();
 
-        /** @var User $user */
-        $user = $this->userRepository->find($id);
-
-        if (empty($user)) {
-            return $this->sendError('User not found');
-        }
-
-        $user = $this->userRepository->update($input, $id);
-
-        return $this->sendResponse(new UserResource($user), 'User updated successfully');
-    }
 
     /**
      * Remove the specified User from storage.

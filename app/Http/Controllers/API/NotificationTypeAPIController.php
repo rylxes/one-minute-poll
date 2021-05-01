@@ -110,12 +110,6 @@ class NotificationTypeAPIController extends AppBaseController
     /**
      * Remove the specified NotificationType from storage.
      * DELETE /notificationTypes/{id}
-     *
-     * @param int $id
-     *
-     * @throws \Exception
-     *
-     * @return Response
      */
     public function destroy($id)
     {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"explicabo","is_favourite":false,"is_lock":false,"folder_id":"dolorem"}'
+    -d '{"name":"vel","is_favourite":false,"is_lock":false,"folder_id":"voluptatem"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "explicabo",
+    "name": "vel",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "dolorem"
+    "folder_id": "voluptatem"
 }
 
 fetch(url, {
@@ -159,14 +159,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/iure" \
+    -G "http://localhost/api/files/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/iure"
+    "http://localhost/api/files/autem"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/aut" \
+    "http://localhost/api/files/vel" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"quis","is_favourite":false,"is_lock":false,"folder_id":"doloremque"}'
+    -d '{"name":"debitis","is_favourite":false,"is_lock":false,"folder_id":"non"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/aut"
+    "http://localhost/api/files/vel"
 );
 
 let headers = {
@@ -245,10 +245,10 @@ let headers = {
 };
 
 let body = {
-    "name": "quis",
+    "name": "debitis",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "doloremque"
+    "folder_id": "non"
 }
 
 fetch(url, {
@@ -324,14 +324,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/soluta" \
+    "http://localhost/api/files/voluptate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/soluta"
+    "http://localhost/api/files/voluptate"
 );
 
 let headers = {
@@ -384,14 +384,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/et" \
+    -G "http://localhost/api/files/byFolder/quo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/et"
+    "http://localhost/api/files/byFolder/quo"
 );
 
 let headers = {
@@ -455,7 +455,7 @@ curl -X POST \
     "http://localhost/api/files/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"tenetur","file_id":"itaque"}'
+    -d '{"password":"neque","file_id":"quis"}'
 
 ```
 
@@ -470,8 +470,8 @@ let headers = {
 };
 
 let body = {
-    "password": "tenetur",
-    "file_id": "itaque"
+    "password": "neque",
+    "file_id": "quis"
 }
 
 fetch(url, {
@@ -510,6 +510,158 @@ fetch(url, {
 <p>
 <b><code>file_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="file_id" data-endpoint="POSTapi-files-validate" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Move file to another folder.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/files/moveFile" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"file_id":"quis","from_folder_id":"est","to_folder_id":"voluptates"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/files/moveFile"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "file_id": "quis",
+    "from_folder_id": "est",
+    "to_folder_id": "voluptates"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-files-moveFile" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-files-moveFile"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-files-moveFile"></code></pre>
+</div>
+<div id="execution-error-POSTapi-files-moveFile" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-files-moveFile"></code></pre>
+</div>
+<form id="form-POSTapi-files-moveFile" data-method="POST" data-path="api/files/moveFile" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-files-moveFile', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-files-moveFile" onclick="tryItOut('POSTapi-files-moveFile');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-files-moveFile" onclick="cancelTryOut('POSTapi-files-moveFile');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-files-moveFile" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/files/moveFile</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>file_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="file_id" data-endpoint="POSTapi-files-moveFile" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>from_folder_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="from_folder_id" data-endpoint="POSTapi-files-moveFile" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>to_folder_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="to_folder_id" data-endpoint="POSTapi-files-moveFile" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Copy file to another folder.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/files/copyFile" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"file_id":"ipsam","folder_id":"fuga"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/files/copyFile"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "file_id": "ipsam",
+    "folder_id": "fuga"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-files-copyFile" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-files-copyFile"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-files-copyFile"></code></pre>
+</div>
+<div id="execution-error-POSTapi-files-copyFile" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-files-copyFile"></code></pre>
+</div>
+<form id="form-POSTapi-files-copyFile" data-method="POST" data-path="api/files/copyFile" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-files-copyFile', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-files-copyFile" onclick="tryItOut('POSTapi-files-copyFile');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-files-copyFile" onclick="cancelTryOut('POSTapi-files-copyFile');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-files-copyFile" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/files/copyFile</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>file_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="file_id" data-endpoint="POSTapi-files-copyFile" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>folder_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="folder_id" data-endpoint="POSTapi-files-copyFile" data-component="body" required  hidden>
 <br>
 </p>
 

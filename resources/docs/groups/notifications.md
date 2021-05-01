@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":6,"user_id":12,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":17,"user_id":9,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 6,
-    "user_id": 12,
+    "notification_type_id": 17,
+    "user_id": 9,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /notifications/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notifications/omnis" \
+    -G "http://localhost/api/notifications/quasi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/omnis"
+    "http://localhost/api/notifications/quasi"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /notifications/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notifications/est" \
+    "http://localhost/api/notifications/numquam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":11,"user_id":8,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":16,"user_id":17,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/est"
+    "http://localhost/api/notifications/numquam"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 11,
-    "user_id": 8,
+    "notification_type_id": 16,
+    "user_id": 17,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /notifications/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notifications/perferendis" \
+    "http://localhost/api/notifications/labore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/perferendis"
+    "http://localhost/api/notifications/labore"
 );
 
 let headers = {

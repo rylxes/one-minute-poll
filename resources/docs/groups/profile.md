@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"corrupti","last_name":"ullam","user_id":14,"avatar":"quia"}'
+    -d '{"first_name":"magni","last_name":"et","user_id":4,"avatar":"perferendis"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "corrupti",
-    "last_name": "ullam",
-    "user_id": 14,
-    "avatar": "quia"
+    "first_name": "magni",
+    "last_name": "et",
+    "user_id": 4,
+    "avatar": "perferendis"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/et" \
+    -G "http://localhost/api/profiles/quaerat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/et"
+    "http://localhost/api/profiles/quaerat"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/officiis" \
+    "http://localhost/api/profiles/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sit","last_name":"soluta","user_id":18}'
+    -d '{"first_name":"et","last_name":"delectus","user_id":14}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/officiis"
+    "http://localhost/api/profiles/et"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sit",
-    "last_name": "soluta",
-    "user_id": 18
+    "first_name": "et",
+    "last_name": "delectus",
+    "user_id": 14
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/optio" \
+    "http://localhost/api/profiles/quo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/optio"
+    "http://localhost/api/profiles/quo"
 );
 
 let headers = {
