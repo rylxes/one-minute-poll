@@ -43,15 +43,36 @@ class LibraryAPIController extends AppBaseController
     {
 
         $lib = new Library();
-        $libraries = $lib->whereHas('theUsers', function($query) {
+        $libraries = $lib->whereHas('theUsers', function ($query) {
             $query->where('user_id', auth()->user()->id);
-        })->orWhereHas('theGroup', function($query) {
+        })->orWhereHas('theGroup', function ($query) {
             $groups = auth()->user()->groups->pluck('id')->toArray();
             $query->whereIn('group_id', $groups);
         })->get();
 
 
         return $this->sendResponse($libraries->toArray(), 'Libraries retrieved successfully');
+    }
+
+
+    /**
+     * my Favourites.
+     *
+     */
+
+    public function myFavourites(Request $request)
+    {
+
+        $lib = new Library();
+        $libraries = $lib->whereHas('theUsers', function ($query) {
+            $query->where('user_id', auth()->user()->id);
+        })->orWhereHas('theGroup', function ($query) {
+            $groups = auth()->user()->groups->pluck('id')->toArray();
+            $query->whereIn('group_id', $groups);
+        })->where('is_favourite', 1)->get();
+
+
+        return $this->sendResponse($libraries->toArray(), 'Favourite Libraries retrieved successfully');
     }
 
     /**
@@ -88,7 +109,7 @@ class LibraryAPIController extends AppBaseController
         if ($library->is_encrypted) {
             $request->validate($this->passwordRules(), []);
         }
-        $library->theGroup()->attach($data['group_id']);
+        $library->theGroup()->attach($data['group_id'], ['is_shared' => 1]);
         $message = "Library shared";
         return $this->sendResponse($data, $message);
     }
@@ -104,7 +125,7 @@ class LibraryAPIController extends AppBaseController
         if ($library->is_encrypted) {
             $request->validate($this->passwordRules(), []);
         }
-        $library->theUsers()->attach($data['user_id']);
+        $library->theUsers()->attach($data['user_id'], ['is_shared' => 1]);
         $message = "Library shared";
         return $this->sendResponse($data, $message);
     }

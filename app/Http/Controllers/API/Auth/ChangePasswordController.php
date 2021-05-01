@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API\Auth;
 
+use App\Events\InviteEvent;
+use App\Events\PasswordChangeEvent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\ChangePassword;
 use App\Http\Requests\API\ResetPassword;
@@ -48,6 +50,19 @@ class ChangePasswordController extends Controller
         ];
     }
 
+    /**
+     * Delete Current User Profile
+     *
+     */
+
+    public function deleteProfile(Request $request)
+    {
+        \auth()->user()->status = 3 ;
+        \auth()->user()->save();
+        $data = [];
+        $message = 'Delete Successful';
+        return redirect()->route('api.logout');
+    }
 
 
     /**
@@ -68,6 +83,7 @@ class ChangePasswordController extends Controller
         }
         $user->password = Hash::make($request->input('password'));
         $user->save();
+        event(new PasswordChangeEvent($user));
         return $this->sendResponse([], "Password Changed");
     }
 

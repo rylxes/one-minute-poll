@@ -25,6 +25,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
     Route::post('login', 'App\Http\Controllers\API\Auth\LoginController@login');
     Route::post('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('logout');
+    Route::get('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('api.logout');
     Route::post('register', 'App\Http\Controllers\API\Auth\RegisterController@register');
     Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.reset');
@@ -45,6 +46,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
         Route::post('invite', 'App\Http\Controllers\API\Auth\RegisterController@invite');
+        Route::post('delete', 'App\Http\Controllers\API\Auth\ChangePasswordController@deleteProfile');
         Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
         Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
         Route::get('folders/byLibrary/{id}', 'App\Http\Controllers\API\FileAPIController@byLibrary');
@@ -59,11 +61,14 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
         Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
         Route::post('files/validate', 'App\Http\Controllers\API\FileAPIController@validatePassword');
+        Route::post('files/moveFile', 'App\Http\Controllers\API\FileAPIController@moveFile');
+        Route::post('files/copyFile', 'App\Http\Controllers\API\FileAPIController@copyFile');
 
         Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');
         Route::post('libraries/shareToUser', 'App\Http\Controllers\API\LibraryAPIController@shareToUser');
         Route::post('libraries/shareToRole', 'App\Http\Controllers\API\LibraryAPIController@shareToRole');
+        Route::get('libraries/myFavourites', 'App\Http\Controllers\API\LibraryAPIController@myFavourites');
 
 
         Route::resource('companies', App\Http\Controllers\API\CompanyAPIController::class);
@@ -91,6 +96,15 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('roles', App\Http\Controllers\API\RolesAPIController::class);
         Route::resource('notifications', App\Http\Controllers\API\NotificationsAPIController::class);
         Route::resource('notification_types', App\Http\Controllers\API\NotificationTypeAPIController::class);
+
+
+
+
+        Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
+        Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
+        Route::resource('file_comments', App\Http\Controllers\API\FileCommentAPIController::class);
+        Route::resource('folder_tags', App\Http\Controllers\API\FolderTagAPIController::class);
+        Route::resource('file_tags', App\Http\Controllers\API\FileTagAPIController::class);
     });
 
 });

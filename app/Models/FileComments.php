@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
  * Class FileComments
@@ -18,7 +19,13 @@ class FileComments extends Model
 {
 
     use HasFactory;
-
+    use LogsActivity;
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This model has been {$eventName}";
+    }
     public $table = 'file_comments';
 
     const CREATED_AT = 'created_at';

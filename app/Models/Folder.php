@@ -8,6 +8,8 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
 use Kalnoy\Nestedset\NodeTrait;
+use Spatie\Activitylog\Traits\LogsActivity;
+
 /**
  * Class Folder
  * @package App\Models
@@ -24,8 +26,14 @@ class Folder extends Model
 
     use NodeTrait;
     use HasFactory;
-
+    use LogsActivity;
     public $table = 'folders';
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This model has been {$eventName}";
+    }
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

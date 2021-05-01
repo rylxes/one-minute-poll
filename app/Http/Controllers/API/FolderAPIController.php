@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Events\InviteEvent;
+use App\Http\Requests\API\AddFolderToLibraryAPIRequest;
 use App\Http\Requests\API\CreateFolderAPIRequest;
 use App\Http\Requests\API\InviteRequest;
 use App\Http\Requests\API\UpdateFolderAPIRequest;
@@ -69,12 +70,23 @@ class FolderAPIController extends AppBaseController
     }
 
 
+    /**
+     * Add Folder to Library.
+     */
+    public function addFolderToLibrary(AddFolderToLibraryAPIRequest $request)
+    {
+        $input = $request->all();
+
+        $folder = $this->folderRepository->create($input['folder_id']);
+        $folder->library()->attach($input['library_id']);
+
+        return $this->sendResponse($folder->toArray(), 'Folder Added to Library successfully');
+    }
+
 
     /**
      * Get All Folders By Library.
      */
-
-
     public function byLibrary($id)
     {
         $res = Folder::whereHas('library',function ($q) use ($id){

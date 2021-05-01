@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Requests\API\AddFolderToLibraryAPIRequest;
+use App\Http\Requests\API\CopyFileToFolderAPIRequest;
 use App\Http\Requests\API\CreateFileAPIRequest;
+use App\Http\Requests\API\MoveFileToFolderAPIRequest;
 use App\Http\Requests\API\UpdateFileAPIRequest;
 use App\Http\Requests\API\ValidateFilePassword;
 use App\Http\Requests\API\ValidatePassword;
@@ -48,6 +51,36 @@ class FileAPIController extends AppBaseController
 
         return $this->sendResponse($files->toArray(), 'Files retrieved successfully');
     }
+
+
+    /**
+     * Move file to another folder.
+     */
+    public function moveFile(MoveFileToFolderAPIRequest $request)
+    {
+        $input = $request->all();
+
+        $file = $this->fileRepository->find($input['file_id']);
+        $file->folder()->attach($input['to_folder_id']);
+        $file->folder()->detach($input['from_folder_id']);
+
+        return $this->sendResponse($file->toArray(), 'File Moved successfully');
+    }
+
+
+    /**
+     * Copy file to another folder.
+     */
+    public function copyFile(CopyFileToFolderAPIRequest $request)
+    {
+        $input = $request->all();
+
+        $file = $this->fileRepository->find($input['file_id']);
+        $file->folder()->attach($input['folder_id']);
+
+        return $this->sendResponse($file->toArray(), 'File Copied successfully');
+    }
+
 
     /**
      * Store a newly created File in storage.

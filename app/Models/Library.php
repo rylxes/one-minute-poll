@@ -7,6 +7,7 @@ use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
  * Class Library
@@ -22,7 +23,13 @@ class Library extends Model
 {
 
     use HasFactory;
-
+    use LogsActivity;
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This model has been {$eventName}";
+    }
     public $table = 'library';
 
     const CREATED_AT = 'created_at';

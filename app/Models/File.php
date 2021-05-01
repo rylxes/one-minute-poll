@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-
+use Spatie\Activitylog\Traits\LogsActivity;
 /**
  * Class File
  * @package App\Models
@@ -27,6 +27,7 @@ class File extends Model implements HasMedia
 
     use InteractsWithMedia;
     use HasFactory;
+    use LogsActivity;
 
     public $table = 'file';
 
@@ -42,7 +43,13 @@ class File extends Model implements HasMedia
         'is_lock',
         'is_favourite'
     ];
-
+    //protected static $logAttributes = ['name', 'text'];
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This model has been {$eventName}";
+    }
     /**
      * The attributes that should be casted to native types.
      *

@@ -7,6 +7,7 @@ use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
  * Class Group
@@ -24,6 +25,13 @@ class Group extends Model
 
     public $table = 'groups';
 
+    use LogsActivity;
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This model has been {$eventName}";
+    }
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 

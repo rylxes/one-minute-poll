@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Validation\ValidationException;
+
 /**
  *
  * @group Auth
@@ -64,6 +66,8 @@ class LoginController extends Controller
     }
 
 
+
+
     /**
      * Handle a login request to the application.
      *
@@ -116,6 +120,30 @@ class LoginController extends Controller
         $data = [];
         $message = 'Successful Logout';
         return $this->sendResponse($data, $message);
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        // 0 = inActive
+        // 2 = Locked
+        // 3 = Deleted
+        if($user->status == 0){
+            throw ValidationException::withMessages([
+                $this->username() => ['This user is inactive'],
+            ]);
+        }
+
+        if($user->status == 2){
+            throw ValidationException::withMessages([
+                $this->username() => ['This user is locked'],
+            ]);
+        }
+
+        if($user->status == 3){
+            throw ValidationException::withMessages([
+                $this->username() => ['This user has been deleted'],
+            ]);
+        }
     }
 
     protected function sendLoginResponse(Request $request)

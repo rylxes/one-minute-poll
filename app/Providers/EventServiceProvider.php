@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\InviteEvent' => [
             'App\Listeners\InvitationListener'
         ],
+        'App\Events\PasswordChangeEvent' => [
+            'App\Listeners\PasswordChangeListener'
+        ],
         'App\Events\InviteSuccessfulEvent' => [
             'App\Listeners\InvitationSuccessfulListener'
         ],
