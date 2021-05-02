@@ -37,12 +37,8 @@ class GroupAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $groups = $this->groupRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
-
+        $groups = new Group();
+        $groups = $groups->where('company_id', Auth::user()->theCompany->first()->id)->get();
         return $this->sendResponse(GroupResource::collection($groups), 'Groups retrieved successfully');
     }
 
