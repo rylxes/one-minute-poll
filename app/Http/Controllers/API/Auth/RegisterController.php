@@ -122,6 +122,14 @@ class RegisterController extends Controller
     {
         $data = $request->all();
 
+        if(!empty($data['email'])){
+            $isUser = User::where('email', $data['email'])->get();
+            if(!empty($isUser)){
+                $data['is_user'] = true;
+            }
+        }
+
+
         if ($data['is_user']) {
             $validator = Validator::make($data, [
                 'user_id' => 'nullable|exists:users,id',
