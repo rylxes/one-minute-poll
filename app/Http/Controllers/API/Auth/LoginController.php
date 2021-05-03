@@ -175,6 +175,7 @@ class LoginController extends Controller
 
         $data = new \stdClass();
         $data->user = $user;
+        $data->companies = $user->theCompany;
         $data->accessToken = $this->accessToken;
 
         $message = 'Successful Login';
