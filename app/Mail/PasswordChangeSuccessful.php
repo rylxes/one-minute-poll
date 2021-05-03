@@ -36,6 +36,6 @@ class PasswordChangeSuccessful extends Mailable
             ->with([
                 'user' => $this->user,
             ])
-            ->subject(config_path('app.name') . " Password Change Successful ");
+            ->subject(config('app.name') . " Password Change Successful ");
     }
 }

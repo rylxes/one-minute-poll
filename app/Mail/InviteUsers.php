@@ -38,7 +38,7 @@ class InviteUsers extends Mailable
                 'company' => $this->company,
                 'is_user' => $this->is_user
             ])
-            ->subject(config_path('app.name') . " Invitation from " . $this->company->name);
+            ->subject(config('app.name') . " Invitation from " . $this->company->name);
 
     }
 }

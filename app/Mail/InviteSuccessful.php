@@ -41,6 +41,6 @@ class InviteSuccessful extends Mailable
                 'company' => $this->company,
                 'user' => $this->user,
             ])
-            ->subject(config_path('app.name') . " Welcome to " . $this->company->name);
+            ->subject(config('app.name') . " Welcome to " . $this->company->name);
     }
 }
