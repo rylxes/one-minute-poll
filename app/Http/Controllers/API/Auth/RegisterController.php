@@ -124,7 +124,7 @@ class RegisterController extends Controller
 
         if(!empty($data['email'])){
             $isUser = User::where('email', $data['email'])->get();
-            if(!empty($isUser)){
+            if(!$isUser->isEmpty()){
                 $data['is_user'] = true;
             }
         }
