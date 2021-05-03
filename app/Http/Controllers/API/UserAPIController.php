@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateUserAPIRequest;
 use App\Http\Requests\API\ShareGroup;
+use App\Http\Requests\API\ShareGroupWithEmail;
 use App\Http\Requests\API\UpdateUserAPIRequest;
 use App\Models\Group;
 use App\Models\Library;
@@ -62,6 +63,30 @@ class UserAPIController extends AppBaseController
         return $this->sendResponse($data, $message);
     }
 
+    /**
+     * Add User to Group with Comma seperated Email.
+     *
+     */
+    public function shareGroupWithEmail(ShareGroupWithEmail $request)
+    {
+        $data = $request->all();
+        $group = Group::find($data['group_id']);
+        $email = $data['email'];
+        $email = explode(',', $email);
+        foreach ($email as $each) {
+            $user = User::whereHas('theCompany', function ($q) {
+                $q->where('company_id', Auth::user()->theCompany->first()->id);
+            })
+                ->where('email', $each)
+                ->first();
+            if (!empty($user)) {
+                $group->users()->attach($user->id);
+            }
+        }
+        $message = "Group shared";
+        return $this->sendResponse($data, $message);
+    }
+
 
     /**
      * My Activities.
@@ -93,7 +118,6 @@ class UserAPIController extends AppBaseController
 
         return $this->sendResponse(new UserResource($user), 'User retrieved successfully');
     }
-
 
 
     /**

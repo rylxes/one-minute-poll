@@ -72,14 +72,14 @@ GET|HEAD /users/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/users/et" \
+    -G "http://localhost/api/users/facere" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/users/et"
+    "http://localhost/api/users/facere"
 );
 
 let headers = {
@@ -140,14 +140,14 @@ DELETE /users/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/users/voluptates" \
+    "http://localhost/api/users/mollitia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/users/voluptates"
+    "http://localhost/api/users/mollitia"
 );
 
 let headers = {
@@ -265,7 +265,7 @@ curl -X POST \
     "http://localhost/api/users/shareToGroup" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"dolorem","user_id":"soluta"}'
+    -d '{"group_id":"beatae","user_id":"sed"}'
 
 ```
 
@@ -280,8 +280,8 @@ let headers = {
 };
 
 let body = {
-    "group_id": "dolorem",
-    "user_id": "soluta"
+    "group_id": "beatae",
+    "user_id": "sed"
 }
 
 fetch(url, {
@@ -320,6 +320,79 @@ fetch(url, {
 <p>
 <b><code>user_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="user_id" data-endpoint="POSTapi-users-shareToGroup" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Add User to Group with Comma seperated Email.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/users/shareGroupWithEmail" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"group_id":"enim","email":"vitae"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/users/shareGroupWithEmail"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "group_id": "enim",
+    "email": "vitae"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-users-shareGroupWithEmail" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-users-shareGroupWithEmail"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-users-shareGroupWithEmail"></code></pre>
+</div>
+<div id="execution-error-POSTapi-users-shareGroupWithEmail" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-users-shareGroupWithEmail"></code></pre>
+</div>
+<form id="form-POSTapi-users-shareGroupWithEmail" data-method="POST" data-path="api/users/shareGroupWithEmail" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-users-shareGroupWithEmail', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-users-shareGroupWithEmail" onclick="tryItOut('POSTapi-users-shareGroupWithEmail');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-users-shareGroupWithEmail" onclick="cancelTryOut('POSTapi-users-shareGroupWithEmail');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-users-shareGroupWithEmail" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/users/shareGroupWithEmail</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>group_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="group_id" data-endpoint="POSTapi-users-shareGroupWithEmail" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-users-shareGroupWithEmail" data-component="body" required  hidden>
 <br>
 </p>
 

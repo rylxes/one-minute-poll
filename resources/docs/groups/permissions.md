@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"user_id":"eos","permission_id":"eum"}'
+    -d '{"user_id":"fuga","permission_id":"quaerat"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "user_id": "eos",
-    "permission_id": "eum"
+    "user_id": "fuga",
+    "permission_id": "quaerat"
 }
 
 fetch(url, {
@@ -86,7 +86,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/role" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"role_id":"nihil","permission_id":"aut"}'
+    -d '{"role_id":"quis","permission_id":"enim"}'
 
 ```
 
@@ -101,8 +101,8 @@ let headers = {
 };
 
 let body = {
-    "role_id": "nihil",
-    "permission_id": "aut"
+    "role_id": "quis",
+    "permission_id": "enim"
 }
 
 fetch(url, {
@@ -221,7 +221,7 @@ curl -X POST \
     "http://localhost/api/permissions" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"rerum","guard_name":"reprehenderit","created_at":{},"updated_at":{}}'
+    -d '{"name":"qui","guard_name":"ducimus","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -236,8 +236,8 @@ let headers = {
 };
 
 let body = {
-    "name": "rerum",
-    "guard_name": "reprehenderit",
+    "name": "qui",
+    "guard_name": "ducimus",
     "created_at": {},
     "updated_at": {}
 }
@@ -303,14 +303,14 @@ GET|HEAD /permissions/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/permissions/omnis" \
+    -G "http://localhost/api/permissions/tempora" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/omnis"
+    "http://localhost/api/permissions/tempora"
 );
 
 let headers = {
@@ -371,16 +371,16 @@ PUT/PATCH /permissions/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/permissions/suscipit" \
+    "http://localhost/api/permissions/amet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ut","guard_name":"omnis","created_at":{},"updated_at":{}}'
+    -d '{"name":"qui","guard_name":"placeat","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/suscipit"
+    "http://localhost/api/permissions/amet"
 );
 
 let headers = {
@@ -389,8 +389,8 @@ let headers = {
 };
 
 let body = {
-    "name": "ut",
-    "guard_name": "omnis",
+    "name": "qui",
+    "guard_name": "placeat",
     "created_at": {},
     "updated_at": {}
 }
@@ -466,14 +466,14 @@ DELETE /permissions/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/permissions/voluptatibus" \
+    "http://localhost/api/permissions/dolorem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/voluptatibus"
+    "http://localhost/api/permissions/dolorem"
 );
 
 let headers = {

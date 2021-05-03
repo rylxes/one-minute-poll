@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folder_tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":10,"tag_id":13,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":7,"tag_id":16,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 10,
-    "tag_id": 13,
+    "folder_id": 7,
+    "tag_id": 16,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /folderTags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_tags/molestias" \
+    -G "http://localhost/api/folder_tags/optio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/molestias"
+    "http://localhost/api/folder_tags/optio"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /folderTags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_tags/alias" \
+    "http://localhost/api/folder_tags/dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":1,"tag_id":20,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":13,"tag_id":13,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/alias"
+    "http://localhost/api/folder_tags/dolores"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 1,
-    "tag_id": 20,
+    "folder_id": 13,
+    "tag_id": 13,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /folderTags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_tags/aut" \
+    "http://localhost/api/folder_tags/ea" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/aut"
+    "http://localhost/api/folder_tags/ea"
 );
 
 let headers = {
