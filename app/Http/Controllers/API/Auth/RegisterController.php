@@ -8,6 +8,7 @@ use App\Http\Requests\API\InviteRequest;
 use App\Http\Requests\API\RegisterInviteRequest;
 use App\Http\Requests\API\RegisterRequest;
 use App\Models\Company;
+use App\Models\Invitations;
 use App\Repositories\CompanyRepository;
 use App\Repositories\PersonalDetailsRepository;
 use App\Repositories\ProfileRepository;
@@ -103,6 +104,10 @@ class RegisterController extends Controller
     {
         $data = $request->all();
         $company = Company::find($data['company_id']);
+        Invitations::create([
+            'company_id' => $data['company_id'],
+            'email' => $data['email'],
+        ]);
         event(new InviteEvent($company, $data['email']));
         $message = "invitation sent";
         return $this->sendResponse($data, $message);

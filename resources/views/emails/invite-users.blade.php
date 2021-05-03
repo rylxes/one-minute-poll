@@ -1,7 +1,7 @@
 @component('mail::message')
     Hello, You have an invitation from {{$company->name}}, to join their team
 
-    @component('mail::button', ['url' => url('join',$company->id)])
+    @component('mail::button', ['url' => url('join',[$company->id, $is_user])])
         Click here to continue
     @endcomponent
 

@@ -26,21 +26,23 @@ class Group extends Model
     public $table = 'groups';
 
     use LogsActivity;
+
     protected static $logFillable = true;
     protected static $submitEmptyLogs = false;
+
     public function getDescriptionForEvent(string $eventName): string
     {
         return "This model has been {$eventName}";
     }
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-
 
 
     public $fillable = [
         'name',
         'description',
+        'created_by',
         'company_id'
     ];
 
@@ -75,11 +77,13 @@ class Group extends Model
         self::creating(function ($model) {
             if (Auth::check()) {
                 $model->company_id = Auth::user()->theCompany->first()->id;
+                $model->created_by = Auth::user()->id;
             }
         });
         self::saving(function ($model) {
             if (Auth::check()) {
                 $model->company_id = Auth::user()->theCompany->first()->id;
+                $model->created_by = Auth::user()->id;;
             }
         });
     }
@@ -89,6 +93,10 @@ class Group extends Model
         return $this->belongsToMany(User::class, 'user_groups');
     }
 
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
 
 
 }

@@ -5,11 +5,12 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
- * Class FileComment
+ * Class FileComments
  * @package App\Models
- * @version May 1, 2021, 11:25 am UTC
+ * @version December 26, 2020, 10:37 pm UTC
  *
  * @property integer $file_id
  * @property string $comment
@@ -18,9 +19,15 @@ class FileComment extends Model
 {
 
     use HasFactory;
-
+    use LogsActivity;
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This model has been {$eventName}";
+    }
     public $table = 'file_comments';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -51,9 +58,8 @@ class FileComment extends Model
     public static $rules = [
         'file_id' => 'required|integer',
         'comment' => 'required|string|max:255',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+
     ];
 
-    
+
 }

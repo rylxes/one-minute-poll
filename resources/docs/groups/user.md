@@ -72,14 +72,14 @@ GET|HEAD /users/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/users/qui" \
+    -G "http://localhost/api/users/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/users/qui"
+    "http://localhost/api/users/et"
 );
 
 let headers = {
@@ -140,14 +140,14 @@ DELETE /users/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/users/eligendi" \
+    "http://localhost/api/users/voluptates" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/users/eligendi"
+    "http://localhost/api/users/voluptates"
 );
 
 let headers = {
@@ -250,6 +250,79 @@ fetch(url, {
 <small class="badge badge-green">GET</small>
  <b><code>api/users/myActivities</code></b>
 </p>
+</form>
+
+
+## Add User to Group.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/users/shareToGroup" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"group_id":"dolorem","user_id":"soluta"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/users/shareToGroup"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "group_id": "dolorem",
+    "user_id": "soluta"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-users-shareToGroup" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-users-shareToGroup"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-users-shareToGroup"></code></pre>
+</div>
+<div id="execution-error-POSTapi-users-shareToGroup" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-users-shareToGroup"></code></pre>
+</div>
+<form id="form-POSTapi-users-shareToGroup" data-method="POST" data-path="api/users/shareToGroup" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-users-shareToGroup', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-users-shareToGroup" onclick="tryItOut('POSTapi-users-shareToGroup');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-users-shareToGroup" onclick="cancelTryOut('POSTapi-users-shareToGroup');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-users-shareToGroup" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/users/shareToGroup</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>group_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="group_id" data-endpoint="POSTapi-users-shareToGroup" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>user_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user_id" data-endpoint="POSTapi-users-shareToGroup" data-component="body" required  hidden>
+<br>
+</p>
+
 </form>
 
 

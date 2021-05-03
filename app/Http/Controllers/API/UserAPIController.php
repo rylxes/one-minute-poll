@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateUserAPIRequest;
+use App\Http\Requests\API\ShareGroup;
 use App\Http\Requests\API\UpdateUserAPIRequest;
+use App\Models\Group;
 use App\Models\Library;
 use App\Models\User;
 use App\Repositories\UserRepository;
@@ -46,6 +48,19 @@ class UserAPIController extends AppBaseController
         return $this->sendResponse(UserResource::collection($users), 'Users retrieved successfully');
     }
 
+
+    /**
+     * Add User to Group.
+     *
+     */
+    public function shareToGroup(ShareGroup $request)
+    {
+        $data = $request->all();
+        $group = Group::find($data['group_id']);
+        $group->users()->attach($data['user_id']);
+        $message = "Group shared";
+        return $this->sendResponse($data, $message);
+    }
 
 
     /**

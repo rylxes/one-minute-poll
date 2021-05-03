@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/file_comments" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":14,"comment":"quam","created_at":{},"updated_at":{}}'
+    -d '{"file_id":9,"comment":"inventore"}'
 
 ```
 
@@ -90,10 +90,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 14,
-    "comment": "quam",
-    "created_at": {},
-    "updated_at": {}
+    "file_id": 9,
+    "comment": "inventore"
 }
 
 fetch(url, {
@@ -134,16 +132,6 @@ fetch(url, {
 <input type="text" name="comment" data-endpoint="POSTapi-file_comments" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-file_comments" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-file_comments" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -157,14 +145,14 @@ GET|HEAD /fileComments/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/file_comments/consectetur" \
+    -G "http://localhost/api/file_comments/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_comments/consectetur"
+    "http://localhost/api/file_comments/et"
 );
 
 let headers = {
@@ -225,16 +213,16 @@ PUT/PATCH /fileComments/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/file_comments/veniam" \
+    "http://localhost/api/file_comments/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":10,"comment":"aperiam","created_at":{},"updated_at":{}}'
+    -d '{"file_id":14,"comment":"enim"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_comments/veniam"
+    "http://localhost/api/file_comments/sunt"
 );
 
 let headers = {
@@ -243,10 +231,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 10,
-    "comment": "aperiam",
-    "created_at": {},
-    "updated_at": {}
+    "file_id": 14,
+    "comment": "enim"
 }
 
 fetch(url, {
@@ -297,16 +283,6 @@ fetch(url, {
 <input type="text" name="comment" data-endpoint="PUTapi-file_comments--file_comment-" data-component="body" required  hidden>
 <br>
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-file_comments--file_comment-" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-file_comments--file_comment-" data-component="body"  hidden>
-<br>
-</p>
 
 </form>
 
@@ -320,14 +296,14 @@ DELETE /fileComments/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/file_comments/quod" \
+    "http://localhost/api/file_comments/harum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_comments/quod"
+    "http://localhost/api/file_comments/harum"
 );
 
 let headers = {

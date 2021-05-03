@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\InviteEvent;
 use App\Mail\InviteUsers;
+use App\Models\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
@@ -30,8 +31,16 @@ class InvitationListener
     {
         $email = $event->email;
         $company = $event->company;
+
+
+        $is_user = false;
+        $isUser = User::where('email', $email)->get();
+        if(!empty($isUser)){
+            $is_user = true;
+        }
+
         try {
-            Mail::to($email)->send(new InviteUsers($company));
+            Mail::to($email)->send(new InviteUsers($company , $is_user));
         } catch (\Exception $exception) {
             //dd($exception->getMessage());
         }

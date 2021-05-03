@@ -43,6 +43,31 @@ class GroupAPIController extends AppBaseController
     }
 
     /**
+     * Get All My Groups.
+     */
+
+    public function myGroup(Request $request)
+    {
+        $groups = new Group();
+        $groups = $groups->where('company_id', Auth::user()->theCompany->first()->id)
+            ->where('created_by', Auth::user()->id)->get();
+        return $this->sendResponse(GroupResource::collection($groups), 'Groups retrieved successfully');
+    }
+
+
+    /**
+     * Get All Other Groups.
+     */
+
+    public function otherGroup(Request $request)
+    {
+        $groups = new Group();
+        $groups = $groups->where('company_id', Auth::user()->theCompany->first()->id)
+            ->where('created_by', '!=', Auth::user()->id)->get();
+        return $this->sendResponse(GroupResource::collection($groups), 'Groups retrieved successfully');
+    }
+
+    /**
      * Store a newly created Group in storage.
      * POST /groups
      *

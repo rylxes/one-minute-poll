@@ -13,15 +13,17 @@ class InviteUsers extends Mailable
     use Queueable, SerializesModels;
 
     public $company;
+    public $is_user;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Company $company)
+    public function __construct(Company $company, $is_user)
     {
         $this->company = $company;
+        $this->is_user = $is_user;
     }
 
     /**
@@ -33,7 +35,8 @@ class InviteUsers extends Mailable
     {
         return $this->markdown('emails.invite-users')
             ->with([
-                'company' => $this->company
+                'company' => $this->company,
+                'is_user' => $this->is_user
             ])
             ->subject(config_path('app.name') . " Invitation from " . $this->company->name);
 

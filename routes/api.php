@@ -78,6 +78,8 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('folder_files', App\Http\Controllers\API\FolderFileAPIController::class);
         Route::resource('groups', App\Http\Controllers\API\GroupAPIController::class);
         Route::get('groups/byUser', 'App\Http\Controllers\API\GroupAPIController@byUser');
+        Route::get('groups/myGroup', 'App\Http\Controllers\API\GroupAPIController@myGroup');
+        Route::get('groups/otherGroup', 'App\Http\Controllers\API\GroupAPIController@otherGroup');
         Route::get('groups/allUsersInGroup/{id}', 'App\Http\Controllers\API\GroupAPIController@allUsersInGroup');
 
 
@@ -102,6 +104,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
         Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
+        Route::post('users/shareToGroup', 'App\Http\Controllers\API\UserAPIController@shareToGroup');
         Route::resource('file_comments', App\Http\Controllers\API\FileCommentAPIController::class);
         Route::resource('folder_tags', App\Http\Controllers\API\FolderTagAPIController::class);
         Route::resource('file_tags', App\Http\Controllers\API\FileTagAPIController::class);
