@@ -35,7 +35,7 @@ class InvitationListener
 
         $is_user = false;
         $isUser = User::where('email', $email)->get();
-        if(!empty($isUser)){
+        if(!$isUser->isEmpty()){
             $is_user = true;
         }
 

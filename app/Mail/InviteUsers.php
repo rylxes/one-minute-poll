@@ -33,10 +33,12 @@ class InviteUsers extends Mailable
      */
     public function build()
     {
+
+        $url = url('join') . '?' . http_build_query(['company' => $this->company->id, 'is_user' => $this->is_user]);
         return $this->markdown('emails.invite-users')
             ->with([
                 'company' => $this->company,
-                'is_user' => $this->is_user
+                'url' => $url
             ])
             ->subject(config('app.name') . " Invitation from " . $this->company->name);
 
