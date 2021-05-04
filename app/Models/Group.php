@@ -65,8 +65,7 @@ class Group extends Model
      */
     public static $rules = [
         'name' => 'required|string|max:255',
-        'description' => 'nullable|string|max:255',
-        'company_id' => 'required|integer',
+        'description' => 'nullable|string|max:255'
     ];
 
 

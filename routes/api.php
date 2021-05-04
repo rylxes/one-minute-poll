@@ -48,8 +48,9 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::post('invite', 'App\Http\Controllers\API\Auth\RegisterController@invite');
         Route::post('delete', 'App\Http\Controllers\API\Auth\ChangePasswordController@deleteProfile');
         Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
-        Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
+
         Route::get('folders/byLibrary/{id}', 'App\Http\Controllers\API\FileAPIController@byLibrary');
+        Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
 
 
 
@@ -59,16 +60,18 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('tags', App\Http\Controllers\API\TagAPIController::class);
 
         Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
-        Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
+
         Route::post('files/validate', 'App\Http\Controllers\API\FileAPIController@validatePassword');
         Route::post('files/moveFile', 'App\Http\Controllers\API\FileAPIController@moveFile');
         Route::post('files/copyFile', 'App\Http\Controllers\API\FileAPIController@copyFile');
+        Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
 
-        Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
+
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');
         Route::post('libraries/shareToUser', 'App\Http\Controllers\API\LibraryAPIController@shareToUser');
         Route::post('libraries/shareToRole', 'App\Http\Controllers\API\LibraryAPIController@shareToRole');
         Route::get('libraries/myFavourites', 'App\Http\Controllers\API\LibraryAPIController@myFavourites');
+        Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
 
 
         Route::resource('companies', App\Http\Controllers\API\CompanyAPIController::class);
@@ -76,16 +79,17 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('profiles', App\Http\Controllers\API\ProfileAPIController::class);
 
         Route::resource('folder_files', App\Http\Controllers\API\FolderFileAPIController::class);
-        Route::resource('groups', App\Http\Controllers\API\GroupAPIController::class);
+
         Route::get('groups/byUser', 'App\Http\Controllers\API\GroupAPIController@byUser');
-        Route::get('groups/myGroup', 'App\Http\Controllers\API\GroupAPIController@myGroup');
         Route::get('groups/otherGroup', 'App\Http\Controllers\API\GroupAPIController@otherGroup');
         Route::get('groups/allUsersInGroup/{id}', 'App\Http\Controllers\API\GroupAPIController@allUsersInGroup');
+        Route::get('groups/myGroup', 'App\Http\Controllers\API\GroupAPIController@myGroup');
+        Route::resource('groups', App\Http\Controllers\API\GroupAPIController::class);
 
 
-        Route::resource('plans', App\Http\Controllers\API\PlansAPIController::class);
         Route::post('plans/subscribe', 'App\Http\Controllers\API\PlansAPIController@subscribe');
         Route::get('plans/currentPlan', 'App\Http\Controllers\API\PlansAPIController@currentPlan');
+        Route::resource('plans', App\Http\Controllers\API\PlansAPIController::class);
 
 
 
@@ -102,10 +106,10 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
 
-        Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
         Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
         Route::post('users/shareToGroup', 'App\Http\Controllers\API\UserAPIController@shareToGroup');
         Route::post('users/shareGroupWithEmail', 'App\Http\Controllers\API\UserAPIController@shareGroupWithEmail');
+        Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
         Route::resource('file_comments', App\Http\Controllers\API\FileCommentAPIController::class);
         Route::resource('folder_tags', App\Http\Controllers\API\FolderTagAPIController::class);
         Route::resource('file_tags', App\Http\Controllers\API\FileTagAPIController::class);
