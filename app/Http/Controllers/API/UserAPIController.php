@@ -64,6 +64,44 @@ class UserAPIController extends AppBaseController
     }
 
     /**
+     * Remove User to Group.
+     *
+     */
+    public function removeToGroup(ShareGroup $request)
+    {
+        $data = $request->all();
+        $group = Group::find($data['group_id']);
+        $group->users()->detach($data['user_id']);
+        $message = "User Detached";
+        return $this->sendResponse($data, $message);
+    }
+
+
+    /**
+     * Remove User to Group with Comma seperated Email.
+     *
+     */
+    public function removeGroupWithEmail(ShareGroupWithEmail $request)
+    {
+        $data = $request->all();
+        $group = Group::find($data['group_id']);
+        $email = $data['email'];
+        $email = explode(',', $email);
+        foreach ($email as $each) {
+            $user = User::whereHas('theCompany', function ($q) {
+                $q->where('company_id', Auth::user()->theCompany->first()->id);
+            })
+                ->where('email', $each)
+                ->first();
+            if (!empty($user)) {
+                $group->users()->detach($user->id);
+            }
+        }
+        $message = "Users Detached";
+        return $this->sendResponse($data, $message);
+    }
+
+    /**
      * Add User to Group with Comma seperated Email.
      *
      */

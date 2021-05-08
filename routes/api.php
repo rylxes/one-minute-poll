@@ -108,7 +108,13 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
         Route::post('users/shareToGroup', 'App\Http\Controllers\API\UserAPIController@shareToGroup');
+        Route::post('users/removeToGroup', 'App\Http\Controllers\API\UserAPIController@removeToGroup');
         Route::post('users/shareGroupWithEmail', 'App\Http\Controllers\API\UserAPIController@shareGroupWithEmail');
+        Route::post('users/removeGroupWithEmail', 'App\Http\Controllers\API\UserAPIController@removeGroupWithEmail');
+
+
+
+
         Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
         Route::resource('file_comments', App\Http\Controllers\API\FileCommentAPIController::class);
         Route::resource('folder_tags', App\Http\Controllers\API\FolderTagAPIController::class);
