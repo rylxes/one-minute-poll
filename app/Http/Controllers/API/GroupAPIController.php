@@ -95,7 +95,7 @@ class GroupAPIController extends AppBaseController
             $q->where('group_id', $id);
         })->get();
         if ($res->isEmpty()) {
-            return $this->sendError('User not found');
+            return $this->sendError('No User in Group');
         }
         return $this->sendResponse($res->toArray(), 'Users retrieved successfully');
     }
