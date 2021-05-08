@@ -1,6 +1,260 @@
 # Group
 
 
+## Get All Groups for a User.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/groups/byUser" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/groups/byUser"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-groups-byUser" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-groups-byUser"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-groups-byUser"></code></pre>
+</div>
+<div id="execution-error-GETapi-groups-byUser" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-groups-byUser"></code></pre>
+</div>
+<form id="form-GETapi-groups-byUser" data-method="GET" data-path="api/groups/byUser" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-byUser', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-byUser" onclick="tryItOut('GETapi-groups-byUser');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-byUser" onclick="cancelTryOut('GETapi-groups-byUser');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-byUser" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/groups/byUser</code></b>
+</p>
+</form>
+
+
+## Get All Other Groups.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/groups/otherGroup" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/groups/otherGroup"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-groups-otherGroup" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-groups-otherGroup"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-groups-otherGroup"></code></pre>
+</div>
+<div id="execution-error-GETapi-groups-otherGroup" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-groups-otherGroup"></code></pre>
+</div>
+<form id="form-GETapi-groups-otherGroup" data-method="GET" data-path="api/groups/otherGroup" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-otherGroup', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-otherGroup" onclick="tryItOut('GETapi-groups-otherGroup');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-otherGroup" onclick="cancelTryOut('GETapi-groups-otherGroup');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-otherGroup" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/groups/otherGroup</code></b>
+</p>
+</form>
+
+
+## Get All Users in a Group.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/groups/allUsersInGroup/eum" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/groups/allUsersInGroup/eum"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-groups-allUsersInGroup--id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-groups-allUsersInGroup--id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-groups-allUsersInGroup--id-"></code></pre>
+</div>
+<div id="execution-error-GETapi-groups-allUsersInGroup--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-groups-allUsersInGroup--id-"></code></pre>
+</div>
+<form id="form-GETapi-groups-allUsersInGroup--id-" data-method="GET" data-path="api/groups/allUsersInGroup/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-allUsersInGroup--id-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-allUsersInGroup--id-" onclick="tryItOut('GETapi-groups-allUsersInGroup--id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-allUsersInGroup--id-" onclick="cancelTryOut('GETapi-groups-allUsersInGroup--id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-allUsersInGroup--id-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/groups/allUsersInGroup/{id}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-groups-allUsersInGroup--id-" data-component="url" required  hidden>
+<br>
+</p>
+</form>
+
+
+## Get All My Groups.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/groups/myGroup" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/groups/myGroup"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-groups-myGroup" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-groups-myGroup"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-groups-myGroup"></code></pre>
+</div>
+<div id="execution-error-GETapi-groups-myGroup" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-groups-myGroup"></code></pre>
+</div>
+<form id="form-GETapi-groups-myGroup" data-method="GET" data-path="api/groups/myGroup" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-myGroup', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-myGroup" onclick="tryItOut('GETapi-groups-myGroup');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-myGroup" onclick="cancelTryOut('GETapi-groups-myGroup');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-myGroup" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/groups/myGroup</code></b>
+</p>
+</form>
+
+
 ## Display a listing of the Group.
 
 
@@ -75,7 +329,7 @@ curl -X POST \
     "http://localhost/api/groups" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"velit","description":"incidunt","company_id":8}'
+    -d '{"name":"porro","description":"unde"}'
 
 ```
 
@@ -90,9 +344,8 @@ let headers = {
 };
 
 let body = {
-    "name": "velit",
-    "description": "incidunt",
-    "company_id": 8
+    "name": "porro",
+    "description": "unde"
 }
 
 fetch(url, {
@@ -131,11 +384,6 @@ fetch(url, {
 <p>
 <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
 <input type="text" name="description" data-endpoint="POSTapi-groups" data-component="body"  hidden>
-<br>
-</p>
-<p>
-<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="company_id" data-endpoint="POSTapi-groups" data-component="body" required  hidden>
 <br>
 </p>
 
@@ -219,16 +467,16 @@ PUT/PATCH /groups/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/groups/dolorem" \
+    "http://localhost/api/groups/cupiditate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"beatae","description":"necessitatibus","company_id":8}'
+    -d '{"name":"adipisci","description":"perferendis"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/groups/dolorem"
+    "http://localhost/api/groups/cupiditate"
 );
 
 let headers = {
@@ -237,9 +485,8 @@ let headers = {
 };
 
 let body = {
-    "name": "beatae",
-    "description": "necessitatibus",
-    "company_id": 8
+    "name": "adipisci",
+    "description": "perferendis"
 }
 
 fetch(url, {
@@ -290,11 +537,6 @@ fetch(url, {
 <input type="text" name="description" data-endpoint="PUTapi-groups--group-" data-component="body"  hidden>
 <br>
 </p>
-<p>
-<b><code>company_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="company_id" data-endpoint="PUTapi-groups--group-" data-component="body" required  hidden>
-<br>
-</p>
 
 </form>
 
@@ -308,14 +550,14 @@ DELETE /groups/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/groups/cumque" \
+    "http://localhost/api/groups/esse" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/groups/cumque"
+    "http://localhost/api/groups/esse"
 );
 
 let headers = {
@@ -354,260 +596,6 @@ fetch(url, {
 <p>
 <b><code>group</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="group" data-endpoint="DELETEapi-groups--group-" data-component="url" required  hidden>
-<br>
-</p>
-</form>
-
-
-## Get All Groups for a User.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/groups/byUser" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/groups/byUser"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (401):
-
-```json
-{
-    "message": "Unauthorized",
-    "status": 401
-}
-```
-<div id="execution-results-GETapi-groups-byUser" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-groups-byUser"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-groups-byUser"></code></pre>
-</div>
-<div id="execution-error-GETapi-groups-byUser" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-groups-byUser"></code></pre>
-</div>
-<form id="form-GETapi-groups-byUser" data-method="GET" data-path="api/groups/byUser" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-byUser', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-byUser" onclick="tryItOut('GETapi-groups-byUser');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-byUser" onclick="cancelTryOut('GETapi-groups-byUser');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-byUser" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/groups/byUser</code></b>
-</p>
-</form>
-
-
-## Get All My Groups.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/groups/myGroup" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/groups/myGroup"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (401):
-
-```json
-{
-    "message": "Unauthorized",
-    "status": 401
-}
-```
-<div id="execution-results-GETapi-groups-myGroup" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-groups-myGroup"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-groups-myGroup"></code></pre>
-</div>
-<div id="execution-error-GETapi-groups-myGroup" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-groups-myGroup"></code></pre>
-</div>
-<form id="form-GETapi-groups-myGroup" data-method="GET" data-path="api/groups/myGroup" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-myGroup', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-myGroup" onclick="tryItOut('GETapi-groups-myGroup');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-myGroup" onclick="cancelTryOut('GETapi-groups-myGroup');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-myGroup" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/groups/myGroup</code></b>
-</p>
-</form>
-
-
-## Get All Other Groups.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/groups/otherGroup" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/groups/otherGroup"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (401):
-
-```json
-{
-    "message": "Unauthorized",
-    "status": 401
-}
-```
-<div id="execution-results-GETapi-groups-otherGroup" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-groups-otherGroup"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-groups-otherGroup"></code></pre>
-</div>
-<div id="execution-error-GETapi-groups-otherGroup" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-groups-otherGroup"></code></pre>
-</div>
-<form id="form-GETapi-groups-otherGroup" data-method="GET" data-path="api/groups/otherGroup" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-otherGroup', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-otherGroup" onclick="tryItOut('GETapi-groups-otherGroup');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-otherGroup" onclick="cancelTryOut('GETapi-groups-otherGroup');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-otherGroup" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/groups/otherGroup</code></b>
-</p>
-</form>
-
-
-## Get All Users in a Group.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/groups/allUsersInGroup/et" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/groups/allUsersInGroup/et"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (401):
-
-```json
-{
-    "message": "Unauthorized",
-    "status": 401
-}
-```
-<div id="execution-results-GETapi-groups-allUsersInGroup--id-" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-groups-allUsersInGroup--id-"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-groups-allUsersInGroup--id-"></code></pre>
-</div>
-<div id="execution-error-GETapi-groups-allUsersInGroup--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-groups-allUsersInGroup--id-"></code></pre>
-</div>
-<form id="form-GETapi-groups-allUsersInGroup--id-" data-method="GET" data-path="api/groups/allUsersInGroup/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-groups-allUsersInGroup--id-', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-groups-allUsersInGroup--id-" onclick="tryItOut('GETapi-groups-allUsersInGroup--id-');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-groups-allUsersInGroup--id-" onclick="cancelTryOut('GETapi-groups-allUsersInGroup--id-');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-groups-allUsersInGroup--id-" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/groups/allUsersInGroup/{id}</code></b>
-</p>
-<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-<p>
-<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="id" data-endpoint="GETapi-groups-allUsersInGroup--id-" data-component="url" required  hidden>
 <br>
 </p>
 </form>

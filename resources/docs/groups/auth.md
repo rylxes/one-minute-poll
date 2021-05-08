@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"skrajcik@example.org","secret":{},"password":"possimus"}'
+    -d '{"email":"jhettinger@example.com","secret":{},"password":"enim"}'
 
 ```
 
@@ -28,9 +28,9 @@ let headers = {
 };
 
 let body = {
-    "email": "skrajcik@example.org",
+    "email": "jhettinger@example.com",
     "secret": {},
-    "password": "possimus"
+    "password": "enim"
 }
 
 fetch(url, {
@@ -209,7 +209,7 @@ curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"et","last_name":"quis","company_name":"rem","company_phone":"voluptate","company_description":"impedit","has2fa":false,"email":"eleffler@example.net","password":"qui","password_confirmation":"delectus"}'
+    -d '{"first_name":"vel","last_name":"voluptatem","company_name":"sit","company_phone":"aut","company_description":"quaerat","has2fa":false,"email":"elissa.prosacco@example.com","password":"asperiores","password_confirmation":"voluptatibus"}'
 
 ```
 
@@ -224,15 +224,15 @@ let headers = {
 };
 
 let body = {
-    "first_name": "et",
-    "last_name": "quis",
-    "company_name": "rem",
-    "company_phone": "voluptate",
-    "company_description": "impedit",
+    "first_name": "vel",
+    "last_name": "voluptatem",
+    "company_name": "sit",
+    "company_phone": "aut",
+    "company_description": "quaerat",
     "has2fa": false,
-    "email": "eleffler@example.net",
-    "password": "qui",
-    "password_confirmation": "delectus"
+    "email": "elissa.prosacco@example.com",
+    "password": "asperiores",
+    "password_confirmation": "voluptatibus"
 }
 
 fetch(url, {
@@ -325,7 +325,7 @@ curl -X POST \
     "http://localhost/api/password/email" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"adolph41@example.com"}'
+    -d '{"email":"cole.demond@example.net"}'
 
 ```
 
@@ -340,7 +340,7 @@ let headers = {
 };
 
 let body = {
-    "email": "adolph41@example.com"
+    "email": "cole.demond@example.net"
 }
 
 fetch(url, {
@@ -389,14 +389,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/dolores" \
+    -G "http://localhost/api/password/reset/quisquam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/dolores"
+    "http://localhost/api/password/reset/quisquam"
 );
 
 let headers = {
@@ -461,8 +461,8 @@ fetch(url, {
         <p class="login-box-msg">Reset your password</p>
 
         <form method="post" action="http://localhost/password/reset">
-            <input type="hidden" name="_token" value="CPux5eGWF3At76DwqiXGrOQqfPdd08Fdy6C89EWr">
-            <input type="hidden" name="token" value="dolores">
+            <input type="hidden" name="_token" value="nXp2bgB0L3lREnuvgocfqafnmRtF2e1PfSufM6qR">
+            <input type="hidden" name="token" value="quisquam">
 
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
@@ -604,14 +604,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/quasi/voluptas" \
+    -G "http://localhost/api/email/verify/deleniti/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/quasi/voluptas"
+    "http://localhost/api/email/verify/deleniti/quia"
 );
 
 let headers = {
@@ -804,7 +804,7 @@ fetch(url, {
 
         
         <form method="post" action="http://localhost/password/email">
-            <input type="hidden" name="_token" value="CPux5eGWF3At76DwqiXGrOQqfPdd08Fdy6C89EWr">
+            <input type="hidden" name="_token" value="nXp2bgB0L3lREnuvgocfqafnmRtF2e1PfSufM6qR">
             <div class="form-group has-feedback ">
                 <input type="email" class="form-control" name="email" value="" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -870,7 +870,7 @@ curl -X POST \
     "http://localhost/api/password/change" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"myra07@example.net","old_password":"iure","password":"reiciendis"}'
+    -d '{"email":"maximo.robel@example.com","old_password":"consequatur","password":"officiis"}'
 
 ```
 
@@ -885,9 +885,9 @@ let headers = {
 };
 
 let body = {
-    "email": "myra07@example.net",
-    "old_password": "iure",
-    "password": "reiciendis"
+    "email": "maximo.robel@example.com",
+    "old_password": "consequatur",
+    "password": "officiis"
 }
 
 fetch(url, {
@@ -949,7 +949,7 @@ curl -X POST \
     "http://localhost/api/invite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"exercitationem","email":"esmeralda75@example.org"}'
+    -d '{"company_id":"ab","email":"lucile.roob@example.org"}'
 
 ```
 
@@ -964,8 +964,8 @@ let headers = {
 };
 
 let body = {
-    "company_id": "exercitationem",
-    "email": "esmeralda75@example.org"
+    "company_id": "ab",
+    "email": "lucile.roob@example.org"
 }
 
 fetch(url, {
@@ -1076,7 +1076,7 @@ curl -X POST \
     "http://localhost/api/registerInvite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"voluptatibus","user_id":{},"is_user":{},"name":"doloremque","has2fa":false,"email":"west.maximus@example.net","password":"nam","password_confirmation":"delectus"}'
+    -d '{"company_id":"ut","user_id":{},"is_user":{},"name":"ea","has2fa":false,"email":"nconn@example.org","password":"in","password_confirmation":"dolores"}'
 
 ```
 
@@ -1091,14 +1091,14 @@ let headers = {
 };
 
 let body = {
-    "company_id": "voluptatibus",
+    "company_id": "ut",
     "user_id": {},
     "is_user": {},
-    "name": "doloremque",
+    "name": "ea",
     "has2fa": false,
-    "email": "west.maximus@example.net",
-    "password": "nam",
-    "password_confirmation": "delectus"
+    "email": "nconn@example.org",
+    "password": "in",
+    "password_confirmation": "dolores"
 }
 
 fetch(url, {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folder_tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":7,"tag_id":16,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":3,"tag_id":19,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 7,
-    "tag_id": 16,
+    "folder_id": 3,
+    "tag_id": 19,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /folderTags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_tags/optio" \
+    -G "http://localhost/api/folder_tags/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/optio"
+    "http://localhost/api/folder_tags/et"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /folderTags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_tags/dolores" \
+    "http://localhost/api/folder_tags/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":13,"tag_id":13,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":13,"tag_id":12,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/dolores"
+    "http://localhost/api/folder_tags/alias"
 );
 
 let headers = {
@@ -244,7 +244,7 @@ let headers = {
 
 let body = {
     "folder_id": 13,
-    "tag_id": 13,
+    "tag_id": 12,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /folderTags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_tags/ea" \
+    "http://localhost/api/folder_tags/illo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/ea"
+    "http://localhost/api/folder_tags/illo"
 );
 
 let headers = {

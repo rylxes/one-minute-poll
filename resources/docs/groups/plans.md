@@ -1,6 +1,135 @@
 # Plans
 
 
+## Get Subscribe for a plan.
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/plans/subscribe" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"plan_id":"vel"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/plans/subscribe"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "plan_id": "vel"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-plans-subscribe" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-plans-subscribe"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-plans-subscribe"></code></pre>
+</div>
+<div id="execution-error-POSTapi-plans-subscribe" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-plans-subscribe"></code></pre>
+</div>
+<form id="form-POSTapi-plans-subscribe" data-method="POST" data-path="api/plans/subscribe" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-plans-subscribe', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-plans-subscribe" onclick="tryItOut('POSTapi-plans-subscribe');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-plans-subscribe" onclick="cancelTryOut('POSTapi-plans-subscribe');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-plans-subscribe" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/plans/subscribe</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>plan_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="plan_id" data-endpoint="POSTapi-plans-subscribe" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Get Current plan user is subscribed to.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/plans/currentPlan" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/plans/currentPlan"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-plans-currentPlan" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-plans-currentPlan"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-plans-currentPlan"></code></pre>
+</div>
+<div id="execution-error-GETapi-plans-currentPlan" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-plans-currentPlan"></code></pre>
+</div>
+<form id="form-GETapi-plans-currentPlan" data-method="GET" data-path="api/plans/currentPlan" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-plans-currentPlan', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-plans-currentPlan" onclick="tryItOut('GETapi-plans-currentPlan');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-plans-currentPlan" onclick="cancelTryOut('GETapi-plans-currentPlan');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-plans-currentPlan" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/plans/currentPlan</code></b>
+</p>
+</form>
+
+
 ## Display a listing of the Plans.
 
 
@@ -75,7 +204,7 @@ curl -X POST \
     "http://localhost/api/plans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"praesentium","name":"animi","description":"eos","is_active":false,"price":3139.947631196,"signup_fee":5709842,"currency":"vitae","trial_period":18,"trial_interval":"month","invoice_period":1,"invoice_interval":"week","grace_period":6,"grace_interval":"hour","sort_order":18,"prorate_day":3,"prorate_period":2,"prorate_extend_due":13,"active_subscribers_limit":3}'
+    -d '{"slug":"enim","name":"recusandae","description":"dolores","is_active":false,"price":1487945.079051,"signup_fee":10.187803,"currency":"nesciunt","trial_period":15,"trial_interval":"hour","invoice_period":11,"invoice_interval":"day","grace_period":13,"grace_interval":"day","sort_order":8,"prorate_day":20,"prorate_period":13,"prorate_extend_due":1,"active_subscribers_limit":15}'
 
 ```
 
@@ -90,24 +219,24 @@ let headers = {
 };
 
 let body = {
-    "slug": "praesentium",
-    "name": "animi",
-    "description": "eos",
+    "slug": "enim",
+    "name": "recusandae",
+    "description": "dolores",
     "is_active": false,
-    "price": 3139.947631196,
-    "signup_fee": 5709842,
-    "currency": "vitae",
-    "trial_period": 18,
-    "trial_interval": "month",
-    "invoice_period": 1,
-    "invoice_interval": "week",
-    "grace_period": 6,
-    "grace_interval": "hour",
-    "sort_order": 18,
-    "prorate_day": 3,
-    "prorate_period": 2,
-    "prorate_extend_due": 13,
-    "active_subscribers_limit": 3
+    "price": 1487945.079051,
+    "signup_fee": 10.187803,
+    "currency": "nesciunt",
+    "trial_period": 15,
+    "trial_interval": "hour",
+    "invoice_period": 11,
+    "invoice_interval": "day",
+    "grace_period": 13,
+    "grace_interval": "day",
+    "sort_order": 8,
+    "prorate_day": 20,
+    "prorate_period": 13,
+    "prorate_extend_due": 1,
+    "active_subscribers_limit": 15
 }
 
 fetch(url, {
@@ -242,14 +371,14 @@ GET|HEAD /plans/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/plans/consequuntur" \
+    -G "http://localhost/api/plans/consectetur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/consequuntur"
+    "http://localhost/api/plans/consectetur"
 );
 
 let headers = {
@@ -310,16 +439,16 @@ PUT/PATCH /plans/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/plans/rerum" \
+    "http://localhost/api/plans/voluptas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"quia","name":"debitis","description":"voluptates","is_active":false,"price":199.1415783,"signup_fee":33153.8,"currency":"similique","trial_period":20,"trial_interval":"day","invoice_period":1,"invoice_interval":"day","grace_period":4,"grace_interval":"hour","sort_order":14,"prorate_day":19,"prorate_period":18,"prorate_extend_due":18,"active_subscribers_limit":7}'
+    -d '{"slug":"magnam","name":"molestias","description":"quod","is_active":false,"price":6.05,"signup_fee":1270.603064,"currency":"iste","trial_period":2,"trial_interval":"hour","invoice_period":13,"invoice_interval":"month","grace_period":2,"grace_interval":"day","sort_order":1,"prorate_day":15,"prorate_period":7,"prorate_extend_due":2,"active_subscribers_limit":16}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/rerum"
+    "http://localhost/api/plans/voluptas"
 );
 
 let headers = {
@@ -328,24 +457,24 @@ let headers = {
 };
 
 let body = {
-    "slug": "quia",
-    "name": "debitis",
-    "description": "voluptates",
+    "slug": "magnam",
+    "name": "molestias",
+    "description": "quod",
     "is_active": false,
-    "price": 199.1415783,
-    "signup_fee": 33153.8,
-    "currency": "similique",
-    "trial_period": 20,
-    "trial_interval": "day",
-    "invoice_period": 1,
-    "invoice_interval": "day",
-    "grace_period": 4,
-    "grace_interval": "hour",
-    "sort_order": 14,
-    "prorate_day": 19,
-    "prorate_period": 18,
-    "prorate_extend_due": 18,
-    "active_subscribers_limit": 7
+    "price": 6.05,
+    "signup_fee": 1270.603064,
+    "currency": "iste",
+    "trial_period": 2,
+    "trial_interval": "hour",
+    "invoice_period": 13,
+    "invoice_interval": "month",
+    "grace_period": 2,
+    "grace_interval": "day",
+    "sort_order": 1,
+    "prorate_day": 15,
+    "prorate_period": 7,
+    "prorate_extend_due": 2,
+    "active_subscribers_limit": 16
 }
 
 fetch(url, {
@@ -490,14 +619,14 @@ DELETE /plans/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/plans/consequatur" \
+    "http://localhost/api/plans/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/consequatur"
+    "http://localhost/api/plans/ut"
 );
 
 let headers = {
@@ -537,135 +666,6 @@ fetch(url, {
 <b><code>plan</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="plan" data-endpoint="DELETEapi-plans--plan-" data-component="url" required  hidden>
 <br>
-</p>
-</form>
-
-
-## Get Subscribe for a plan.
-
-
-
-
-> Example request:
-
-```bash
-curl -X POST \
-    "http://localhost/api/plans/subscribe" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json" \
-    -d '{"plan_id":"architecto"}'
-
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/plans/subscribe"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "plan_id": "architecto"
-}
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response => response.json());
-```
-
-
-<div id="execution-results-POSTapi-plans-subscribe" hidden>
-    <blockquote>Received response<span id="execution-response-status-POSTapi-plans-subscribe"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-plans-subscribe"></code></pre>
-</div>
-<div id="execution-error-POSTapi-plans-subscribe" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-plans-subscribe"></code></pre>
-</div>
-<form id="form-POSTapi-plans-subscribe" data-method="POST" data-path="api/plans/subscribe" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-plans-subscribe', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-plans-subscribe" onclick="tryItOut('POSTapi-plans-subscribe');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-plans-subscribe" onclick="cancelTryOut('POSTapi-plans-subscribe');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-plans-subscribe" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-black">POST</small>
- <b><code>api/plans/subscribe</code></b>
-</p>
-<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-<p>
-<b><code>plan_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="plan_id" data-endpoint="POSTapi-plans-subscribe" data-component="body" required  hidden>
-<br>
-</p>
-
-</form>
-
-
-## Get Current plan user is subscribed to.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/plans/currentPlan" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/plans/currentPlan"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (401):
-
-```json
-{
-    "message": "Unauthorized",
-    "status": 401
-}
-```
-<div id="execution-results-GETapi-plans-currentPlan" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-plans-currentPlan"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-plans-currentPlan"></code></pre>
-</div>
-<div id="execution-error-GETapi-plans-currentPlan" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-plans-currentPlan"></code></pre>
-</div>
-<form id="form-GETapi-plans-currentPlan" data-method="GET" data-path="api/plans/currentPlan" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-plans-currentPlan', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-plans-currentPlan" onclick="tryItOut('GETapi-plans-currentPlan');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-plans-currentPlan" onclick="cancelTryOut('GETapi-plans-currentPlan');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-plans-currentPlan" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/plans/currentPlan</code></b>
 </p>
 </form>
 

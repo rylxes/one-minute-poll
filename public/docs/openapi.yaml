@@ -39,7 +39,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: skrajcik@example.org
+                                    example: jhettinger@example.com
                                 secret:
                                     type: string
                                     description: ''
@@ -47,7 +47,7 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: possimus
+                                    example: enim
                             required:
                                 - email
                                 - password
@@ -143,23 +143,23 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: et
+                                    example: vel
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: quis
+                                    example: voluptatem
                                 company_name:
                                     type: string
                                     description: ''
-                                    example: rem
+                                    example: sit
                                 company_phone:
                                     type: string
                                     description: ''
-                                    example: voluptate
+                                    example: aut
                                 company_description:
                                     type: string
                                     description: ''
-                                    example: impedit
+                                    example: quaerat
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -167,15 +167,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: eleffler@example.net
+                                    example: elissa.prosacco@example.com
                                 password:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: asperiores
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: delectus
+                                    example: voluptatibus
                             required:
                                 - first_name
                                 - last_name
@@ -217,7 +217,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: adolph41@example.com
+                                    example: cole.demond@example.net
                             required:
                                 - email
             security: []
@@ -246,7 +246,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Enter Email to reset password</p>\n\n        \n        <form method=\"post\" action=\"http://localhost/password/email\">\n            <input type=\"hidden\" name=\"_token\" value=\"CPux5eGWF3At76DwqiXGrOQqfPdd08Fdy6C89EWr\">\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-envelope\"></i> Send Password Reset Link\n                    </button>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n    <!-- /.login-box-body -->\n</div>\n<!-- /.login-box -->\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n</body>\n</html>\n"
+                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Enter Email to reset password</p>\n\n        \n        <form method=\"post\" action=\"http://localhost/password/email\">\n            <input type=\"hidden\" name=\"_token\" value=\"nXp2bgB0L3lREnuvgocfqafnmRtF2e1PfSufM6qR\">\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-envelope\"></i> Send Password Reset Link\n                    </button>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n    <!-- /.login-box-body -->\n</div>\n<!-- /.login-box -->\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n</body>\n</html>\n"
             tags:
                 - Auth
             security: []
@@ -276,7 +276,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"CPux5eGWF3At76DwqiXGrOQqfPdd08Fdy6C89EWr\">\n            <input type=\"hidden\" name=\"token\" value=\"dolores\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
+                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"nXp2bgB0L3lREnuvgocfqafnmRtF2e1PfSufM6qR\">\n            <input type=\"hidden\" name=\"token\" value=\"quisquam\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
             tags:
                 - Auth
             security: []
@@ -285,7 +285,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: dolores
+                example: quisquam
                 required: true
                 schema:
                     type: string
@@ -352,7 +352,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: quasi
+                example: deleniti
                 required: true
                 schema:
                     type: string
@@ -360,7 +360,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: voluptas
+                example: quia
                 required: true
                 schema:
                     type: string
@@ -419,15 +419,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: myra07@example.net
+                                    example: maximo.robel@example.com
                                 old_password:
                                     type: string
                                     description: ''
-                                    example: iure
+                                    example: consequatur
                                 password:
                                     type: string
                                     description: ''
-                                    example: reiciendis
+                                    example: officiis
                             required:
                                 - email
                                 - old_password
@@ -465,11 +465,11 @@ paths:
                                 company_id:
                                     type: string
                                     description: ''
-                                    example: exercitationem
+                                    example: ab
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: esmeralda75@example.org
+                                    example: lucile.roob@example.org
                             required:
                                 - company_id
                                 - email
@@ -529,7 +529,7 @@ paths:
                                 company_id:
                                     type: string
                                     description: ''
-                                    example: voluptatibus
+                                    example: ut
                                 user_id:
                                     type: string
                                     description: ''
@@ -541,7 +541,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: doloremque
+                                    example: ea
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -549,15 +549,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: west.maximus@example.net
+                                    example: nconn@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: nam
+                                    example: in
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: delectus
+                                    example: dolores
                             required:
                                 - company_id
                                 - email
@@ -630,19 +630,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: unde
+                                    example: illum
                                 description:
                                     type: string
                                     description: ''
-                                    example: rerum
+                                    example: et
                                 email:
                                     type: string
                                     description: ''
-                                    example: perferendis
+                                    example: ipsam
                                 phone:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: facilis
                             required:
                                 - name
             security: []
@@ -712,19 +712,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: eum
+                                    example: deleniti
                                 description:
                                     type: string
                                     description: ''
-                                    example: culpa
+                                    example: illo
                                 email:
                                     type: string
                                     description: ''
-                                    example: sit
+                                    example: sed
                                 phone:
                                     type: string
                                     description: ''
-                                    example: neque
+                                    example: labore
                             required:
                                 - name
             security: []
@@ -755,7 +755,7 @@ paths:
                 in: path
                 name: company
                 description: ''
-                example: eveniet
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -924,7 +924,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: natus
+                example: magni
                 required: true
                 schema:
                     type: string
@@ -1058,7 +1058,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: quos
+                example: et
                 required: true
                 schema:
                     type: string
@@ -1182,7 +1182,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: qui
+                example: repellat
                 required: true
                 schema:
                     type: string
@@ -1357,7 +1357,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: voluptas
+                                    example: consequatur
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1369,7 +1369,7 @@ paths:
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: et
                             required:
                                 - name
                                 - folder_id
@@ -1440,7 +1440,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: nulla
+                                    example: labore
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1452,7 +1452,7 @@ paths:
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: sunt
+                                    example: est
                             required:
                                 - name
                                 - folder_id
@@ -1484,10 +1484,138 @@ paths:
                 in: path
                 name: file
                 description: ''
-                example: magnam
+                example: doloremque
                 required: true
                 schema:
                     type: string
+    /api/files/validate:
+        post:
+            summary: 'Validate File''s password.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - File
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                password:
+                                    type: string
+                                    description: ''
+                                    example: animi
+                                file_id:
+                                    type: string
+                                    description: ''
+                                    example: et
+                            required:
+                                - password
+                                - file_id
+            security: []
+    /api/files/moveFile:
+        post:
+            summary: 'Move file to another folder.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - File
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                file_id:
+                                    type: string
+                                    description: ''
+                                    example: consequatur
+                                from_folder_id:
+                                    type: string
+                                    description: ''
+                                    example: qui
+                                to_folder_id:
+                                    type: string
+                                    description: ''
+                                    example: beatae
+                            required:
+                                - file_id
+                                - from_folder_id
+                                - to_folder_id
+            security: []
+    /api/files/copyFile:
+        post:
+            summary: 'Copy file to another folder.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - File
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                file_id:
+                                    type: string
+                                    description: ''
+                                    example: quod
+                                folder_id:
+                                    type: string
+                                    description: ''
+                                    example: accusamus
+                            required:
+                                - file_id
+                                - folder_id
+            security: []
     '/api/files/byFolder/{id}':
         get:
             summary: 'Get All Files By Folder.'
@@ -1528,138 +1656,10 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: molestias
+                example: unde
                 required: true
                 schema:
                     type: string
-    /api/files/validate:
-        post:
-            summary: 'Validate File''s password.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: sed
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: eaque
-                            required:
-                                - password
-                                - file_id
-            security: []
-    /api/files/moveFile:
-        post:
-            summary: 'Move file to another folder.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: laboriosam
-                                from_folder_id:
-                                    type: string
-                                    description: ''
-                                    example: voluptas
-                                to_folder_id:
-                                    type: string
-                                    description: ''
-                                    example: soluta
-                            required:
-                                - file_id
-                                - from_folder_id
-                                - to_folder_id
-            security: []
-    /api/files/copyFile:
-        post:
-            summary: 'Copy file to another folder.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: omnis
-                                folder_id:
-                                    type: string
-                                    description: ''
-                                    example: perspiciatis
-                            required:
-                                - file_id
-                                - folder_id
-            security: []
     /api/file_comments:
         get:
             summary: 'Display a listing of the FileComment.'
@@ -1726,11 +1726,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 6
                                 comment:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: id
                             required:
                                 - file_id
                                 - comment
@@ -1801,11 +1801,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 8
                                 comment:
                                     type: string
                                     description: ''
-                                    example: quod
+                                    example: laborum
                             required:
                                 - file_id
                                 - comment
@@ -1837,7 +1837,7 @@ paths:
                 in: path
                 name: file_comment
                 description: ''
-                example: est
+                example: quia
                 required: true
                 schema:
                     type: string
@@ -1907,11 +1907,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 20
+                                    example: 18
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 14
                                 created_at:
                                     type: string
                                     description: ''
@@ -1990,11 +1990,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 17
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 10
                                 created_at:
                                     type: string
                                     description: ''
@@ -2034,7 +2034,7 @@ paths:
                 in: path
                 name: file_tag
                 description: ''
-                example: vitae
+                example: laudantium
                 required: true
                 schema:
                     type: string
@@ -2104,15 +2104,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: recusandae
+                                    example: vel
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: soluta
+                                    example: incidunt
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 12
+                                    example: 19
                             required:
                                 - name
                                 - library_id
@@ -2183,11 +2183,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: repudiandae
+                                    example: sint
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 8
+                                    example: 15
                             required:
                                 - name
             security: []
@@ -2218,7 +2218,7 @@ paths:
                 in: path
                 name: folder
                 description: ''
-                example: et
+                example: animi
                 required: true
                 schema:
                     type: string
@@ -2288,11 +2288,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 3
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 10
                             required:
                                 - file_id
                                 - folder_id
@@ -2363,11 +2363,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 7
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 13
                             required:
                                 - file_id
                                 - folder_id
@@ -2399,7 +2399,7 @@ paths:
                 in: path
                 name: folder_file
                 description: ''
-                example: reiciendis
+                example: quia
                 required: true
                 schema:
                     type: string
@@ -2469,11 +2469,11 @@ paths:
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 7
+                                    example: 3
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 16
+                                    example: 19
                                 created_at:
                                     type: string
                                     description: ''
@@ -2556,7 +2556,7 @@ paths:
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 12
                                 created_at:
                                     type: string
                                     description: ''
@@ -2596,237 +2596,13 @@ paths:
                 in: path
                 name: folder_tag
                 description: ''
-                example: optio
-                required: true
-                schema:
-                    type: string
-    /api/groups:
-        get:
-            summary: 'Display a listing of the Group.'
-            description: 'GET|HEAD /groups'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-        post:
-            summary: 'Store a newly created Group in storage.'
-            description: 'POST /groups'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Group
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: velit
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: incidunt
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 8
-                            required:
-                                - name
-                                - company_id
-            security: []
-    '/api/groups/{group}':
-        get:
-            summary: 'Display the specified Group.'
-            description: 'GET|HEAD /groups/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-        put:
-            summary: 'Update the specified Group in storage.'
-            description: 'PUT/PATCH /groups/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Group
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: beatae
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: necessitatibus
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 8
-                            required:
-                                - name
-                                - company_id
-            security: []
-        delete:
-            summary: 'Remove the specified Group from storage.'
-            description: 'DELETE /groups/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Group
-            security: []
-        parameters:
-            -
-                in: path
-                name: group
-                description: ''
-                example: rerum
+                example: et
                 required: true
                 schema:
                     type: string
     /api/groups/byUser:
         get:
             summary: 'Get All Groups for a User.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-    /api/groups/myGroup:
-        get:
-            summary: 'Get All My Groups.'
             description: ''
             parameters:
                 -
@@ -2934,10 +2710,390 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: et
+                example: eum
                 required: true
                 schema:
                     type: string
+    /api/groups/myGroup:
+        get:
+            summary: 'Get All My Groups.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Group
+            security: []
+    /api/groups:
+        get:
+            summary: 'Display a listing of the Group.'
+            description: 'GET|HEAD /groups'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Group
+            security: []
+        post:
+            summary: 'Store a newly created Group in storage.'
+            description: 'POST /groups'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Group
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: porro
+                                description:
+                                    type: string
+                                    description: ''
+                                    example: unde
+                            required:
+                                - name
+            security: []
+    '/api/groups/{group}':
+        get:
+            summary: 'Display the specified Group.'
+            description: 'GET|HEAD /groups/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Group
+            security: []
+        put:
+            summary: 'Update the specified Group in storage.'
+            description: 'PUT/PATCH /groups/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Group
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: adipisci
+                                description:
+                                    type: string
+                                    description: ''
+                                    example: perferendis
+                            required:
+                                - name
+            security: []
+        delete:
+            summary: 'Remove the specified Group from storage.'
+            description: 'DELETE /groups/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Group
+            security: []
+        parameters:
+            -
+                in: path
+                name: group
+                description: ''
+                example: rerum
+                required: true
+                schema:
+                    type: string
+    /api/libraries/validate:
+        post:
+            summary: 'Validate Library''s password.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Library
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                password:
+                                    type: string
+                                    description: ''
+                                    example: rerum
+                                library_id:
+                                    type: string
+                                    description: ''
+                                    example: nobis
+                            required:
+                                - password
+                                - library_id
+            security: []
+    /api/libraries/shareToUser:
+        post:
+            summary: 'Share Library to User.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Library
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                library_id:
+                                    type: string
+                                    description: ''
+                                    example: culpa
+                                user_id:
+                                    type: string
+                                    description: ''
+                                    example: qui
+                                password:
+                                    type: boolean
+                                    description: ''
+                                    example: false
+                            required:
+                                - library_id
+                                - user_id
+            security: []
+    /api/libraries/shareToRole:
+        post:
+            summary: 'Share Library to Group.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Library
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                library_id:
+                                    type: string
+                                    description: ''
+                                    example: quas
+                                group_id:
+                                    type: string
+                                    description: ''
+                                    example: et
+                                password:
+                                    type: boolean
+                                    description: ''
+                                    example: false
+                            required:
+                                - library_id
+                                - group_id
+            security: []
+    /api/libraries/myFavourites:
+        get:
+            summary: 'my Favourites.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Library
+            security: []
     /api/libraries:
         get:
             summary: 'Display a listing of the Library.'
@@ -3004,15 +3160,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: consequuntur
+                                    example: voluptas
                                 description:
                                     type: string
                                     description: ''
-                                    example: voluptas
+                                    example: ex
                                 password:
                                     type: string
                                     description: ''
-                                    example: ea
+                                    example: doloribus
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -3092,15 +3248,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: voluptate
                                 description:
                                     type: string
                                     description: ''
-                                    example: sunt
+                                    example: quia
                                 password:
                                     type: string
                                     description: ''
-                                    example: laudantium
+                                    example: quibusdam
                                 company_id:
                                     type: integer
                                     description: ''
@@ -3146,176 +3302,10 @@ paths:
                 in: path
                 name: library
                 description: ''
-                example: optio
+                example: et
                 required: true
                 schema:
                     type: string
-    /api/libraries/validate:
-        post:
-            summary: 'Validate Library''s password.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: rerum
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: repellendus
-                            required:
-                                - password
-                                - library_id
-            security: []
-    /api/libraries/shareToUser:
-        post:
-            summary: 'Share Library to User.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: nam
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: voluptatum
-                                password:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                            required:
-                                - library_id
-                                - user_id
-            security: []
-    /api/libraries/shareToRole:
-        post:
-            summary: 'Share Library to Group.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: ut
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: et
-                                password:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                            required:
-                                - library_id
-                                - group_id
-            security: []
-    /api/libraries/myFavourites:
-        get:
-            summary: 'my Favourites.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Library
-            security: []
     /api/notification_types:
         get:
             summary: 'Display a listing of the NotificationType.'
@@ -3382,7 +3372,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: dolores
+                                    example: dolore
                                 created_at:
                                     type: string
                                     description: ''
@@ -3460,7 +3450,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: repellendus
+                                    example: porro
                                 created_at:
                                     type: string
                                     description: ''
@@ -3499,7 +3489,7 @@ paths:
                 in: path
                 name: notification_type
                 description: ''
-                example: omnis
+                example: sunt
                 required: true
                 schema:
                     type: string
@@ -3569,11 +3559,11 @@ paths:
                                 notification_type_id:
                                     type: integer
                                     description: ''
-                                    example: 2
+                                    example: 6
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 16
+                                    example: 5
                                 created_at:
                                     type: string
                                     description: ''
@@ -3652,11 +3642,11 @@ paths:
                                 notification_type_id:
                                     type: integer
                                     description: ''
-                                    example: 16
+                                    example: 4
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 11
                                 created_at:
                                     type: string
                                     description: ''
@@ -3696,7 +3686,7 @@ paths:
                 in: path
                 name: notification
                 description: ''
-                example: qui
+                example: unde
                 required: true
                 schema:
                     type: string
@@ -3732,11 +3722,11 @@ paths:
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: fuga
+                                    example: alias
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: quaerat
+                                    example: eum
                             required:
                                 - user_id
                                 - permission_id
@@ -3773,11 +3763,11 @@ paths:
                                 role_id:
                                     type: string
                                     description: ''
-                                    example: quis
+                                    example: dolorem
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: enim
+                                    example: nemo
                             required:
                                 - role_id
                                 - permission_id
@@ -3848,11 +3838,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: ab
                                 guard_name:
                                     type: string
                                     description: ''
-                                    example: ducimus
+                                    example: est
                                 created_at:
                                     type: string
                                     description: ''
@@ -3931,11 +3921,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: dolorem
                                 guard_name:
                                     type: string
                                     description: ''
-                                    example: placeat
+                                    example: eum
                                 created_at:
                                     type: string
                                     description: ''
@@ -3975,10 +3965,81 @@ paths:
                 in: path
                 name: permission
                 description: ''
-                example: tempora
+                example: voluptate
                 required: true
                 schema:
                     type: string
+    /api/plans/subscribe:
+        post:
+            summary: 'Get Subscribe for a plan.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Plans
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                plan_id:
+                                    type: string
+                                    description: ''
+                                    example: vel
+                            required:
+                                - plan_id
+            security: []
+    /api/plans/currentPlan:
+        get:
+            summary: 'Get Current plan user is subscribed to.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Plans
+            security: []
     /api/plans:
         get:
             summary: 'Display a listing of the Plans.'
@@ -4045,15 +4106,15 @@ paths:
                                 slug:
                                     type: string
                                     description: ''
-                                    example: praesentium
+                                    example: enim
                                 name:
                                     type: string
                                     description: ''
-                                    example: animi
+                                    example: recusandae
                                 description:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: dolores
                                 is_active:
                                     type: boolean
                                     description: ''
@@ -4061,59 +4122,59 @@ paths:
                                 price:
                                     type: number
                                     description: ''
-                                    example: 3139.947631196
+                                    example: 1487945.079051
                                 signup_fee:
                                     type: number
                                     description: ''
-                                    example: !!float 5709842
+                                    example: 10.187803
                                 currency:
                                     type: string
                                     description: ''
-                                    example: vitae
+                                    example: nesciunt
                                 trial_period:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 15
                                 trial_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: month
+                                    example: hour
                                 invoice_period:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 11
                                 invoice_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: week
+                                    example: day
                                 grace_period:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 13
                                 grace_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: hour
+                                    example: day
                                 sort_order:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 8
                                 prorate_day:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 20
                                 prorate_period:
                                     type: integer
                                     description: ''
-                                    example: 2
+                                    example: 13
                                 prorate_extend_due:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 1
                                 active_subscribers_limit:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 15
                             required:
                                 - slug
                                 - name
@@ -4187,15 +4248,15 @@ paths:
                                 slug:
                                     type: string
                                     description: ''
-                                    example: quia
+                                    example: magnam
                                 name:
                                     type: string
                                     description: ''
-                                    example: debitis
+                                    example: molestias
                                 description:
                                     type: string
                                     description: ''
-                                    example: voluptates
+                                    example: quod
                                 is_active:
                                     type: boolean
                                     description: ''
@@ -4203,59 +4264,59 @@ paths:
                                 price:
                                     type: number
                                     description: ''
-                                    example: 199.1415783
+                                    example: 6.05
                                 signup_fee:
                                     type: number
                                     description: ''
-                                    example: 33153.8
+                                    example: 1270.603064
                                 currency:
                                     type: string
                                     description: ''
-                                    example: similique
+                                    example: iste
                                 trial_period:
                                     type: integer
                                     description: ''
-                                    example: 20
+                                    example: 2
                                 trial_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: day
+                                    example: hour
                                 invoice_period:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 13
                                 invoice_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: day
+                                    example: month
                                 grace_period:
                                     type: integer
                                     description: ''
-                                    example: 4
+                                    example: 2
                                 grace_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: hour
+                                    example: day
                                 sort_order:
                                     type: integer
                                     description: ''
-                                    example: 14
+                                    example: 1
                                 prorate_day:
                                     type: integer
                                     description: ''
-                                    example: 19
+                                    example: 15
                                 prorate_period:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 7
                                 prorate_extend_due:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 2
                                 active_subscribers_limit:
                                     type: integer
                                     description: ''
-                                    example: 7
+                                    example: 16
                             required:
                                 - slug
                                 - name
@@ -4290,81 +4351,10 @@ paths:
                 in: path
                 name: plan
                 description: ''
-                example: consequuntur
+                example: consectetur
                 required: true
                 schema:
                     type: string
-    /api/plans/subscribe:
-        post:
-            summary: 'Get Subscribe for a plan.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Plans
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                plan_id:
-                                    type: string
-                                    description: ''
-                                    example: architecto
-                            required:
-                                - plan_id
-            security: []
-    /api/plans/currentPlan:
-        get:
-            summary: 'Get Current plan user is subscribed to.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Plans
-            security: []
     /api/profiles:
         get:
             summary: 'Display a listing of the Profile.'
@@ -4431,19 +4421,19 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: fuga
+                                    example: quos
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: omnis
+                                    example: quo
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 12
                                 avatar:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: non
                             required:
                                 - first_name
                                 - last_name
@@ -4515,15 +4505,15 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: velit
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: modi
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 15
                             required:
                                 - first_name
                                 - last_name
@@ -4556,7 +4546,7 @@ paths:
                 in: path
                 name: profile
                 description: ''
-                example: minima
+                example: voluptas
                 required: true
                 schema:
                     type: string
@@ -4626,11 +4616,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: itaque
+                                    example: rerum
                                 guard_name:
                                     type: string
                                     description: ''
-                                    example: dolorum
+                                    example: nisi
                                 created_at:
                                     type: string
                                     description: ''
@@ -4709,11 +4699,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: harum
+                                    example: quidem
                                 guard_name:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: excepturi
                                 created_at:
                                     type: string
                                     description: ''
@@ -4753,7 +4743,7 @@ paths:
                 in: path
                 name: role
                 description: ''
-                example: et
+                example: distinctio
                 required: true
                 schema:
                     type: string
@@ -4823,15 +4813,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: in
+                                    example: nemo
                                 value:
                                     type: string
                                     description: ''
-                                    example: eaque
+                                    example: odit
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 7
+                                    example: 13
                             required:
                                 - company_id
             security: []
@@ -4901,15 +4891,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: deserunt
+                                    example: reiciendis
                                 value:
                                     type: string
                                     description: ''
-                                    example: labore
+                                    example: nesciunt
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 18
                             required:
                                 - company_id
             security: []
@@ -4940,7 +4930,7 @@ paths:
                 in: path
                 name: setting
                 description: ''
-                example: esse
+                example: sunt
                 required: true
                 schema:
                     type: string
@@ -5010,15 +5000,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: minus
                                 colour:
                                     type: string
                                     description: ''
-                                    example: magnam
+                                    example: est
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 18
                             required:
                                 - name
                                 - company_id
@@ -5089,15 +5079,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: natus
+                                    example: architecto
                                 colour:
                                     type: string
                                     description: ''
-                                    example: eum
+                                    example: repellat
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 1
                             required:
                                 - name
                                 - company_id
@@ -5129,10 +5119,209 @@ paths:
                 in: path
                 name: tag
                 description: ''
-                example: eaque
+                example: quia
                 required: true
                 schema:
                     type: string
+    /api/users/myActivities:
+        get:
+            summary: 'My Activities.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - User
+            security: []
+    /api/users/shareToGroup:
+        post:
+            summary: 'Add User to Group.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - User
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                group_id:
+                                    type: string
+                                    description: ''
+                                    example: quo
+                                user_id:
+                                    type: string
+                                    description: ''
+                                    example: eos
+                            required:
+                                - group_id
+                                - user_id
+            security: []
+    /api/users/removeToGroup:
+        post:
+            summary: 'Remove User to Group.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - User
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                group_id:
+                                    type: string
+                                    description: ''
+                                    example: nisi
+                                user_id:
+                                    type: string
+                                    description: ''
+                                    example: excepturi
+                            required:
+                                - group_id
+                                - user_id
+            security: []
+    /api/users/shareGroupWithEmail:
+        post:
+            summary: 'Add User to Group with Comma seperated Email.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - User
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                group_id:
+                                    type: string
+                                    description: ''
+                                    example: ipsum
+                                email:
+                                    type: string
+                                    description: ''
+                                    example: ab
+                            required:
+                                - group_id
+                                - email
+            security: []
+    /api/users/removeGroupWithEmail:
+        post:
+            summary: 'Remove User to Group with Comma seperated Email.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - User
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                group_id:
+                                    type: string
+                                    description: ''
+                                    example: a
+                                email:
+                                    type: string
+                                    description: ''
+                                    example: similique
+                            required:
+                                - group_id
+                                - email
+            security: []
     /api/users:
         get:
             summary: 'Display a listing of the User.'
@@ -5230,124 +5419,7 @@ paths:
                 in: path
                 name: user
                 description: ''
-                example: facere
+                example: doloribus
                 required: true
                 schema:
                     type: string
-    /api/users/myActivities:
-        get:
-            summary: 'My Activities.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - User
-            security: []
-    /api/users/shareToGroup:
-        post:
-            summary: 'Add User to Group.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - User
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: beatae
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: sed
-                            required:
-                                - group_id
-                                - user_id
-            security: []
-    /api/users/shareGroupWithEmail:
-        post:
-            summary: 'Add User to Group with Comma seperated Email.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - User
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: enim
-                                email:
-                                    type: string
-                                    description: ''
-                                    example: vitae
-                            required:
-                                - group_id
-                                - email
-            security: []

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/roles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"itaque","guard_name":"dolorum","created_at":{},"updated_at":{}}'
+    -d '{"name":"rerum","guard_name":"nisi","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "itaque",
-    "guard_name": "dolorum",
+    "name": "rerum",
+    "guard_name": "nisi",
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /roles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/roles/et" \
+    -G "http://localhost/api/roles/distinctio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/et"
+    "http://localhost/api/roles/distinctio"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /roles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/roles/tempore" \
+    "http://localhost/api/roles/quae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"harum","guard_name":"aut","created_at":{},"updated_at":{}}'
+    -d '{"name":"quidem","guard_name":"excepturi","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/tempore"
+    "http://localhost/api/roles/quae"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "name": "harum",
-    "guard_name": "aut",
+    "name": "quidem",
+    "guard_name": "excepturi",
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /roles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/roles/aliquam" \
+    "http://localhost/api/roles/repellat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/aliquam"
+    "http://localhost/api/roles/repellat"
 );
 
 let headers = {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptas","is_favourite":false,"is_lock":false,"folder_id":"aut"}'
+    -d '{"name":"consequatur","is_favourite":false,"is_lock":false,"folder_id":"et"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptas",
+    "name": "consequatur",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "aut"
+    "folder_id": "et"
 }
 
 fetch(url, {
@@ -159,14 +159,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/magnam" \
+    -G "http://localhost/api/files/doloremque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/magnam"
+    "http://localhost/api/files/doloremque"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/consectetur" \
+    "http://localhost/api/files/vel" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nulla","is_favourite":false,"is_lock":false,"folder_id":"sunt"}'
+    -d '{"name":"labore","is_favourite":false,"is_lock":false,"folder_id":"est"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/consectetur"
+    "http://localhost/api/files/vel"
 );
 
 let headers = {
@@ -245,10 +245,10 @@ let headers = {
 };
 
 let body = {
-    "name": "nulla",
+    "name": "labore",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "sunt"
+    "folder_id": "est"
 }
 
 fetch(url, {
@@ -324,14 +324,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/sed" \
+    "http://localhost/api/files/minima" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/sed"
+    "http://localhost/api/files/minima"
 );
 
 let headers = {
@@ -375,74 +375,6 @@ fetch(url, {
 </form>
 
 
-## Get All Files By Folder.
-
-
-
-
-> Example request:
-
-```bash
-curl -X GET \
-    -G "http://localhost/api/files/byFolder/molestias" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
-    "http://localhost/api/files/byFolder/molestias"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response => response.json());
-```
-
-
-> Example response (401):
-
-```json
-{
-    "message": "Unauthorized",
-    "status": 401
-}
-```
-<div id="execution-results-GETapi-files-byFolder--id-" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETapi-files-byFolder--id-"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-files-byFolder--id-"></code></pre>
-</div>
-<div id="execution-error-GETapi-files-byFolder--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-files-byFolder--id-"></code></pre>
-</div>
-<form id="form-GETapi-files-byFolder--id-" data-method="GET" data-path="api/files/byFolder/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-files-byFolder--id-', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-files-byFolder--id-" onclick="tryItOut('GETapi-files-byFolder--id-');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-files-byFolder--id-" onclick="cancelTryOut('GETapi-files-byFolder--id-');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-files-byFolder--id-" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>api/files/byFolder/{id}</code></b>
-</p>
-<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-<p>
-<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="id" data-endpoint="GETapi-files-byFolder--id-" data-component="url" required  hidden>
-<br>
-</p>
-</form>
-
-
 ## Validate File&#039;s password.
 
 
@@ -455,7 +387,7 @@ curl -X POST \
     "http://localhost/api/files/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"sed","file_id":"eaque"}'
+    -d '{"password":"animi","file_id":"et"}'
 
 ```
 
@@ -470,8 +402,8 @@ let headers = {
 };
 
 let body = {
-    "password": "sed",
-    "file_id": "eaque"
+    "password": "animi",
+    "file_id": "et"
 }
 
 fetch(url, {
@@ -528,7 +460,7 @@ curl -X POST \
     "http://localhost/api/files/moveFile" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"laboriosam","from_folder_id":"voluptas","to_folder_id":"soluta"}'
+    -d '{"file_id":"consequatur","from_folder_id":"qui","to_folder_id":"beatae"}'
 
 ```
 
@@ -543,9 +475,9 @@ let headers = {
 };
 
 let body = {
-    "file_id": "laboriosam",
-    "from_folder_id": "voluptas",
-    "to_folder_id": "soluta"
+    "file_id": "consequatur",
+    "from_folder_id": "qui",
+    "to_folder_id": "beatae"
 }
 
 fetch(url, {
@@ -607,7 +539,7 @@ curl -X POST \
     "http://localhost/api/files/copyFile" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"omnis","folder_id":"perspiciatis"}'
+    -d '{"file_id":"quod","folder_id":"accusamus"}'
 
 ```
 
@@ -622,8 +554,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": "omnis",
-    "folder_id": "perspiciatis"
+    "file_id": "quod",
+    "folder_id": "accusamus"
 }
 
 fetch(url, {
@@ -665,6 +597,74 @@ fetch(url, {
 <br>
 </p>
 
+</form>
+
+
+## Get All Files By Folder.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/files/byFolder/unde" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/files/byFolder/unde"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-files-byFolder--id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-files-byFolder--id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-files-byFolder--id-"></code></pre>
+</div>
+<div id="execution-error-GETapi-files-byFolder--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-files-byFolder--id-"></code></pre>
+</div>
+<form id="form-GETapi-files-byFolder--id-" data-method="GET" data-path="api/files/byFolder/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-files-byFolder--id-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-files-byFolder--id-" onclick="tryItOut('GETapi-files-byFolder--id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-files-byFolder--id-" onclick="cancelTryOut('GETapi-files-byFolder--id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-files-byFolder--id-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/files/byFolder/{id}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-files-byFolder--id-" data-component="url" required  hidden>
+<br>
+</p>
 </form>
 
 
