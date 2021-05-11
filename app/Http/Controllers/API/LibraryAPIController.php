@@ -43,7 +43,7 @@ class LibraryAPIController extends AppBaseController
     {
 
         $lib = new Library();
-        $libraries = $lib->whereHas('theUsers', function ($query) {
+        $libraries = $lib->with('folders')->whereHas('theUsers', function ($query) {
             $query->where('user_id', auth()->user()->id);
         })->orWhereHas('theGroup', function ($query) {
             $groups = auth()->user()->groups->pluck('id')->toArray();
