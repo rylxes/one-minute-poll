@@ -171,8 +171,10 @@ class LibraryAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Library $library */
-        $library = $this->libraryRepository->find($id);
+        //$library = $this->libraryRepository->find($id);
 
+        $lib = new Library();
+        $library = $lib->with('folders')->find($id);
         if (empty($library)) {
             return $this->sendError('Library not found');
         }
