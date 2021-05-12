@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"user_id":"alias","permission_id":"eum"}'
+    -d '{"user_id":"officiis","permission_id":"corrupti"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "user_id": "alias",
-    "permission_id": "eum"
+    "user_id": "officiis",
+    "permission_id": "corrupti"
 }
 
 fetch(url, {
@@ -86,7 +86,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/role" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"role_id":"dolorem","permission_id":"nemo"}'
+    -d '{"role_id":"at","permission_id":"provident"}'
 
 ```
 
@@ -101,8 +101,8 @@ let headers = {
 };
 
 let body = {
-    "role_id": "dolorem",
-    "permission_id": "nemo"
+    "role_id": "at",
+    "permission_id": "provident"
 }
 
 fetch(url, {
@@ -221,7 +221,7 @@ curl -X POST \
     "http://localhost/api/permissions" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"ab","guard_name":"est","created_at":{},"updated_at":{}}'
+    -d '{"name":"dolor","guard_name":"ut","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -236,8 +236,8 @@ let headers = {
 };
 
 let body = {
-    "name": "ab",
-    "guard_name": "est",
+    "name": "dolor",
+    "guard_name": "ut",
     "created_at": {},
     "updated_at": {}
 }
@@ -303,14 +303,14 @@ GET|HEAD /permissions/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/permissions/voluptate" \
+    -G "http://localhost/api/permissions/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/voluptate"
+    "http://localhost/api/permissions/ut"
 );
 
 let headers = {
@@ -371,16 +371,16 @@ PUT/PATCH /permissions/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/permissions/deleniti" \
+    "http://localhost/api/permissions/veniam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"dolorem","guard_name":"eum","created_at":{},"updated_at":{}}'
+    -d '{"name":"ut","guard_name":"libero","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/deleniti"
+    "http://localhost/api/permissions/veniam"
 );
 
 let headers = {
@@ -389,8 +389,8 @@ let headers = {
 };
 
 let body = {
-    "name": "dolorem",
-    "guard_name": "eum",
+    "name": "ut",
+    "guard_name": "libero",
     "created_at": {},
     "updated_at": {}
 }
@@ -466,14 +466,14 @@ DELETE /permissions/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/permissions/quam" \
+    "http://localhost/api/permissions/laboriosam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/quam"
+    "http://localhost/api/permissions/laboriosam"
 );
 
 let headers = {

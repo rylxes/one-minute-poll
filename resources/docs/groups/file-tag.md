@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/file_tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":18,"tag_id":14,"created_at":{},"updated_at":{}}'
+    -d '{"file_id":6,"tag_id":19,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 18,
-    "tag_id": 14,
+    "file_id": 6,
+    "tag_id": 19,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /fileTags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/file_tags/laudantium" \
+    -G "http://localhost/api/file_tags/sequi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_tags/laudantium"
+    "http://localhost/api/file_tags/sequi"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /fileTags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/file_tags/quod" \
+    "http://localhost/api/file_tags/voluptas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":17,"tag_id":10,"created_at":{},"updated_at":{}}'
+    -d '{"file_id":12,"tag_id":9,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_tags/quod"
+    "http://localhost/api/file_tags/voluptas"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 17,
-    "tag_id": 10,
+    "file_id": 12,
+    "tag_id": 9,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /fileTags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/file_tags/rerum" \
+    "http://localhost/api/file_tags/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_tags/rerum"
+    "http://localhost/api/file_tags/et"
 );
 
 let headers = {

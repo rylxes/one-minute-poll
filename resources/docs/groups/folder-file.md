@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folder_files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":3,"folder_id":10}'
+    -d '{"file_id":4,"folder_id":10}'
 
 ```
 
@@ -90,7 +90,7 @@ let headers = {
 };
 
 let body = {
-    "file_id": 3,
+    "file_id": 4,
     "folder_id": 10
 }
 
@@ -145,14 +145,14 @@ GET|HEAD /folderFiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_files/quia" \
+    -G "http://localhost/api/folder_files/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/quia"
+    "http://localhost/api/folder_files/non"
 );
 
 let headers = {
@@ -213,16 +213,16 @@ PUT/PATCH /folderFiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_files/maxime" \
+    "http://localhost/api/folder_files/facilis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":7,"folder_id":13}'
+    -d '{"file_id":4,"folder_id":13}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/maxime"
+    "http://localhost/api/folder_files/facilis"
 );
 
 let headers = {
@@ -231,7 +231,7 @@ let headers = {
 };
 
 let body = {
-    "file_id": 7,
+    "file_id": 4,
     "folder_id": 13
 }
 
@@ -296,14 +296,14 @@ DELETE /folderFiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_files/quo" \
+    "http://localhost/api/folder_files/voluptas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_files/quo"
+    "http://localhost/api/folder_files/voluptas"
 );
 
 let headers = {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folders" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"vel","library_id":"incidunt","parent_id":19}'
+    -d '{"name":"officiis","library_id":"accusamus","parent_id":20}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "name": "vel",
-    "library_id": "incidunt",
-    "parent_id": 19
+    "name": "officiis",
+    "library_id": "accusamus",
+    "parent_id": 20
 }
 
 fetch(url, {
@@ -151,14 +151,14 @@ GET|HEAD /folders/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folders/animi" \
+    -G "http://localhost/api/folders/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/animi"
+    "http://localhost/api/folders/est"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /folders/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folders/tenetur" \
+    "http://localhost/api/folders/consequatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sint","parent_id":15}'
+    -d '{"name":"quia","parent_id":14}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/tenetur"
+    "http://localhost/api/folders/consequatur"
 );
 
 let headers = {
@@ -237,8 +237,8 @@ let headers = {
 };
 
 let body = {
-    "name": "sint",
-    "parent_id": 15
+    "name": "quia",
+    "parent_id": 14
 }
 
 fetch(url, {
@@ -302,14 +302,14 @@ DELETE /folders/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folders/animi" \
+    "http://localhost/api/folders/inventore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folders/animi"
+    "http://localhost/api/folders/inventore"
 );
 
 let headers = {

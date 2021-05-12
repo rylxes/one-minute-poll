@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"rerum","library_id":"nobis"}'
+    -d '{"password":"ea","library_id":"assumenda"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "password": "rerum",
-    "library_id": "nobis"
+    "password": "ea",
+    "library_id": "assumenda"
 }
 
 fetch(url, {
@@ -86,7 +86,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"culpa","user_id":"qui","password":false}'
+    -d '{"library_id":"beatae","user_id":"est","password":false}'
 
 ```
 
@@ -101,8 +101,8 @@ let headers = {
 };
 
 let body = {
-    "library_id": "culpa",
-    "user_id": "qui",
+    "library_id": "beatae",
+    "user_id": "est",
     "password": false
 }
 
@@ -166,7 +166,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToRole" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"quas","group_id":"et","password":false}'
+    -d '{"library_id":"laboriosam","group_id":"voluptatem","password":false}'
 
 ```
 
@@ -181,8 +181,8 @@ let headers = {
 };
 
 let body = {
-    "library_id": "quas",
-    "group_id": "et",
+    "library_id": "laboriosam",
+    "group_id": "voluptatem",
     "password": false
 }
 
@@ -370,7 +370,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptas","description":"ex","password":"doloribus","is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"et","description":"odit","password":"modi","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -385,9 +385,9 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptas",
-    "description": "ex",
-    "password": "doloribus",
+    "name": "et",
+    "description": "odit",
+    "password": "modi",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -460,14 +460,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/et" \
+    -G "http://localhost/api/libraries/ea" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/et"
+    "http://localhost/api/libraries/ea"
 );
 
 let headers = {
@@ -528,16 +528,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/quam" \
+    "http://localhost/api/libraries/doloribus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptate","description":"quia","password":"quibusdam","company_id":20,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"ut","description":"iure","password":"quia","company_id":5,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/quam"
+    "http://localhost/api/libraries/doloribus"
 );
 
 let headers = {
@@ -546,10 +546,10 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptate",
-    "description": "quia",
-    "password": "quibusdam",
-    "company_id": 20,
+    "name": "ut",
+    "description": "iure",
+    "password": "quia",
+    "company_id": 5,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -637,14 +637,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/eos" \
+    "http://localhost/api/libraries/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/eos"
+    "http://localhost/api/libraries/sunt"
 );
 
 let headers = {

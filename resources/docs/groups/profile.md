@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"quos","last_name":"quo","user_id":12,"avatar":"non"}'
+    -d '{"first_name":"nihil","last_name":"quidem","user_id":7,"avatar":"dolores"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "quos",
-    "last_name": "quo",
-    "user_id": 12,
-    "avatar": "non"
+    "first_name": "nihil",
+    "last_name": "quidem",
+    "user_id": 7,
+    "avatar": "dolores"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/voluptas" \
+    -G "http://localhost/api/profiles/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/voluptas"
+    "http://localhost/api/profiles/ut"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/illum" \
+    "http://localhost/api/profiles/ea" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"velit","last_name":"modi","user_id":15}'
+    -d '{"first_name":"sint","last_name":"molestias","user_id":16}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/illum"
+    "http://localhost/api/profiles/ea"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "velit",
-    "last_name": "modi",
-    "user_id": 15
+    "first_name": "sint",
+    "last_name": "molestias",
+    "user_id": 16
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/molestiae" \
+    "http://localhost/api/profiles/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/molestiae"
+    "http://localhost/api/profiles/non"
 );
 
 let headers = {
