@@ -8,6 +8,7 @@ use App\Models\Company;
 use App\Repositories\CompanyRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Auth;
 use Response;
 
 /**
@@ -72,7 +73,11 @@ class CompanyAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Company $company */
-        $company = $this->companyRepository->find($id);
+        $company = new Company();
+        $company = $company
+            ->whereHas('theUser', function ($query) {
+                $query->where('company_id', Auth::user()->theCompany->first()->id);
+            })->where('id', $id)->get();
 
         if (empty($company)) {
             return $this->sendError('Company not found');
@@ -95,7 +100,11 @@ class CompanyAPIController extends AppBaseController
         $input = $request->all();
 
         /** @var Company $company */
-        $company = $this->companyRepository->find($id);
+        $company = new Company();
+        $company = $company
+            ->whereHas('theUser', function ($query) {
+                $query->where('company_id', Auth::user()->theCompany->first()->id);
+            })->where('id', $id)->get();
 
         if (empty($company)) {
             return $this->sendError('Company not found');
@@ -118,8 +127,11 @@ class CompanyAPIController extends AppBaseController
      */
     public function destroy($id)
     {
-        /** @var Company $company */
-        $company = $this->companyRepository->find($id);
+        $company = new Company();
+        $company = $company
+            ->whereHas('theUser', function ($query) {
+                $query->where('company_id', Auth::user()->theCompany->first()->id);
+            })->where('id', $id)->get();
 
         if (empty($company)) {
             return $this->sendError('Company not found');

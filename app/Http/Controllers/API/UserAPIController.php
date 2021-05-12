@@ -170,14 +170,17 @@ class UserAPIController extends AppBaseController
      */
     public function destroy($id)
     {
-        /** @var User $user */
-        $user = $this->userRepository->find($id);
+        $user = new User();
+        $user = $user
+            ->whereHas('theCompany', function ($query) {
+                $query->where('company_id', Auth::user()->theCompany->first()->id);
+            })->where('id', $id)->get();
 
         if (empty($user)) {
             return $this->sendError('User not found');
         }
-
-        $user->delete();
+        $input['status'] = 3;
+        $this->userRepository->update($input, $id);
 
         return $this->sendSuccess('User deleted successfully');
     }

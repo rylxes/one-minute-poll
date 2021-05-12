@@ -62,4 +62,9 @@ class Company extends Model
     ];
 
 
+    public function theUser()
+    {
+        return $this->belongsToMany(User::class, 'company_user');
+    }
+
 }
