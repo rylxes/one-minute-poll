@@ -77,7 +77,7 @@ class CompanyAPIController extends AppBaseController
         $company = $company
             ->whereHas('theUser', function ($query) {
                 $query->where('company_id', Auth::user()->theCompany->first()->id);
-            })->where('id', $id)->get();
+            })->where('id', $id)->first();
 
         if (empty($company)) {
             return $this->sendError('Company not found');
@@ -104,7 +104,7 @@ class CompanyAPIController extends AppBaseController
         $company = $company
             ->whereHas('theUser', function ($query) {
                 $query->where('company_id', Auth::user()->theCompany->first()->id);
-            })->where('id', $id)->get();
+            })->where('id', $id)->first();
 
         if (empty($company)) {
             return $this->sendError('Company not found');
@@ -131,7 +131,7 @@ class CompanyAPIController extends AppBaseController
         $company = $company
             ->whereHas('theUser', function ($query) {
                 $query->where('company_id', Auth::user()->theCompany->first()->id);
-            })->where('id', $id)->get();
+            })->where('id', $id)->first();
 
         if (empty($company)) {
             return $this->sendError('Company not found');

@@ -174,13 +174,15 @@ class UserAPIController extends AppBaseController
         $user = $user
             ->whereHas('theCompany', function ($query) {
                 $query->where('company_id', Auth::user()->theCompany->first()->id);
-            })->where('id', $id)->get();
+            })->where('id', $id)->first();
 
         if (empty($user)) {
             return $this->sendError('User not found');
         }
-        $input['status'] = 3;
-        $this->userRepository->update($input, $id);
+        //$user->theCompany()->syncWithoutDetaching([Auth::user()->theCompany->first()->id => ['status' => 3]]);
+        $user->theCompany()->detach(Auth::user()->theCompany->first()->id);
+        //$input['status'] = 3;
+        //$this->userRepository->update($input, $id);
 
         return $this->sendSuccess('User deleted successfully');
     }

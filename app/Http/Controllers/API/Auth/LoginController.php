@@ -124,6 +124,12 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
+        if(!$user->theCompany()->exists()){
+            throw ValidationException::withMessages([
+                $this->username() => ['You are not attached to a company'],
+            ]);
+        }
+
         // 0 = inActive
         // 2 = Locked
         // 3 = Deleted

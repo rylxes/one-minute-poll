@@ -30,6 +30,7 @@ class User extends Authenticatable
         'two_factor_secret',
         'has2fa',
         'email',
+        'status',
         'password',
     ];
 
