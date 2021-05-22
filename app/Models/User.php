@@ -33,7 +33,7 @@ class User extends Authenticatable
         'status',
         'password',
     ];
-
+    protected $guard_name = 'api';
     protected $fields = ['two_factor'];
     /**
      * The attributes that should be hidden for arrays.
