@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"odio","last_name":"iusto","user_id":8,"avatar":"a"}'
+    -d '{"first_name":"rerum","last_name":"qui","user_id":10,"avatar":"sunt"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "odio",
-    "last_name": "iusto",
-    "user_id": 8,
-    "avatar": "a"
+    "first_name": "rerum",
+    "last_name": "qui",
+    "user_id": 10,
+    "avatar": "sunt"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/rerum" \
+    -G "http://localhost/api/profiles/harum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/rerum"
+    "http://localhost/api/profiles/harum"
 );
 
 let headers = {
@@ -228,7 +228,7 @@ curl -X PUT \
     "http://localhost/api/profiles/doloribus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"dicta","last_name":"dolor","user_id":17}'
+    -d '{"first_name":"ipsum","last_name":"exercitationem","user_id":4}'
 
 ```
 
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "dicta",
-    "last_name": "dolor",
-    "user_id": 17
+    "first_name": "ipsum",
+    "last_name": "exercitationem",
+    "user_id": 4
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/eligendi" \
+    "http://localhost/api/profiles/nihil" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/eligendi"
+    "http://localhost/api/profiles/nihil"
 );
 
 let headers = {

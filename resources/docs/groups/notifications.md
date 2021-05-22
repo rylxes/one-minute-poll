@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":3,"user_id":5,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":3,"user_id":15,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -91,7 +91,7 @@ let headers = {
 
 let body = {
     "notification_type_id": 3,
-    "user_id": 5,
+    "user_id": 15,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /notifications/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notifications/quam" \
+    -G "http://localhost/api/notifications/soluta" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/quam"
+    "http://localhost/api/notifications/soluta"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /notifications/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notifications/ea" \
+    "http://localhost/api/notifications/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":8,"user_id":20,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":16,"user_id":11,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/ea"
+    "http://localhost/api/notifications/autem"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 8,
-    "user_id": 20,
+    "notification_type_id": 16,
+    "user_id": 11,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /notifications/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notifications/et" \
+    "http://localhost/api/notifications/eum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/et"
+    "http://localhost/api/notifications/eum"
 );
 
 let headers = {

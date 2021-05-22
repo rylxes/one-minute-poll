@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folder_tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":12,"tag_id":3,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":19,"tag_id":5,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 12,
-    "tag_id": 3,
+    "folder_id": 19,
+    "tag_id": 5,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /folderTags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_tags/reiciendis" \
+    -G "http://localhost/api/folder_tags/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/reiciendis"
+    "http://localhost/api/folder_tags/voluptatem"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /folderTags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_tags/quas" \
+    "http://localhost/api/folder_tags/dolorem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":3,"tag_id":16,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":2,"tag_id":20,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/quas"
+    "http://localhost/api/folder_tags/dolorem"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 3,
-    "tag_id": 16,
+    "folder_id": 2,
+    "tag_id": 20,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /folderTags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_tags/necessitatibus" \
+    "http://localhost/api/folder_tags/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/necessitatibus"
+    "http://localhost/api/folder_tags/et"
 );
 
 let headers = {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/users/shareToGroup" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"amet","user_id":"quia"}'
+    -d '{"group_id":"sit","user_id":"omnis"}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "group_id": "amet",
-    "user_id": "quia"
+    "group_id": "sit",
+    "user_id": "omnis"
 }
 
 fetch(url, {
@@ -148,7 +148,7 @@ curl -X POST \
     "http://localhost/api/users/removeToGroup" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"aut","user_id":"et"}'
+    -d '{"group_id":"pariatur","user_id":"quae"}'
 
 ```
 
@@ -163,8 +163,8 @@ let headers = {
 };
 
 let body = {
-    "group_id": "aut",
-    "user_id": "et"
+    "group_id": "pariatur",
+    "user_id": "quae"
 }
 
 fetch(url, {
@@ -221,7 +221,7 @@ curl -X POST \
     "http://localhost/api/users/shareGroupWithEmail" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"veritatis","email":"soluta"}'
+    -d '{"group_id":"alias","email":"blanditiis"}'
 
 ```
 
@@ -236,8 +236,8 @@ let headers = {
 };
 
 let body = {
-    "group_id": "veritatis",
-    "email": "soluta"
+    "group_id": "alias",
+    "email": "blanditiis"
 }
 
 fetch(url, {
@@ -294,7 +294,7 @@ curl -X POST \
     "http://localhost/api/users/removeGroupWithEmail" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"et","email":"est"}'
+    -d '{"group_id":"culpa","email":"unde"}'
 
 ```
 
@@ -309,8 +309,8 @@ let headers = {
 };
 
 let body = {
-    "group_id": "et",
-    "email": "est"
+    "group_id": "culpa",
+    "email": "unde"
 }
 
 fetch(url, {
@@ -426,14 +426,14 @@ GET|HEAD /users/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/users/est" \
+    -G "http://localhost/api/users/illo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/users/est"
+    "http://localhost/api/users/illo"
 );
 
 let headers = {
@@ -494,14 +494,14 @@ DELETE /users/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/users/explicabo" \
+    "http://localhost/api/users/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/users/explicabo"
+    "http://localhost/api/users/est"
 );
 
 let headers = {

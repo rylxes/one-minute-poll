@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"user_id":"consequatur","permission_id":"quis"}'
+    -d '{"user_id":"dolor","permission_id":"nam"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "user_id": "consequatur",
-    "permission_id": "quis"
+    "user_id": "dolor",
+    "permission_id": "nam"
 }
 
 fetch(url, {
@@ -86,7 +86,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/role" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"role_id":"eos","permission_id":"placeat"}'
+    -d '{"role_id":"qui","permission_id":"ipsam"}'
 
 ```
 
@@ -101,8 +101,8 @@ let headers = {
 };
 
 let body = {
-    "role_id": "eos",
-    "permission_id": "placeat"
+    "role_id": "qui",
+    "permission_id": "ipsam"
 }
 
 fetch(url, {
@@ -147,6 +147,73 @@ fetch(url, {
 </form>
 
 
+## Get Permissions for a User
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/permissions/get/user" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"user_id":"illum"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/permissions/get/user"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "user_id": "illum"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-permissions-get-user" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-permissions-get-user"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-permissions-get-user"></code></pre>
+</div>
+<div id="execution-error-POSTapi-permissions-get-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-permissions-get-user"></code></pre>
+</div>
+<form id="form-POSTapi-permissions-get-user" data-method="POST" data-path="api/permissions/get/user" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-permissions-get-user', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-permissions-get-user" onclick="tryItOut('POSTapi-permissions-get-user');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-permissions-get-user" onclick="cancelTryOut('POSTapi-permissions-get-user');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-permissions-get-user" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/permissions/get/user</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>user_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user_id" data-endpoint="POSTapi-permissions-get-user" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
 ## Assigns Permissions to File
 
 
@@ -159,7 +226,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/file" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"ullam","permission_id":"ratione"}'
+    -d '{"file_id":"blanditiis","permission_id":"sunt"}'
 
 ```
 
@@ -174,8 +241,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": "ullam",
-    "permission_id": "ratione"
+    "file_id": "blanditiis",
+    "permission_id": "sunt"
 }
 
 fetch(url, {
@@ -294,7 +361,7 @@ curl -X POST \
     "http://localhost/api/permissions" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"quibusdam"}'
+    -d '{"name":"assumenda"}'
 
 ```
 
@@ -309,7 +376,7 @@ let headers = {
 };
 
 let body = {
-    "name": "quibusdam"
+    "name": "assumenda"
 }
 
 fetch(url, {
@@ -358,14 +425,14 @@ GET|HEAD /permissions/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/permissions/hic" \
+    -G "http://localhost/api/permissions/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/hic"
+    "http://localhost/api/permissions/omnis"
 );
 
 let headers = {
@@ -426,16 +493,16 @@ PUT/PATCH /permissions/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/permissions/nisi" \
+    "http://localhost/api/permissions/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"maiores"}'
+    -d '{"name":"excepturi"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/nisi"
+    "http://localhost/api/permissions/sed"
 );
 
 let headers = {
@@ -444,7 +511,7 @@ let headers = {
 };
 
 let body = {
-    "name": "maiores"
+    "name": "excepturi"
 }
 
 fetch(url, {
@@ -503,14 +570,14 @@ DELETE /permissions/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/permissions/aperiam" \
+    "http://localhost/api/permissions/odio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/aperiam"
+    "http://localhost/api/permissions/odio"
 );
 
 let headers = {
