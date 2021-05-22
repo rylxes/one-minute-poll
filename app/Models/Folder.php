@@ -46,7 +46,10 @@ class Folder extends Model
         '_lft',
         '_rgt',
         'company_id',
-        'parent_id'
+        'parent_id',
+        'is_lock',
+        'is_favourite',
+        'password',
     ];
 
     /**
