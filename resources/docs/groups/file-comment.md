@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/file_comments" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":10,"comment":"ut"}'
+    -d '{"file_id":20,"comment":"exercitationem"}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 10,
-    "comment": "ut"
+    "file_id": 20,
+    "comment": "exercitationem"
 }
 
 fetch(url, {
@@ -145,14 +145,14 @@ GET|HEAD /fileComments/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/file_comments/aut" \
+    -G "http://localhost/api/file_comments/distinctio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_comments/aut"
+    "http://localhost/api/file_comments/distinctio"
 );
 
 let headers = {
@@ -213,16 +213,16 @@ PUT/PATCH /fileComments/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/file_comments/amet" \
+    "http://localhost/api/file_comments/esse" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":14,"comment":"numquam"}'
+    -d '{"file_id":9,"comment":"molestias"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_comments/amet"
+    "http://localhost/api/file_comments/esse"
 );
 
 let headers = {
@@ -231,8 +231,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": 14,
-    "comment": "numquam"
+    "file_id": 9,
+    "comment": "molestias"
 }
 
 fetch(url, {
@@ -296,14 +296,14 @@ DELETE /fileComments/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/file_comments/magni" \
+    "http://localhost/api/file_comments/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/file_comments/magni"
+    "http://localhost/api/file_comments/est"
 );
 
 let headers = {

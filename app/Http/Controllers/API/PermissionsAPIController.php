@@ -78,6 +78,20 @@ class PermissionsAPIController extends AppBaseController
         return $this->sendResponse([], 'Permissions Saved');
     }
 
+
+    /**
+     * UnAssigns Permissions to User
+     */
+
+    public function userUnPermissionsAssign(AssignPermissionsUser $request)
+    {
+        $input = $request->input();
+        $user = User::find($input['user_id']);
+        $permissionName = Permissions::find($input['permission_id']);
+        $user->revokePermissionTo($permissionName->name);
+        return $this->sendResponse([], 'Permissions Revoked');
+    }
+
     /**
      * Assigns Permissions to Role
      */

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/companies" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"qui","description":"vero","email":"itaque","phone":"in"}'
+    -d '{"name":"id","description":"distinctio","email":"omnis","phone":"porro"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "qui",
-    "description": "vero",
-    "email": "itaque",
-    "phone": "in"
+    "name": "id",
+    "description": "distinctio",
+    "email": "omnis",
+    "phone": "porro"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /companies/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/companies/voluptatem" \
+    -G "http://localhost/api/companies/vel" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/voluptatem"
+    "http://localhost/api/companies/vel"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /companies/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/companies/omnis" \
+    "http://localhost/api/companies/ipsam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"doloribus","description":"aut","email":"laudantium","phone":"odio"}'
+    -d '{"name":"suscipit","description":"nam","email":"nostrum","phone":"tempora"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/omnis"
+    "http://localhost/api/companies/ipsam"
 );
 
 let headers = {
@@ -243,10 +243,10 @@ let headers = {
 };
 
 let body = {
-    "name": "doloribus",
-    "description": "aut",
-    "email": "laudantium",
-    "phone": "odio"
+    "name": "suscipit",
+    "description": "nam",
+    "email": "nostrum",
+    "phone": "tempora"
 }
 
 fetch(url, {
@@ -320,14 +320,14 @@ DELETE /companies/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/companies/magnam" \
+    "http://localhost/api/companies/nemo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/companies/magnam"
+    "http://localhost/api/companies/nemo"
 );
 
 let headers = {

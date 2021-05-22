@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/roles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"pariatur","guard_name":"facilis","created_at":{},"updated_at":{}}'
+    -d '{"name":"a","guard_name":"et","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "pariatur",
-    "guard_name": "facilis",
+    "name": "a",
+    "guard_name": "et",
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /roles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/roles/alias" \
+    -G "http://localhost/api/roles/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/alias"
+    "http://localhost/api/roles/quia"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /roles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/roles/voluptatem" \
+    "http://localhost/api/roles/doloribus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"deserunt","guard_name":"odio","created_at":{},"updated_at":{}}'
+    -d '{"name":"sapiente","guard_name":"impedit","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/voluptatem"
+    "http://localhost/api/roles/doloribus"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "name": "deserunt",
-    "guard_name": "odio",
+    "name": "sapiente",
+    "guard_name": "impedit",
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /roles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/roles/ut" \
+    "http://localhost/api/roles/tempore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/ut"
+    "http://localhost/api/roles/tempore"
 );
 
 let headers = {
