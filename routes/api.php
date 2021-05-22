@@ -49,7 +49,10 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::post('delete', 'App\Http\Controllers\API\Auth\ChangePasswordController@deleteProfile');
         Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
 
-        Route::get('folders/byLibrary/{id}', 'App\Http\Controllers\API\FileAPIController@byLibrary');
+
+        Route::get('folders/myFavourites', 'App\Http\Controllers\API\FolderAPIController@myFavourites');
+        Route::post('folders/validate', 'App\Http\Controllers\API\FolderAPIController@validatePassword');
+        Route::get('folders/byLibrary/{id}', 'App\Http\Controllers\API\FolderAPIController@byLibrary');
         Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
 
 
@@ -59,8 +62,12 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::resource('tags', App\Http\Controllers\API\TagAPIController::class);
 
+
+
         Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
 
+
+        Route::get('files/myFavourites', 'App\Http\Controllers\API\FileAPIController@myFavourites');
         Route::post('files/validate', 'App\Http\Controllers\API\FileAPIController@validatePassword');
         Route::post('files/moveFile', 'App\Http\Controllers\API\FileAPIController@moveFile');
         Route::post('files/copyFile', 'App\Http\Controllers\API\FileAPIController@copyFile');
@@ -88,6 +95,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
         Route::post('plans/subscribe', 'App\Http\Controllers\API\PlansAPIController@subscribe');
+        Route::post('plans/createPlan', 'App\Http\Controllers\API\PlansAPIController@createPlan');
         Route::get('plans/currentPlan', 'App\Http\Controllers\API\PlansAPIController@currentPlan');
         Route::resource('plans', App\Http\Controllers\API\PlansAPIController::class);
 
@@ -96,6 +104,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::post('permissions/assign/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsAssign');
         Route::post('permissions/assign/role', 'App\Http\Controllers\API\PermissionsAPIController@rolePermissionsAssign');
+        Route::post('permissions/assign/file', 'App\Http\Controllers\API\PermissionsAPIController@filePermissionsAssign');
         Route::resource('permissions', App\Http\Controllers\API\PermissionsAPIController::class);
 
 

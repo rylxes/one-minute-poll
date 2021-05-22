@@ -7,12 +7,15 @@ use App\Http\Requests\API\AddFolderToLibraryAPIRequest;
 use App\Http\Requests\API\CreateFolderAPIRequest;
 use App\Http\Requests\API\InviteRequest;
 use App\Http\Requests\API\UpdateFolderAPIRequest;
+use App\Http\Requests\API\ValidateFilePassword;
+use App\Http\Requests\API\ValidateFolderPassword;
 use App\Models\Company;
 use App\Models\File;
 use App\Models\Folder;
 use App\Repositories\FolderRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\Hash;
 use Response;
 
 /**
@@ -64,9 +67,44 @@ class FolderAPIController extends AppBaseController
     {
         $input = $request->all();
 
+        if (@$input['is_lock']) {
+            $request->validate($this->passwordRules(), []);
+            $input['password'] = Hash::make($input['password']);
+        }
+
         $folder = $this->folderRepository->create($input);
         $folder->library()->attach($input['library_id']);
         return $this->sendResponse($folder->toArray(), 'Folder saved successfully');
+    }
+
+
+    /**
+     * Validate File's password.
+     *
+     *
+     */
+    public function validatePassword(ValidateFolderPassword $request)
+    {
+        $input = $request->all();
+        $folder = $this->folderRepository->find($input['folder_id']);
+        if (empty($folder)) {
+            return $this->sendError('Folder not found');
+        }
+
+        $isChecked = Hash::check(
+            $input['password'], $folder->password
+        );
+        if (!$isChecked) {
+            return $this->sendError("The Password is Incorrect");
+        }
+        return $this->sendResponse([], 'success');
+    }
+
+    protected function passwordRules()
+    {
+        return [
+            'password' => 'required|min:8',
+        ];
     }
 
 
@@ -119,6 +157,18 @@ class FolderAPIController extends AppBaseController
     }
 
     /**
+     * my Favourites.
+     *
+     */
+
+    public function myFavourites(Request $request)
+    {
+        $lib = new Folder();
+        $libraries = $lib->where('is_favourite', 1)->get();
+        return $this->sendResponse($libraries->toArray(), 'Favourites retrieved successfully');
+    }
+
+    /**
      * Update the specified Folder in storage.
      * PUT/PATCH /folders/{id}
      *
@@ -133,9 +183,12 @@ class FolderAPIController extends AppBaseController
 
         /** @var Folder $folder */
         $folder = $this->folderRepository->find($id);
-
         if (empty($folder)) {
             return $this->sendError('Folder not found');
+        }
+        if (@$input['is_lock']) {
+            $request->validate($this->passwordRules(), []);
+            $input['password'] = Hash::make($input['password']);
         }
 
         $folder = $this->folderRepository->update($input, $id);

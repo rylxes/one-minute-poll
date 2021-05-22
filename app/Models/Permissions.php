@@ -53,9 +53,6 @@ class Permissions extends Permission
      */
     public static $rules = [
         'name' => 'required|string|max:255',
-        'guard_name' => 'required|string|max:255',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
     ];
 
 }

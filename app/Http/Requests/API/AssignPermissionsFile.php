@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Folder;
+use App\Models\Permissions;
 use InfyOm\Generator\Request\APIRequest;
 
-class CreateFolderAPIRequest extends APIRequest
+class AssignPermissionsFile extends APIRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,11 +25,8 @@ class CreateFolderAPIRequest extends APIRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'library_id' => 'required|exists:library,id',
-            'is_favourite' => 'nullable|boolean',
-            'is_lock' => 'nullable|boolean',
-            'parent_id' => 'nullable|integer'
+            'file_id' => 'required|exists:file,id',
+            'permission_id' => 'required|exists:permissions,id',
         ];
     }
 }

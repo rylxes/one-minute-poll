@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Folder;
-use InfyOm\Generator\Request\APIRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class CreateFolderAPIRequest extends APIRequest
+class ValidateFolderPassword extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,11 +24,8 @@ class CreateFolderAPIRequest extends APIRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'library_id' => 'required|exists:library,id',
-            'is_favourite' => 'nullable|boolean',
-            'is_lock' => 'nullable|boolean',
-            'parent_id' => 'nullable|integer'
+            'password' => 'required|min:8',
+            'folder_id' => 'required|exists:folders,id',
         ];
     }
 }

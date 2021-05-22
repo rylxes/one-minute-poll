@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"nihil","last_name":"quidem","user_id":7,"avatar":"dolores"}'
+    -d '{"first_name":"odio","last_name":"iusto","user_id":8,"avatar":"a"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "nihil",
-    "last_name": "quidem",
-    "user_id": 7,
-    "avatar": "dolores"
+    "first_name": "odio",
+    "last_name": "iusto",
+    "user_id": 8,
+    "avatar": "a"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/ut" \
+    -G "http://localhost/api/profiles/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/ut"
+    "http://localhost/api/profiles/rerum"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/ea" \
+    "http://localhost/api/profiles/doloribus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sint","last_name":"molestias","user_id":16}'
+    -d '{"first_name":"dicta","last_name":"dolor","user_id":17}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/ea"
+    "http://localhost/api/profiles/doloribus"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sint",
-    "last_name": "molestias",
-    "user_id": 16
+    "first_name": "dicta",
+    "last_name": "dolor",
+    "user_id": 17
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/non" \
+    "http://localhost/api/profiles/eligendi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/non"
+    "http://localhost/api/profiles/eligendi"
 );
 
 let headers = {

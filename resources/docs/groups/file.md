@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nemo","is_favourite":false,"is_lock":false,"folder_id":"expedita"}'
+    -d '{"name":"qui","is_favourite":false,"is_lock":false,"folder_id":"aut"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "name": "nemo",
+    "name": "qui",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "expedita"
+    "folder_id": "aut"
 }
 
 fetch(url, {
@@ -159,14 +159,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/aliquid" \
+    -G "http://localhost/api/files/officiis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/aliquid"
+    "http://localhost/api/files/officiis"
 );
 
 let headers = {
@@ -227,16 +227,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/quis" \
+    "http://localhost/api/files/blanditiis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"optio","is_favourite":false,"is_lock":false,"folder_id":"reiciendis"}'
+    -d '{"name":"aspernatur","is_favourite":false,"is_lock":false,"folder_id":"libero"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/quis"
+    "http://localhost/api/files/blanditiis"
 );
 
 let headers = {
@@ -245,10 +245,10 @@ let headers = {
 };
 
 let body = {
-    "name": "optio",
+    "name": "aspernatur",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "reiciendis"
+    "folder_id": "libero"
 }
 
 fetch(url, {
@@ -324,14 +324,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/et" \
+    "http://localhost/api/files/quos" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/et"
+    "http://localhost/api/files/quos"
 );
 
 let headers = {
@@ -375,6 +375,68 @@ fetch(url, {
 </form>
 
 
+## my Favourites.
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/files/myFavourites" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/files/myFavourites"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETapi-files-myFavourites" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-files-myFavourites"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-files-myFavourites"></code></pre>
+</div>
+<div id="execution-error-GETapi-files-myFavourites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-files-myFavourites"></code></pre>
+</div>
+<form id="form-GETapi-files-myFavourites" data-method="GET" data-path="api/files/myFavourites" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-files-myFavourites', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-files-myFavourites" onclick="tryItOut('GETapi-files-myFavourites');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-files-myFavourites" onclick="cancelTryOut('GETapi-files-myFavourites');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-files-myFavourites" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/files/myFavourites</code></b>
+</p>
+</form>
+
+
 ## Validate File&#039;s password.
 
 
@@ -387,7 +449,7 @@ curl -X POST \
     "http://localhost/api/files/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"error","file_id":"dolore"}'
+    -d '{"password":"aspernatur","file_id":"qui"}'
 
 ```
 
@@ -402,8 +464,8 @@ let headers = {
 };
 
 let body = {
-    "password": "error",
-    "file_id": "dolore"
+    "password": "aspernatur",
+    "file_id": "qui"
 }
 
 fetch(url, {
@@ -460,7 +522,7 @@ curl -X POST \
     "http://localhost/api/files/moveFile" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"vel","from_folder_id":"quia","to_folder_id":"ducimus"}'
+    -d '{"file_id":"et","from_folder_id":"est","to_folder_id":"consequatur"}'
 
 ```
 
@@ -475,9 +537,9 @@ let headers = {
 };
 
 let body = {
-    "file_id": "vel",
-    "from_folder_id": "quia",
-    "to_folder_id": "ducimus"
+    "file_id": "et",
+    "from_folder_id": "est",
+    "to_folder_id": "consequatur"
 }
 
 fetch(url, {
@@ -539,7 +601,7 @@ curl -X POST \
     "http://localhost/api/files/copyFile" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"ex","folder_id":"aut"}'
+    -d '{"file_id":"qui","folder_id":"sunt"}'
 
 ```
 
@@ -554,8 +616,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": "ex",
-    "folder_id": "aut"
+    "file_id": "qui",
+    "folder_id": "sunt"
 }
 
 fetch(url, {
@@ -609,14 +671,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/recusandae" \
+    -G "http://localhost/api/files/byFolder/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/recusandae"
+    "http://localhost/api/files/byFolder/qui"
 );
 
 let headers = {

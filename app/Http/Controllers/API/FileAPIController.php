@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\AddFolderToLibraryAPIRequest;
+use App\Http\Requests\API\AssignPermissionsFile;
+use App\Http\Requests\API\AssignPermissionsUser;
 use App\Http\Requests\API\CopyFileToFolderAPIRequest;
 use App\Http\Requests\API\CreateFileAPIRequest;
 use App\Http\Requests\API\MoveFileToFolderAPIRequest;
@@ -11,6 +13,8 @@ use App\Http\Requests\API\ValidateFilePassword;
 use App\Http\Requests\API\ValidatePassword;
 use App\Models\File;
 use App\Models\Library;
+use App\Models\Permissions;
+use App\Models\User;
 use App\Repositories\FileRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
@@ -51,6 +55,7 @@ class FileAPIController extends AppBaseController
 
         return $this->sendResponse($files->toArray(), 'Files retrieved successfully');
     }
+
 
 
     /**
@@ -188,6 +193,18 @@ class FileAPIController extends AppBaseController
     }
 
     /**
+     * my Favourites.
+     *
+     */
+
+    public function myFavourites(Request $request)
+    {
+        $lib = new File();
+        $libraries = $lib->where('is_favourite', 1)->get();
+        return $this->sendResponse($libraries->toArray(), 'Favourites retrieved successfully');
+    }
+
+    /**
      * Validate File's password.
      *
      *
@@ -196,7 +213,7 @@ class FileAPIController extends AppBaseController
     {
         $input = $request->all();
         /** @var File $file */
-        $file = $this->fileRepository->find($input['library_id']);
+        $file = $this->fileRepository->find($input['file_id']);
         if (empty($file)) {
             return $this->sendError('File not found');
         }
@@ -229,7 +246,7 @@ class FileAPIController extends AppBaseController
             return $this->sendError('File not found');
         }
         DB::beginTransaction();
-        if ($input['is_lock']) {
+        if (@$input['is_lock']) {
             $request->validate($this->passwordRules(), []);
             $input['password'] = Hash::make($input['password']);
         }

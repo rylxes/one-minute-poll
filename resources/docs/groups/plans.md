@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/plans/subscribe" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"plan_id":"et"}'
+    -d '{"plan_id":"tenetur"}'
 
 ```
 
@@ -28,7 +28,7 @@ let headers = {
 };
 
 let body = {
-    "plan_id": "et"
+    "plan_id": "tenetur"
 }
 
 fetch(url, {
@@ -62,6 +62,103 @@ fetch(url, {
 <p>
 <b><code>plan_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="plan_id" data-endpoint="POSTapi-plans-subscribe" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
+## Create Plans (Less Params).
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/plans/createPlan" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"slug":"unde","name":"et","price":36381727.3,"invoice_period":14,"invoice_interval":"hour","active_subscribers_limit":7}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/plans/createPlan"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "slug": "unde",
+    "name": "et",
+    "price": 36381727.3,
+    "invoice_period": 14,
+    "invoice_interval": "hour",
+    "active_subscribers_limit": 7
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-plans-createPlan" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-plans-createPlan"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-plans-createPlan"></code></pre>
+</div>
+<div id="execution-error-POSTapi-plans-createPlan" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-plans-createPlan"></code></pre>
+</div>
+<form id="form-POSTapi-plans-createPlan" data-method="POST" data-path="api/plans/createPlan" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-plans-createPlan', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-plans-createPlan" onclick="tryItOut('POSTapi-plans-createPlan');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-plans-createPlan" onclick="cancelTryOut('POSTapi-plans-createPlan');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-plans-createPlan" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/plans/createPlan</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>slug</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="slug" data-endpoint="POSTapi-plans-createPlan" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-plans-createPlan" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>price</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="price" data-endpoint="POSTapi-plans-createPlan" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>invoice_period</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+<input type="number" name="invoice_period" data-endpoint="POSTapi-plans-createPlan" data-component="body"  hidden>
+<br>
+</p>
+<p>
+<b><code>invoice_interval</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="invoice_interval" data-endpoint="POSTapi-plans-createPlan" data-component="body"  hidden>
+<br>
+The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.</p>
+<p>
+<b><code>active_subscribers_limit</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+<input type="number" name="active_subscribers_limit" data-endpoint="POSTapi-plans-createPlan" data-component="body"  hidden>
 <br>
 </p>
 
@@ -204,7 +301,7 @@ curl -X POST \
     "http://localhost/api/plans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"molestias","name":"ipsum","description":"nisi","is_active":false,"price":4.744,"signup_fee":66,"currency":"molestiae","trial_period":9,"trial_interval":"hour","invoice_period":4,"invoice_interval":"month","grace_period":15,"grace_interval":"hour","sort_order":10,"prorate_day":7,"prorate_period":2,"prorate_extend_due":7,"active_subscribers_limit":15}'
+    -d '{"slug":"ipsam","name":"sit","description":"voluptates","is_active":false,"price":505.03224,"signup_fee":124.16164,"currency":"voluptas","trial_period":12,"trial_interval":"day","invoice_period":3,"invoice_interval":"hour","grace_period":20,"grace_interval":"month","sort_order":12,"prorate_day":3,"prorate_period":7,"prorate_extend_due":12,"active_subscribers_limit":13}'
 
 ```
 
@@ -219,24 +316,24 @@ let headers = {
 };
 
 let body = {
-    "slug": "molestias",
-    "name": "ipsum",
-    "description": "nisi",
+    "slug": "ipsam",
+    "name": "sit",
+    "description": "voluptates",
     "is_active": false,
-    "price": 4.744,
-    "signup_fee": 66,
-    "currency": "molestiae",
-    "trial_period": 9,
-    "trial_interval": "hour",
-    "invoice_period": 4,
-    "invoice_interval": "month",
-    "grace_period": 15,
-    "grace_interval": "hour",
-    "sort_order": 10,
-    "prorate_day": 7,
-    "prorate_period": 2,
-    "prorate_extend_due": 7,
-    "active_subscribers_limit": 15
+    "price": 505.03224,
+    "signup_fee": 124.16164,
+    "currency": "voluptas",
+    "trial_period": 12,
+    "trial_interval": "day",
+    "invoice_period": 3,
+    "invoice_interval": "hour",
+    "grace_period": 20,
+    "grace_interval": "month",
+    "sort_order": 12,
+    "prorate_day": 3,
+    "prorate_period": 7,
+    "prorate_extend_due": 12,
+    "active_subscribers_limit": 13
 }
 
 fetch(url, {
@@ -371,14 +468,14 @@ GET|HEAD /plans/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/plans/quo" \
+    -G "http://localhost/api/plans/nesciunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/quo"
+    "http://localhost/api/plans/nesciunt"
 );
 
 let headers = {
@@ -439,16 +536,16 @@ PUT/PATCH /plans/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/plans/blanditiis" \
+    "http://localhost/api/plans/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"possimus","name":"expedita","description":"et","is_active":false,"price":11,"signup_fee":0.10878242,"currency":"sit","trial_period":6,"trial_interval":"week","invoice_period":6,"invoice_interval":"month","grace_period":11,"grace_interval":"hour","sort_order":4,"prorate_day":20,"prorate_period":8,"prorate_extend_due":8,"active_subscribers_limit":19}'
+    -d '{"slug":"consequatur","name":"rerum","description":"totam","is_active":false,"price":463057.9961,"signup_fee":21169645.1,"currency":"qui","trial_period":2,"trial_interval":"month","invoice_period":4,"invoice_interval":"day","grace_period":19,"grace_interval":"day","sort_order":4,"prorate_day":7,"prorate_period":15,"prorate_extend_due":2,"active_subscribers_limit":17}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/blanditiis"
+    "http://localhost/api/plans/alias"
 );
 
 let headers = {
@@ -457,24 +554,24 @@ let headers = {
 };
 
 let body = {
-    "slug": "possimus",
-    "name": "expedita",
-    "description": "et",
+    "slug": "consequatur",
+    "name": "rerum",
+    "description": "totam",
     "is_active": false,
-    "price": 11,
-    "signup_fee": 0.10878242,
-    "currency": "sit",
-    "trial_period": 6,
-    "trial_interval": "week",
-    "invoice_period": 6,
-    "invoice_interval": "month",
-    "grace_period": 11,
-    "grace_interval": "hour",
+    "price": 463057.9961,
+    "signup_fee": 21169645.1,
+    "currency": "qui",
+    "trial_period": 2,
+    "trial_interval": "month",
+    "invoice_period": 4,
+    "invoice_interval": "day",
+    "grace_period": 19,
+    "grace_interval": "day",
     "sort_order": 4,
-    "prorate_day": 20,
-    "prorate_period": 8,
-    "prorate_extend_due": 8,
-    "active_subscribers_limit": 19
+    "prorate_day": 7,
+    "prorate_period": 15,
+    "prorate_extend_due": 2,
+    "active_subscribers_limit": 17
 }
 
 fetch(url, {
@@ -619,14 +716,14 @@ DELETE /plans/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/plans/aut" \
+    "http://localhost/api/plans/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/aut"
+    "http://localhost/api/plans/quis"
 );
 
 let headers = {

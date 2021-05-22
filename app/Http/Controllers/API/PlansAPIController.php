@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Requests\API\CreateNewPlansAPIRequest;
 use App\Http\Requests\API\CreatePlansAPIRequest;
 use App\Http\Requests\API\PlanSubscribe;
 use App\Http\Requests\API\UpdatePlansAPIRequest;
@@ -89,6 +90,24 @@ class PlansAPIController extends AppBaseController
         } else {
             $user->newSubscription((string)$plan->name, $plan);
         }
+    }
+
+    /**
+     * Create Plans (Less Params).
+     *
+     */
+
+    public function createPlan(CreateNewPlansAPIRequest $request)
+    {
+        $input = $request->all();
+        $input['signup_fee'] = 0;
+        $input['trial_period'] = 0;
+        $input['grace_period'] = 1;
+        $input['currency'] = 'NGN';
+        $input['trial_interval'] = 'month';
+        $input['grace_interval'] = 'month';
+        $plans = $this->plansRepository->create($input);
+        return $this->sendResponse(new PlansResource($plans), 'Plans saved successfully');
     }
 
     /**

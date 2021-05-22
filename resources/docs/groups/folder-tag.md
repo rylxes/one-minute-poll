@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/folder_tags" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":14,"tag_id":18,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":12,"tag_id":3,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 14,
-    "tag_id": 18,
+    "folder_id": 12,
+    "tag_id": 3,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /folderTags/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/folder_tags/sed" \
+    -G "http://localhost/api/folder_tags/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/sed"
+    "http://localhost/api/folder_tags/reiciendis"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /folderTags/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/folder_tags/et" \
+    "http://localhost/api/folder_tags/quas" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":8,"tag_id":12,"created_at":{},"updated_at":{}}'
+    -d '{"folder_id":3,"tag_id":16,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/et"
+    "http://localhost/api/folder_tags/quas"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": 8,
-    "tag_id": 12,
+    "folder_id": 3,
+    "tag_id": 16,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /folderTags/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/folder_tags/reprehenderit" \
+    "http://localhost/api/folder_tags/necessitatibus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/folder_tags/reprehenderit"
+    "http://localhost/api/folder_tags/necessitatibus"
 );
 
 let headers = {

@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Permission\Traits\HasPermissions;
+
 /**
  * Class File
  * @package App\Models
@@ -28,7 +30,9 @@ class File extends Model implements HasMedia
     use InteractsWithMedia;
     use HasFactory;
     use LogsActivity;
+    use HasPermissions;
 
+    protected $guard_name = 'api';
     public $table = 'file';
 
     const CREATED_AT = 'created_at';

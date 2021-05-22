@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\GenerateDocumentationNew;
 use App\Console\Commands\generateResult;
+use App\Console\Commands\SendFoodHandlerTest;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -16,7 +17,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         generateResult::class,
-        GenerateDocumentationNew::class
+        GenerateDocumentationNew::class,
+        SendFoodHandlerTest::class
     ];
 
     /**

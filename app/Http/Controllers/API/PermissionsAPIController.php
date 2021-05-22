@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Requests\API\AssignPermissionsFile;
 use App\Http\Requests\API\AssignPermissionsRole;
 use App\Http\Requests\API\AssignPermissionsUser;
 use App\Http\Requests\API\CreatePermissionsAPIRequest;
 use App\Http\Requests\API\UpdatePermissionsAPIRequest;
+use App\Models\File;
 use App\Models\Permissions;
 use App\Models\Roles;
 use App\Models\User;
@@ -46,6 +48,20 @@ class PermissionsAPIController extends AppBaseController
         );
 
         return $this->sendResponse(PermissionsResource::collection($permissions), 'Permissions retrieved successfully');
+    }
+
+
+    /**
+     * Assigns Permissions to File
+     */
+
+    public function filePermissionsAssign(AssignPermissionsFile $request)
+    {
+        $input = $request->input();
+        $file = File::find($input['file_id']);
+        $permissionName = Permissions::find($input['permission_id']);
+        $file->givePermissionTo($permissionName->name);
+        return $this->sendResponse([], 'Permissions Saved For File');
     }
 
     /**
