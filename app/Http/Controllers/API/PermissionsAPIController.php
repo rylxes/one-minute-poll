@@ -6,6 +6,7 @@ use App\Http\Requests\API\AssignPermissionsFile;
 use App\Http\Requests\API\AssignPermissionsRole;
 use App\Http\Requests\API\AssignPermissionsUser;
 use App\Http\Requests\API\CreatePermissionsAPIRequest;
+use App\Http\Requests\API\OnlyUser;
 use App\Http\Requests\API\UpdatePermissionsAPIRequest;
 use App\Models\File;
 use App\Models\Permissions;
@@ -87,6 +88,18 @@ class PermissionsAPIController extends AppBaseController
         $permissionName = Permissions::find($input['permission_id']);
         $role->givePermissionTo($permissionName->name);
         return $this->sendResponse([], 'Permissions Saved');
+    }
+
+
+    /**
+     * Get Permissions for a User
+     */
+    public function userPermissionsGet(OnlyUser $request)
+    {
+        $input = $request->input();
+        $user = User::find($input['user_id']);
+        $res = $user->getAllPermissions();
+        return $this->sendResponse($res, 'All Permissions');
     }
 
     /**

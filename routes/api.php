@@ -104,6 +104,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::post('permissions/assign/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsAssign');
         Route::post('permissions/assign/role', 'App\Http\Controllers\API\PermissionsAPIController@rolePermissionsAssign');
+        Route::post('permissions/get/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsGet');
         Route::post('permissions/assign/file', 'App\Http\Controllers\API\PermissionsAPIController@filePermissionsAssign');
         Route::resource('permissions', App\Http\Controllers\API\PermissionsAPIController::class);
 
