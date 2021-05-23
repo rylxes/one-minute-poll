@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"voluptatibus","value":"esse","company_id":9}'
+    -d '{"type":"est","value":"numquam","company_id":8}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "type": "voluptatibus",
-    "value": "esse",
-    "company_id": 9
+    "type": "est",
+    "value": "numquam",
+    "company_id": 8
 }
 
 fetch(url, {
@@ -151,14 +151,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/consequatur" \
+    -G "http://localhost/api/settings/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/consequatur"
+    "http://localhost/api/settings/quis"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/voluptatem" \
+    "http://localhost/api/settings/laudantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"veniam","value":"rerum","company_id":14}'
+    -d '{"type":"blanditiis","value":"vero","company_id":14}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/voluptatem"
+    "http://localhost/api/settings/laudantium"
 );
 
 let headers = {
@@ -237,8 +237,8 @@ let headers = {
 };
 
 let body = {
-    "type": "veniam",
-    "value": "rerum",
+    "type": "blanditiis",
+    "value": "vero",
     "company_id": 14
 }
 
@@ -308,14 +308,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/est" \
+    "http://localhost/api/settings/dolore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/est"
+    "http://localhost/api/settings/dolore"
 );
 
 let headers = {

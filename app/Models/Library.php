@@ -8,6 +8,7 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Permission\Traits\HasPermissions;
 
 /**
  * Class Library
@@ -24,7 +25,11 @@ class Library extends Model
 
     use HasFactory;
     use LogsActivity;
+    use HasPermissions;
+
+
     protected static $logFillable = true;
+    protected $guard_name = 'api';
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {

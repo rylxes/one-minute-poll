@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"consequatur","last_name":"quia","user_id":2,"avatar":"vel"}'
+    -d '{"first_name":"dignissimos","last_name":"vitae","user_id":20,"avatar":"soluta"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "consequatur",
-    "last_name": "quia",
-    "user_id": 2,
-    "avatar": "vel"
+    "first_name": "dignissimos",
+    "last_name": "vitae",
+    "user_id": 20,
+    "avatar": "soluta"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/beatae" \
+    -G "http://localhost/api/profiles/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/beatae"
+    "http://localhost/api/profiles/sit"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/id" \
+    "http://localhost/api/profiles/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"dolore","last_name":"ut","user_id":10}'
+    -d '{"first_name":"qui","last_name":"voluptate","user_id":15}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/id"
+    "http://localhost/api/profiles/et"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "dolore",
-    "last_name": "ut",
-    "user_id": 10
+    "first_name": "qui",
+    "last_name": "voluptate",
+    "user_id": 15
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/unde" \
+    "http://localhost/api/profiles/pariatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/unde"
+    "http://localhost/api/profiles/pariatur"
 );
 
 let headers = {

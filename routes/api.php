@@ -76,6 +76,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');
         Route::post('libraries/shareToUser', 'App\Http\Controllers\API\LibraryAPIController@shareToUser');
+        Route::post('libraries/groupLibraries', 'App\Http\Controllers\API\LibraryAPIController@groupLibraries');
         Route::post('libraries/shareToRole', 'App\Http\Controllers\API\LibraryAPIController@shareToRole');
         Route::get('libraries/myFavourites', 'App\Http\Controllers\API\LibraryAPIController@myFavourites');
         Route::resource('libraries', App\Http\Controllers\API\LibraryAPIController::class);
@@ -103,6 +104,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
         Route::post('permissions/assign/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsAssign');
+        Route::post('permissions/assign/library', 'App\Http\Controllers\API\PermissionsAPIController@libraryPermissionsAssign');
         Route::post('permissions/assign/folder', 'App\Http\Controllers\API\PermissionsAPIController@folderPermissionsAssign');
         Route::post('permissions/unassign/user', 'App\Http\Controllers\API\PermissionsAPIController@userUnPermissionsAssign');
         Route::post('permissions/assign/role', 'App\Http\Controllers\API\PermissionsAPIController@rolePermissionsAssign');

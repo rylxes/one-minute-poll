@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Events\InviteEvent;
 use App\Http\Requests\API\CreateLibraryAPIRequest;
 use App\Http\Requests\API\InviteRequest;
+use App\Http\Requests\API\OnlyGroup;
 use App\Http\Requests\API\ShareLibrary;
 use App\Http\Requests\API\ShareLibraryRole;
 use App\Http\Requests\API\UpdateLibraryAPIRequest;
@@ -128,6 +129,24 @@ class LibraryAPIController extends AppBaseController
         $library->theUsers()->attach($data['user_id'], ['is_shared' => 1]);
         $message = "Library shared";
         return $this->sendResponse($data, $message);
+    }
+
+
+    /**
+     * All Libraries for a Group
+     *
+     *
+     */
+    public function groupLibraries(OnlyGroup $request)
+    {
+        $input = $request->all();
+        $lib = new Library();
+        $groups = $input['group_id'];
+        $libraries = $lib->whereHas('theGroup', function ($query) use ($groups) {
+            $query->where('group_id', $groups);
+        })->get();
+
+        return $this->sendResponse($libraries->toArray(), 'success');
     }
 
     /**

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":16,"user_id":1,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":10,"user_id":1,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +90,7 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 16,
+    "notification_type_id": 10,
     "user_id": 1,
     "created_at": {},
     "updated_at": {}
@@ -157,14 +157,14 @@ GET|HEAD /notifications/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notifications/corrupti" \
+    -G "http://localhost/api/notifications/omnis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/corrupti"
+    "http://localhost/api/notifications/omnis"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /notifications/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notifications/ullam" \
+    "http://localhost/api/notifications/ipsum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":19,"user_id":13,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":11,"user_id":7,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/ullam"
+    "http://localhost/api/notifications/ipsum"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 19,
-    "user_id": 13,
+    "notification_type_id": 11,
+    "user_id": 7,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /notifications/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notifications/omnis" \
+    "http://localhost/api/notifications/nostrum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/omnis"
+    "http://localhost/api/notifications/nostrum"
 );
 
 let headers = {

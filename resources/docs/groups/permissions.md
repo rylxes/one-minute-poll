@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"user_id":"et","permission_id":"aperiam"}'
+    -d '{"user_id":"enim","permission_id":"excepturi"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "user_id": "et",
-    "permission_id": "aperiam"
+    "user_id": "enim",
+    "permission_id": "excepturi"
 }
 
 fetch(url, {
@@ -74,6 +74,79 @@ fetch(url, {
 </form>
 
 
+## Assigns Permissions to Library
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/permissions/assign/library" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"library_id":"architecto","permission_id":"iure"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/permissions/assign/library"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "library_id": "architecto",
+    "permission_id": "iure"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-permissions-assign-library" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-permissions-assign-library"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-permissions-assign-library"></code></pre>
+</div>
+<div id="execution-error-POSTapi-permissions-assign-library" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-permissions-assign-library"></code></pre>
+</div>
+<form id="form-POSTapi-permissions-assign-library" data-method="POST" data-path="api/permissions/assign/library" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-permissions-assign-library', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-permissions-assign-library" onclick="tryItOut('POSTapi-permissions-assign-library');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-permissions-assign-library" onclick="cancelTryOut('POSTapi-permissions-assign-library');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-permissions-assign-library" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/permissions/assign/library</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>library_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="library_id" data-endpoint="POSTapi-permissions-assign-library" data-component="body" required  hidden>
+<br>
+</p>
+<p>
+<b><code>permission_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="permission_id" data-endpoint="POSTapi-permissions-assign-library" data-component="body" required  hidden>
+<br>
+</p>
+
+</form>
+
+
 ## Assigns Permissions to Folder
 
 
@@ -86,7 +159,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/folder" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"folder_id":"vitae","permission_id":"velit"}'
+    -d '{"folder_id":"beatae","permission_id":"commodi"}'
 
 ```
 
@@ -101,8 +174,8 @@ let headers = {
 };
 
 let body = {
-    "folder_id": "vitae",
-    "permission_id": "velit"
+    "folder_id": "beatae",
+    "permission_id": "commodi"
 }
 
 fetch(url, {
@@ -159,7 +232,7 @@ curl -X POST \
     "http://localhost/api/permissions/unassign/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"user_id":"non","permission_id":"non"}'
+    -d '{"user_id":"blanditiis","permission_id":"atque"}'
 
 ```
 
@@ -174,8 +247,8 @@ let headers = {
 };
 
 let body = {
-    "user_id": "non",
-    "permission_id": "non"
+    "user_id": "blanditiis",
+    "permission_id": "atque"
 }
 
 fetch(url, {
@@ -232,7 +305,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/role" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"role_id":"ea","permission_id":"saepe"}'
+    -d '{"role_id":"veniam","permission_id":"tenetur"}'
 
 ```
 
@@ -247,8 +320,8 @@ let headers = {
 };
 
 let body = {
-    "role_id": "ea",
-    "permission_id": "saepe"
+    "role_id": "veniam",
+    "permission_id": "tenetur"
 }
 
 fetch(url, {
@@ -305,7 +378,7 @@ curl -X POST \
     "http://localhost/api/permissions/get/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"user_id":"quae"}'
+    -d '{"user_id":"consequatur"}'
 
 ```
 
@@ -320,7 +393,7 @@ let headers = {
 };
 
 let body = {
-    "user_id": "quae"
+    "user_id": "consequatur"
 }
 
 fetch(url, {
@@ -372,7 +445,7 @@ curl -X POST \
     "http://localhost/api/permissions/assign/file" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"necessitatibus","permission_id":"suscipit"}'
+    -d '{"file_id":"commodi","permission_id":"exercitationem"}'
 
 ```
 
@@ -387,8 +460,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": "necessitatibus",
-    "permission_id": "suscipit"
+    "file_id": "commodi",
+    "permission_id": "exercitationem"
 }
 
 fetch(url, {
@@ -507,7 +580,7 @@ curl -X POST \
     "http://localhost/api/permissions" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"incidunt"}'
+    -d '{"name":"beatae"}'
 
 ```
 
@@ -522,7 +595,7 @@ let headers = {
 };
 
 let body = {
-    "name": "incidunt"
+    "name": "beatae"
 }
 
 fetch(url, {
@@ -571,14 +644,14 @@ GET|HEAD /permissions/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/permissions/autem" \
+    -G "http://localhost/api/permissions/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/autem"
+    "http://localhost/api/permissions/et"
 );
 
 let headers = {
@@ -639,16 +712,16 @@ PUT/PATCH /permissions/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/permissions/qui" \
+    "http://localhost/api/permissions/voluptatem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nam"}'
+    -d '{"name":"exercitationem"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/qui"
+    "http://localhost/api/permissions/voluptatem"
 );
 
 let headers = {
@@ -657,7 +730,7 @@ let headers = {
 };
 
 let body = {
-    "name": "nam"
+    "name": "exercitationem"
 }
 
 fetch(url, {
@@ -716,14 +789,14 @@ DELETE /permissions/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/permissions/rem" \
+    "http://localhost/api/permissions/consectetur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/permissions/rem"
+    "http://localhost/api/permissions/consectetur"
 );
 
 let headers = {

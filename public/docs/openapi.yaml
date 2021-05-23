@@ -39,7 +39,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: brittany68@example.org
+                                    example: emile29@example.com
                                 secret:
                                     type: string
                                     description: ''
@@ -47,7 +47,7 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: consequatur
                             required:
                                 - email
                                 - password
@@ -143,23 +143,23 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: quaerat
+                                    example: voluptatem
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: debitis
+                                    example: illum
                                 company_name:
                                     type: string
                                     description: ''
-                                    example: eum
+                                    example: deleniti
                                 company_phone:
                                     type: string
                                     description: ''
-                                    example: animi
+                                    example: recusandae
                                 company_description:
                                     type: string
                                     description: ''
-                                    example: voluptas
+                                    example: et
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -167,15 +167,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: katharina83@example.com
+                                    example: garett.lemke@example.net
                                 password:
                                     type: string
                                     description: ''
-                                    example: perspiciatis
+                                    example: iure
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: sed
+                                    example: molestiae
                             required:
                                 - first_name
                                 - last_name
@@ -217,7 +217,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: hmaggio@example.com
+                                    example: sschuster@example.com
                             required:
                                 - email
             security: []
@@ -246,7 +246,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Enter Email to reset password</p>\n\n        \n        <form method=\"post\" action=\"http://localhost/password/email\">\n            <input type=\"hidden\" name=\"_token\" value=\"lHyUc6KcqwbxFpKZhob5LSPbQuviPuyz7T7CkxC3\">\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-envelope\"></i> Send Password Reset Link\n                    </button>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n    <!-- /.login-box-body -->\n</div>\n<!-- /.login-box -->\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n</body>\n</html>\n"
+                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Enter Email to reset password</p>\n\n        \n        <form method=\"post\" action=\"http://localhost/password/email\">\n            <input type=\"hidden\" name=\"_token\" value=\"BJy18QD3WysktRukV6Ho795zaxqsrZj5Kf4uU14b\">\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-envelope\"></i> Send Password Reset Link\n                    </button>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n    <!-- /.login-box-body -->\n</div>\n<!-- /.login-box -->\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n</body>\n</html>\n"
             tags:
                 - Auth
             security: []
@@ -276,7 +276,7 @@ paths:
                         text/plain:
                             schema:
                                 type: string
-                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"lHyUc6KcqwbxFpKZhob5LSPbQuviPuyz7T7CkxC3\">\n            <input type=\"hidden\" name=\"token\" value=\"nisi\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
+                                example: "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>E-DMS</title>\n\n    <!-- Tell the browser to be responsive to screen width -->\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n\n    <!-- Bootstrap 3.3.7 -->\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n    <!-- Font Awesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n\n    <!-- Ionicons -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css\">\n\n    <!-- Theme style -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css\">\n\n    <!-- iCheck -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n<body class=\"hold-transition login-page\">\n<div class=\"login-box\">\n    <div class=\"login-logo\">\n        <a href=\"http://localhost/home\"><b>InfyOm </b>Generator</a>\n    </div>\n\n    <!-- /.login-logo -->\n    <div class=\"login-box-body\">\n        <p class=\"login-box-msg\">Reset your password</p>\n\n        <form method=\"post\" action=\"http://localhost/password/reset\">\n            <input type=\"hidden\" name=\"_token\" value=\"BJy18QD3WysktRukV6Ho795zaxqsrZj5Kf4uU14b\">\n            <input type=\"hidden\" name=\"token\" value=\"nesciunt\">\n\n            <div class=\"form-group has-feedback \">\n                <input type=\"email\" class=\"form-control\" name=\"email\" value=\"\" placeholder=\"Email\">\n                <span class=\"glyphicon glyphicon-envelope form-control-feedback\"></span>\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"form-group has-feedback\">\n                <input type=\"password\" name=\"password_confirmation\" class=\"form-control\" placeholder=\"Confirm password\">\n                <span class=\"glyphicon glyphicon-lock form-control-feedback\"></span>\n\n                            </div>\n\n            <div class=\"row\">\n                <div class=\"col-md-12\">\n                    <button type=\"submit\" class=\"btn btn-primary pull-right\">\n                        <i class=\"fa fa-btn fa-refresh\"></i>Reset Password\n                    </button>\n                </div>\n            </div>\n        </form>\n\n    </div>\n</div>\n\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n<!-- AdminLTE App -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/js/adminlte.min.js\"></script>\n\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js\"></script>\n<script>\n    $(function () {\n        $('input').iCheck({\n            checkboxClass: 'icheckbox_square-blue',\n            radioClass: 'iradio_square-blue',\n            increaseArea: '20%' // optional\n        });\n    });\n</script>\n</body>\n</html>\n"
             tags:
                 - Auth
             security: []
@@ -285,7 +285,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: nisi
+                example: nesciunt
                 required: true
                 schema:
                     type: string
@@ -352,7 +352,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: et
+                example: officia
                 required: true
                 schema:
                     type: string
@@ -360,7 +360,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: autem
+                example: adipisci
                 required: true
                 schema:
                     type: string
@@ -419,15 +419,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: stamm.mauricio@example.org
+                                    example: kuvalis.maci@example.net
                                 old_password:
                                     type: string
                                     description: ''
-                                    example: non
+                                    example: tempore
                                 password:
                                     type: string
                                     description: ''
-                                    example: expedita
+                                    example: sit
                             required:
                                 - email
                                 - old_password
@@ -465,11 +465,11 @@ paths:
                                 company_id:
                                     type: string
                                     description: ''
-                                    example: et
+                                    example: aut
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: corkery.chloe@example.net
+                                    example: wbode@example.com
                             required:
                                 - company_id
                                 - email
@@ -541,7 +541,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: labore
+                                    example: et
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -549,15 +549,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: brice.hayes@example.com
+                                    example: anitzsche@example.net
                                 password:
                                     type: string
                                     description: ''
-                                    example: dolores
+                                    example: sed
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: minus
+                                    example: provident
                             required:
                                 - company_id
                                 - email
@@ -630,19 +630,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: optio
+                                    example: tenetur
                                 description:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: non
                                 email:
                                     type: string
                                     description: ''
-                                    example: asperiores
+                                    example: est
                                 phone:
                                     type: string
                                     description: ''
-                                    example: facilis
+                                    example: ducimus
                             required:
                                 - name
             security: []
@@ -712,19 +712,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: molestiae
+                                    example: similique
                                 description:
                                     type: string
                                     description: ''
-                                    example: ut
+                                    example: vitae
                                 email:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: ad
                                 phone:
                                     type: string
                                     description: ''
-                                    example: suscipit
+                                    example: voluptatum
                             required:
                                 - name
             security: []
@@ -755,7 +755,7 @@ paths:
                 in: path
                 name: company
                 description: ''
-                example: vitae
+                example: sapiente
                 required: true
                 schema:
                     type: string
@@ -924,7 +924,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: qui
+                example: voluptates
                 required: true
                 schema:
                     type: string
@@ -1058,7 +1058,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: officia
+                example: id
                 required: true
                 schema:
                     type: string
@@ -1182,7 +1182,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: voluptas
+                example: aliquid
                 required: true
                 schema:
                     type: string
@@ -1357,7 +1357,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: suscipit
+                                    example: deserunt
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1369,7 +1369,7 @@ paths:
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: culpa
+                                    example: dolores
                             required:
                                 - name
                                 - folder_id
@@ -1440,7 +1440,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: nesciunt
+                                    example: reprehenderit
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -1452,7 +1452,7 @@ paths:
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: consequatur
                             required:
                                 - name
                                 - folder_id
@@ -1484,7 +1484,7 @@ paths:
                 in: path
                 name: file
                 description: ''
-                example: tempore
+                example: voluptatibus
                 required: true
                 schema:
                     type: string
@@ -1555,11 +1555,11 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: est
+                                    example: neque
                                 file_id:
                                     type: string
                                     description: ''
-                                    example: reprehenderit
+                                    example: et
                             required:
                                 - password
                                 - file_id
@@ -1596,15 +1596,15 @@ paths:
                                 file_id:
                                     type: string
                                     description: ''
-                                    example: velit
+                                    example: fugit
                                 from_folder_id:
                                     type: string
                                     description: ''
-                                    example: praesentium
+                                    example: provident
                                 to_folder_id:
                                     type: string
                                     description: ''
-                                    example: molestiae
+                                    example: et
                             required:
                                 - file_id
                                 - from_folder_id
@@ -1642,11 +1642,11 @@ paths:
                                 file_id:
                                     type: string
                                     description: ''
-                                    example: inventore
+                                    example: adipisci
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: ipsa
+                                    example: esse
                             required:
                                 - file_id
                                 - folder_id
@@ -1691,7 +1691,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: odio
+                example: voluptas
                 required: true
                 schema:
                     type: string
@@ -1761,11 +1761,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 1
                                 comment:
                                     type: string
                                     description: ''
-                                    example: sunt
+                                    example: ut
                             required:
                                 - file_id
                                 - comment
@@ -1836,11 +1836,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 16
                                 comment:
                                     type: string
                                     description: ''
-                                    example: ullam
+                                    example: architecto
                             required:
                                 - file_id
                                 - comment
@@ -1872,7 +1872,7 @@ paths:
                 in: path
                 name: file_comment
                 description: ''
-                example: perferendis
+                example: facere
                 required: true
                 schema:
                     type: string
@@ -1942,11 +1942,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 16
+                                    example: 13
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 12
                                 created_at:
                                     type: string
                                     description: ''
@@ -2025,11 +2025,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 19
+                                    example: 10
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 2
                                 created_at:
                                     type: string
                                     description: ''
@@ -2069,7 +2069,7 @@ paths:
                 in: path
                 name: file_tag
                 description: ''
-                example: officia
+                example: reprehenderit
                 required: true
                 schema:
                     type: string
@@ -2140,11 +2140,11 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: vero
+                                    example: nam
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: non
+                                    example: reprehenderit
                             required:
                                 - password
                                 - folder_id
@@ -2189,7 +2189,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: voluptas
+                example: qui
                 required: true
                 schema:
                     type: string
@@ -2259,11 +2259,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: consequatur
+                                    example: amet
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: deleniti
+                                    example: quis
                                 is_favourite:
                                     type: boolean
                                     description: ''
@@ -2275,7 +2275,7 @@ paths:
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 12
+                                    example: 8
                             required:
                                 - name
                                 - library_id
@@ -2346,11 +2346,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: vitae
+                                    example: odio
                                 parent_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 15
                             required:
                                 - name
             security: []
@@ -2381,7 +2381,7 @@ paths:
                 in: path
                 name: folder
                 description: ''
-                example: amet
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -2451,11 +2451,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 4
+                                    example: 19
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 2
+                                    example: 20
                             required:
                                 - file_id
                                 - folder_id
@@ -2526,11 +2526,11 @@ paths:
                                 file_id:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 16
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 5
                             required:
                                 - file_id
                                 - folder_id
@@ -2562,7 +2562,7 @@ paths:
                 in: path
                 name: folder_file
                 description: ''
-                example: eaque
+                example: accusantium
                 required: true
                 schema:
                     type: string
@@ -2632,11 +2632,11 @@ paths:
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 3
+                                    example: 11
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 15
                                 created_at:
                                     type: string
                                     description: ''
@@ -2715,11 +2715,11 @@ paths:
                                 folder_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 7
                                 tag_id:
                                     type: integer
                                     description: ''
-                                    example: 8
+                                    example: 5
                                 created_at:
                                     type: string
                                     description: ''
@@ -2759,7 +2759,7 @@ paths:
                 in: path
                 name: folder_tag
                 description: ''
-                example: consequuntur
+                example: dolores
                 required: true
                 schema:
                     type: string
@@ -2873,7 +2873,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: id
+                example: molestias
                 required: true
                 schema:
                     type: string
@@ -2978,11 +2978,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: nam
+                                    example: quia
                                 description:
                                     type: string
                                     description: ''
-                                    example: sit
+                                    example: sed
                             required:
                                 - name
             security: []
@@ -3052,11 +3052,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: facilis
+                                    example: est
                                 description:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: vitae
                             required:
                                 - name
             security: []
@@ -3087,7 +3087,7 @@ paths:
                 in: path
                 name: group
                 description: ''
-                example: quaerat
+                example: neque
                 required: true
                 schema:
                     type: string
@@ -3123,11 +3123,11 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: quisquam
+                                    example: molestiae
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: suscipit
+                                    example: tempora
                             required:
                                 - password
                                 - library_id
@@ -3164,11 +3164,11 @@ paths:
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: est
+                                    example: reiciendis
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: exercitationem
+                                    example: ea
                                 password:
                                     type: boolean
                                     description: ''
@@ -3176,6 +3176,42 @@ paths:
                             required:
                                 - library_id
                                 - user_id
+            security: []
+    /api/libraries/groupLibraries:
+        post:
+            summary: 'All Libraries for a Group'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Library
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                group_id:
+                                    type: string
+                                    description: ''
+                                    example: sit
+                            required:
+                                - group_id
             security: []
     /api/libraries/shareToRole:
         post:
@@ -3209,11 +3245,11 @@ paths:
                                 library_id:
                                     type: string
                                     description: ''
-                                    example: maxime
+                                    example: omnis
                                 group_id:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: amet
                                 password:
                                     type: boolean
                                     description: ''
@@ -3323,15 +3359,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: ipsa
+                                    example: suscipit
                                 description:
                                     type: string
                                     description: ''
-                                    example: consequatur
+                                    example: quo
                                 password:
                                     type: string
                                     description: ''
-                                    example: dolorem
+                                    example: hic
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -3411,19 +3447,19 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: rerum
+                                    example: corporis
                                 description:
                                     type: string
                                     description: ''
-                                    example: reprehenderit
+                                    example: minima
                                 password:
                                     type: string
                                     description: ''
-                                    example: sapiente
+                                    example: tempora
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 5
+                                    example: 14
                                 is_encrypted:
                                     type: boolean
                                     description: ''
@@ -3465,7 +3501,7 @@ paths:
                 in: path
                 name: library
                 description: ''
-                example: ab
+                example: amet
                 required: true
                 schema:
                     type: string
@@ -3535,7 +3571,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: sit
+                                    example: dolores
                                 created_at:
                                     type: string
                                     description: ''
@@ -3652,7 +3688,7 @@ paths:
                 in: path
                 name: notification_type
                 description: ''
-                example: iste
+                example: consequatur
                 required: true
                 schema:
                     type: string
@@ -3722,7 +3758,7 @@ paths:
                                 notification_type_id:
                                     type: integer
                                     description: ''
-                                    example: 16
+                                    example: 10
                                 user_id:
                                     type: integer
                                     description: ''
@@ -3805,11 +3841,11 @@ paths:
                                 notification_type_id:
                                     type: integer
                                     description: ''
-                                    example: 19
+                                    example: 11
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 7
                                 created_at:
                                     type: string
                                     description: ''
@@ -3849,7 +3885,7 @@ paths:
                 in: path
                 name: notification
                 description: ''
-                example: corrupti
+                example: omnis
                 required: true
                 schema:
                     type: string
@@ -3885,13 +3921,54 @@ paths:
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: et
+                                    example: enim
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: aperiam
+                                    example: excepturi
                             required:
                                 - user_id
+                                - permission_id
+            security: []
+    /api/permissions/assign/library:
+        post:
+            summary: 'Assigns Permissions to Library'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Permissions
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                library_id:
+                                    type: string
+                                    description: ''
+                                    example: architecto
+                                permission_id:
+                                    type: string
+                                    description: ''
+                                    example: iure
+                            required:
+                                - library_id
                                 - permission_id
             security: []
     /api/permissions/assign/folder:
@@ -3926,11 +4003,11 @@ paths:
                                 folder_id:
                                     type: string
                                     description: ''
-                                    example: vitae
+                                    example: beatae
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: velit
+                                    example: commodi
                             required:
                                 - folder_id
                                 - permission_id
@@ -3967,11 +4044,11 @@ paths:
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: non
+                                    example: blanditiis
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: non
+                                    example: atque
                             required:
                                 - user_id
                                 - permission_id
@@ -4008,11 +4085,11 @@ paths:
                                 role_id:
                                     type: string
                                     description: ''
-                                    example: ea
+                                    example: veniam
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: saepe
+                                    example: tenetur
                             required:
                                 - role_id
                                 - permission_id
@@ -4049,7 +4126,7 @@ paths:
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: quae
+                                    example: consequatur
                             required:
                                 - user_id
             security: []
@@ -4085,11 +4162,11 @@ paths:
                                 file_id:
                                     type: string
                                     description: ''
-                                    example: necessitatibus
+                                    example: commodi
                                 permission_id:
                                     type: string
                                     description: ''
-                                    example: suscipit
+                                    example: exercitationem
                             required:
                                 - file_id
                                 - permission_id
@@ -4160,7 +4237,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: incidunt
+                                    example: beatae
                             required:
                                 - name
             security: []
@@ -4230,7 +4307,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: nam
+                                    example: exercitationem
                             required:
                                 - name
             security: []
@@ -4261,7 +4338,7 @@ paths:
                 in: path
                 name: permission
                 description: ''
-                example: autem
+                example: et
                 required: true
                 schema:
                     type: string
@@ -4297,7 +4374,7 @@ paths:
                                 plan_id:
                                     type: string
                                     description: ''
-                                    example: enim
+                                    example: reprehenderit
                             required:
                                 - plan_id
             security: []
@@ -4333,19 +4410,19 @@ paths:
                                 slug:
                                     type: string
                                     description: ''
-                                    example: voluptatum
+                                    example: facilis
                                 name:
                                     type: string
                                     description: ''
-                                    example: ab
+                                    example: voluptatum
                                 price:
                                     type: number
                                     description: ''
-                                    example: 62.211
+                                    example: 1631.968173
                                 invoice_period:
                                     type: integer
                                     description: ''
-                                    example: 14
+                                    example: 2
                                 invoice_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
@@ -4353,7 +4430,7 @@ paths:
                                 active_subscribers_limit:
                                     type: integer
                                     description: ''
-                                    example: 19
+                                    example: 11
                             required:
                                 - slug
                                 - name
@@ -4460,15 +4537,15 @@ paths:
                                 slug:
                                     type: string
                                     description: ''
-                                    example: saepe
+                                    example: soluta
                                 name:
                                     type: string
                                     description: ''
-                                    example: dolor
+                                    example: illo
                                 description:
                                     type: string
                                     description: ''
-                                    example: itaque
+                                    example: dicta
                                 is_active:
                                     type: boolean
                                     description: ''
@@ -4476,35 +4553,35 @@ paths:
                                 price:
                                     type: number
                                     description: ''
-                                    example: 466402.012151
+                                    example: 130362.594
                                 signup_fee:
                                     type: number
                                     description: ''
-                                    example: 2445.8239
+                                    example: 7332848.743
                                 currency:
                                     type: string
                                     description: ''
-                                    example: fugiat
+                                    example: consequatur
                                 trial_period:
                                     type: integer
                                     description: ''
-                                    example: 5
+                                    example: 8
                                 trial_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: month
+                                    example: week
                                 invoice_period:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 10
                                 invoice_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: month
+                                    example: day
                                 grace_period:
                                     type: integer
                                     description: ''
-                                    example: 20
+                                    example: 14
                                 grace_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
@@ -4512,23 +4589,23 @@ paths:
                                 sort_order:
                                     type: integer
                                     description: ''
-                                    example: 20
+                                    example: 17
                                 prorate_day:
                                     type: integer
                                     description: ''
-                                    example: 7
+                                    example: 20
                                 prorate_period:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 13
                                 prorate_extend_due:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 10
                                 active_subscribers_limit:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 2
                             required:
                                 - slug
                                 - name
@@ -4602,15 +4679,15 @@ paths:
                                 slug:
                                     type: string
                                     description: ''
-                                    example: dolorem
+                                    example: modi
                                 name:
                                     type: string
                                     description: ''
-                                    example: perspiciatis
+                                    example: consequatur
                                 description:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: provident
                                 is_active:
                                     type: boolean
                                     description: ''
@@ -4618,23 +4695,23 @@ paths:
                                 price:
                                     type: number
                                     description: ''
-                                    example: !!float 3447
+                                    example: 562420.3
                                 signup_fee:
                                     type: number
                                     description: ''
-                                    example: 1.74
+                                    example: 166.0497049
                                 currency:
                                     type: string
                                     description: ''
-                                    example: non
+                                    example: suscipit
                                 trial_period:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 3
                                 trial_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: week
+                                    example: day
                                 invoice_period:
                                     type: integer
                                     description: ''
@@ -4646,31 +4723,31 @@ paths:
                                 grace_period:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 6
                                 grace_interval:
                                     type: string
                                     description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: week
+                                    example: day
                                 sort_order:
                                     type: integer
                                     description: ''
-                                    example: 16
+                                    example: 8
                                 prorate_day:
                                     type: integer
                                     description: ''
-                                    example: 14
+                                    example: 20
                                 prorate_period:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 9
                                 prorate_extend_due:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 15
                                 active_subscribers_limit:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 5
                             required:
                                 - slug
                                 - name
@@ -4705,7 +4782,7 @@ paths:
                 in: path
                 name: plan
                 description: ''
-                example: illo
+                example: labore
                 required: true
                 schema:
                     type: string
@@ -4775,19 +4852,19 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: consequatur
+                                    example: dignissimos
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: quia
+                                    example: vitae
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 2
+                                    example: 20
                                 avatar:
                                     type: string
                                     description: ''
-                                    example: vel
+                                    example: soluta
                             required:
                                 - first_name
                                 - last_name
@@ -4859,15 +4936,15 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: dolore
+                                    example: qui
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: ut
+                                    example: voluptate
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 15
                             required:
                                 - first_name
                                 - last_name
@@ -4900,7 +4977,7 @@ paths:
                 in: path
                 name: profile
                 description: ''
-                example: beatae
+                example: sit
                 required: true
                 schema:
                     type: string
@@ -4970,11 +5047,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: explicabo
+                                    example: repellendus
                                 guard_name:
                                     type: string
                                     description: ''
-                                    example: sed
+                                    example: laudantium
                                 created_at:
                                     type: string
                                     description: ''
@@ -5053,11 +5130,11 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: omnis
+                                    example: porro
                                 guard_name:
                                     type: string
                                     description: ''
-                                    example: deserunt
+                                    example: voluptate
                                 created_at:
                                     type: string
                                     description: ''
@@ -5097,7 +5174,7 @@ paths:
                 in: path
                 name: role
                 description: ''
-                example: rerum
+                example: aliquid
                 required: true
                 schema:
                     type: string
@@ -5167,15 +5244,15 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: voluptatibus
+                                    example: est
                                 value:
                                     type: string
                                     description: ''
-                                    example: esse
+                                    example: numquam
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 8
                             required:
                                 - company_id
             security: []
@@ -5245,11 +5322,11 @@ paths:
                                 type:
                                     type: string
                                     description: ''
-                                    example: veniam
+                                    example: blanditiis
                                 value:
                                     type: string
                                     description: ''
-                                    example: rerum
+                                    example: vero
                                 company_id:
                                     type: integer
                                     description: ''
@@ -5284,7 +5361,7 @@ paths:
                 in: path
                 name: setting
                 description: ''
-                example: consequatur
+                example: quis
                 required: true
                 schema:
                     type: string
@@ -5354,15 +5431,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: esse
+                                    example: tempora
                                 colour:
                                     type: string
                                     description: ''
-                                    example: cumque
+                                    example: inventore
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 4
                             required:
                                 - name
                                 - company_id
@@ -5433,15 +5510,15 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: alias
+                                    example: occaecati
                                 colour:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: voluptatem
                                 company_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 15
                             required:
                                 - name
                                 - company_id
@@ -5473,7 +5550,7 @@ paths:
                 in: path
                 name: tag
                 description: ''
-                example: accusamus
+                example: cumque
                 required: true
                 schema:
                     type: string
@@ -5544,11 +5621,11 @@ paths:
                                 group_id:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: qui
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: repellendus
                             required:
                                 - group_id
                                 - user_id
@@ -5585,11 +5662,11 @@ paths:
                                 group_id:
                                     type: string
                                     description: ''
-                                    example: ut
+                                    example: natus
                                 user_id:
                                     type: string
                                     description: ''
-                                    example: dignissimos
+                                    example: quibusdam
                             required:
                                 - group_id
                                 - user_id
@@ -5626,11 +5703,11 @@ paths:
                                 group_id:
                                     type: string
                                     description: ''
-                                    example: autem
+                                    example: corporis
                                 email:
                                     type: string
                                     description: ''
-                                    example: facere
+                                    example: temporibus
                             required:
                                 - group_id
                                 - email
@@ -5667,11 +5744,11 @@ paths:
                                 group_id:
                                     type: string
                                     description: ''
-                                    example: cupiditate
+                                    example: id
                                 email:
                                     type: string
                                     description: ''
-                                    example: quia
+                                    example: ipsum
                             required:
                                 - group_id
                                 - email
@@ -5773,7 +5850,7 @@ paths:
                 in: path
                 name: user
                 description: ''
-                example: officia
+                example: ad
                 required: true
                 schema:
                     type: string

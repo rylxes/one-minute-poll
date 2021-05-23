@@ -134,14 +134,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/groups/allUsersInGroup/id" \
+    -G "http://localhost/api/groups/allUsersInGroup/molestias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/groups/allUsersInGroup/id"
+    "http://localhost/api/groups/allUsersInGroup/molestias"
 );
 
 let headers = {
@@ -329,7 +329,7 @@ curl -X POST \
     "http://localhost/api/groups" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nam","description":"sit"}'
+    -d '{"name":"quia","description":"sed"}'
 
 ```
 
@@ -344,8 +344,8 @@ let headers = {
 };
 
 let body = {
-    "name": "nam",
-    "description": "sit"
+    "name": "quia",
+    "description": "sed"
 }
 
 fetch(url, {
@@ -399,14 +399,14 @@ GET|HEAD /groups/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/groups/quaerat" \
+    -G "http://localhost/api/groups/neque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/groups/quaerat"
+    "http://localhost/api/groups/neque"
 );
 
 let headers = {
@@ -467,16 +467,16 @@ PUT/PATCH /groups/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/groups/recusandae" \
+    "http://localhost/api/groups/sequi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"facilis","description":"voluptatem"}'
+    -d '{"name":"est","description":"vitae"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/groups/recusandae"
+    "http://localhost/api/groups/sequi"
 );
 
 let headers = {
@@ -485,8 +485,8 @@ let headers = {
 };
 
 let body = {
-    "name": "facilis",
-    "description": "voluptatem"
+    "name": "est",
+    "description": "vitae"
 }
 
 fetch(url, {
@@ -550,14 +550,14 @@ DELETE /groups/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/groups/animi" \
+    "http://localhost/api/groups/provident" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/groups/animi"
+    "http://localhost/api/groups/provident"
 );
 
 let headers = {
