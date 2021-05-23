@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"explicabo","last_name":"alias","user_id":3,"avatar":"omnis"}'
+    -d '{"first_name":"consequatur","last_name":"quia","user_id":2,"avatar":"vel"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "explicabo",
-    "last_name": "alias",
-    "user_id": 3,
-    "avatar": "omnis"
+    "first_name": "consequatur",
+    "last_name": "quia",
+    "user_id": 2,
+    "avatar": "vel"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/maxime" \
+    -G "http://localhost/api/profiles/beatae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/maxime"
+    "http://localhost/api/profiles/beatae"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/ut" \
+    "http://localhost/api/profiles/id" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"et","last_name":"aut","user_id":1}'
+    -d '{"first_name":"dolore","last_name":"ut","user_id":10}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/ut"
+    "http://localhost/api/profiles/id"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "et",
-    "last_name": "aut",
-    "user_id": 1
+    "first_name": "dolore",
+    "last_name": "ut",
+    "user_id": 10
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/dolor" \
+    "http://localhost/api/profiles/unde" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/dolor"
+    "http://localhost/api/profiles/unde"
 );
 
 let headers = {

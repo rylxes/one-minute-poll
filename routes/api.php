@@ -103,6 +103,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
         Route::post('permissions/assign/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsAssign');
+        Route::post('permissions/assign/folder', 'App\Http\Controllers\API\PermissionsAPIController@folderPermissionsAssign');
         Route::post('permissions/unassign/user', 'App\Http\Controllers\API\PermissionsAPIController@userUnPermissionsAssign');
         Route::post('permissions/assign/role', 'App\Http\Controllers\API\PermissionsAPIController@rolePermissionsAssign');
         Route::post('permissions/get/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsGet');

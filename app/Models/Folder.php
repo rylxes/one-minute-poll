@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Auth;
 use Kalnoy\Nestedset\NodeTrait;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Permission\Traits\HasPermissions;
 
 /**
  * Class Folder
@@ -27,7 +28,13 @@ class Folder extends Model
     use NodeTrait;
     use HasFactory;
     use LogsActivity;
+    use HasPermissions;
+
+
+
+
     public $table = 'folders';
+    protected $guard_name = 'api';
     protected static $logFillable = true;
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string

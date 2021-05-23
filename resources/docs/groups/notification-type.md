@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notification_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"iure","created_at":{},"updated_at":{}}'
+    -d '{"name":"sit","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +90,7 @@ let headers = {
 };
 
 let body = {
-    "name": "iure",
+    "name": "sit",
     "created_at": {},
     "updated_at": {}
 }
@@ -151,14 +151,14 @@ GET|HEAD /notificationTypes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notification_types/totam" \
+    -G "http://localhost/api/notification_types/iste" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/totam"
+    "http://localhost/api/notification_types/iste"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /notificationTypes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notification_types/reiciendis" \
+    "http://localhost/api/notification_types/dolorum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"animi","created_at":{},"updated_at":{}}'
+    -d '{"name":"et","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/reiciendis"
+    "http://localhost/api/notification_types/dolorum"
 );
 
 let headers = {
@@ -237,7 +237,7 @@ let headers = {
 };
 
 let body = {
-    "name": "animi",
+    "name": "et",
     "created_at": {},
     "updated_at": {}
 }
@@ -308,14 +308,14 @@ DELETE /notificationTypes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notification_types/qui" \
+    "http://localhost/api/notification_types/eius" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/qui"
+    "http://localhost/api/notification_types/eius"
 );
 
 let headers = {
