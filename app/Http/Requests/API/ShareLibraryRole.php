@@ -27,7 +27,7 @@ class ShareLibraryRole extends APIRequest
         return [
             'library_id' => 'required|exists:library,id',
             'group_id' => 'required|exists:groups,id',
-            'password' => 'nullable|boolean',
+            'password' => 'nullable|string',
         ];
     }
 }
