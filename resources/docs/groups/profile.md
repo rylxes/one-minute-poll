@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"dignissimos","last_name":"vitae","user_id":20,"avatar":"soluta"}'
+    -d '{"first_name":"sunt","last_name":"ex","user_id":5,"avatar":"voluptatem"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "dignissimos",
-    "last_name": "vitae",
-    "user_id": 20,
-    "avatar": "soluta"
+    "first_name": "sunt",
+    "last_name": "ex",
+    "user_id": 5,
+    "avatar": "voluptatem"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/sit" \
+    -G "http://localhost/api/profiles/dolores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/sit"
+    "http://localhost/api/profiles/dolores"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/et" \
+    "http://localhost/api/profiles/ipsam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"qui","last_name":"voluptate","user_id":15}'
+    -d '{"first_name":"accusamus","last_name":"accusamus","user_id":17}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/et"
+    "http://localhost/api/profiles/ipsam"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "qui",
-    "last_name": "voluptate",
-    "user_id": 15
+    "first_name": "accusamus",
+    "last_name": "accusamus",
+    "user_id": 17
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/pariatur" \
+    "http://localhost/api/profiles/fugiat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/pariatur"
+    "http://localhost/api/profiles/fugiat"
 );
 
 let headers = {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/roles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"repellendus","guard_name":"laudantium","created_at":{},"updated_at":{}}'
+    -d '{"name":"quis","guard_name":"repellendus","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "repellendus",
-    "guard_name": "laudantium",
+    "name": "quis",
+    "guard_name": "repellendus",
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /roles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/roles/aliquid" \
+    -G "http://localhost/api/roles/minus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/aliquid"
+    "http://localhost/api/roles/minus"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /roles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/roles/tempora" \
+    "http://localhost/api/roles/eveniet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"porro","guard_name":"voluptate","created_at":{},"updated_at":{}}'
+    -d '{"name":"magnam","guard_name":"non","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/tempora"
+    "http://localhost/api/roles/eveniet"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "name": "porro",
-    "guard_name": "voluptate",
+    "name": "magnam",
+    "guard_name": "non",
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /roles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/roles/illo" \
+    "http://localhost/api/roles/incidunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/illo"
+    "http://localhost/api/roles/incidunt"
 );
 
 let headers = {

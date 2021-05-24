@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"molestiae","library_id":"tempora"}'
+    -d '{"password":"voluptatem","library_id":"eum"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "password": "molestiae",
-    "library_id": "tempora"
+    "password": "voluptatem",
+    "library_id": "eum"
 }
 
 fetch(url, {
@@ -86,7 +86,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"reiciendis","user_id":"ea","password":false}'
+    -d '{"library_id":"quasi","user_id":"est","password":false}'
 
 ```
 
@@ -101,8 +101,8 @@ let headers = {
 };
 
 let body = {
-    "library_id": "reiciendis",
-    "user_id": "ea",
+    "library_id": "quasi",
+    "user_id": "est",
     "password": false
 }
 
@@ -166,7 +166,7 @@ curl -X POST \
     "http://localhost/api/libraries/groupLibraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"sit"}'
+    -d '{"group_id":"magnam"}'
 
 ```
 
@@ -181,7 +181,7 @@ let headers = {
 };
 
 let body = {
-    "group_id": "sit"
+    "group_id": "magnam"
 }
 
 fetch(url, {
@@ -233,7 +233,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToRole" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"omnis","group_id":"amet","password":false}'
+    -d '{"library_id":"quia","group_id":"dolore","password":"aliquid"}'
 
 ```
 
@@ -248,9 +248,9 @@ let headers = {
 };
 
 let body = {
-    "library_id": "omnis",
-    "group_id": "amet",
-    "password": false
+    "library_id": "quia",
+    "group_id": "dolore",
+    "password": "aliquid"
 }
 
 fetch(url, {
@@ -292,9 +292,8 @@ fetch(url, {
 <br>
 </p>
 <p>
-<b><code>password</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
-<label data-endpoint="POSTapi-libraries-shareToRole" hidden><input type="radio" name="password" value="true" data-endpoint="POSTapi-libraries-shareToRole" data-component="body" ><code>true</code></label>
-<label data-endpoint="POSTapi-libraries-shareToRole" hidden><input type="radio" name="password" value="false" data-endpoint="POSTapi-libraries-shareToRole" data-component="body" ><code>false</code></label>
+<b><code>password</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="password" data-endpoint="POSTapi-libraries-shareToRole" data-component="body"  hidden>
 <br>
 </p>
 
@@ -437,7 +436,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"suscipit","description":"quo","password":"hic","is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"fuga","description":"perspiciatis","password":"nam","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -452,9 +451,9 @@ let headers = {
 };
 
 let body = {
-    "name": "suscipit",
-    "description": "quo",
-    "password": "hic",
+    "name": "fuga",
+    "description": "perspiciatis",
+    "password": "nam",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -527,14 +526,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/amet" \
+    -G "http://localhost/api/libraries/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/amet"
+    "http://localhost/api/libraries/ut"
 );
 
 let headers = {
@@ -595,16 +594,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/sit" \
+    "http://localhost/api/libraries/autem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"corporis","description":"minima","password":"tempora","company_id":14,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"esse","description":"eos","password":"adipisci","company_id":14,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/sit"
+    "http://localhost/api/libraries/autem"
 );
 
 let headers = {
@@ -613,9 +612,9 @@ let headers = {
 };
 
 let body = {
-    "name": "corporis",
-    "description": "minima",
-    "password": "tempora",
+    "name": "esse",
+    "description": "eos",
+    "password": "adipisci",
     "company_id": 14,
     "is_encrypted": false,
     "is_favourite": false
@@ -704,14 +703,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/ex" \
+    "http://localhost/api/libraries/beatae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/ex"
+    "http://localhost/api/libraries/beatae"
 );
 
 let headers = {
