@@ -32,6 +32,7 @@ class FileAPIController extends AppBaseController
     /** @var  FileRepository */
     private $fileRepository;
     private $isFileSuccess = false;
+    private $hasFile = false;
 
     public function __construct(FileRepository $fileRepo)
     {
@@ -108,17 +109,20 @@ class FileAPIController extends AppBaseController
 
         $file = $this->fileRepository->create($input);
         $__response = $this->uploadFile($request, $file);
-        if (!$this->isFileSuccess) {
+        if (!$this->isFileSuccess && $this->hasFile) {
             return $__response;
         }
         $file->folder()->attach($input['folder_id']);
         DB::commit();
 
 
-        $file = $this->fileRepository->find($file->id);
-        $mediaItems = $file->getMedia('Documents');
-        $input['url'] = $mediaItems[0]->getFullUrl();
-        $this->fileRepository->update($input, $file->id);
+        if ($this->hasFile) {
+            $file = $this->fileRepository->find($file->id);
+            $mediaItems = $file->getMedia('Documents');
+            $input['url'] = $mediaItems[0]->getFullUrl();
+            $this->fileRepository->update($input, $file->id);
+        }
+
         return $this->sendResponse($file->toArray(), 'File saved successfully');
     }
 
@@ -135,6 +139,7 @@ class FileAPIController extends AppBaseController
         $this->isFileSuccess = false;
         if (!empty($request->file('file'))) {
             $this->deleteFile($file);
+            $this->hasFile = true;
             try {
                 $file->addMedia($request->file('file'))
                     ->toMediaCollection('Documents');
@@ -252,11 +257,17 @@ class FileAPIController extends AppBaseController
         }
         $file = $this->fileRepository->update($input, $id);
         $__response = $this->uploadFile($request, $file);
-        if (!$this->isFileSuccess) {
+        if (!$this->isFileSuccess && $this->hasFile) {
             return $__response;
         }
         $file->folder()->attach($input['folder_id']);
         DB::commit();
+        if ($this->hasFile) {
+            $file = $this->fileRepository->find($file->id);
+            $mediaItems = $file->getMedia('Documents');
+            $input['url'] = $mediaItems[0]->getFullUrl();
+            $this->fileRepository->update($input, $file->id);
+        }
 
         return $this->sendResponse($file->toArray(), 'File updated successfully');
     }
