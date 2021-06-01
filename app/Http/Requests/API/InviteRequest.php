@@ -25,6 +25,7 @@ class InviteRequest extends FormRequest
     {
         return [
             'company_id' => 'required|exists:companies,id',
+            'base_url' => 'required',
             'email' => ['required', 'string', 'email', 'max:255'],
         ];
     }

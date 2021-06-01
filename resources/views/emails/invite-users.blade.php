@@ -5,6 +5,8 @@
         Click here to continue
     @endcomponent
 
+    URL : {{$url}}
+
     Thanks,
     {{ config('app.name') }}
 @endcomponent

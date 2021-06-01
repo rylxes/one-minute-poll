@@ -31,16 +31,19 @@ class InvitationListener
     {
         $email = $event->email;
         $company = $event->company;
+        $base_url = $event->base_url;
 
 
         $is_user = false;
         $isUser = User::where('email', $email)->get();
-        if(!$isUser->isEmpty()){
+        $user_id = null;
+        if (!$isUser->isEmpty()) {
             $is_user = true;
+            $user_id = $isUser->first()->id;
         }
 
         try {
-            Mail::to($email)->send(new InviteUsers($company , $is_user));
+            Mail::to($email)->send(new InviteUsers($company, $is_user, $user_id , $base_url));
         } catch (\Exception $exception) {
             //dd($exception->getMessage());
         }

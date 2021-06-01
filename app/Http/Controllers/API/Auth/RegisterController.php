@@ -108,7 +108,7 @@ class RegisterController extends Controller
             'company_id' => $data['company_id'],
             'email' => $data['email'],
         ]);
-        event(new InviteEvent($company, $data['email']));
+        event(new InviteEvent($company, $data['email'], $data['base_url']));
         $message = "invitation sent";
         return $this->sendResponse($data, $message);
     }
@@ -122,9 +122,9 @@ class RegisterController extends Controller
     {
         $data = $request->all();
 
-        if(!empty($data['email'])){
+        if (!empty($data['email'])) {
             $isUser = User::where('email', $data['email'])->get();
-            if(!$isUser->isEmpty()){
+            if (!$isUser->isEmpty()) {
                 $data['is_user'] = true;
             }
         }
