@@ -16,7 +16,6 @@ use Response;
  * @group File Comment
  * @package App\Http\Controllers\API
  */
-
 class FileCommentAPIController extends AppBaseController
 {
     /** @var  FileCommentRepository */
@@ -73,13 +72,14 @@ class FileCommentAPIController extends AppBaseController
     public function show($id)
     {
         /** @var FileComment $fileComment */
-        $fileComment = $this->fileCommentRepository->find($id);
+        //$fileComment = $this->fileCommentRepository->find($id);
+        $fileComment = FileComment::with('user')->find($id);
 
         if (empty($fileComment)) {
             return $this->sendError('File Comment not found');
         }
 
-       // return $this->sendResponse(new FileCommentResource($fileComment), 'File Comment retrieved successfully');
+        // return $this->sendResponse(new FileCommentResource($fileComment), 'File Comment retrieved successfully');
         return $this->sendResponse($fileComment->toArray(), 'File Comment retrieved successfully');
     }
 
@@ -114,9 +114,9 @@ class FileCommentAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {
