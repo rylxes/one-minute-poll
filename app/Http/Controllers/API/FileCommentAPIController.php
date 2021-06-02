@@ -35,13 +35,9 @@ class FileCommentAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $fileComments = $this->fileCommentRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
 
-        return $this->sendResponse(FileCommentResource::collection($fileComments), 'File Comments retrieved successfully');
+        $fileComment = FileComment::with('user')->get();
+        return $this->sendResponse($fileComment->toArray(), 'File Comments retrieved successfully');
     }
 
     /**
