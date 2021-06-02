@@ -56,7 +56,7 @@ class RegisterController extends Controller
     {
         $this->profileRepository = $profileRepo;
         $this->companyRepository = $companyRepo;
-        $this->middleware('guest')->except(['invite']);
+        $this->middleware('guest')->except(['invite', 'registerInvite']);
     }
 
     /**
