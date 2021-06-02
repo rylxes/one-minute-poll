@@ -41,13 +41,13 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 // Password reset routes...
     Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.request');
     Route::post('password/reset', 'App\Http\Controllers\API\Auth\ResetPasswordController@postReset')->name('password.reset');
+    Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
 
 
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
         Route::post('invite', 'App\Http\Controllers\API\Auth\RegisterController@invite');
         Route::post('delete', 'App\Http\Controllers\API\Auth\ChangePasswordController@deleteProfile');
-        Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
 
 
         Route::get('folders/myFavourites', 'App\Http\Controllers\API\FolderAPIController@myFavourites');
