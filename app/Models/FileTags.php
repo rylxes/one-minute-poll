@@ -25,7 +25,7 @@ class FileTags extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This file tag has been {$eventName}";
     }
     public $table = 'file_tags';
 

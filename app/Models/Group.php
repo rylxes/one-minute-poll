@@ -32,7 +32,7 @@ class Group extends Model
 
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This group has been {$eventName}";
     }
 
     const CREATED_AT = 'created_at';

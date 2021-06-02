@@ -25,7 +25,7 @@ class LibraryUsers extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This library user has been {$eventName}";
     }
     public $table = 'library_users';
 

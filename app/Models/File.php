@@ -52,7 +52,7 @@ class File extends Model implements HasMedia
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This file has been {$eventName}";
     }
     /**
      * The attributes that should be casted to native types.

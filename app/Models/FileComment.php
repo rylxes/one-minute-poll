@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Scopes\CompanyScope;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
@@ -20,22 +22,24 @@ class FileComment extends Model
 
     use HasFactory;
     use LogsActivity;
+
     protected static $logFillable = true;
     protected static $submitEmptyLogs = false;
+
     public function getDescriptionForEvent(string $eventName): string
     {
         return "This model has been {$eventName}";
     }
+
     public $table = 'file_comments';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
 
-
-
     public $fillable = [
         'file_id',
+        'user_id',
         'comment'
     ];
 
@@ -47,6 +51,7 @@ class FileComment extends Model
     protected $casts = [
         'id' => 'integer',
         'file_id' => 'integer',
+        'user_id' => 'integer',
         'comment' => 'string'
     ];
 
@@ -61,5 +66,19 @@ class FileComment extends Model
 
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+        self::creating(function ($model) {
+            if (Auth::check()) {
+                $model->user_id = Auth::user()->id;
+            }
+        });
+        self::saving(function ($model) {
+            if (Auth::check()) {
+                $model->user_id = Auth::user()->id;
+            }
+        });
+    }
 
 }

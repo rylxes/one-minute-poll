@@ -24,7 +24,7 @@ class UserGroup extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This user group has been {$eventName}";
     }
     public $table = 'user_groups';
 

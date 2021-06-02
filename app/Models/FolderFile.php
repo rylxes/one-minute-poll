@@ -24,7 +24,7 @@ class FolderFile extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This folder's file has been {$eventName}";
     }
     public $table = 'folders_file';
 

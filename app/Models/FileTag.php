@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
  * Class FileTag
@@ -18,9 +19,17 @@ class FileTag extends Model
 {
 
     use HasFactory;
+    use LogsActivity;
 
     public $table = 'file_tags';
-    
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This file tag has been {$eventName}";
+    }
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -55,5 +64,5 @@ class FileTag extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+
 }

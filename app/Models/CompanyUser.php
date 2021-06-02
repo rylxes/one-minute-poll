@@ -24,7 +24,7 @@ class CompanyUser extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This company's User has been {$eventName}";
     }
     public $table = 'company_user';
 

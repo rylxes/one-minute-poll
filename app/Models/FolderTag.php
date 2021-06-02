@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 /**
  * Class FolderTag
@@ -18,9 +19,16 @@ class FolderTag extends Model
 {
 
     use HasFactory;
+    use LogsActivity;
+    protected static $logFillable = true;
+    protected static $submitEmptyLogs = false;
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "This folder's tag has been {$eventName}";
+    }
 
     public $table = 'folder_tags';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -55,5 +63,5 @@ class FolderTag extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+
 }

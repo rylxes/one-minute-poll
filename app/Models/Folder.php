@@ -39,7 +39,7 @@ class Folder extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This folder has been {$eventName}";
     }
 
     const CREATED_AT = 'created_at';

@@ -20,18 +20,19 @@ class FileComments extends Model
 
     use HasFactory;
     use LogsActivity;
+
     protected static $logFillable = true;
     protected static $submitEmptyLogs = false;
+
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This file comment has been {$eventName}";
     }
+
     public $table = 'file_comments';
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-
 
 
     public $fillable = [

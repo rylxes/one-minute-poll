@@ -25,7 +25,7 @@ class LibraryGroup extends Model
     protected static $submitEmptyLogs = false;
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "This model has been {$eventName}";
+        return "This library group has been {$eventName}";
     }
     public $table = 'library_groups';
 
