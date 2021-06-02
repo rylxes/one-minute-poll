@@ -29,9 +29,9 @@ class RegisterInviteRequest extends FormRequest
             'is_user' => 'required|boolean',
             'name' => ['nullable', 'string', 'max:255'],
             'has2fa' => 'nullable|boolean',
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'string', 'min:8'],
+            'email' => ['nullable', 'string', 'email', 'max:255'],
+            'password' => ['nullable', 'string', 'min:8', 'confirmed'],
+            'password_confirmation' => ['nullable', 'string', 'min:8'],
         ];
     }
 }
