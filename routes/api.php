@@ -63,15 +63,15 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('tags', App\Http\Controllers\API\TagAPIController::class);
 
 
-
-        Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
-
-
         Route::get('files/myFavourites', 'App\Http\Controllers\API\FileAPIController@myFavourites');
         Route::post('files/validate', 'App\Http\Controllers\API\FileAPIController@validatePassword');
         Route::post('files/moveFile', 'App\Http\Controllers\API\FileAPIController@moveFile');
         Route::post('files/copyFile', 'App\Http\Controllers\API\FileAPIController@copyFile');
         Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
+
+        Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
+
+
 
 
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');

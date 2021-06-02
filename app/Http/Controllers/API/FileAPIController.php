@@ -205,7 +205,7 @@ class FileAPIController extends AppBaseController
     public function myFavourites(Request $request)
     {
         $lib = new File();
-        $libraries = $lib->where('is_favourite', true)->get();
+        $libraries = $lib->where('is_favourite', 1)->get();
         return $this->sendResponse($libraries->toArray(), 'Favourites retrieved successfully');
     }
 
