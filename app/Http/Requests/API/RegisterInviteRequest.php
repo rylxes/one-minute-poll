@@ -26,7 +26,7 @@ class RegisterInviteRequest extends FormRequest
         return [
             'company_id' => 'required|exists:companies,id',
             'user_id' => 'nullable|exists:users,id',
-            'is_user' => ['required|boolean'],
+            'is_user' => 'required|boolean',
             'name' => ['nullable', 'string', 'max:255'],
             'has2fa' => 'nullable|boolean',
             'email' => ['required', 'string', 'email', 'max:255'],
