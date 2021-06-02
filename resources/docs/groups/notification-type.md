@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notification_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"enim","created_at":{},"updated_at":{}}'
+    -d '{"name":"impedit","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +90,7 @@ let headers = {
 };
 
 let body = {
-    "name": "enim",
+    "name": "impedit",
     "created_at": {},
     "updated_at": {}
 }
@@ -151,14 +151,14 @@ GET|HEAD /notificationTypes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notification_types/qui" \
+    -G "http://localhost/api/notification_types/repellendus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/qui"
+    "http://localhost/api/notification_types/repellendus"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /notificationTypes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notification_types/fuga" \
+    "http://localhost/api/notification_types/numquam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aut","created_at":{},"updated_at":{}}'
+    -d '{"name":"tenetur","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/fuga"
+    "http://localhost/api/notification_types/numquam"
 );
 
 let headers = {
@@ -237,7 +237,7 @@ let headers = {
 };
 
 let body = {
-    "name": "aut",
+    "name": "tenetur",
     "created_at": {},
     "updated_at": {}
 }
@@ -308,14 +308,14 @@ DELETE /notificationTypes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notification_types/fugiat" \
+    "http://localhost/api/notification_types/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/fugiat"
+    "http://localhost/api/notification_types/ut"
 );
 
 let headers = {

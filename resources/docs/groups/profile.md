@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sunt","last_name":"ex","user_id":5,"avatar":"voluptatem"}'
+    -d '{"first_name":"officia","last_name":"quod","user_id":5,"avatar":"quia"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sunt",
-    "last_name": "ex",
+    "first_name": "officia",
+    "last_name": "quod",
     "user_id": 5,
-    "avatar": "voluptatem"
+    "avatar": "quia"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/dolores" \
+    -G "http://localhost/api/profiles/nostrum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/dolores"
+    "http://localhost/api/profiles/nostrum"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/ipsam" \
+    "http://localhost/api/profiles/quo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"accusamus","last_name":"accusamus","user_id":17}'
+    -d '{"first_name":"maiores","last_name":"debitis","user_id":9}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/ipsam"
+    "http://localhost/api/profiles/quo"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "accusamus",
-    "last_name": "accusamus",
-    "user_id": 17
+    "first_name": "maiores",
+    "last_name": "debitis",
+    "user_id": 9
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/fugiat" \
+    "http://localhost/api/profiles/dicta" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/fugiat"
+    "http://localhost/api/profiles/dicta"
 );
 
 let headers = {

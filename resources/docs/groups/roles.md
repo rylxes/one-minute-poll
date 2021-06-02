@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/roles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"quis","guard_name":"repellendus","created_at":{},"updated_at":{}}'
+    -d '{"name":"magnam","guard_name":"qui","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "quis",
-    "guard_name": "repellendus",
+    "name": "magnam",
+    "guard_name": "qui",
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /roles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/roles/minus" \
+    -G "http://localhost/api/roles/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/minus"
+    "http://localhost/api/roles/qui"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /roles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/roles/eveniet" \
+    "http://localhost/api/roles/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"magnam","guard_name":"non","created_at":{},"updated_at":{}}'
+    -d '{"name":"ut","guard_name":"nulla","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/eveniet"
+    "http://localhost/api/roles/sed"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "name": "magnam",
-    "guard_name": "non",
+    "name": "ut",
+    "guard_name": "nulla",
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /roles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/roles/incidunt" \
+    "http://localhost/api/roles/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/incidunt"
+    "http://localhost/api/roles/est"
 );
 
 let headers = {

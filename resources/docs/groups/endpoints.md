@@ -296,14 +296,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/tokens/doloribus" \
+    "http://localhost/oauth/tokens/rem" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/tokens/doloribus"
+    "http://localhost/oauth/tokens/rem"
 );
 
 let headers = {
@@ -526,14 +526,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/oauth/clients/et" \
+    "http://localhost/oauth/clients/commodi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/et"
+    "http://localhost/oauth/clients/commodi"
 );
 
 let headers = {
@@ -586,14 +586,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/clients/sit" \
+    "http://localhost/oauth/clients/error" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/sit"
+    "http://localhost/oauth/clients/error"
 );
 
 let headers = {
@@ -824,14 +824,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/personal-access-tokens/voluptatem" \
+    "http://localhost/oauth/personal-access-tokens/voluptates" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens/voluptatem"
+    "http://localhost/oauth/personal-access-tokens/voluptates"
 );
 
 let headers = {

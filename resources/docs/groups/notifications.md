@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":16,"user_id":3,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":14,"user_id":18,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 16,
-    "user_id": 3,
+    "notification_type_id": 14,
+    "user_id": 18,
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /notifications/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notifications/doloremque" \
+    -G "http://localhost/api/notifications/consequatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/doloremque"
+    "http://localhost/api/notifications/consequatur"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /notifications/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notifications/qui" \
+    "http://localhost/api/notifications/amet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":7,"user_id":2,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":12,"user_id":17,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/qui"
+    "http://localhost/api/notifications/amet"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 7,
-    "user_id": 2,
+    "notification_type_id": 12,
+    "user_id": 17,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /notifications/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notifications/odio" \
+    "http://localhost/api/notifications/deserunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/odio"
+    "http://localhost/api/notifications/deserunt"
 );
 
 let headers = {
