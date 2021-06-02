@@ -66,6 +66,12 @@ class FileComment extends Model
 
     ];
 
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
+
+
     protected static function boot()
     {
         parent::boot();

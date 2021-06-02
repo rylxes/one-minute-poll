@@ -79,7 +79,8 @@ class FileCommentAPIController extends AppBaseController
             return $this->sendError('File Comment not found');
         }
 
-        return $this->sendResponse(new FileCommentResource($fileComment), 'File Comment retrieved successfully');
+       // return $this->sendResponse(new FileCommentResource($fileComment), 'File Comment retrieved successfully');
+        return $this->sendResponse($fileComment->toArray(), 'File Comment retrieved successfully');
     }
 
     /**
