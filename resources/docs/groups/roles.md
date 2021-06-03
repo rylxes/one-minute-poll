@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/roles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aut","guard_name":"molestias","created_at":{},"updated_at":{}}'
+    -d '{"name":"voluptatum","guard_name":"asperiores","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "aut",
-    "guard_name": "molestias",
+    "name": "voluptatum",
+    "guard_name": "asperiores",
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /roles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/roles/consequatur" \
+    -G "http://localhost/api/roles/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/consequatur"
+    "http://localhost/api/roles/et"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /roles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/roles/consequatur" \
+    "http://localhost/api/roles/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"tempora","guard_name":"tempora","created_at":{},"updated_at":{}}'
+    -d '{"name":"vero","guard_name":"rerum","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/consequatur"
+    "http://localhost/api/roles/ut"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "name": "tempora",
-    "guard_name": "tempora",
+    "name": "vero",
+    "guard_name": "rerum",
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /roles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/roles/assumenda" \
+    "http://localhost/api/roles/inventore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/assumenda"
+    "http://localhost/api/roles/inventore"
 );
 
 let headers = {

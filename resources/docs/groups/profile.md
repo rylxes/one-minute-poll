@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/profiles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"sit","last_name":"non","user_id":8,"avatar":"quaerat"}'
+    -d '{"first_name":"officia","last_name":"quia","user_id":8,"avatar":"ea"}'
 
 ```
 
@@ -90,10 +90,10 @@ let headers = {
 };
 
 let body = {
-    "first_name": "sit",
-    "last_name": "non",
+    "first_name": "officia",
+    "last_name": "quia",
     "user_id": 8,
-    "avatar": "quaerat"
+    "avatar": "ea"
 }
 
 fetch(url, {
@@ -157,14 +157,14 @@ GET|HEAD /profiles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/profiles/velit" \
+    -G "http://localhost/api/profiles/quod" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/velit"
+    "http://localhost/api/profiles/quod"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /profiles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/profiles/impedit" \
+    "http://localhost/api/profiles/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"aperiam","last_name":"laudantium","user_id":1}'
+    -d '{"first_name":"omnis","last_name":"placeat","user_id":18}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/impedit"
+    "http://localhost/api/profiles/reiciendis"
 );
 
 let headers = {
@@ -243,9 +243,9 @@ let headers = {
 };
 
 let body = {
-    "first_name": "aperiam",
-    "last_name": "laudantium",
-    "user_id": 1
+    "first_name": "omnis",
+    "last_name": "placeat",
+    "user_id": 18
 }
 
 fetch(url, {
@@ -314,14 +314,14 @@ DELETE /profiles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/profiles/quia" \
+    "http://localhost/api/profiles/aut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/profiles/quia"
+    "http://localhost/api/profiles/aut"
 );
 
 let headers = {

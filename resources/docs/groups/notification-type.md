@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notification_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sapiente","created_at":{},"updated_at":{}}'
+    -d '{"name":"et","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +90,7 @@ let headers = {
 };
 
 let body = {
-    "name": "sapiente",
+    "name": "et",
     "created_at": {},
     "updated_at": {}
 }
@@ -151,14 +151,14 @@ GET|HEAD /notificationTypes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notification_types/qui" \
+    -G "http://localhost/api/notification_types/sint" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/qui"
+    "http://localhost/api/notification_types/sint"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /notificationTypes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notification_types/voluptatibus" \
+    "http://localhost/api/notification_types/doloribus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptas","created_at":{},"updated_at":{}}'
+    -d '{"name":"rerum","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/voluptatibus"
+    "http://localhost/api/notification_types/doloribus"
 );
 
 let headers = {
@@ -237,7 +237,7 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptas",
+    "name": "rerum",
     "created_at": {},
     "updated_at": {}
 }
@@ -308,14 +308,14 @@ DELETE /notificationTypes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notification_types/doloremque" \
+    "http://localhost/api/notification_types/fugiat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notification_types/doloremque"
+    "http://localhost/api/notification_types/fugiat"
 );
 
 let headers = {

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/files/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"ea","file_id":"doloribus"}'
+    -d '{"password":"iste","file_id":"voluptatem"}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "password": "ea",
-    "file_id": "doloribus"
+    "password": "iste",
+    "file_id": "voluptatem"
 }
 
 fetch(url, {
@@ -148,7 +148,7 @@ curl -X POST \
     "http://localhost/api/files/moveFile" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"sit","from_folder_id":"quaerat","to_folder_id":"culpa"}'
+    -d '{"file_id":"qui","from_folder_id":"inventore","to_folder_id":"facilis"}'
 
 ```
 
@@ -163,9 +163,9 @@ let headers = {
 };
 
 let body = {
-    "file_id": "sit",
-    "from_folder_id": "quaerat",
-    "to_folder_id": "culpa"
+    "file_id": "qui",
+    "from_folder_id": "inventore",
+    "to_folder_id": "facilis"
 }
 
 fetch(url, {
@@ -227,7 +227,7 @@ curl -X POST \
     "http://localhost/api/files/copyFile" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"file_id":"fugiat","folder_id":"accusamus"}'
+    -d '{"file_id":"odio","folder_id":"repellendus"}'
 
 ```
 
@@ -242,8 +242,8 @@ let headers = {
 };
 
 let body = {
-    "file_id": "fugiat",
-    "folder_id": "accusamus"
+    "file_id": "odio",
+    "folder_id": "repellendus"
 }
 
 fetch(url, {
@@ -297,14 +297,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/byFolder/harum" \
+    -G "http://localhost/api/files/byFolder/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/byFolder/harum"
+    "http://localhost/api/files/byFolder/qui"
 );
 
 let headers = {
@@ -430,7 +430,7 @@ curl -X POST \
     "http://localhost/api/files" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"aperiam","is_favourite":false,"is_lock":false,"folder_id":"non"}'
+    -d '{"name":"rerum","is_favourite":false,"is_lock":false,"folder_id":"voluptas"}'
 
 ```
 
@@ -445,10 +445,10 @@ let headers = {
 };
 
 let body = {
-    "name": "aperiam",
+    "name": "rerum",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "non"
+    "folder_id": "voluptas"
 }
 
 fetch(url, {
@@ -514,14 +514,14 @@ GET|HEAD /files/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/files/similique" \
+    -G "http://localhost/api/files/accusamus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/similique"
+    "http://localhost/api/files/accusamus"
 );
 
 let headers = {
@@ -582,16 +582,16 @@ PUT/PATCH /files/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/files/officia" \
+    "http://localhost/api/files/error" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"similique","is_favourite":false,"is_lock":false,"folder_id":"laudantium"}'
+    -d '{"name":"aut","is_favourite":false,"is_lock":false,"folder_id":"iusto"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/officia"
+    "http://localhost/api/files/error"
 );
 
 let headers = {
@@ -600,10 +600,10 @@ let headers = {
 };
 
 let body = {
-    "name": "similique",
+    "name": "aut",
     "is_favourite": false,
     "is_lock": false,
-    "folder_id": "laudantium"
+    "folder_id": "iusto"
 }
 
 fetch(url, {
@@ -679,14 +679,14 @@ DELETE /files/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/files/et" \
+    "http://localhost/api/files/veritatis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/files/et"
+    "http://localhost/api/files/veritatis"
 );
 
 let headers = {

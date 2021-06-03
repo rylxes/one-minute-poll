@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/libraries/validate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"password":"ullam","library_id":"architecto"}'
+    -d '{"password":"eum","library_id":"nihil"}'
 
 ```
 
@@ -28,8 +28,8 @@ let headers = {
 };
 
 let body = {
-    "password": "ullam",
-    "library_id": "architecto"
+    "password": "eum",
+    "library_id": "nihil"
 }
 
 fetch(url, {
@@ -86,7 +86,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"laudantium","user_id":"eius","password":false}'
+    -d '{"library_id":"necessitatibus","user_id":"quia","password":false}'
 
 ```
 
@@ -101,8 +101,8 @@ let headers = {
 };
 
 let body = {
-    "library_id": "laudantium",
-    "user_id": "eius",
+    "library_id": "necessitatibus",
+    "user_id": "quia",
     "password": false
 }
 
@@ -166,7 +166,7 @@ curl -X POST \
     "http://localhost/api/libraries/groupLibraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"group_id":"possimus"}'
+    -d '{"group_id":"incidunt"}'
 
 ```
 
@@ -181,7 +181,7 @@ let headers = {
 };
 
 let body = {
-    "group_id": "possimus"
+    "group_id": "incidunt"
 }
 
 fetch(url, {
@@ -233,7 +233,7 @@ curl -X POST \
     "http://localhost/api/libraries/shareToRole" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"library_id":"incidunt","group_id":"velit","password":"asperiores"}'
+    -d '{"library_id":"sint","group_id":"aliquam","password":"consectetur"}'
 
 ```
 
@@ -248,9 +248,9 @@ let headers = {
 };
 
 let body = {
-    "library_id": "incidunt",
-    "group_id": "velit",
-    "password": "asperiores"
+    "library_id": "sint",
+    "group_id": "aliquam",
+    "password": "consectetur"
 }
 
 fetch(url, {
@@ -436,7 +436,7 @@ curl -X POST \
     "http://localhost/api/libraries" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptas","description":"esse","password":"nesciunt","is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"non","description":"recusandae","password":"similique","is_encrypted":false,"is_favourite":false}'
 
 ```
 
@@ -451,9 +451,9 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptas",
-    "description": "esse",
-    "password": "nesciunt",
+    "name": "non",
+    "description": "recusandae",
+    "password": "similique",
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -526,14 +526,14 @@ GET|HEAD /libraries/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/libraries/autem" \
+    -G "http://localhost/api/libraries/asperiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/autem"
+    "http://localhost/api/libraries/asperiores"
 );
 
 let headers = {
@@ -594,16 +594,16 @@ PUT/PATCH /libraries/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/libraries/molestiae" \
+    "http://localhost/api/libraries/enim" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"recusandae","description":"suscipit","password":"consectetur","company_id":4,"is_encrypted":false,"is_favourite":false}'
+    -d '{"name":"quos","description":"ut","password":"occaecati","company_id":1,"is_encrypted":false,"is_favourite":false}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/molestiae"
+    "http://localhost/api/libraries/enim"
 );
 
 let headers = {
@@ -612,10 +612,10 @@ let headers = {
 };
 
 let body = {
-    "name": "recusandae",
-    "description": "suscipit",
-    "password": "consectetur",
-    "company_id": 4,
+    "name": "quos",
+    "description": "ut",
+    "password": "occaecati",
+    "company_id": 1,
     "is_encrypted": false,
     "is_favourite": false
 }
@@ -703,14 +703,14 @@ DELETE /libraries/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/libraries/ad" \
+    "http://localhost/api/libraries/in" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/libraries/ad"
+    "http://localhost/api/libraries/in"
 );
 
 let headers = {

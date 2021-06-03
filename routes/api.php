@@ -27,9 +27,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('logout');
     Route::get('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('api.logout');
     Route::post('register', 'App\Http\Controllers\API\Auth\RegisterController@register');
-    Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('password/reset', 'App\Http\Controllers\API\Auth\ResetPasswordController@reset')->name('password.update');
     Route::post('password/confirm', 'App\Http\Controllers\API\Auth\ConfirmPasswordController@confirm');
     Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\API\Auth\VerificationController@verify')->name('verification.verify');
     Route::post('email/resend', 'App\Http\Controllers\API\Auth\VerificationController@resend')->name('verification.resend');
@@ -37,10 +35,11 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     // Password reset link request routes...
     Route::get('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.email');
     Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail');
+    //Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
 // Password reset routes...
-    Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.request');
-    Route::post('password/reset', 'App\Http\Controllers\API\Auth\ResetPasswordController@postReset')->name('password.reset');
+    Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm');
+    Route::post('password/reset', 'App\Http\Controllers\API\Auth\ResetPasswordController@reset');
     Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
 
 

@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/settings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"dolor","value":"amet","company_id":2}'
+    -d '{"type":"iusto","value":"vero","company_id":20}'
 
 ```
 
@@ -90,9 +90,9 @@ let headers = {
 };
 
 let body = {
-    "type": "dolor",
-    "value": "amet",
-    "company_id": 2
+    "type": "iusto",
+    "value": "vero",
+    "company_id": 20
 }
 
 fetch(url, {
@@ -151,14 +151,14 @@ GET|HEAD /settings/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/settings/corrupti" \
+    -G "http://localhost/api/settings/molestiae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/corrupti"
+    "http://localhost/api/settings/molestiae"
 );
 
 let headers = {
@@ -219,16 +219,16 @@ PUT/PATCH /settings/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/settings/cupiditate" \
+    "http://localhost/api/settings/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"type":"perspiciatis","value":"cupiditate","company_id":10}'
+    -d '{"type":"vel","value":"necessitatibus","company_id":16}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/cupiditate"
+    "http://localhost/api/settings/sit"
 );
 
 let headers = {
@@ -237,9 +237,9 @@ let headers = {
 };
 
 let body = {
-    "type": "perspiciatis",
-    "value": "cupiditate",
-    "company_id": 10
+    "type": "vel",
+    "value": "necessitatibus",
+    "company_id": 16
 }
 
 fetch(url, {
@@ -308,14 +308,14 @@ DELETE /settings/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/settings/sit" \
+    "http://localhost/api/settings/reiciendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/settings/sit"
+    "http://localhost/api/settings/reiciendis"
 );
 
 let headers = {
