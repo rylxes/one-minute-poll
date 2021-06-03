@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\ResetPassword;
 use App\Providers\RouteServiceProvider;
+use App\Traits\PasswordBrokerDMS;
 use App\Traits\ResponseTrait;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\JsonResponse;
@@ -32,6 +33,7 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
     use ResponseTrait;
+    use PasswordBrokerDMS;
 
     /**
      * Where to redirect users after resetting their password.
@@ -67,7 +69,7 @@ class ResetPasswordController extends Controller
         // Here we will attempt to reset the user's password. If it is successful we
         // will update the password on an actual user model and persist it to the
         // database. Otherwise we will parse the error and return the response.
-        $response = $this->broker()->reset(
+        $response = $this->resetPWD(
             $this->credentials($request), function ($user, $password) {
             $this->resetPassword($user, $password);
         }

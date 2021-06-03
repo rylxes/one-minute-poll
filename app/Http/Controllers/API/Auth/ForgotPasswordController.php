@@ -4,12 +4,22 @@ namespace App\Http\Controllers\API\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\AuthEmailRequest;
+use App\Mail\ForgotPasswordMail;
+use App\Mail\InviteUsers;
+use App\Traits\PasswordBrokerDMS;
 use App\Traits\ResponseTrait;
+use Closure;
+use Illuminate\Auth\Passwords\TokenRepositoryInterface;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\ValidationException;
+use UnexpectedValueException;
 
 /**
  *
@@ -30,6 +40,8 @@ class ForgotPasswordController extends Controller
     */
     use ResponseTrait;
     use SendsPasswordResetEmails;
+    use PasswordBrokerDMS;
+
 
 
     /**
@@ -43,14 +55,15 @@ class ForgotPasswordController extends Controller
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
-        $response = $this->broker()->sendResetLink(
-            $this->credentials($request)
+        $response = $this->sendResetLink(
+            $this->credentials($request), $request
         );
 
         return $response == Password::RESET_LINK_SENT
             ? $this->sendResetLinkResponse($request, $response)
             : $this->sendResetLinkFailedResponse($request, $response);
     }
+
     protected function sendResetLinkFailedResponse(Request $request, $response)
     {
         //dd($response);
