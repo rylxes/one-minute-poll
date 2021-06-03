@@ -75,11 +75,7 @@ class PasswordBrokerDMS implements PasswordBrokerContract
         if ($callback) {
             $callback($user, $token);
         } else {
-            try {
-                Mail::to($user->getEmailForPasswordReset())->send(new ForgotPasswordMail($baseURL, $token, $user));
-            } catch (\Throwable $exception) {
-                dd($exception->getMessage());
-            }
+            $user->sendPasswordResetNotification($token);
         }
 
         return static::RESET_LINK_SENT;
