@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/notifications" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":14,"user_id":18,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":19,"user_id":18,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +90,7 @@ let headers = {
 };
 
 let body = {
-    "notification_type_id": 14,
+    "notification_type_id": 19,
     "user_id": 18,
     "created_at": {},
     "updated_at": {}
@@ -157,14 +157,14 @@ GET|HEAD /notifications/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/notifications/consequatur" \
+    -G "http://localhost/api/notifications/est" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/consequatur"
+    "http://localhost/api/notifications/est"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /notifications/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/notifications/amet" \
+    "http://localhost/api/notifications/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"notification_type_id":12,"user_id":17,"created_at":{},"updated_at":{}}'
+    -d '{"notification_type_id":12,"user_id":19,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/amet"
+    "http://localhost/api/notifications/sunt"
 );
 
 let headers = {
@@ -244,7 +244,7 @@ let headers = {
 
 let body = {
     "notification_type_id": 12,
-    "user_id": 17,
+    "user_id": 19,
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /notifications/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/notifications/deserunt" \
+    "http://localhost/api/notifications/officia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/notifications/deserunt"
+    "http://localhost/api/notifications/officia"
 );
 
 let headers = {
