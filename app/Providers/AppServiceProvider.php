@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+//        $this->app->bind(
+//            'Illuminate\Contracts\Auth\PasswordBroker',
+//            'App\Broker\PasswordBrokerDMS'
+//        );
+        //app()->bind('password.email', 'App/Broker/PasswordBrokerDMS');
     }
 }

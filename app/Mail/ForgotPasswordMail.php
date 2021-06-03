@@ -39,11 +39,13 @@ class ForgotPasswordMail extends Mailable
         $url = $this->base_url . '?' . http_build_query([
                 'token' => $this->token,
             ]);
+       // $url = '';
+        //dd($url, $this->token , $this->user);
         return $this->markdown('emails.forgot-password')
             ->with([
                 'token' => $this->token,
                 'url' => $url,
-                'user' => $this->user,
+                // 'user' => $this->user,
             ])
             ->subject(config('app.name') . " Reset Password Notification ");
     }

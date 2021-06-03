@@ -40,8 +40,12 @@ class ForgotPasswordController extends Controller
     */
     use ResponseTrait;
     use SendsPasswordResetEmails;
-    use PasswordBrokerDMS;
 
+
+    protected function credentials(Request $request)
+    {
+        return $request->only('email', 'base_url');
+    }
 
 
     /**
@@ -55,9 +59,18 @@ class ForgotPasswordController extends Controller
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
-        $response = $this->sendResetLink(
-            $this->credentials($request), $request
+
+        //dd('dd');
+        $response = $this->broker()->sendResetLink(
+
+            $this->credentials($request), function ($user, $token) use ($request) {
+            //$user->sendPasswordResetNotification($token);
+            $baseURL = $request->input('base_url');
+            Mail::to($user->getEmailForPasswordReset())->send(new ForgotPasswordMail($baseURL, $token, $user));
+        }
         );
+
+       // dd($response);
 
         return $response == Password::RESET_LINK_SENT
             ? $this->sendResetLinkResponse($request, $response)
