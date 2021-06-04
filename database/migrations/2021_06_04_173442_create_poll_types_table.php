@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFolders extends Migration
+class CreatePollTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateFolders extends Migration
      */
     public function up()
     {
-        Schema::create('folders', function (Blueprint $table) {
+        Schema::create('poll_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('file_id');
-            $table->nestedSet();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateFolders extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('folders');
+        Schema::dropIfExists('poll_types');
     }
 }
