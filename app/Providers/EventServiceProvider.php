@@ -17,16 +17,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
-        ],
-        'App\Events\InviteEvent' => [
-            'App\Listeners\InvitationListener'
-        ],
-        'App\Events\PasswordChangeEvent' => [
-            'App\Listeners\PasswordChangeListener'
-        ],
-        'App\Events\InviteSuccessfulEvent' => [
-            'App\Listeners\InvitationSuccessfulListener'
-        ],
+        ]
     ];
 
     /**

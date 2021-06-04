@@ -130,3 +130,14 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
 
+
+
+Route::resource('polls', App\Http\Controllers\API\PollAPIController::class);
+
+Route::resource('categories', App\Http\Controllers\API\CategoryAPIController::class);
+
+Route::resource('poll_types', App\Http\Controllers\API\PollTypeAPIController::class);
+
+Route::resource('votes', App\Http\Controllers\API\VoteAPIController::class);
+
+Route::resource('vote_values', App\Http\Controllers\API\VoteValueAPIController::class);
