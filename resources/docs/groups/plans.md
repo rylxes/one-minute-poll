@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/plans/subscribe" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"plan_id":"cumque"}'
+    -d '{"plan_id":"et"}'
 
 ```
 
@@ -28,7 +28,7 @@ let headers = {
 };
 
 let body = {
-    "plan_id": "cumque"
+    "plan_id": "et"
 }
 
 fetch(url, {
@@ -80,7 +80,7 @@ curl -X POST \
     "http://localhost/api/plans/createPlan" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"totam","name":"voluptas","price":6840845.546,"invoice_period":4,"invoice_interval":"hour","active_subscribers_limit":19}'
+    -d '{"slug":"sit","name":"asperiores","price":356134049.775493,"invoice_period":15,"invoice_interval":"week","active_subscribers_limit":18}'
 
 ```
 
@@ -95,12 +95,12 @@ let headers = {
 };
 
 let body = {
-    "slug": "totam",
-    "name": "voluptas",
-    "price": 6840845.546,
-    "invoice_period": 4,
-    "invoice_interval": "hour",
-    "active_subscribers_limit": 19
+    "slug": "sit",
+    "name": "asperiores",
+    "price": 356134049.775493,
+    "invoice_period": 15,
+    "invoice_interval": "week",
+    "active_subscribers_limit": 18
 }
 
 fetch(url, {
@@ -301,7 +301,7 @@ curl -X POST \
     "http://localhost/api/plans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"aut","name":"est","description":"qui","is_active":false,"price":150962522.3,"signup_fee":3639403.21029397,"currency":"dolor","trial_period":10,"trial_interval":"week","invoice_period":3,"invoice_interval":"week","grace_period":9,"grace_interval":"day","sort_order":15,"prorate_day":6,"prorate_period":4,"prorate_extend_due":8,"active_subscribers_limit":19}'
+    -d '{"slug":"modi","name":"nobis","description":"temporibus","is_active":false,"price":324611344.26694936,"signup_fee":130883604.5087,"currency":"dolore","trial_period":11,"trial_interval":"day","invoice_period":19,"invoice_interval":"month","grace_period":14,"grace_interval":"week","sort_order":7,"prorate_day":2,"prorate_period":5,"prorate_extend_due":13,"active_subscribers_limit":10}'
 
 ```
 
@@ -316,24 +316,24 @@ let headers = {
 };
 
 let body = {
-    "slug": "aut",
-    "name": "est",
-    "description": "qui",
+    "slug": "modi",
+    "name": "nobis",
+    "description": "temporibus",
     "is_active": false,
-    "price": 150962522.3,
-    "signup_fee": 3639403.21029397,
-    "currency": "dolor",
-    "trial_period": 10,
-    "trial_interval": "week",
-    "invoice_period": 3,
-    "invoice_interval": "week",
-    "grace_period": 9,
-    "grace_interval": "day",
-    "sort_order": 15,
-    "prorate_day": 6,
-    "prorate_period": 4,
-    "prorate_extend_due": 8,
-    "active_subscribers_limit": 19
+    "price": 324611344.26694936,
+    "signup_fee": 130883604.5087,
+    "currency": "dolore",
+    "trial_period": 11,
+    "trial_interval": "day",
+    "invoice_period": 19,
+    "invoice_interval": "month",
+    "grace_period": 14,
+    "grace_interval": "week",
+    "sort_order": 7,
+    "prorate_day": 2,
+    "prorate_period": 5,
+    "prorate_extend_due": 13,
+    "active_subscribers_limit": 10
 }
 
 fetch(url, {
@@ -468,14 +468,14 @@ GET|HEAD /plans/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/plans/ipsa" \
+    -G "http://localhost/api/plans/quasi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/ipsa"
+    "http://localhost/api/plans/quasi"
 );
 
 let headers = {
@@ -536,16 +536,16 @@ PUT/PATCH /plans/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/plans/dolorum" \
+    "http://localhost/api/plans/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"slug":"molestias","name":"molestiae","description":"magni","is_active":false,"price":704.1,"signup_fee":7.0406,"currency":"assumenda","trial_period":20,"trial_interval":"week","invoice_period":20,"invoice_interval":"month","grace_period":5,"grace_interval":"week","sort_order":20,"prorate_day":10,"prorate_period":8,"prorate_extend_due":20,"active_subscribers_limit":15}'
+    -d '{"slug":"id","name":"dolores","description":"in","is_active":false,"price":346.789,"signup_fee":0.3846255,"currency":"iure","trial_period":12,"trial_interval":"day","invoice_period":12,"invoice_interval":"hour","grace_period":10,"grace_interval":"hour","sort_order":2,"prorate_day":6,"prorate_period":6,"prorate_extend_due":5,"active_subscribers_limit":19}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/dolorum"
+    "http://localhost/api/plans/sit"
 );
 
 let headers = {
@@ -554,24 +554,24 @@ let headers = {
 };
 
 let body = {
-    "slug": "molestias",
-    "name": "molestiae",
-    "description": "magni",
+    "slug": "id",
+    "name": "dolores",
+    "description": "in",
     "is_active": false,
-    "price": 704.1,
-    "signup_fee": 7.0406,
-    "currency": "assumenda",
-    "trial_period": 20,
-    "trial_interval": "week",
-    "invoice_period": 20,
-    "invoice_interval": "month",
-    "grace_period": 5,
-    "grace_interval": "week",
-    "sort_order": 20,
-    "prorate_day": 10,
-    "prorate_period": 8,
-    "prorate_extend_due": 20,
-    "active_subscribers_limit": 15
+    "price": 346.789,
+    "signup_fee": 0.3846255,
+    "currency": "iure",
+    "trial_period": 12,
+    "trial_interval": "day",
+    "invoice_period": 12,
+    "invoice_interval": "hour",
+    "grace_period": 10,
+    "grace_interval": "hour",
+    "sort_order": 2,
+    "prorate_day": 6,
+    "prorate_period": 6,
+    "prorate_extend_due": 5,
+    "active_subscribers_limit": 19
 }
 
 fetch(url, {
@@ -716,14 +716,14 @@ DELETE /plans/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/plans/dolore" \
+    "http://localhost/api/plans/quam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/plans/dolore"
+    "http://localhost/api/plans/quam"
 );
 
 let headers = {

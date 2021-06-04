@@ -75,7 +75,7 @@ curl -X POST \
     "http://localhost/api/roles" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"voluptatum","guard_name":"asperiores","created_at":{},"updated_at":{}}'
+    -d '{"name":"iusto","guard_name":"sint","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,8 +90,8 @@ let headers = {
 };
 
 let body = {
-    "name": "voluptatum",
-    "guard_name": "asperiores",
+    "name": "iusto",
+    "guard_name": "sint",
     "created_at": {},
     "updated_at": {}
 }
@@ -157,14 +157,14 @@ GET|HEAD /roles/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/roles/et" \
+    -G "http://localhost/api/roles/labore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/et"
+    "http://localhost/api/roles/labore"
 );
 
 let headers = {
@@ -225,16 +225,16 @@ PUT/PATCH /roles/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/roles/ut" \
+    "http://localhost/api/roles/minima" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"vero","guard_name":"rerum","created_at":{},"updated_at":{}}'
+    -d '{"name":"aut","guard_name":"consequatur","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/ut"
+    "http://localhost/api/roles/minima"
 );
 
 let headers = {
@@ -243,8 +243,8 @@ let headers = {
 };
 
 let body = {
-    "name": "vero",
-    "guard_name": "rerum",
+    "name": "aut",
+    "guard_name": "consequatur",
     "created_at": {},
     "updated_at": {}
 }
@@ -320,14 +320,14 @@ DELETE /roles/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/roles/inventore" \
+    "http://localhost/api/roles/sunt" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/roles/inventore"
+    "http://localhost/api/roles/sunt"
 );
 
 let headers = {

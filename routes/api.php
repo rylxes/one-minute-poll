@@ -27,7 +27,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('logout');
     Route::get('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('api.logout');
     Route::post('register', 'App\Http\Controllers\API\Auth\RegisterController@register');
-    Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.reset');
+    Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm');
     Route::post('password/confirm', 'App\Http\Controllers\API\Auth\ConfirmPasswordController@confirm');
     Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\API\Auth\VerificationController@verify')->name('verification.verify');
     Route::post('email/resend', 'App\Http\Controllers\API\Auth\VerificationController@resend')->name('verification.resend');
