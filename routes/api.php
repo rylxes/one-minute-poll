@@ -33,7 +33,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('email/resend', 'App\Http\Controllers\API\Auth\VerificationController@resend')->name('verification.resend');
     Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.reset');
     // Password reset link request routes...
-    Route::get('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.email');
+    //Route::get('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.email');
     Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail');
     //Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
