@@ -52,7 +52,7 @@ class ForgotPasswordController extends Controller
      * Send a reset link to the given user.
      *
      */
-    public function sendResetLinkEmail(AuthEmailRequest $request)
+    public function sendResetLink(AuthEmailRequest $request)
     {
         $this->validateEmail($request);
 

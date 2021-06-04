@@ -62,7 +62,7 @@ class ResetPasswordController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
-    public function reset(ResetPassword $request)
+    public function resetUser(ResetPassword $request)
     {
         $request->validate($this->rules(), $this->validationErrorMessages());
 

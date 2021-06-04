@@ -31,15 +31,9 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('password/confirm', 'App\Http\Controllers\API\Auth\ConfirmPasswordController@confirm');
     Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\API\Auth\VerificationController@verify')->name('verification.verify');
     Route::post('email/resend', 'App\Http\Controllers\API\Auth\VerificationController@resend')->name('verification.resend');
-   // Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm')->name('password.reset');
-    // Password reset link request routes...
-    //Route::get('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.email');
-    //Route::post('password/email', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail');
-    Route::post('password/sendEmailLink', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 
-// Password reset routes...
-    Route::get('password/reset/{token}', 'App\Http\Controllers\API\Auth\ResetPasswordController@showResetForm');
-    Route::post('password/reset', 'App\Http\Controllers\API\Auth\ResetPasswordController@reset');
+    Route::post('password/sendEmailLink', 'App\Http\Controllers\API\Auth\ForgotPasswordController@sendResetLink');
+    Route::post('password/resetUser', 'App\Http\Controllers\API\Auth\ResetPasswordController@resetUser');
     Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
 
 
@@ -55,8 +49,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('folders', App\Http\Controllers\API\FolderAPIController::class);
 
 
-
-
         Route::resource('settings', App\Http\Controllers\API\SettingAPIController::class);
 
         Route::resource('tags', App\Http\Controllers\API\TagAPIController::class);
@@ -69,8 +61,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::get('files/byFolder/{id}', 'App\Http\Controllers\API\FileAPIController@byFolder');
 
         Route::resource('files', App\Http\Controllers\API\FileAPIController::class);
-
-
 
 
         Route::post('libraries/validate', 'App\Http\Controllers\API\LibraryAPIController@validatePassword');
@@ -100,8 +90,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('plans', App\Http\Controllers\API\PlansAPIController::class);
 
 
-
-
         Route::post('permissions/assign/user', 'App\Http\Controllers\API\PermissionsAPIController@userPermissionsAssign');
         Route::post('permissions/assign/library', 'App\Http\Controllers\API\PermissionsAPIController@libraryPermissionsAssign');
         Route::post('permissions/assign/folder', 'App\Http\Controllers\API\PermissionsAPIController@folderPermissionsAssign');
@@ -117,15 +105,11 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
         Route::resource('notification_types', App\Http\Controllers\API\NotificationTypeAPIController::class);
 
 
-
-
         Route::get('users/myActivities', 'App\Http\Controllers\API\UserAPIController@myActivities');
         Route::post('users/shareToGroup', 'App\Http\Controllers\API\UserAPIController@shareToGroup');
         Route::post('users/removeToGroup', 'App\Http\Controllers\API\UserAPIController@removeToGroup');
         Route::post('users/shareGroupWithEmail', 'App\Http\Controllers\API\UserAPIController@shareGroupWithEmail');
         Route::post('users/removeGroupWithEmail', 'App\Http\Controllers\API\UserAPIController@removeGroupWithEmail');
-
-
 
 
         Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
