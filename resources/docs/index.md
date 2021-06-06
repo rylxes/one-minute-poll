@@ -34,7 +34,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <script>
     var baseUrl = "http://localhost";
 </script>
-<script src="js/tryitout-2.4.2.js"></script>
+<script src="js/tryitout-2.7.6.js"></script>
 
 > Base URL
 

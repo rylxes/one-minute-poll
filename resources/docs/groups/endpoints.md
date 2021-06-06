@@ -296,14 +296,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/tokens/est" \
+    "http://localhost/oauth/tokens/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/tokens/est"
+    "http://localhost/oauth/tokens/quia"
 );
 
 let headers = {
@@ -343,6 +343,7 @@ fetch(url, {
 <b><code>token_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="token_id" data-endpoint="DELETEoauth-tokens--token_id-" data-component="url" required  hidden>
 <br>
+
 </p>
 </form>
 
@@ -526,14 +527,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/oauth/clients/sequi" \
+    "http://localhost/oauth/clients/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/sequi"
+    "http://localhost/oauth/clients/ut"
 );
 
 let headers = {
@@ -573,6 +574,7 @@ fetch(url, {
 <b><code>client_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="client_id" data-endpoint="PUToauth-clients--client_id-" data-component="url" required  hidden>
 <br>
+
 </p>
 </form>
 
@@ -586,14 +588,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/clients/earum" \
+    "http://localhost/oauth/clients/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/earum"
+    "http://localhost/oauth/clients/et"
 );
 
 let headers = {
@@ -633,6 +635,7 @@ fetch(url, {
 <b><code>client_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="client_id" data-endpoint="DELETEoauth-clients--client_id-" data-component="url" required  hidden>
 <br>
+
 </p>
 </form>
 
@@ -824,14 +827,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/personal-access-tokens/animi" \
+    "http://localhost/oauth/personal-access-tokens/distinctio" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens/animi"
+    "http://localhost/oauth/personal-access-tokens/distinctio"
 );
 
 let headers = {
@@ -871,6 +874,7 @@ fetch(url, {
 <b><code>token_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
 <input type="text" name="token_id" data-endpoint="DELETEoauth-personal-access-tokens--token_id-" data-component="url" required  hidden>
 <br>
+
 </p>
 </form>
 

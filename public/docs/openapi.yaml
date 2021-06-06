@@ -39,7 +39,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: mmante@example.com
+                                    example: tremaine.braun@example.org
                                 secret:
                                     type: string
                                     description: ''
@@ -47,7 +47,7 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: illum
+                                    example: laboriosam
                             required:
                                 - email
                                 - password
@@ -143,23 +143,23 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: illum
+                                    example: autem
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: eos
+                                    example: quam
                                 company_name:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: voluptatem
                                 company_phone:
                                     type: string
                                     description: ''
-                                    example: eius
+                                    example: exercitationem
                                 company_description:
                                     type: string
                                     description: ''
-                                    example: assumenda
+                                    example: explicabo
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -167,15 +167,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: tmarks@example.com
+                                    example: mya.harris@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: quae
+                                    example: vitae
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: qui
                             required:
                                 - first_name
                                 - last_name
@@ -225,7 +225,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: ad
+                example: hic
                 required: true
                 schema:
                     type: string
@@ -292,7 +292,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: non
+                example: dolorum
                 required: true
                 schema:
                     type: string
@@ -300,7 +300,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: voluptatem
+                example: eaque
                 required: true
                 schema:
                     type: string
@@ -359,11 +359,11 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: blabadie@example.com
+                                    example: erick13@example.org
                                 base_url:
                                     type: string
                                     description: ''
-                                    example: voluptate
+                                    example: voluptatum
                             required:
                                 - email
                                 - base_url
@@ -400,15 +400,15 @@ paths:
                                 token:
                                     type: string
                                     description: ''
-                                    example: quod
+                                    example: tempora
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: leffler.melvin@example.org
+                                    example: dorn@example.net
                                 password:
                                     type: string
                                     description: ''
-                                    example: doloremque
+                                    example: aut
                             required:
                                 - token
                                 - email
@@ -446,7 +446,7 @@ paths:
                                 company_id:
                                     type: string
                                     description: ''
-                                    example: ex
+                                    example: fugiat
                                 user_id:
                                     type: string
                                     description: ''
@@ -458,7 +458,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: necessitatibus
+                                    example: itaque
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -466,15 +466,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: ffeest@example.com
+                                    example: annabell96@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: repellendus
+                                    example: eligendi
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: laboriosam
+                                    example: reiciendis
                             required:
                                 - company_id
                                 - is_user
@@ -511,93 +511,24 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: gerlach.graciela@example.net
+                                    example: ryann21@example.com
                                 old_password:
                                     type: string
                                     description: ''
-                                    example: enim
+                                    example: sit
                                 password:
                                     type: string
                                     description: ''
-                                    example: cumque
+                                    example: facere
                             required:
                                 - email
                                 - old_password
                                 - password
             security: []
-    /api/invite:
-        post:
-            summary: 'Sends Invitation to Register.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Auth
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                company_id:
-                                    type: string
-                                    description: ''
-                                    example: aut
-                                base_url:
-                                    type: string
-                                    description: ''
-                                    example: est
-                                email:
-                                    type: string
-                                    description: 'The value must be a valid email address.'
-                                    example: flatley.zita@example.com
-                            required:
-                                - company_id
-                                - base_url
-                                - email
-            security: []
-    /api/delete:
-        post:
-            summary: 'Delete Current User Profile'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Auth
-            security: []
-    /api/companies:
+    /api/categories:
         get:
-            summary: 'Display a listing of the Company.'
-            description: 'GET|HEAD /companies'
+            summary: 'Display a listing of the Category.'
+            description: 'GET|HEAD /categories'
             parameters:
                 -
                     in: header
@@ -627,11 +558,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - Company
+                - Category
             security: []
         post:
-            summary: 'Store a newly created Company in storage.'
-            description: 'POST /companies'
+            summary: 'Store a newly created Category in storage.'
+            description: 'POST /categories'
             parameters:
                 -
                     in: header
@@ -649,7 +580,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Company
+                - Category
             requestBody:
                 required: true
                 content:
@@ -660,26 +591,22 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: maxime
-                                description:
+                                    example: nemo
+                                created_at:
                                     type: string
                                     description: ''
-                                    example: repellat
-                                email:
+                                    example: {  }
+                                updated_at:
                                     type: string
                                     description: ''
-                                    example: veritatis
-                                phone:
-                                    type: string
-                                    description: ''
-                                    example: sint
+                                    example: {  }
                             required:
                                 - name
             security: []
-    '/api/companies/{company}':
+    '/api/categories/{category}':
         get:
-            summary: 'Display the specified Company.'
-            description: 'GET|HEAD /companies/{id}'
+            summary: 'Display the specified Category.'
+            description: 'GET|HEAD /categories/{id}'
             parameters:
                 -
                     in: header
@@ -709,11 +636,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - Company
+                - Category
             security: []
         put:
-            summary: 'Update the specified Company in storage.'
-            description: 'PUT/PATCH /companies/{id}'
+            summary: 'Update the specified Category in storage.'
+            description: 'PUT/PATCH /categories/{id}'
             parameters:
                 -
                     in: header
@@ -731,7 +658,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Company
+                - Category
             requestBody:
                 required: true
                 content:
@@ -742,25 +669,21 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: labore
-                                description:
+                                    example: corporis
+                                created_at:
                                     type: string
                                     description: ''
-                                    example: consequatur
-                                email:
+                                    example: {  }
+                                updated_at:
                                     type: string
                                     description: ''
-                                    example: consectetur
-                                phone:
-                                    type: string
-                                    description: ''
-                                    example: voluptatibus
+                                    example: {  }
                             required:
                                 - name
             security: []
         delete:
-            summary: 'Remove the specified Company from storage.'
-            description: 'DELETE /companies/{id}'
+            summary: 'Remove the specified Category from storage.'
+            description: 'DELETE /categories/{id}'
             parameters:
                 -
                     in: header
@@ -778,14 +701,14 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Company
+                - Category
             security: []
         parameters:
             -
                 in: path
-                name: company
+                name: category
                 description: ''
-                example: est
+                example: incidunt
                 required: true
                 schema:
                     type: string
@@ -954,7 +877,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: est
+                example: quia
                 required: true
                 schema:
                     type: string
@@ -1088,7 +1011,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: sequi
+                example: ut
                 required: true
                 schema:
                     type: string
@@ -1212,7 +1135,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: animi
+                example: distinctio
                 required: true
                 schema:
                     type: string
@@ -1321,10 +1244,10 @@ paths:
             tags:
                 - Endpoints
             security: []
-    /api/files/myFavourites:
+    /api/polls:
         get:
-            summary: 'my Favourites.'
-            description: ''
+            summary: 'Display a listing of the Poll.'
+            description: 'GET|HEAD /polls'
             parameters:
                 -
                     in: header
@@ -1354,218 +1277,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - File
-            security: []
-    /api/files/validate:
-        post:
-            summary: 'Validate File''s password.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: accusantium
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: qui
-                            required:
-                                - password
-                                - file_id
-            security: []
-    /api/files/moveFile:
-        post:
-            summary: 'Move file to another folder.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: qui
-                                from_folder_id:
-                                    type: string
-                                    description: ''
-                                    example: omnis
-                                to_folder_id:
-                                    type: string
-                                    description: ''
-                                    example: qui
-                            required:
-                                - file_id
-                                - from_folder_id
-                                - to_folder_id
-            security: []
-    /api/files/copyFile:
-        post:
-            summary: 'Copy file to another folder.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: est
-                                folder_id:
-                                    type: string
-                                    description: ''
-                                    example: ea
-                            required:
-                                - file_id
-                                - folder_id
-            security: []
-    '/api/files/byFolder/{id}':
-        get:
-            summary: 'Get All Files By Folder.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - File
-            security: []
-        parameters:
-            -
-                in: path
-                name: id
-                description: ''
-                example: a
-                required: true
-                schema:
-                    type: string
-    /api/files:
-        get:
-            summary: 'Display a listing of the File.'
-            description: 'GET|HEAD /files'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - File
+                - Poll
             security: []
         post:
-            summary: 'Store a newly created File in storage.'
-            description: 'POST /files'
+            summary: 'Store a newly created Poll in storage.'
+            description: 'POST /polls'
             parameters:
                 -
                     in: header
@@ -1583,7 +1299,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - File
+                - Poll
             requestBody:
                 required: true
                 content:
@@ -1591,3319 +1307,62 @@ paths:
                         schema:
                             type: object
                             properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: vero
-                                is_favourite:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                is_lock:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                folder_id:
-                                    type: string
-                                    description: ''
-                                    example: quas
-                            required:
-                                - name
-                                - folder_id
-            security: []
-    '/api/files/{file}':
-        get:
-            summary: 'Display the specified File.'
-            description: 'GET|HEAD /files/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - File
-            security: []
-        put:
-            summary: 'Update the specified File in storage.'
-            description: 'PUT/PATCH /files/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: tenetur
-                                is_favourite:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                is_lock:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                folder_id:
-                                    type: string
-                                    description: ''
-                                    example: repudiandae
-                            required:
-                                - name
-                                - folder_id
-            security: []
-        delete:
-            summary: 'Remove the specified File from storage.'
-            description: 'DELETE /files/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - File
-            security: []
-        parameters:
-            -
-                in: path
-                name: file
-                description: ''
-                example: omnis
-                required: true
-                schema:
-                    type: string
-    /api/file_comments:
-        get:
-            summary: 'Display a listing of the FileComment.'
-            description: 'GET|HEAD /fileComments'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'File Comment'
-            security: []
-        post:
-            summary: 'Store a newly created FileComment in storage.'
-            description: 'POST /fileComments'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'File Comment'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: integer
-                                    description: ''
-                                    example: 19
-                                comment:
-                                    type: string
-                                    description: ''
-                                    example: a
-                            required:
-                                - file_id
-                                - comment
-            security: []
-    '/api/file_comments/{file_comment}':
-        get:
-            summary: 'Display the specified FileComment.'
-            description: 'GET|HEAD /fileComments/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'File Comment'
-            security: []
-        put:
-            summary: 'Update the specified FileComment in storage.'
-            description: 'PUT/PATCH /fileComments/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'File Comment'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: integer
-                                    description: ''
-                                    example: 16
-                                comment:
-                                    type: string
-                                    description: ''
-                                    example: eveniet
-                            required:
-                                - file_id
-                                - comment
-            security: []
-        delete:
-            summary: 'Remove the specified FileComment from storage.'
-            description: 'DELETE /fileComments/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'File Comment'
-            security: []
-        parameters:
-            -
-                in: path
-                name: file_comment
-                description: ''
-                example: delectus
-                required: true
-                schema:
-                    type: string
-    /api/file_tags:
-        get:
-            summary: 'Display a listing of the FileTag.'
-            description: 'GET|HEAD /fileTags'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'File Tag'
-            security: []
-        post:
-            summary: 'Store a newly created FileTag in storage.'
-            description: 'POST /fileTags'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'File Tag'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: integer
-                                    description: ''
-                                    example: 19
-                                tag_id:
-                                    type: integer
-                                    description: ''
-                                    example: 18
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - file_id
-                                - tag_id
-            security: []
-    '/api/file_tags/{file_tag}':
-        get:
-            summary: 'Display the specified FileTag.'
-            description: 'GET|HEAD /fileTags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'File Tag'
-            security: []
-        put:
-            summary: 'Update the specified FileTag in storage.'
-            description: 'PUT/PATCH /fileTags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'File Tag'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: integer
-                                    description: ''
-                                    example: 6
-                                tag_id:
-                                    type: integer
-                                    description: ''
-                                    example: 18
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - file_id
-                                - tag_id
-            security: []
-        delete:
-            summary: 'Remove the specified FileTag from storage.'
-            description: 'DELETE /fileTags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'File Tag'
-            security: []
-        parameters:
-            -
-                in: path
-                name: file_tag
-                description: ''
-                example: sed
-                required: true
-                schema:
-                    type: string
-    /api/folders/myFavourites:
-        get:
-            summary: 'my Favourites.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Folder
-            security: []
-    /api/folders/validate:
-        post:
-            summary: 'Validate File''s password.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Folder
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: et
-                                folder_id:
-                                    type: string
-                                    description: ''
-                                    example: perferendis
-                            required:
-                                - password
-                                - folder_id
-            security: []
-    '/api/folders/byLibrary/{id}':
-        get:
-            summary: 'Get All Folders By Library.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Folder
-            security: []
-        parameters:
-            -
-                in: path
-                name: id
-                description: ''
-                example: quo
-                required: true
-                schema:
-                    type: string
-    /api/folders:
-        get:
-            summary: 'Display a listing of the Folder.'
-            description: 'GET|HEAD /folders'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Folder
-            security: []
-        post:
-            summary: 'Store a newly created Folder in storage.'
-            description: 'POST /folders'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Folder
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: tempore
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: eum
-                                is_favourite:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                is_lock:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                parent_id:
-                                    type: integer
-                                    description: ''
-                                    example: 10
-                            required:
-                                - name
-                                - library_id
-            security: []
-    '/api/folders/{folder}':
-        get:
-            summary: 'Display the specified Folder.'
-            description: 'GET|HEAD /folders/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Folder
-            security: []
-        put:
-            summary: 'Update the specified Folder in storage.'
-            description: 'PUT/PATCH /folders/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Folder
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: aut
-                                parent_id:
-                                    type: integer
-                                    description: ''
-                                    example: 11
-                            required:
-                                - name
-            security: []
-        delete:
-            summary: 'Remove the specified Folder from storage.'
-            description: 'DELETE /folders/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Folder
-            security: []
-        parameters:
-            -
-                in: path
-                name: folder
-                description: ''
-                example: in
-                required: true
-                schema:
-                    type: string
-    /api/folder_files:
-        get:
-            summary: 'Display a listing of the FolderFile.'
-            description: 'GET|HEAD /folderFiles'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'Folder File'
-            security: []
-        post:
-            summary: 'Store a newly created FolderFile in storage.'
-            description: 'POST /folderFiles'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Folder File'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: integer
-                                    description: ''
-                                    example: 3
-                                folder_id:
-                                    type: integer
-                                    description: ''
-                                    example: 8
-                            required:
-                                - file_id
-                                - folder_id
-            security: []
-    '/api/folder_files/{folder_file}':
-        get:
-            summary: 'Display the specified FolderFile.'
-            description: 'GET|HEAD /folderFiles/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'Folder File'
-            security: []
-        put:
-            summary: 'Update the specified FolderFile in storage.'
-            description: 'PUT/PATCH /folderFiles/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Folder File'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: integer
-                                    description: ''
-                                    example: 20
-                                folder_id:
-                                    type: integer
-                                    description: ''
-                                    example: 20
-                            required:
-                                - file_id
-                                - folder_id
-            security: []
-        delete:
-            summary: 'Remove the specified FolderFile from storage.'
-            description: 'DELETE /folderFiles/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Folder File'
-            security: []
-        parameters:
-            -
-                in: path
-                name: folder_file
-                description: ''
-                example: sunt
-                required: true
-                schema:
-                    type: string
-    /api/folder_tags:
-        get:
-            summary: 'Display a listing of the FolderTag.'
-            description: 'GET|HEAD /folderTags'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'Folder Tag'
-            security: []
-        post:
-            summary: 'Store a newly created FolderTag in storage.'
-            description: 'POST /folderTags'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Folder Tag'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                folder_id:
-                                    type: integer
-                                    description: ''
-                                    example: 6
-                                tag_id:
-                                    type: integer
-                                    description: ''
-                                    example: 19
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - folder_id
-                                - tag_id
-            security: []
-    '/api/folder_tags/{folder_tag}':
-        get:
-            summary: 'Display the specified FolderTag.'
-            description: 'GET|HEAD /folderTags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'Folder Tag'
-            security: []
-        put:
-            summary: 'Update the specified FolderTag in storage.'
-            description: 'PUT/PATCH /folderTags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Folder Tag'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                folder_id:
-                                    type: integer
-                                    description: ''
-                                    example: 14
-                                tag_id:
-                                    type: integer
-                                    description: ''
-                                    example: 8
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - folder_id
-                                - tag_id
-            security: []
-        delete:
-            summary: 'Remove the specified FolderTag from storage.'
-            description: 'DELETE /folderTags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Folder Tag'
-            security: []
-        parameters:
-            -
-                in: path
-                name: folder_tag
-                description: ''
-                example: vero
-                required: true
-                schema:
-                    type: string
-    /api/groups/byUser:
-        get:
-            summary: 'Get All Groups for a User.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-    /api/groups/otherGroup:
-        get:
-            summary: 'Get All Other Groups.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-    '/api/groups/allUsersInGroup/{id}':
-        get:
-            summary: 'Get All Users in a Group.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-        parameters:
-            -
-                in: path
-                name: id
-                description: ''
-                example: quos
-                required: true
-                schema:
-                    type: string
-    /api/groups/myGroup:
-        get:
-            summary: 'Get All My Groups.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-    /api/groups:
-        get:
-            summary: 'Display a listing of the Group.'
-            description: 'GET|HEAD /groups'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-        post:
-            summary: 'Store a newly created Group in storage.'
-            description: 'POST /groups'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Group
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: architecto
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: aut
-                            required:
-                                - name
-            security: []
-    '/api/groups/{group}':
-        get:
-            summary: 'Display the specified Group.'
-            description: 'GET|HEAD /groups/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Group
-            security: []
-        put:
-            summary: 'Update the specified Group in storage.'
-            description: 'PUT/PATCH /groups/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Group
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: quaerat
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: soluta
-                            required:
-                                - name
-            security: []
-        delete:
-            summary: 'Remove the specified Group from storage.'
-            description: 'DELETE /groups/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Group
-            security: []
-        parameters:
-            -
-                in: path
-                name: group
-                description: ''
-                example: minus
-                required: true
-                schema:
-                    type: string
-    /api/libraries/validate:
-        post:
-            summary: 'Validate Library''s password.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: sit
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: ex
-                            required:
-                                - password
-                                - library_id
-            security: []
-    /api/libraries/shareToUser:
-        post:
-            summary: 'Share Library to User.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: mollitia
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: et
-                                password:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                            required:
-                                - library_id
-                                - user_id
-            security: []
-    /api/libraries/groupLibraries:
-        post:
-            summary: 'All Libraries for a Group'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: culpa
-                            required:
-                                - group_id
-            security: []
-    /api/libraries/shareToRole:
-        post:
-            summary: 'Share Library to Group.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: sit
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: voluptatibus
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: fugit
-                            required:
-                                - library_id
-                                - group_id
-            security: []
-    /api/libraries/myFavourites:
-        get:
-            summary: 'my Favourites.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Library
-            security: []
-    /api/libraries:
-        get:
-            summary: 'Display a listing of the Library.'
-            description: 'GET|HEAD /libraries'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Library
-            security: []
-        post:
-            summary: 'Store a newly created Library in storage.'
-            description: 'POST /libraries'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: perspiciatis
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: architecto
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: dolorem
-                                is_encrypted:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                is_favourite:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                            required:
-                                - name
-                                - is_encrypted
-                                - is_favourite
-            security: []
-    '/api/libraries/{library}':
-        get:
-            summary: 'Display the specified Library.'
-            description: 'GET|HEAD /libraries/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Library
-            security: []
-        put:
-            summary: 'Update the specified Library in storage.'
-            description: 'PUT/PATCH /libraries/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: et
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: quam
-                                password:
-                                    type: string
-                                    description: ''
-                                    example: nemo
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 2
-                                is_encrypted:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                is_favourite:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                            required:
-                                - name
-                                - company_id
-                                - is_encrypted
-                                - is_favourite
-            security: []
-        delete:
-            summary: 'Remove the specified Library from storage.'
-            description: 'DELETE /libraries/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Library
-            security: []
-        parameters:
-            -
-                in: path
-                name: library
-                description: ''
-                example: facilis
-                required: true
-                schema:
-                    type: string
-    /api/notification_types:
-        get:
-            summary: 'Display a listing of the NotificationType.'
-            description: 'GET|HEAD /notificationTypes'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'Notification Type'
-            security: []
-        post:
-            summary: 'Store a newly created NotificationType in storage.'
-            description: 'POST /notificationTypes'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Notification Type'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: odio
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - name
-            security: []
-    '/api/notification_types/{notification_type}':
-        get:
-            summary: 'Display the specified NotificationType.'
-            description: 'GET|HEAD /notificationTypes/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - 'Notification Type'
-            security: []
-        put:
-            summary: 'Update the specified NotificationType in storage.'
-            description: 'PUT/PATCH /notificationTypes/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Notification Type'
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: iure
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - name
-            security: []
-        delete:
-            summary: 'Remove the specified NotificationType from storage.'
-            description: 'DELETE /notificationTypes/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - 'Notification Type'
-            security: []
-        parameters:
-            -
-                in: path
-                name: notification_type
-                description: ''
-                example: id
-                required: true
-                schema:
-                    type: string
-    /api/notifications:
-        get:
-            summary: 'Display a listing of the Notifications.'
-            description: 'GET|HEAD /notifications'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Notifications
-            security: []
-        post:
-            summary: 'Store a newly created Notifications in storage.'
-            description: 'POST /notifications'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Notifications
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                notification_type_id:
-                                    type: integer
-                                    description: ''
-                                    example: 4
-                                user_id:
-                                    type: integer
-                                    description: ''
-                                    example: 11
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - notification_type_id
-                                - user_id
-            security: []
-    '/api/notifications/{notification}':
-        get:
-            summary: 'Display the specified Notifications.'
-            description: 'GET|HEAD /notifications/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Notifications
-            security: []
-        put:
-            summary: 'Update the specified Notifications in storage.'
-            description: 'PUT/PATCH /notifications/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Notifications
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                notification_type_id:
-                                    type: integer
-                                    description: ''
-                                    example: 16
-                                user_id:
-                                    type: integer
-                                    description: ''
-                                    example: 15
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - notification_type_id
-                                - user_id
-            security: []
-        delete:
-            summary: 'Remove the specified Notifications from storage.'
-            description: 'DELETE /notifications/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Notifications
-            security: []
-        parameters:
-            -
-                in: path
-                name: notification
-                description: ''
-                example: placeat
-                required: true
-                schema:
-                    type: string
-    /api/permissions/assign/user:
-        post:
-            summary: 'Assigns Permissions to User'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: rem
-                                permission_id:
-                                    type: string
-                                    description: ''
-                                    example: possimus
-                            required:
-                                - user_id
-                                - permission_id
-            security: []
-    /api/permissions/assign/library:
-        post:
-            summary: 'Assigns Permissions to Library'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                library_id:
-                                    type: string
-                                    description: ''
-                                    example: officia
-                                permission_id:
-                                    type: string
-                                    description: ''
-                                    example: sunt
-                            required:
-                                - library_id
-                                - permission_id
-            security: []
-    /api/permissions/assign/folder:
-        post:
-            summary: 'Assigns Permissions to Folder'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                folder_id:
-                                    type: string
-                                    description: ''
-                                    example: in
-                                permission_id:
-                                    type: string
-                                    description: ''
-                                    example: aut
-                            required:
-                                - folder_id
-                                - permission_id
-            security: []
-    /api/permissions/unassign/user:
-        post:
-            summary: 'UnAssigns Permissions to User'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: excepturi
-                                permission_id:
-                                    type: string
-                                    description: ''
-                                    example: nihil
-                            required:
-                                - user_id
-                                - permission_id
-            security: []
-    /api/permissions/assign/role:
-        post:
-            summary: 'Assigns Permissions to Role'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                role_id:
-                                    type: string
-                                    description: ''
-                                    example: sapiente
-                                permission_id:
-                                    type: string
-                                    description: ''
-                                    example: quia
-                            required:
-                                - role_id
-                                - permission_id
-            security: []
-    /api/permissions/get/user:
-        post:
-            summary: 'Get Permissions for a User'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: fuga
-                            required:
-                                - user_id
-            security: []
-    /api/permissions/assign/file:
-        post:
-            summary: 'Assigns Permissions to File'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                file_id:
-                                    type: string
-                                    description: ''
-                                    example: cupiditate
-                                permission_id:
-                                    type: string
-                                    description: ''
-                                    example: dolorem
-                            required:
-                                - file_id
-                                - permission_id
-            security: []
-    /api/permissions:
-        get:
-            summary: 'Display a listing of the Permissions.'
-            description: 'GET|HEAD /permissions'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Permissions
-            security: []
-        post:
-            summary: 'Store a newly created Permissions in storage.'
-            description: 'POST /permissions'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: dolorum
-                            required:
-                                - name
-            security: []
-    '/api/permissions/{permission}':
-        get:
-            summary: 'Display the specified Permissions.'
-            description: 'GET|HEAD /permissions/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Permissions
-            security: []
-        put:
-            summary: 'Update the specified Permissions in storage.'
-            description: 'PUT/PATCH /permissions/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: laboriosam
-                            required:
-                                - name
-            security: []
-        delete:
-            summary: 'Remove the specified Permissions from storage.'
-            description: 'DELETE /permissions/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Permissions
-            security: []
-        parameters:
-            -
-                in: path
-                name: permission
-                description: ''
-                example: tenetur
-                required: true
-                schema:
-                    type: string
-    /api/plans/subscribe:
-        post:
-            summary: 'Get Subscribe for a plan.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Plans
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                plan_id:
-                                    type: string
-                                    description: ''
-                                    example: et
-                            required:
-                                - plan_id
-            security: []
-    /api/plans/createPlan:
-        post:
-            summary: 'Create Plans (Less Params).'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Plans
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                slug:
-                                    type: string
-                                    description: ''
-                                    example: sit
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: asperiores
-                                price:
-                                    type: number
-                                    description: ''
-                                    example: 356134049.77549
-                                invoice_period:
-                                    type: integer
-                                    description: ''
-                                    example: 15
-                                invoice_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: week
-                                active_subscribers_limit:
-                                    type: integer
-                                    description: ''
-                                    example: 18
-                            required:
-                                - slug
-                                - name
-                                - price
-            security: []
-    /api/plans/currentPlan:
-        get:
-            summary: 'Get Current plan user is subscribed to.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Plans
-            security: []
-    /api/plans:
-        get:
-            summary: 'Display a listing of the Plans.'
-            description: 'GET|HEAD /plans'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Plans
-            security: []
-        post:
-            summary: 'Store a newly created Plans in storage.'
-            description: 'POST /plans'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Plans
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                slug:
-                                    type: string
-                                    description: ''
-                                    example: modi
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: nobis
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: temporibus
-                                is_active:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                price:
-                                    type: number
-                                    description: ''
-                                    example: 324611344.26695
-                                signup_fee:
-                                    type: number
-                                    description: ''
-                                    example: 130883604.5087
-                                currency:
-                                    type: string
-                                    description: ''
-                                    example: dolore
-                                trial_period:
-                                    type: integer
-                                    description: ''
-                                    example: 11
-                                trial_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: day
-                                invoice_period:
-                                    type: integer
-                                    description: ''
-                                    example: 19
-                                invoice_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: month
-                                grace_period:
-                                    type: integer
-                                    description: ''
-                                    example: 14
-                                grace_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: week
-                                sort_order:
-                                    type: integer
-                                    description: ''
-                                    example: 7
-                                prorate_day:
-                                    type: integer
-                                    description: ''
-                                    example: 2
-                                prorate_period:
-                                    type: integer
-                                    description: ''
-                                    example: 5
-                                prorate_extend_due:
-                                    type: integer
-                                    description: ''
-                                    example: 13
-                                active_subscribers_limit:
-                                    type: integer
-                                    description: ''
-                                    example: 10
-                            required:
-                                - slug
-                                - name
-                                - price
-                                - signup_fee
-                                - currency
-            security: []
-    '/api/plans/{plan}':
-        get:
-            summary: 'Display the specified Plans.'
-            description: 'GET|HEAD /plans/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Plans
-            security: []
-        put:
-            summary: 'Update the specified Plans in storage.'
-            description: 'PUT/PATCH /plans/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Plans
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                slug:
-                                    type: string
-                                    description: ''
-                                    example: id
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: dolores
-                                description:
-                                    type: string
-                                    description: ''
-                                    example: in
-                                is_active:
-                                    type: boolean
-                                    description: ''
-                                    example: false
-                                price:
-                                    type: number
-                                    description: ''
-                                    example: 346.789
-                                signup_fee:
-                                    type: number
-                                    description: ''
-                                    example: 0.3846255
-                                currency:
-                                    type: string
-                                    description: ''
-                                    example: iure
-                                trial_period:
-                                    type: integer
-                                    description: ''
-                                    example: 12
-                                trial_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: day
-                                invoice_period:
-                                    type: integer
-                                    description: ''
-                                    example: 12
-                                invoice_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: hour
-                                grace_period:
-                                    type: integer
-                                    description: ''
-                                    example: 10
-                                grace_interval:
-                                    type: string
-                                    description: 'The value must be one of <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.'
-                                    example: hour
-                                sort_order:
-                                    type: integer
-                                    description: ''
-                                    example: 2
-                                prorate_day:
-                                    type: integer
-                                    description: ''
-                                    example: 6
-                                prorate_period:
-                                    type: integer
-                                    description: ''
-                                    example: 6
-                                prorate_extend_due:
-                                    type: integer
-                                    description: ''
-                                    example: 5
-                                active_subscribers_limit:
-                                    type: integer
-                                    description: ''
-                                    example: 19
-                            required:
-                                - slug
-                                - name
-                                - price
-                                - signup_fee
-                                - currency
-            security: []
-        delete:
-            summary: 'Remove the specified Plans from storage.'
-            description: 'DELETE /plans/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Plans
-            security: []
-        parameters:
-            -
-                in: path
-                name: plan
-                description: ''
-                example: quasi
-                required: true
-                schema:
-                    type: string
-    /api/profiles:
-        get:
-            summary: 'Display a listing of the Profile.'
-            description: 'GET|HEAD /profiles'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Profile
-            security: []
-        post:
-            summary: 'Store a newly created Profile in storage.'
-            description: 'POST /profiles'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Profile
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                first_name:
+                                title:
                                     type: string
                                     description: ''
                                     example: dolor
-                                last_name:
+                                url:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: accusamus
+                                code:
+                                    type: string
+                                    description: ''
+                                    example: molestias
+                                category_id:
+                                    type: integer
+                                    description: ''
+                                    example: 17
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 14
-                                avatar:
+                                    example: 1
+                                poll_type_id:
+                                    type: integer
+                                    description: ''
+                                    example: 13
+                                open_to_everyone:
                                     type: string
                                     description: ''
-                                    example: suscipit
+                                    example: repudiandae
+                                question:
+                                    type: string
+                                    description: ''
+                                    example: ut
+                                close_date:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
                             required:
-                                - first_name
-                                - last_name
-                                - user_id
+                                - title
+                                - code
+                                - category_id
+                                - poll_type_id
+                                - open_to_everyone
+                                - question
             security: []
-    '/api/profiles/{profile}':
+    '/api/polls/{poll}':
         get:
-            summary: 'Display the specified Profile.'
-            description: 'GET|HEAD /profiles/{id}'
+            summary: 'Display the specified Poll.'
+            description: 'GET|HEAD /polls/{id}'
             parameters:
                 -
                     in: header
@@ -4933,11 +1392,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - Profile
+                - Poll
             security: []
         put:
-            summary: 'Update the specified Profile in storage.'
-            description: 'PUT/PATCH /profiles/{id}'
+            summary: 'Update the specified Poll in storage.'
+            description: 'PUT/PATCH /polls/{id}'
             parameters:
                 -
                     in: header
@@ -4955,7 +1414,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Profile
+                - Poll
             requestBody:
                 required: true
                 content:
@@ -4963,26 +1422,61 @@ paths:
                         schema:
                             type: object
                             properties:
-                                first_name:
+                                title:
                                     type: string
                                     description: ''
-                                    example: nobis
-                                last_name:
+                                    example: voluptas
+                                url:
                                     type: string
                                     description: ''
-                                    example: sed
+                                    example: cumque
+                                code:
+                                    type: string
+                                    description: ''
+                                    example: minima
+                                category_id:
+                                    type: integer
+                                    description: ''
+                                    example: 18
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 8
+                                    example: 5
+                                poll_type_id:
+                                    type: integer
+                                    description: ''
+                                    example: 11
+                                open_to_everyone:
+                                    type: string
+                                    description: ''
+                                    example: id
+                                question:
+                                    type: string
+                                    description: ''
+                                    example: deleniti
+                                close_date:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
                             required:
-                                - first_name
-                                - last_name
-                                - user_id
+                                - title
+                                - code
+                                - category_id
+                                - poll_type_id
+                                - open_to_everyone
+                                - question
             security: []
         delete:
-            summary: 'Remove the specified Profile from storage.'
-            description: 'DELETE /profiles/{id}'
+            summary: 'Remove the specified Poll from storage.'
+            description: 'DELETE /polls/{id}'
             parameters:
                 -
                     in: header
@@ -5000,21 +1494,208 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Profile
+                - Poll
             security: []
         parameters:
             -
                 in: path
-                name: profile
+                name: poll
+                description: ''
+                example: deleniti
+                required: true
+                schema:
+                    type: string
+    /api/poll_types:
+        get:
+            summary: 'Display a listing of the PollType.'
+            description: 'GET|HEAD /pollTypes'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - 'Poll Type'
+            security: []
+        post:
+            summary: 'Store a newly created PollType in storage.'
+            description: 'POST /pollTypes'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - 'Poll Type'
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: harum
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                            required:
+                                - name
+            security: []
+    '/api/poll_types/{poll_type}':
+        get:
+            summary: 'Display the specified PollType.'
+            description: 'GET|HEAD /pollTypes/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - 'Poll Type'
+            security: []
+        put:
+            summary: 'Update the specified PollType in storage.'
+            description: 'PUT/PATCH /pollTypes/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - 'Poll Type'
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: quo
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                            required:
+                                - name
+            security: []
+        delete:
+            summary: 'Remove the specified PollType from storage.'
+            description: 'DELETE /pollTypes/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - 'Poll Type'
+            security: []
+        parameters:
+            -
+                in: path
+                name: poll_type
                 description: ''
                 example: aut
                 required: true
                 schema:
                     type: string
-    /api/roles:
+    /api/votes:
         get:
-            summary: 'Display a listing of the Roles.'
-            description: 'GET|HEAD /roles'
+            summary: 'Display a listing of the Vote.'
+            description: 'GET|HEAD /votes'
             parameters:
                 -
                     in: header
@@ -5044,11 +1725,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - Roles
+                - Vote
             security: []
         post:
-            summary: 'Store a newly created Roles in storage.'
-            description: 'POST /roles'
+            summary: 'Store a newly created Vote in storage.'
+            description: 'POST /votes'
             parameters:
                 -
                     in: header
@@ -5066,7 +1747,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Roles
+                - Vote
             requestBody:
                 required: true
                 content:
@@ -5074,97 +1755,18 @@ paths:
                         schema:
                             type: object
                             properties:
-                                name:
-                                    type: string
+                                poll_id:
+                                    type: integer
                                     description: ''
-                                    example: iusto
-                                guard_name:
-                                    type: string
-                                    description: ''
-                                    example: sint
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                            required:
-                                - name
-                                - guard_name
-            security: []
-    '/api/roles/{role}':
-        get:
-            summary: 'Display the specified Roles.'
-            description: 'GET|HEAD /roles/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Roles
-            security: []
-        put:
-            summary: 'Update the specified Roles in storage.'
-            description: 'PUT/PATCH /roles/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Roles
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
+                                    example: 1
+                                unique_id:
                                     type: string
                                     description: ''
                                     example: aut
-                                guard_name:
-                                    type: string
+                                poll_value_id:
+                                    type: integer
                                     description: ''
-                                    example: consequatur
+                                    example: 10
                                 created_at:
                                     type: string
                                     description: ''
@@ -5174,44 +1776,13 @@ paths:
                                     description: ''
                                     example: {  }
                             required:
-                                - name
-                                - guard_name
+                                - poll_id
+                                - poll_value_id
             security: []
-        delete:
-            summary: 'Remove the specified Roles from storage.'
-            description: 'DELETE /roles/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Roles
-            security: []
-        parameters:
-            -
-                in: path
-                name: role
-                description: ''
-                example: labore
-                required: true
-                schema:
-                    type: string
-    /api/settings:
+    '/api/votes/{vote}':
         get:
-            summary: 'Display a listing of the Setting.'
-            description: 'GET|HEAD /settings'
+            summary: 'Display the specified Vote.'
+            description: 'GET|HEAD /votes/{id}'
             parameters:
                 -
                     in: header
@@ -5241,89 +1812,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - Setting
-            security: []
-        post:
-            summary: 'Store a newly created Setting in storage.'
-            description: 'POST /settings'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Setting
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                type:
-                                    type: string
-                                    description: ''
-                                    example: itaque
-                                value:
-                                    type: string
-                                    description: ''
-                                    example: laborum
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 1
-                            required:
-                                - company_id
-            security: []
-    '/api/settings/{setting}':
-        get:
-            summary: 'Display the specified Setting.'
-            description: 'GET|HEAD /settings/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Setting
+                - Vote
             security: []
         put:
-            summary: 'Update the specified Setting in storage.'
-            description: 'PUT/PATCH /settings/{id}'
+            summary: 'Update the specified Vote in storage.'
+            description: 'PUT/PATCH /votes/{id}'
             parameters:
                 -
                     in: header
@@ -5341,7 +1834,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Setting
+                - Vote
             requestBody:
                 required: true
                 content:
@@ -5349,213 +1842,33 @@ paths:
                         schema:
                             type: object
                             properties:
-                                type:
-                                    type: string
-                                    description: ''
-                                    example: rerum
-                                value:
-                                    type: string
-                                    description: ''
-                                    example: repudiandae
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 1
-                            required:
-                                - company_id
-            security: []
-        delete:
-            summary: 'Remove the specified Setting from storage.'
-            description: 'DELETE /settings/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Setting
-            security: []
-        parameters:
-            -
-                in: path
-                name: setting
-                description: ''
-                example: itaque
-                required: true
-                schema:
-                    type: string
-    /api/tags:
-        get:
-            summary: 'Display a listing of the Tag.'
-            description: 'GET|HEAD /tags'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Tag
-            security: []
-        post:
-            summary: 'Store a newly created Tag in storage.'
-            description: 'POST /tags'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Tag
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: eum
-                                colour:
-                                    type: string
-                                    description: ''
-                                    example: ut
-                                company_id:
-                                    type: integer
-                                    description: ''
-                                    example: 14
-                            required:
-                                - name
-                                - company_id
-            security: []
-    '/api/tags/{tag}':
-        get:
-            summary: 'Display the specified Tag.'
-            description: 'GET|HEAD /tags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
-            tags:
-                - Tag
-            security: []
-        put:
-            summary: 'Update the specified Tag in storage.'
-            description: 'PUT/PATCH /tags/{id}'
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - Tag
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                name:
-                                    type: string
-                                    description: ''
-                                    example: consequatur
-                                colour:
-                                    type: string
-                                    description: ''
-                                    example: dolorem
-                                company_id:
+                                poll_id:
                                     type: integer
                                     description: ''
                                     example: 18
+                                unique_id:
+                                    type: string
+                                    description: ''
+                                    example: quia
+                                poll_value_id:
+                                    type: integer
+                                    description: ''
+                                    example: 15
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
                             required:
-                                - name
-                                - company_id
+                                - poll_id
+                                - poll_value_id
             security: []
         delete:
-            summary: 'Remove the specified Tag from storage.'
-            description: 'DELETE /tags/{id}'
+            summary: 'Remove the specified Vote from storage.'
+            description: 'DELETE /votes/{id}'
             parameters:
                 -
                     in: header
@@ -5573,21 +1886,21 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - Tag
+                - Vote
             security: []
         parameters:
             -
                 in: path
-                name: tag
+                name: vote
                 description: ''
-                example: non
+                example: saepe
                 required: true
                 schema:
                     type: string
-    /api/users/myActivities:
+    /api/vote_values:
         get:
-            summary: 'My Activities.'
-            description: ''
+            summary: 'Display a listing of the VoteValue.'
+            description: 'GET|HEAD /voteValues'
             parameters:
                 -
                     in: header
@@ -5617,12 +1930,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - User
+                - 'Vote Value'
             security: []
-    /api/users/shareToGroup:
         post:
-            summary: 'Add User to Group.'
-            description: ''
+            summary: 'Store a newly created VoteValue in storage.'
+            description: 'POST /voteValues'
             parameters:
                 -
                     in: header
@@ -5640,7 +1952,7 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - User
+                - 'Vote Value'
             requestBody:
                 required: true
                 content:
@@ -5648,145 +1960,35 @@ paths:
                         schema:
                             type: object
                             properties:
-                                group_id:
+                                poll_type_id:
+                                    type: integer
+                                    description: ''
+                                    example: 1
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: consequuntur
+                                value:
                                     type: string
                                     description: ''
                                     example: qui
-                                user_id:
+                                created_at:
                                     type: string
                                     description: ''
-                                    example: quam
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
                             required:
-                                - group_id
-                                - user_id
+                                - poll_type_id
+                                - name
+                                - value
             security: []
-    /api/users/removeToGroup:
-        post:
-            summary: 'Remove User to Group.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - User
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: qui
-                                user_id:
-                                    type: string
-                                    description: ''
-                                    example: nihil
-                            required:
-                                - group_id
-                                - user_id
-            security: []
-    /api/users/shareGroupWithEmail:
-        post:
-            summary: 'Add User to Group with Comma seperated Email.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - User
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: earum
-                                email:
-                                    type: string
-                                    description: ''
-                                    example: ab
-                            required:
-                                - group_id
-                                - email
-            security: []
-    /api/users/removeGroupWithEmail:
-        post:
-            summary: 'Remove User to Group with Comma seperated Email.'
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses: {  }
-            tags:
-                - User
-            requestBody:
-                required: true
-                content:
-                    application/json:
-                        schema:
-                            type: object
-                            properties:
-                                group_id:
-                                    type: string
-                                    description: ''
-                                    example: autem
-                                email:
-                                    type: string
-                                    description: ''
-                                    example: corrupti
-                            required:
-                                - group_id
-                                - email
-            security: []
-    /api/users:
+    '/api/vote_values/{vote_value}':
         get:
-            summary: 'Display a listing of the User.'
-            description: 'GET|HEAD /users'
+            summary: 'Display the specified VoteValue.'
+            description: 'GET|HEAD /voteValues/{id}'
             parameters:
                 -
                     in: header
@@ -5816,12 +2018,11 @@ paths:
                                     message: { type: string, example: Unauthorized }
                                     status: { type: integer, example: 401 }
             tags:
-                - User
+                - 'Vote Value'
             security: []
-    '/api/users/{user}':
-        get:
-            summary: 'Display the specified User.'
-            description: 'GET|HEAD /users/{id}'
+        put:
+            summary: 'Update the specified VoteValue in storage.'
+            description: 'PUT/PATCH /voteValues/{id}'
             parameters:
                 -
                     in: header
@@ -5837,25 +2038,44 @@ paths:
                     example: application/json
                     schema:
                         type: string
-            responses:
-                401:
-                    description: ''
-                    content:
-                        application/json:
-                            schema:
-                                type: object
-                                example:
-                                    message: Unauthorized
-                                    status: 401
-                                properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+            responses: {  }
             tags:
-                - User
+                - 'Vote Value'
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                poll_type_id:
+                                    type: integer
+                                    description: ''
+                                    example: 19
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: ut
+                                value:
+                                    type: string
+                                    description: ''
+                                    example: quidem
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                            required:
+                                - poll_type_id
+                                - name
+                                - value
             security: []
         delete:
-            summary: 'Remove the specified User from storage.'
-            description: 'DELETE /users/{id}'
+            summary: 'Remove the specified VoteValue from storage.'
+            description: 'DELETE /voteValues/{id}'
             parameters:
                 -
                     in: header
@@ -5873,14 +2093,14 @@ paths:
                         type: string
             responses: {  }
             tags:
-                - User
+                - 'Vote Value'
             security: []
         parameters:
             -
                 in: path
-                name: user
+                name: vote_value
                 description: ''
-                example: dolores
+                example: consectetur
                 required: true
                 schema:
                     type: string
