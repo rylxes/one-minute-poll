@@ -1,11 +1,11 @@
 # GENERATED. YOU SHOULDN'T MODIFY OR DELETE THIS FILE.
 # Scribe uses this file to know when you change something manually in your docs.
-resources/docs/groups/endpoints.md=1623001186
+resources/docs/groups/endpoints.md=1626607509
 resources/docs/index.md=1623001186
-resources/docs/authentication.md=1623001186
+resources/docs/authentication.md=1626607509
 resources/docs/groups/club-assesment.md=1608892119
 resources/docs/groups/health-predictor.md=1608892119
-resources/docs/groups/auth.md=1623001186
+resources/docs/groups/auth.md=1626607509
 resources/docs/groups/personal-details.md=1608892119
 resources/docs/groups/psych-predictor.md=1608892119
 resources/docs/groups/skill-report.md=1608892119
@@ -31,8 +31,9 @@ resources/docs/groups/file-comment.md=1622766967
 resources/docs/groups/file-tag.md=1622766967
 resources/docs/groups/folder-tag.md=1622766967
 resources/docs/groups/user.md=1622766967
-resources/docs/groups/category.md=1623001186
-resources/docs/groups/poll.md=1623001186
-resources/docs/groups/poll-type.md=1623001186
-resources/docs/groups/vote.md=1623001186
-resources/docs/groups/vote-value.md=1623001186
+resources/docs/groups/category.md=1626607509
+resources/docs/groups/poll.md=1626607509
+resources/docs/groups/poll-type.md=1626607509
+resources/docs/groups/vote.md=1626607509
+resources/docs/groups/vote-value.md=1626607509
+resources/docs/groups/poll-option.md=1626607509

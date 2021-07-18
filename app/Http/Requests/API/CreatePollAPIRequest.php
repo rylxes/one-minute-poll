@@ -24,6 +24,21 @@ class CreatePollAPIRequest extends APIRequest
      */
     public function rules()
     {
-        return Poll::$rules;
+        return [
+            'title' => 'required|string|max:255',
+            //'url' => 'nullable|string|max:255',
+            'options.A' => 'nullable|string|max:255',
+            'options.B' => 'nullable|string|max:255',
+            'options.C' => 'nullable|string|max:255',
+            'options.D' => 'nullable|string|max:255',
+            'options.E' => 'nullable|string|max:255',
+            'email' => 'nullable|email',
+            'category_id' => 'required|integer',
+            'user_id' => 'nullable|integer',
+            'poll_type_id' => 'required|integer',
+            'open_to_everyone' => 'required',
+            'question' => 'required|string',
+            'close_date' => 'nullable',
+        ];
     }
 }

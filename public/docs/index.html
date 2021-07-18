@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>E-DMS App API Documentation</title>
+    <title>One minute poll API Documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
@@ -44,14 +44,14 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: June 6 2021</li>
+            <li>Last updated: July 18 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
     <div class="dark-box"></div>
     <div class="content">
         <h1>Introduction</h1>
-<p>E-DMS App API Documentation</p>
+<p>One minute poll API Documentation</p>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
@@ -73,7 +73,7 @@ You can switch the language used with the tabs at the top right (or from the nav
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"tremaine.braun@example.org","secret":{},"password":"laboriosam"}'
+    -d '{"email":"keira92@example.org","secret":{},"password":"aut"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/login"
@@ -85,9 +85,9 @@ let headers = {
 };
 
 let body = {
-    "email": "tremaine.braun@example.org",
+    "email": "keira92@example.org",
     "secret": {},
-    "password": "laboriosam"
+    "password": "aut"
 }
 
 fetch(url, {
@@ -233,7 +233,7 @@ fetch(url, {
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"autem","last_name":"quam","company_name":"voluptatem","company_phone":"exercitationem","company_description":"explicabo","has2fa":false,"email":"mya.harris@example.org","password":"vitae","password_confirmation":"qui"}'
+    -d '{"first_name":"laborum","last_name":"omnis","company_name":"qui","company_phone":"alias","company_description":"nihil","has2fa":false,"email":"brock39@example.net","password":"accusamus","password_confirmation":"non"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/register"
@@ -245,15 +245,15 @@ let headers = {
 };
 
 let body = {
-    "first_name": "autem",
-    "last_name": "quam",
-    "company_name": "voluptatem",
-    "company_phone": "exercitationem",
-    "company_description": "explicabo",
+    "first_name": "laborum",
+    "last_name": "omnis",
+    "company_name": "qui",
+    "company_phone": "alias",
+    "company_description": "nihil",
     "has2fa": false,
-    "email": "mya.harris@example.org",
-    "password": "vitae",
-    "password_confirmation": "qui"
+    "email": "brock39@example.net",
+    "password": "accusamus",
+    "password_confirmation": "non"
 }
 
 fetch(url, {
@@ -344,11 +344,11 @@ The value must be a valid email address.
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/password/reset/hic" \
+    -G "http://localhost/api/password/reset/tenetur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/password/reset/hic"
+    "http://localhost/api/password/reset/tenetur"
 );
 
 let headers = {
@@ -440,11 +440,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/email/verify/dolorum/eaque" \
+    -G "http://localhost/api/email/verify/fugit/eveniet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/email/verify/dolorum/eaque"
+    "http://localhost/api/email/verify/fugit/eveniet"
 );
 
 let headers = {
@@ -545,7 +545,7 @@ fetch(url, {
     "http://localhost/api/password/sendEmailLink" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"erick13@example.org","base_url":"voluptatum"}'
+    -d '{"email":"jalyn74@example.com","base_url":"et"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/password/sendEmailLink"
@@ -557,8 +557,8 @@ let headers = {
 };
 
 let body = {
-    "email": "erick13@example.org",
-    "base_url": "voluptatum"
+    "email": "jalyn74@example.com",
+    "base_url": "et"
 }
 
 fetch(url, {
@@ -608,7 +608,7 @@ The value must be a valid email address.
     "http://localhost/api/password/resetUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"token":"tempora","email":"dorn@example.net","password":"aut"}'
+    -d '{"token":"ut","email":"ullrich.grover@example.com","password":"quaerat"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/password/resetUser"
@@ -620,9 +620,9 @@ let headers = {
 };
 
 let body = {
-    "token": "tempora",
-    "email": "dorn@example.net",
-    "password": "aut"
+    "token": "ut",
+    "email": "ullrich.grover@example.com",
+    "password": "quaerat"
 }
 
 fetch(url, {
@@ -678,7 +678,7 @@ The value must be a valid email address.
     "http://localhost/api/registerInvite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"fugiat","user_id":{},"is_user":false,"name":"itaque","has2fa":false,"email":"annabell96@example.org","password":"eligendi","password_confirmation":"reiciendis"}'
+    -d '{"company_id":"commodi","user_id":{},"is_user":false,"name":"cum","has2fa":false,"email":"gardner.heller@example.net","password":"adipisci","password_confirmation":"numquam"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/registerInvite"
@@ -690,14 +690,14 @@ let headers = {
 };
 
 let body = {
-    "company_id": "fugiat",
+    "company_id": "commodi",
     "user_id": {},
     "is_user": false,
-    "name": "itaque",
+    "name": "cum",
     "has2fa": false,
-    "email": "annabell96@example.org",
-    "password": "eligendi",
-    "password_confirmation": "reiciendis"
+    "email": "gardner.heller@example.net",
+    "password": "adipisci",
+    "password_confirmation": "numquam"
 }
 
 fetch(url, {
@@ -785,7 +785,7 @@ The value must be a valid email address.
     "http://localhost/api/password/change" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"ryann21@example.com","old_password":"sit","password":"facere"}'
+    -d '{"email":"berneice96@example.net","old_password":"quod","password":"quis"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/password/change"
@@ -797,9 +797,9 @@ let headers = {
 };
 
 let body = {
-    "email": "ryann21@example.com",
-    "old_password": "sit",
-    "password": "facere"
+    "email": "berneice96@example.net",
+    "old_password": "quod",
+    "password": "quis"
 }
 
 fetch(url, {
@@ -870,11 +870,49 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "name": "General Opinion",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "name": "Lifestyle",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "name": "Politics",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "name": "Entertainment",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 5,
+            "name": "Sports",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "name": "Technology",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "message": "Categories retrieved successfully"
 }</code></pre>
 <div id="execution-results-GETapi-categories" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-categories"></span>:</blockquote>
@@ -905,7 +943,7 @@ fetch(url, {
     "http://localhost/api/categories" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nemo","created_at":{},"updated_at":{}}'
+    -d '{"name":"sint","created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/categories"
@@ -917,7 +955,7 @@ let headers = {
 };
 
 let body = {
-    "name": "nemo",
+    "name": "sint",
     "created_at": {},
     "updated_at": {}
 }
@@ -973,11 +1011,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/categories/incidunt" \
+    -G "http://localhost/api/categories/suscipit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/categories/incidunt"
+    "http://localhost/api/categories/suscipit"
 );
 
 let headers = {
@@ -990,11 +1028,11 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (404):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Category not found"
 }</code></pre>
 <div id="execution-results-GETapi-categories--category-" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-categories--category-"></span>:</blockquote>
@@ -1029,13 +1067,13 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/categories/eos" \
+    "http://localhost/api/categories/accusantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"corporis","created_at":{},"updated_at":{}}'
+    -d '{"name":"labore","created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/categories/eos"
+    "http://localhost/api/categories/accusantium"
 );
 
 let headers = {
@@ -1044,7 +1082,7 @@ let headers = {
 };
 
 let body = {
-    "name": "corporis",
+    "name": "labore",
     "created_at": {},
     "updated_at": {}
 }
@@ -1111,11 +1149,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/categories/nesciunt" \
+    "http://localhost/api/categories/totam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/categories/nesciunt"
+    "http://localhost/api/categories/totam"
 );
 
 let headers = {
@@ -1378,11 +1416,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/oauth/tokens/quia" \
+    "http://localhost/oauth/tokens/possimus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/oauth/tokens/quia"
+    "http://localhost/oauth/tokens/possimus"
 );
 
 let headers = {
@@ -1556,11 +1594,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/oauth/clients/ut" \
+    "http://localhost/oauth/clients/laborum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/oauth/clients/ut"
+    "http://localhost/oauth/clients/laborum"
 );
 
 let headers = {
@@ -1604,11 +1642,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/oauth/clients/et" \
+    "http://localhost/oauth/clients/labore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/oauth/clients/et"
+    "http://localhost/oauth/clients/labore"
 );
 
 let headers = {
@@ -1789,11 +1827,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/oauth/personal-access-tokens/distinctio" \
+    "http://localhost/oauth/personal-access-tokens/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/oauth/personal-access-tokens/distinctio"
+    "http://localhost/oauth/personal-access-tokens/alias"
 );
 
 let headers = {
@@ -1975,6 +2013,356 @@ fetch(url, {
 <small class="badge badge-green">GET</small>
  <b><code>home</code></b>
 </p>
+</form><h1>Poll Option</h1>
+<h2>Display a listing of the PollOption.</h2>
+<p>GET|HEAD /pollOptions</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/poll_options" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/poll_options"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": true,
+    "data": [],
+    "message": "Poll Options retrieved successfully"
+}</code></pre>
+<div id="execution-results-GETapi-poll_options" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-poll_options"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-poll_options"></code></pre>
+</div>
+<div id="execution-error-GETapi-poll_options" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-poll_options"></code></pre>
+</div>
+<form id="form-GETapi-poll_options" data-method="GET" data-path="api/poll_options" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-poll_options', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-poll_options" onclick="tryItOut('GETapi-poll_options');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-poll_options" onclick="cancelTryOut('GETapi-poll_options');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-poll_options" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/poll_options</code></b>
+</p>
+</form>
+<h2>Store a newly created PollOption in storage.</h2>
+<p>POST /pollOptions</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/poll_options" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"poll_id":20,"name":"repellendus","value":"molestias","count":9,"created_at":{},"updated_at":{}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/poll_options"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "poll_id": 20,
+    "name": "repellendus",
+    "value": "molestias",
+    "count": 9,
+    "created_at": {},
+    "updated_at": {}
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTapi-poll_options" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-poll_options"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-poll_options"></code></pre>
+</div>
+<div id="execution-error-POSTapi-poll_options" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-poll_options"></code></pre>
+</div>
+<form id="form-POSTapi-poll_options" data-method="POST" data-path="api/poll_options" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-poll_options', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-poll_options" onclick="tryItOut('POSTapi-poll_options');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-poll_options" onclick="cancelTryOut('POSTapi-poll_options');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-poll_options" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/poll_options</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>poll_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="poll_id" data-endpoint="POSTapi-poll_options" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-poll_options" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>value</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="value" data-endpoint="POSTapi-poll_options" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>count</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="count" data-endpoint="POSTapi-poll_options" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="created_at" data-endpoint="POSTapi-poll_options" data-component="body"  hidden>
+<br>
+
+</p>
+<p>
+<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="updated_at" data-endpoint="POSTapi-poll_options" data-component="body"  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Display the specified PollOption.</h2>
+<p>GET|HEAD /pollOptions/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/poll_options/fugit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/poll_options/fugit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "success": false,
+    "message": "Poll Option not found"
+}</code></pre>
+<div id="execution-results-GETapi-poll_options--poll_option-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-poll_options--poll_option-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-poll_options--poll_option-"></code></pre>
+</div>
+<div id="execution-error-GETapi-poll_options--poll_option-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-poll_options--poll_option-"></code></pre>
+</div>
+<form id="form-GETapi-poll_options--poll_option-" data-method="GET" data-path="api/poll_options/{poll_option}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-poll_options--poll_option-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-poll_options--poll_option-" onclick="tryItOut('GETapi-poll_options--poll_option-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-poll_options--poll_option-" onclick="cancelTryOut('GETapi-poll_options--poll_option-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-poll_options--poll_option-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/poll_options/{poll_option}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>poll_option</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="poll_option" data-endpoint="GETapi-poll_options--poll_option-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>Update the specified PollOption in storage.</h2>
+<p>PUT/PATCH /pollOptions/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/poll_options/sint" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"poll_id":19,"name":"est","value":"aut","count":14,"created_at":{},"updated_at":{}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/poll_options/sint"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "poll_id": 19,
+    "name": "est",
+    "value": "aut",
+    "count": 14,
+    "created_at": {},
+    "updated_at": {}
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-PUTapi-poll_options--poll_option-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-poll_options--poll_option-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-poll_options--poll_option-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-poll_options--poll_option-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-poll_options--poll_option-"></code></pre>
+</div>
+<form id="form-PUTapi-poll_options--poll_option-" data-method="PUT" data-path="api/poll_options/{poll_option}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-poll_options--poll_option-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-poll_options--poll_option-" onclick="tryItOut('PUTapi-poll_options--poll_option-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-poll_options--poll_option-" onclick="cancelTryOut('PUTapi-poll_options--poll_option-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-poll_options--poll_option-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/poll_options/{poll_option}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/poll_options/{poll_option}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>poll_option</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="poll_option" data-endpoint="PUTapi-poll_options--poll_option-" data-component="url" required  hidden>
+<br>
+
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>poll_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="poll_id" data-endpoint="PUTapi-poll_options--poll_option-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="PUTapi-poll_options--poll_option-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>value</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="value" data-endpoint="PUTapi-poll_options--poll_option-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>count</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="count" data-endpoint="PUTapi-poll_options--poll_option-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="created_at" data-endpoint="PUTapi-poll_options--poll_option-" data-component="body"  hidden>
+<br>
+
+</p>
+<p>
+<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="updated_at" data-endpoint="PUTapi-poll_options--poll_option-" data-component="body"  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Remove the specified PollOption from storage.</h2>
+<p>DELETE /pollOptions/{id}</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/poll_options/quia" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/poll_options/quia"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-DELETEapi-poll_options--poll_option-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-poll_options--poll_option-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-poll_options--poll_option-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-poll_options--poll_option-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-poll_options--poll_option-"></code></pre>
+</div>
+<form id="form-DELETEapi-poll_options--poll_option-" data-method="DELETE" data-path="api/poll_options/{poll_option}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-poll_options--poll_option-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-poll_options--poll_option-" onclick="tryItOut('DELETEapi-poll_options--poll_option-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-poll_options--poll_option-" onclick="cancelTryOut('DELETEapi-poll_options--poll_option-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-poll_options--poll_option-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/poll_options/{poll_option}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>poll_option</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="poll_option" data-endpoint="DELETEapi-poll_options--poll_option-" data-component="url" required  hidden>
+<br>
+
+</p>
 </form><h1>Poll Type</h1>
 <h2>Display a listing of the PollType.</h2>
 <p>GET|HEAD /pollTypes</p>
@@ -1999,11 +2387,31 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "name": "Yes \/ No",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "name": "1 - 5 Stars",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "name": "A - E Options",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "message": "Poll Types retrieved successfully"
 }</code></pre>
 <div id="execution-results-GETapi-poll_types" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-poll_types"></span>:</blockquote>
@@ -2034,7 +2442,7 @@ fetch(url, {
     "http://localhost/api/poll_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"harum","created_at":{},"updated_at":{}}'
+    -d '{"name":"itaque","created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/poll_types"
@@ -2046,7 +2454,7 @@ let headers = {
 };
 
 let body = {
-    "name": "harum",
+    "name": "itaque",
     "created_at": {},
     "updated_at": {}
 }
@@ -2102,11 +2510,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/poll_types/aut" \
+    -G "http://localhost/api/poll_types/maiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/poll_types/aut"
+    "http://localhost/api/poll_types/maiores"
 );
 
 let headers = {
@@ -2119,11 +2527,11 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (404):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Poll Type not found"
 }</code></pre>
 <div id="execution-results-GETapi-poll_types--poll_type-" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-poll_types--poll_type-"></span>:</blockquote>
@@ -2158,13 +2566,13 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/poll_types/asperiores" \
+    "http://localhost/api/poll_types/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"quo","created_at":{},"updated_at":{}}'
+    -d '{"name":"veniam","created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/poll_types/asperiores"
+    "http://localhost/api/poll_types/quia"
 );
 
 let headers = {
@@ -2173,7 +2581,7 @@ let headers = {
 };
 
 let body = {
-    "name": "quo",
+    "name": "veniam",
     "created_at": {},
     "updated_at": {}
 }
@@ -2240,11 +2648,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/poll_types/ut" \
+    "http://localhost/api/poll_types/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/poll_types/ut"
+    "http://localhost/api/poll_types/rerum"
 );
 
 let headers = {
@@ -2306,11 +2714,12 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [],
+    "message": "Polls retrieved successfully"
 }</code></pre>
 <div id="execution-results-GETapi-polls" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-polls"></span>:</blockquote>
@@ -2341,7 +2750,7 @@ fetch(url, {
     "http://localhost/api/polls" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"title":"dolor","url":"accusamus","code":"molestias","category_id":17,"user_id":1,"poll_type_id":13,"open_to_everyone":"repudiandae","question":"ut","close_date":{},"created_at":{},"updated_at":{}}'
+    -d '{"title":"inventore","options":{"A":"omnis","B":"fugiat","C":"magnam","D":"nam","E":"vitae"},"email":"dach.cornell@example.com","category_id":12,"user_id":11,"poll_type_id":6,"open_to_everyone":"eius","question":"aut","close_date":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/polls"
@@ -2353,17 +2762,21 @@ let headers = {
 };
 
 let body = {
-    "title": "dolor",
-    "url": "accusamus",
-    "code": "molestias",
-    "category_id": 17,
-    "user_id": 1,
-    "poll_type_id": 13,
-    "open_to_everyone": "repudiandae",
-    "question": "ut",
-    "close_date": {},
-    "created_at": {},
-    "updated_at": {}
+    "title": "inventore",
+    "options": {
+        "A": "omnis",
+        "B": "fugiat",
+        "C": "magnam",
+        "D": "nam",
+        "E": "vitae"
+    },
+    "email": "dach.cornell@example.com",
+    "category_id": 12,
+    "user_id": 11,
+    "poll_type_id": 6,
+    "open_to_everyone": "eius",
+    "question": "aut",
+    "close_date": {}
 }
 
 fetch(url, {
@@ -2398,16 +2811,50 @@ fetch(url, {
 
 </p>
 <p>
-<b><code>url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="url" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<details>
+<summary>
+<b><code>options</code></b>&nbsp;&nbsp;<small>object</small>     <i>optional</i> &nbsp;
+<br>
+
+</summary>
+<br>
+<p>
+<b><code>options.A</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.A" data-endpoint="POSTapi-polls" data-component="body"  hidden>
 <br>
 
 </p>
 <p>
-<b><code>code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="code" data-endpoint="POSTapi-polls" data-component="body" required  hidden>
+<b><code>options.B</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.B" data-endpoint="POSTapi-polls" data-component="body"  hidden>
 <br>
 
+</p>
+<p>
+<b><code>options.C</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.C" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+
+</p>
+<p>
+<b><code>options.D</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.D" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+
+</p>
+<p>
+<b><code>options.E</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.E" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+
+</p>
+</details>
+</p>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+The value must be a valid email address.
 </p>
 <p>
 <b><code>category_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
@@ -2445,18 +2892,6 @@ fetch(url, {
 <br>
 
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-polls" data-component="body"  hidden>
-<br>
-
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-polls" data-component="body"  hidden>
-<br>
-
-</p>
 
 </form>
 <h2>Display the specified Poll.</h2>
@@ -2465,11 +2900,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/polls/deleniti" \
+    -G "http://localhost/api/polls/hic" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/polls/deleniti"
+    "http://localhost/api/polls/hic"
 );
 
 let headers = {
@@ -2482,11 +2917,11 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (404):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Poll not found"
 }</code></pre>
 <div id="execution-results-GETapi-polls--poll-" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-polls--poll-"></span>:</blockquote>
@@ -2521,13 +2956,13 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/polls/architecto" \
+    "http://localhost/api/polls/animi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"title":"voluptas","url":"cumque","code":"minima","category_id":18,"user_id":5,"poll_type_id":11,"open_to_everyone":"id","question":"deleniti","close_date":{},"created_at":{},"updated_at":{}}'
+    -d '{"title":"accusantium","url":"quod","code":"minima","category_id":15,"user_id":14,"poll_type_id":20,"open_to_everyone":"eius","question":"at","close_date":{},"created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/polls/architecto"
+    "http://localhost/api/polls/animi"
 );
 
 let headers = {
@@ -2536,14 +2971,14 @@ let headers = {
 };
 
 let body = {
-    "title": "voluptas",
-    "url": "cumque",
+    "title": "accusantium",
+    "url": "quod",
     "code": "minima",
-    "category_id": 18,
-    "user_id": 5,
-    "poll_type_id": 11,
-    "open_to_everyone": "id",
-    "question": "deleniti",
+    "category_id": 15,
+    "user_id": 14,
+    "poll_type_id": 20,
+    "open_to_everyone": "eius",
+    "question": "at",
     "close_date": {},
     "created_at": {},
     "updated_at": {}
@@ -2659,11 +3094,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/polls/eveniet" \
+    "http://localhost/api/polls/inventore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/polls/eveniet"
+    "http://localhost/api/polls/inventore"
 );
 
 let headers = {
@@ -2725,11 +3160,109 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "poll_type_id": 1,
+            "name": "Yes",
+            "value": "Yes",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "poll_type_id": 1,
+            "name": "No",
+            "value": "No",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "poll_type_id": 2,
+            "name": "1",
+            "value": "1",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "poll_type_id": 2,
+            "name": "2",
+            "value": "2",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 5,
+            "poll_type_id": 2,
+            "name": "3",
+            "value": "3",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "poll_type_id": 2,
+            "name": "4",
+            "value": "4",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 7,
+            "poll_type_id": 2,
+            "name": "5",
+            "value": "5",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 8,
+            "poll_type_id": 3,
+            "name": "A",
+            "value": "A",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 9,
+            "poll_type_id": 3,
+            "name": "B",
+            "value": "B",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 10,
+            "poll_type_id": 3,
+            "name": "C",
+            "value": "C",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 11,
+            "poll_type_id": 3,
+            "name": "D",
+            "value": "D",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 12,
+            "poll_type_id": 3,
+            "name": "E",
+            "value": "E",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "message": "Vote Values retrieved successfully"
 }</code></pre>
 <div id="execution-results-GETapi-vote_values" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-vote_values"></span>:</blockquote>
@@ -2760,7 +3293,7 @@ fetch(url, {
     "http://localhost/api/vote_values" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_type_id":1,"name":"consequuntur","value":"qui","created_at":{},"updated_at":{}}'
+    -d '{"poll_type_id":2,"name":"voluptatum","value":"est","created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/vote_values"
@@ -2772,9 +3305,9 @@ let headers = {
 };
 
 let body = {
-    "poll_type_id": 1,
-    "name": "consequuntur",
-    "value": "qui",
+    "poll_type_id": 2,
+    "name": "voluptatum",
+    "value": "est",
     "created_at": {},
     "updated_at": {}
 }
@@ -2842,11 +3375,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/vote_values/consectetur" \
+    -G "http://localhost/api/vote_values/dignissimos" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/vote_values/consectetur"
+    "http://localhost/api/vote_values/dignissimos"
 );
 
 let headers = {
@@ -2859,11 +3392,11 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (404):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Vote Value not found"
 }</code></pre>
 <div id="execution-results-GETapi-vote_values--vote_value-" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-vote_values--vote_value-"></span>:</blockquote>
@@ -2898,13 +3431,13 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/vote_values/voluptas" \
+    "http://localhost/api/vote_values/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_type_id":19,"name":"ut","value":"quidem","created_at":{},"updated_at":{}}'
+    -d '{"poll_type_id":5,"name":"molestiae","value":"est","created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/vote_values/voluptas"
+    "http://localhost/api/vote_values/sed"
 );
 
 let headers = {
@@ -2913,9 +3446,9 @@ let headers = {
 };
 
 let body = {
-    "poll_type_id": 19,
-    "name": "ut",
-    "value": "quidem",
+    "poll_type_id": 5,
+    "name": "molestiae",
+    "value": "est",
     "created_at": {},
     "updated_at": {}
 }
@@ -2994,11 +3527,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/vote_values/velit" \
+    "http://localhost/api/vote_values/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/vote_values/velit"
+    "http://localhost/api/vote_values/vitae"
 );
 
 let headers = {
@@ -3060,11 +3593,12 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [],
+    "message": "Votes retrieved successfully"
 }</code></pre>
 <div id="execution-results-GETapi-votes" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-votes"></span>:</blockquote>
@@ -3095,7 +3629,7 @@ fetch(url, {
     "http://localhost/api/votes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":1,"unique_id":"aut","poll_value_id":10,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":15,"unique_id":"labore","poll_value_id":14,"created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/votes"
@@ -3107,9 +3641,9 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 1,
-    "unique_id": "aut",
-    "poll_value_id": 10,
+    "poll_id": 15,
+    "unique_id": "labore",
+    "poll_value_id": 14,
     "created_at": {},
     "updated_at": {}
 }
@@ -3177,11 +3711,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/api/votes/saepe" \
+    -G "http://localhost/api/votes/tempora" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/votes/saepe"
+    "http://localhost/api/votes/tempora"
 );
 
 let headers = {
@@ -3194,11 +3728,11 @@ fetch(url, {
     headers,
 }).then(response =&gt; response.json());</code></pre>
 <blockquote>
-<p>Example response (401):</p>
+<p>Example response (404):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Vote not found"
 }</code></pre>
 <div id="execution-results-GETapi-votes--vote-" hidden>
     <blockquote>Received response<span id="execution-response-status-GETapi-votes--vote-"></span>:</blockquote>
@@ -3233,13 +3767,13 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "http://localhost/api/votes/assumenda" \
+    "http://localhost/api/votes/harum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":18,"unique_id":"quia","poll_value_id":15,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":13,"unique_id":"sed","poll_value_id":3,"created_at":{},"updated_at":{}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/votes/assumenda"
+    "http://localhost/api/votes/harum"
 );
 
 let headers = {
@@ -3248,9 +3782,9 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 18,
-    "unique_id": "quia",
-    "poll_value_id": 15,
+    "poll_id": 13,
+    "unique_id": "sed",
+    "poll_value_id": 3,
     "created_at": {},
     "updated_at": {}
 }
@@ -3329,11 +3863,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "http://localhost/api/votes/nam" \
+    "http://localhost/api/votes/eaque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/votes/nam"
+    "http://localhost/api/votes/eaque"
 );
 
 let headers = {

@@ -13,7 +13,7 @@ curl -X POST \
     "http://localhost/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"tremaine.braun@example.org","secret":{},"password":"laboriosam"}'
+    -d '{"email":"keira92@example.org","secret":{},"password":"aut"}'
 
 ```
 
@@ -28,9 +28,9 @@ let headers = {
 };
 
 let body = {
-    "email": "tremaine.braun@example.org",
+    "email": "keira92@example.org",
     "secret": {},
-    "password": "laboriosam"
+    "password": "aut"
 }
 
 fetch(url, {
@@ -212,7 +212,7 @@ curl -X POST \
     "http://localhost/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"autem","last_name":"quam","company_name":"voluptatem","company_phone":"exercitationem","company_description":"explicabo","has2fa":false,"email":"mya.harris@example.org","password":"vitae","password_confirmation":"qui"}'
+    -d '{"first_name":"laborum","last_name":"omnis","company_name":"qui","company_phone":"alias","company_description":"nihil","has2fa":false,"email":"brock39@example.net","password":"accusamus","password_confirmation":"non"}'
 
 ```
 
@@ -227,15 +227,15 @@ let headers = {
 };
 
 let body = {
-    "first_name": "autem",
-    "last_name": "quam",
-    "company_name": "voluptatem",
-    "company_phone": "exercitationem",
-    "company_description": "explicabo",
+    "first_name": "laborum",
+    "last_name": "omnis",
+    "company_name": "qui",
+    "company_phone": "alias",
+    "company_description": "nihil",
     "has2fa": false,
-    "email": "mya.harris@example.org",
-    "password": "vitae",
-    "password_confirmation": "qui"
+    "email": "brock39@example.net",
+    "password": "accusamus",
+    "password_confirmation": "non"
 }
 
 fetch(url, {
@@ -334,14 +334,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/hic" \
+    -G "http://localhost/api/password/reset/tenetur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/hic"
+    "http://localhost/api/password/reset/tenetur"
 );
 
 let headers = {
@@ -457,14 +457,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/dolorum/eaque" \
+    -G "http://localhost/api/email/verify/fugit/eveniet" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/dolorum/eaque"
+    "http://localhost/api/email/verify/fugit/eveniet"
 );
 
 let headers = {
@@ -589,7 +589,7 @@ curl -X POST \
     "http://localhost/api/password/sendEmailLink" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"erick13@example.org","base_url":"voluptatum"}'
+    -d '{"email":"jalyn74@example.com","base_url":"et"}'
 
 ```
 
@@ -604,8 +604,8 @@ let headers = {
 };
 
 let body = {
-    "email": "erick13@example.org",
-    "base_url": "voluptatum"
+    "email": "jalyn74@example.com",
+    "base_url": "et"
 }
 
 fetch(url, {
@@ -664,7 +664,7 @@ curl -X POST \
     "http://localhost/api/password/resetUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"token":"tempora","email":"dorn@example.net","password":"aut"}'
+    -d '{"token":"ut","email":"ullrich.grover@example.com","password":"quaerat"}'
 
 ```
 
@@ -679,9 +679,9 @@ let headers = {
 };
 
 let body = {
-    "token": "tempora",
-    "email": "dorn@example.net",
-    "password": "aut"
+    "token": "ut",
+    "email": "ullrich.grover@example.com",
+    "password": "quaerat"
 }
 
 fetch(url, {
@@ -746,7 +746,7 @@ curl -X POST \
     "http://localhost/api/registerInvite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"fugiat","user_id":{},"is_user":false,"name":"itaque","has2fa":false,"email":"annabell96@example.org","password":"eligendi","password_confirmation":"reiciendis"}'
+    -d '{"company_id":"commodi","user_id":{},"is_user":false,"name":"cum","has2fa":false,"email":"gardner.heller@example.net","password":"adipisci","password_confirmation":"numquam"}'
 
 ```
 
@@ -761,14 +761,14 @@ let headers = {
 };
 
 let body = {
-    "company_id": "fugiat",
+    "company_id": "commodi",
     "user_id": {},
     "is_user": false,
-    "name": "itaque",
+    "name": "cum",
     "has2fa": false,
-    "email": "annabell96@example.org",
-    "password": "eligendi",
-    "password_confirmation": "reiciendis"
+    "email": "gardner.heller@example.net",
+    "password": "adipisci",
+    "password_confirmation": "numquam"
 }
 
 fetch(url, {
@@ -865,7 +865,7 @@ curl -X POST \
     "http://localhost/api/password/change" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"ryann21@example.com","old_password":"sit","password":"facere"}'
+    -d '{"email":"berneice96@example.net","old_password":"quod","password":"quis"}'
 
 ```
 
@@ -880,9 +880,9 @@ let headers = {
 };
 
 let body = {
-    "email": "ryann21@example.com",
-    "old_password": "sit",
-    "password": "facere"
+    "email": "berneice96@example.net",
+    "old_password": "quod",
+    "password": "quis"
 }
 
 fetch(url, {

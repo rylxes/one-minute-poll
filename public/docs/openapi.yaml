@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-    title: 'E-DMS App API Documentation'
-    description: 'E-DMS App API Documentation'
+    title: 'One minute poll API Documentation'
+    description: 'One minute poll API Documentation'
     version: 1.0.0
 servers:
     -
@@ -39,7 +39,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: tremaine.braun@example.org
+                                    example: keira92@example.org
                                 secret:
                                     type: string
                                     description: ''
@@ -47,7 +47,7 @@ paths:
                                 password:
                                     type: string
                                     description: ''
-                                    example: laboriosam
+                                    example: aut
                             required:
                                 - email
                                 - password
@@ -143,23 +143,23 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: autem
+                                    example: laborum
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: quam
+                                    example: omnis
                                 company_name:
                                     type: string
                                     description: ''
-                                    example: voluptatem
+                                    example: qui
                                 company_phone:
                                     type: string
                                     description: ''
-                                    example: exercitationem
+                                    example: alias
                                 company_description:
                                     type: string
                                     description: ''
-                                    example: explicabo
+                                    example: nihil
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -167,15 +167,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: mya.harris@example.org
+                                    example: brock39@example.net
                                 password:
                                     type: string
                                     description: ''
-                                    example: vitae
+                                    example: accusamus
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: non
                             required:
                                 - first_name
                                 - last_name
@@ -225,7 +225,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: hic
+                example: tenetur
                 required: true
                 schema:
                     type: string
@@ -292,7 +292,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: dolorum
+                example: fugit
                 required: true
                 schema:
                     type: string
@@ -300,7 +300,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: eaque
+                example: eveniet
                 required: true
                 schema:
                     type: string
@@ -359,11 +359,11 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: erick13@example.org
+                                    example: jalyn74@example.com
                                 base_url:
                                     type: string
                                     description: ''
-                                    example: voluptatum
+                                    example: et
                             required:
                                 - email
                                 - base_url
@@ -400,15 +400,15 @@ paths:
                                 token:
                                     type: string
                                     description: ''
-                                    example: tempora
+                                    example: ut
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: dorn@example.net
+                                    example: ullrich.grover@example.com
                                 password:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: quaerat
                             required:
                                 - token
                                 - email
@@ -446,7 +446,7 @@ paths:
                                 company_id:
                                     type: string
                                     description: ''
-                                    example: fugiat
+                                    example: commodi
                                 user_id:
                                     type: string
                                     description: ''
@@ -458,7 +458,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: itaque
+                                    example: cum
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -466,15 +466,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: annabell96@example.org
+                                    example: gardner.heller@example.net
                                 password:
                                     type: string
                                     description: ''
-                                    example: eligendi
+                                    example: adipisci
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: reiciendis
+                                    example: numquam
                             required:
                                 - company_id
                                 - is_user
@@ -511,15 +511,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: ryann21@example.com
+                                    example: berneice96@example.net
                                 old_password:
                                     type: string
                                     description: ''
-                                    example: sit
+                                    example: quod
                                 password:
                                     type: string
                                     description: ''
-                                    example: facere
+                                    example: quis
                             required:
                                 - email
                                 - old_password
@@ -545,18 +545,20 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                200:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: true
+                                    data: [{ id: 1, name: 'General Opinion', created_at: null, updated_at: null }, { id: 2, name: Lifestyle, created_at: null, updated_at: null }, { id: 3, name: Politics, created_at: null, updated_at: null }, { id: 4, name: Entertainment, created_at: null, updated_at: null }, { id: 5, name: Sports, created_at: null, updated_at: null }, { id: 6, name: Technology, created_at: null, updated_at: null }]
+                                    message: 'Categories retrieved successfully'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [{ id: 1, name: 'General Opinion', created_at: null, updated_at: null }, { id: 2, name: Lifestyle, created_at: null, updated_at: null }, { id: 3, name: Politics, created_at: null, updated_at: null }, { id: 4, name: Entertainment, created_at: null, updated_at: null }, { id: 5, name: Sports, created_at: null, updated_at: null }, { id: 6, name: Technology, created_at: null, updated_at: null }], items: { type: object } }
+                                    message: { type: string, example: 'Categories retrieved successfully' }
             tags:
                 - Category
             security: []
@@ -591,7 +593,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: nemo
+                                    example: sint
                                 created_at:
                                     type: string
                                     description: ''
@@ -623,18 +625,18 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                404:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: false
+                                    message: 'Category not found'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Category not found' }
             tags:
                 - Category
             security: []
@@ -669,7 +671,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: corporis
+                                    example: labore
                                 created_at:
                                     type: string
                                     description: ''
@@ -708,7 +710,7 @@ paths:
                 in: path
                 name: category
                 description: ''
-                example: incidunt
+                example: suscipit
                 required: true
                 schema:
                     type: string
@@ -877,7 +879,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: quia
+                example: possimus
                 required: true
                 schema:
                     type: string
@@ -1011,7 +1013,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: ut
+                example: laborum
                 required: true
                 schema:
                     type: string
@@ -1135,7 +1137,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: distinctio
+                example: alias
                 required: true
                 schema:
                     type: string
@@ -1264,18 +1266,20 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                200:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: true
+                                    data: []
+                                    message: 'Polls retrieved successfully'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [] }
+                                    message: { type: string, example: 'Polls retrieved successfully' }
             tags:
                 - Poll
             security: []
@@ -1310,50 +1314,42 @@ paths:
                                 title:
                                     type: string
                                     description: ''
-                                    example: dolor
-                                url:
-                                    type: string
+                                    example: inventore
+                                options:
+                                    type: object
                                     description: ''
-                                    example: accusamus
-                                code:
+                                    example: []
+                                    properties: { A: { type: string, description: '', example: omnis }, B: { type: string, description: '', example: fugiat }, C: { type: string, description: '', example: magnam }, D: { type: string, description: '', example: nam }, E: { type: string, description: '', example: vitae } }
+                                email:
                                     type: string
-                                    description: ''
-                                    example: molestias
+                                    description: 'The value must be a valid email address.'
+                                    example: dach.cornell@example.com
                                 category_id:
                                     type: integer
                                     description: ''
-                                    example: 17
+                                    example: 12
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 11
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 13
+                                    example: 6
                                 open_to_everyone:
                                     type: string
                                     description: ''
-                                    example: repudiandae
+                                    example: eius
                                 question:
                                     type: string
                                     description: ''
-                                    example: ut
+                                    example: aut
                                 close_date:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                created_at:
-                                    type: string
-                                    description: ''
-                                    example: {  }
-                                updated_at:
                                     type: string
                                     description: ''
                                     example: {  }
                             required:
                                 - title
-                                - code
                                 - category_id
                                 - poll_type_id
                                 - open_to_everyone
@@ -1379,18 +1375,18 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                404:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: false
+                                    message: 'Poll not found'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Poll not found' }
             tags:
                 - Poll
             security: []
@@ -1425,11 +1421,11 @@ paths:
                                 title:
                                     type: string
                                     description: ''
-                                    example: voluptas
+                                    example: accusantium
                                 url:
                                     type: string
                                     description: ''
-                                    example: cumque
+                                    example: quod
                                 code:
                                     type: string
                                     description: ''
@@ -1437,23 +1433,23 @@ paths:
                                 category_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 15
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 5
+                                    example: 14
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 20
                                 open_to_everyone:
                                     type: string
                                     description: ''
-                                    example: id
+                                    example: eius
                                 question:
                                     type: string
                                     description: ''
-                                    example: deleniti
+                                    example: at
                                 close_date:
                                     type: string
                                     description: ''
@@ -1501,7 +1497,226 @@ paths:
                 in: path
                 name: poll
                 description: ''
-                example: deleniti
+                example: hic
+                required: true
+                schema:
+                    type: string
+    /api/poll_options:
+        get:
+            summary: 'Display a listing of the PollOption.'
+            description: 'GET|HEAD /pollOptions'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    success: true
+                                    data: []
+                                    message: 'Poll Options retrieved successfully'
+                                properties:
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [] }
+                                    message: { type: string, example: 'Poll Options retrieved successfully' }
+            tags:
+                - 'Poll Option'
+            security: []
+        post:
+            summary: 'Store a newly created PollOption in storage.'
+            description: 'POST /pollOptions'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - 'Poll Option'
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                poll_id:
+                                    type: integer
+                                    description: ''
+                                    example: 20
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: repellendus
+                                value:
+                                    type: string
+                                    description: ''
+                                    example: molestias
+                                count:
+                                    type: integer
+                                    description: ''
+                                    example: 9
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                            required:
+                                - poll_id
+                                - name
+                                - value
+                                - count
+            security: []
+    '/api/poll_options/{poll_option}':
+        get:
+            summary: 'Display the specified PollOption.'
+            description: 'GET|HEAD /pollOptions/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                404:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    success: false
+                                    message: 'Poll Option not found'
+                                properties:
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Poll Option not found' }
+            tags:
+                - 'Poll Option'
+            security: []
+        put:
+            summary: 'Update the specified PollOption in storage.'
+            description: 'PUT/PATCH /pollOptions/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - 'Poll Option'
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                poll_id:
+                                    type: integer
+                                    description: ''
+                                    example: 19
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: est
+                                value:
+                                    type: string
+                                    description: ''
+                                    example: aut
+                                count:
+                                    type: integer
+                                    description: ''
+                                    example: 14
+                                created_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                                updated_at:
+                                    type: string
+                                    description: ''
+                                    example: {  }
+                            required:
+                                - poll_id
+                                - name
+                                - value
+                                - count
+            security: []
+        delete:
+            summary: 'Remove the specified PollOption from storage.'
+            description: 'DELETE /pollOptions/{id}'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - 'Poll Option'
+            security: []
+        parameters:
+            -
+                in: path
+                name: poll_option
+                description: ''
+                example: fugit
                 required: true
                 schema:
                     type: string
@@ -1525,18 +1740,20 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                200:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: true
+                                    data: [{ id: 1, name: 'Yes / No', created_at: null, updated_at: null }, { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null }, { id: 3, name: 'A - E Options', created_at: null, updated_at: null }]
+                                    message: 'Poll Types retrieved successfully'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [{ id: 1, name: 'Yes / No', created_at: null, updated_at: null }, { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null }, { id: 3, name: 'A - E Options', created_at: null, updated_at: null }], items: { type: object } }
+                                    message: { type: string, example: 'Poll Types retrieved successfully' }
             tags:
                 - 'Poll Type'
             security: []
@@ -1571,7 +1788,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: harum
+                                    example: itaque
                                 created_at:
                                     type: string
                                     description: ''
@@ -1603,18 +1820,18 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                404:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: false
+                                    message: 'Poll Type not found'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Poll Type not found' }
             tags:
                 - 'Poll Type'
             security: []
@@ -1649,7 +1866,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: quo
+                                    example: veniam
                                 created_at:
                                     type: string
                                     description: ''
@@ -1688,7 +1905,7 @@ paths:
                 in: path
                 name: poll_type
                 description: ''
-                example: aut
+                example: maiores
                 required: true
                 schema:
                     type: string
@@ -1712,18 +1929,20 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                200:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: true
+                                    data: []
+                                    message: 'Votes retrieved successfully'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [] }
+                                    message: { type: string, example: 'Votes retrieved successfully' }
             tags:
                 - Vote
             security: []
@@ -1758,15 +1977,15 @@ paths:
                                 poll_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 15
                                 unique_id:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: labore
                                 poll_value_id:
                                     type: integer
                                     description: ''
-                                    example: 10
+                                    example: 14
                                 created_at:
                                     type: string
                                     description: ''
@@ -1799,18 +2018,18 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                404:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: false
+                                    message: 'Vote not found'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Vote not found' }
             tags:
                 - Vote
             security: []
@@ -1845,15 +2064,15 @@ paths:
                                 poll_id:
                                     type: integer
                                     description: ''
-                                    example: 18
+                                    example: 13
                                 unique_id:
                                     type: string
                                     description: ''
-                                    example: quia
+                                    example: sed
                                 poll_value_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 3
                                 created_at:
                                     type: string
                                     description: ''
@@ -1893,7 +2112,7 @@ paths:
                 in: path
                 name: vote
                 description: ''
-                example: saepe
+                example: tempora
                 required: true
                 schema:
                     type: string
@@ -1917,18 +2136,20 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                200:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: true
+                                    data: [{ id: 1, poll_type_id: 1, name: 'Yes', value: 'Yes', created_at: null, updated_at: null }, { id: 2, poll_type_id: 1, name: 'No', value: 'No', created_at: null, updated_at: null }, { id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }, { id: 8, poll_type_id: 3, name: A, value: A, created_at: null, updated_at: null }, { id: 9, poll_type_id: 3, name: B, value: B, created_at: null, updated_at: null }, { id: 10, poll_type_id: 3, name: C, value: C, created_at: null, updated_at: null }, { id: 11, poll_type_id: 3, name: D, value: D, created_at: null, updated_at: null }, { id: 12, poll_type_id: 3, name: E, value: E, created_at: null, updated_at: null }]
+                                    message: 'Vote Values retrieved successfully'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [{ id: 1, poll_type_id: 1, name: 'Yes', value: 'Yes', created_at: null, updated_at: null }, { id: 2, poll_type_id: 1, name: 'No', value: 'No', created_at: null, updated_at: null }, { id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }, { id: 8, poll_type_id: 3, name: A, value: A, created_at: null, updated_at: null }, { id: 9, poll_type_id: 3, name: B, value: B, created_at: null, updated_at: null }, { id: 10, poll_type_id: 3, name: C, value: C, created_at: null, updated_at: null }, { id: 11, poll_type_id: 3, name: D, value: D, created_at: null, updated_at: null }, { id: 12, poll_type_id: 3, name: E, value: E, created_at: null, updated_at: null }], items: { type: object } }
+                                    message: { type: string, example: 'Vote Values retrieved successfully' }
             tags:
                 - 'Vote Value'
             security: []
@@ -1963,15 +2184,15 @@ paths:
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 1
+                                    example: 2
                                 name:
                                     type: string
                                     description: ''
-                                    example: consequuntur
+                                    example: voluptatum
                                 value:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: est
                                 created_at:
                                     type: string
                                     description: ''
@@ -2005,18 +2226,18 @@ paths:
                     schema:
                         type: string
             responses:
-                401:
+                404:
                     description: ''
                     content:
                         application/json:
                             schema:
                                 type: object
                                 example:
-                                    message: Unauthorized
-                                    status: 401
+                                    success: false
+                                    message: 'Vote Value not found'
                                 properties:
-                                    message: { type: string, example: Unauthorized }
-                                    status: { type: integer, example: 401 }
+                                    success: { type: boolean, example: false }
+                                    message: { type: string, example: 'Vote Value not found' }
             tags:
                 - 'Vote Value'
             security: []
@@ -2051,15 +2272,15 @@ paths:
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 19
+                                    example: 5
                                 name:
                                     type: string
                                     description: ''
-                                    example: ut
+                                    example: molestiae
                                 value:
                                     type: string
                                     description: ''
-                                    example: quidem
+                                    example: est
                                 created_at:
                                     type: string
                                     description: ''
@@ -2100,7 +2321,7 @@ paths:
                 in: path
                 name: vote_value
                 description: ''
-                example: consectetur
+                example: dignissimos
                 required: true
                 schema:
                     type: string

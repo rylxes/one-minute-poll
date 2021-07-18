@@ -33,12 +33,110 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (200):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "poll_type_id": 1,
+            "name": "Yes",
+            "value": "Yes",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "poll_type_id": 1,
+            "name": "No",
+            "value": "No",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "poll_type_id": 2,
+            "name": "1",
+            "value": "1",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "poll_type_id": 2,
+            "name": "2",
+            "value": "2",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 5,
+            "poll_type_id": 2,
+            "name": "3",
+            "value": "3",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "poll_type_id": 2,
+            "name": "4",
+            "value": "4",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 7,
+            "poll_type_id": 2,
+            "name": "5",
+            "value": "5",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 8,
+            "poll_type_id": 3,
+            "name": "A",
+            "value": "A",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 9,
+            "poll_type_id": 3,
+            "name": "B",
+            "value": "B",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 10,
+            "poll_type_id": 3,
+            "name": "C",
+            "value": "C",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 11,
+            "poll_type_id": 3,
+            "name": "D",
+            "value": "D",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 12,
+            "poll_type_id": 3,
+            "name": "E",
+            "value": "E",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "message": "Vote Values retrieved successfully"
 }
 ```
 <div id="execution-results-GETapi-vote_values" hidden>
@@ -75,7 +173,7 @@ curl -X POST \
     "http://localhost/api/vote_values" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_type_id":1,"name":"consequuntur","value":"qui","created_at":{},"updated_at":{}}'
+    -d '{"poll_type_id":2,"name":"voluptatum","value":"est","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,9 +188,9 @@ let headers = {
 };
 
 let body = {
-    "poll_type_id": 1,
-    "name": "consequuntur",
-    "value": "qui",
+    "poll_type_id": 2,
+    "name": "voluptatum",
+    "value": "est",
     "created_at": {},
     "updated_at": {}
 }
@@ -168,14 +266,14 @@ GET|HEAD /voteValues/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/vote_values/consectetur" \
+    -G "http://localhost/api/vote_values/dignissimos" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values/consectetur"
+    "http://localhost/api/vote_values/dignissimos"
 );
 
 let headers = {
@@ -191,12 +289,12 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (404):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Vote Value not found"
 }
 ```
 <div id="execution-results-GETapi-vote_values--vote_value-" hidden>
@@ -237,16 +335,16 @@ PUT/PATCH /voteValues/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/vote_values/voluptas" \
+    "http://localhost/api/vote_values/sed" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_type_id":19,"name":"ut","value":"quidem","created_at":{},"updated_at":{}}'
+    -d '{"poll_type_id":5,"name":"molestiae","value":"est","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values/voluptas"
+    "http://localhost/api/vote_values/sed"
 );
 
 let headers = {
@@ -255,9 +353,9 @@ let headers = {
 };
 
 let body = {
-    "poll_type_id": 19,
-    "name": "ut",
-    "value": "quidem",
+    "poll_type_id": 5,
+    "name": "molestiae",
+    "value": "est",
     "created_at": {},
     "updated_at": {}
 }
@@ -344,14 +442,14 @@ DELETE /voteValues/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/vote_values/velit" \
+    "http://localhost/api/vote_values/vitae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values/velit"
+    "http://localhost/api/vote_values/vitae"
 );
 
 let headers = {

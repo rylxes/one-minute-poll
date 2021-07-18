@@ -33,12 +33,13 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (200):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [],
+    "message": "Votes retrieved successfully"
 }
 ```
 <div id="execution-results-GETapi-votes" hidden>
@@ -75,7 +76,7 @@ curl -X POST \
     "http://localhost/api/votes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":1,"unique_id":"aut","poll_value_id":10,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":15,"unique_id":"labore","poll_value_id":14,"created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,9 +91,9 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 1,
-    "unique_id": "aut",
-    "poll_value_id": 10,
+    "poll_id": 15,
+    "unique_id": "labore",
+    "poll_value_id": 14,
     "created_at": {},
     "updated_at": {}
 }
@@ -168,14 +169,14 @@ GET|HEAD /votes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/votes/saepe" \
+    -G "http://localhost/api/votes/tempora" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes/saepe"
+    "http://localhost/api/votes/tempora"
 );
 
 let headers = {
@@ -191,12 +192,12 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (404):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Vote not found"
 }
 ```
 <div id="execution-results-GETapi-votes--vote-" hidden>
@@ -237,16 +238,16 @@ PUT/PATCH /votes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/votes/assumenda" \
+    "http://localhost/api/votes/harum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":18,"unique_id":"quia","poll_value_id":15,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":13,"unique_id":"sed","poll_value_id":3,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes/assumenda"
+    "http://localhost/api/votes/harum"
 );
 
 let headers = {
@@ -255,9 +256,9 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 18,
-    "unique_id": "quia",
-    "poll_value_id": 15,
+    "poll_id": 13,
+    "unique_id": "sed",
+    "poll_value_id": 3,
     "created_at": {},
     "updated_at": {}
 }
@@ -344,14 +345,14 @@ DELETE /votes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/votes/nam" \
+    "http://localhost/api/votes/eaque" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes/nam"
+    "http://localhost/api/votes/eaque"
 );
 
 let headers = {

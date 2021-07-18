@@ -296,14 +296,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/tokens/quia" \
+    "http://localhost/oauth/tokens/possimus" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/tokens/quia"
+    "http://localhost/oauth/tokens/possimus"
 );
 
 let headers = {
@@ -527,14 +527,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/oauth/clients/ut" \
+    "http://localhost/oauth/clients/laborum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/ut"
+    "http://localhost/oauth/clients/laborum"
 );
 
 let headers = {
@@ -588,14 +588,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/clients/et" \
+    "http://localhost/oauth/clients/labore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/et"
+    "http://localhost/oauth/clients/labore"
 );
 
 let headers = {
@@ -827,14 +827,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/personal-access-tokens/distinctio" \
+    "http://localhost/oauth/personal-access-tokens/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens/distinctio"
+    "http://localhost/oauth/personal-access-tokens/alias"
 );
 
 let headers = {

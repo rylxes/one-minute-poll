@@ -1,5 +1,5 @@
 ---
-title: E-DMS App API Documentation
+title: One minute poll API Documentation
 
 language_tabs:
 - bash
@@ -23,7 +23,7 @@ toc_footers:
 
 # Introduction
 
-E-DMS App API Documentation
+One minute poll API Documentation
 
 This documentation aims to provide all the information you need to work with our API.
 

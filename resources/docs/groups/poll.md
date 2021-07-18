@@ -33,12 +33,13 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (200):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [],
+    "message": "Polls retrieved successfully"
 }
 ```
 <div id="execution-results-GETapi-polls" hidden>
@@ -75,7 +76,7 @@ curl -X POST \
     "http://localhost/api/polls" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"title":"dolor","url":"accusamus","code":"molestias","category_id":17,"user_id":1,"poll_type_id":13,"open_to_everyone":"repudiandae","question":"ut","close_date":{},"created_at":{},"updated_at":{}}'
+    -d '{"title":"inventore","options":{"A":"omnis","B":"fugiat","C":"magnam","D":"nam","E":"vitae"},"email":"dach.cornell@example.com","category_id":12,"user_id":11,"poll_type_id":6,"open_to_everyone":"eius","question":"aut","close_date":{}}'
 
 ```
 
@@ -90,17 +91,21 @@ let headers = {
 };
 
 let body = {
-    "title": "dolor",
-    "url": "accusamus",
-    "code": "molestias",
-    "category_id": 17,
-    "user_id": 1,
-    "poll_type_id": 13,
-    "open_to_everyone": "repudiandae",
-    "question": "ut",
-    "close_date": {},
-    "created_at": {},
-    "updated_at": {}
+    "title": "inventore",
+    "options": {
+        "A": "omnis",
+        "B": "fugiat",
+        "C": "magnam",
+        "D": "nam",
+        "E": "vitae"
+    },
+    "email": "dach.cornell@example.com",
+    "category_id": 12,
+    "user_id": 11,
+    "poll_type_id": 6,
+    "open_to_everyone": "eius",
+    "question": "aut",
+    "close_date": {}
 }
 
 fetch(url, {
@@ -138,16 +143,50 @@ fetch(url, {
 
 </p>
 <p>
-<b><code>url</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="url" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<details>
+<summary>
+<b><code>options</code></b>&nbsp;&nbsp;<small>object</small>     <i>optional</i> &nbsp;
+<br>
+
+</summary>
+<br>
+<p>
+<b><code>options.A</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.A" data-endpoint="POSTapi-polls" data-component="body"  hidden>
 <br>
 
 </p>
 <p>
-<b><code>code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="code" data-endpoint="POSTapi-polls" data-component="body" required  hidden>
+<b><code>options.B</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.B" data-endpoint="POSTapi-polls" data-component="body"  hidden>
 <br>
 
+</p>
+<p>
+<b><code>options.C</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.C" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+
+</p>
+<p>
+<b><code>options.D</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.D" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+
+</p>
+<p>
+<b><code>options.E</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="options.E" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+
+</p>
+</details>
+</p>
+<p>
+<b><code>email</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="email" data-endpoint="POSTapi-polls" data-component="body"  hidden>
+<br>
+The value must be a valid email address.
 </p>
 <p>
 <b><code>category_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
@@ -185,18 +224,6 @@ fetch(url, {
 <br>
 
 </p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-polls" data-component="body"  hidden>
-<br>
-
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-polls" data-component="body"  hidden>
-<br>
-
-</p>
 
 </form>
 
@@ -210,14 +237,14 @@ GET|HEAD /polls/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/polls/deleniti" \
+    -G "http://localhost/api/polls/hic" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/polls/deleniti"
+    "http://localhost/api/polls/hic"
 );
 
 let headers = {
@@ -233,12 +260,12 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (404):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Poll not found"
 }
 ```
 <div id="execution-results-GETapi-polls--poll-" hidden>
@@ -279,16 +306,16 @@ PUT/PATCH /polls/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/polls/architecto" \
+    "http://localhost/api/polls/animi" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"title":"voluptas","url":"cumque","code":"minima","category_id":18,"user_id":5,"poll_type_id":11,"open_to_everyone":"id","question":"deleniti","close_date":{},"created_at":{},"updated_at":{}}'
+    -d '{"title":"accusantium","url":"quod","code":"minima","category_id":15,"user_id":14,"poll_type_id":20,"open_to_everyone":"eius","question":"at","close_date":{},"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/polls/architecto"
+    "http://localhost/api/polls/animi"
 );
 
 let headers = {
@@ -297,14 +324,14 @@ let headers = {
 };
 
 let body = {
-    "title": "voluptas",
-    "url": "cumque",
+    "title": "accusantium",
+    "url": "quod",
     "code": "minima",
-    "category_id": 18,
-    "user_id": 5,
-    "poll_type_id": 11,
-    "open_to_everyone": "id",
-    "question": "deleniti",
+    "category_id": 15,
+    "user_id": 14,
+    "poll_type_id": 20,
+    "open_to_everyone": "eius",
+    "question": "at",
     "close_date": {},
     "created_at": {},
     "updated_at": {}
@@ -428,14 +455,14 @@ DELETE /polls/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/polls/eveniet" \
+    "http://localhost/api/polls/inventore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/polls/eveniet"
+    "http://localhost/api/polls/inventore"
 );
 
 let headers = {

@@ -21,17 +21,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $question
  * @property string|\Carbon\Carbon $close_date
  */
-class Poll extends Model
+class Poll extends AppModel
 {
 
     use HasFactory;
 
     public $table = 'polls';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-
 
 
     public $fillable = [
@@ -83,5 +81,11 @@ class Poll extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('Poll Picture')
+            ->singleFile();
+
+    }
+
 }

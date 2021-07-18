@@ -33,12 +33,32 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (200):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "name": "Yes \/ No",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "name": "1 - 5 Stars",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "name": "A - E Options",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "message": "Poll Types retrieved successfully"
 }
 ```
 <div id="execution-results-GETapi-poll_types" hidden>
@@ -75,7 +95,7 @@ curl -X POST \
     "http://localhost/api/poll_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"harum","created_at":{},"updated_at":{}}'
+    -d '{"name":"itaque","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +110,7 @@ let headers = {
 };
 
 let body = {
-    "name": "harum",
+    "name": "itaque",
     "created_at": {},
     "updated_at": {}
 }
@@ -154,14 +174,14 @@ GET|HEAD /pollTypes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/poll_types/aut" \
+    -G "http://localhost/api/poll_types/maiores" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types/aut"
+    "http://localhost/api/poll_types/maiores"
 );
 
 let headers = {
@@ -177,12 +197,12 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (404):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Poll Type not found"
 }
 ```
 <div id="execution-results-GETapi-poll_types--poll_type-" hidden>
@@ -223,16 +243,16 @@ PUT/PATCH /pollTypes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/poll_types/asperiores" \
+    "http://localhost/api/poll_types/quia" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"quo","created_at":{},"updated_at":{}}'
+    -d '{"name":"veniam","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types/asperiores"
+    "http://localhost/api/poll_types/quia"
 );
 
 let headers = {
@@ -241,7 +261,7 @@ let headers = {
 };
 
 let body = {
-    "name": "quo",
+    "name": "veniam",
     "created_at": {},
     "updated_at": {}
 }
@@ -316,14 +336,14 @@ DELETE /pollTypes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/poll_types/ut" \
+    "http://localhost/api/poll_types/rerum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types/ut"
+    "http://localhost/api/poll_types/rerum"
 );
 
 let headers = {

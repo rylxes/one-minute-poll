@@ -6,9 +6,11 @@ use App\Http\Requests\API\CreatePollAPIRequest;
 use App\Http\Requests\API\UpdatePollAPIRequest;
 use App\Models\Poll;
 use App\Repositories\PollRepository;
+use App\Traits\FilesTrait;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Resources\PollResource;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 /**
@@ -16,11 +18,13 @@ use Response;
  * @group Poll
  * @package App\Http\Controllers\API
  */
-
 class PollAPIController extends AppBaseController
 {
+    use FilesTrait;
+
     /** @var  PollRepository */
     private $pollRepository;
+    private $collectionName = 'Poll Picture';
 
     public function __construct(PollRepository $pollRepo)
     {
@@ -55,10 +59,31 @@ class PollAPIController extends AppBaseController
      */
     public function store(CreatePollAPIRequest $request)
     {
+
+        //email
+        //   'user_id' => 'nullable|integer',
+        DB::beginTransaction();
         $input = $request->all();
 
+        $input['code'] = $this->nextCode();
+        if (!empty(@$input['email'])) {
+            $input['name'] = 'New User';
+            $input['password'] = 'password';
+            $user = $this->createUser($input);
+            $input['user_id'] = $user->id;
+        }
         $poll = $this->pollRepository->create($input);
-
+        $__response = $this->uploadOneFile($request, $poll, $this->collectionName, 'file');
+        if (!$this->isFileSuccess && $this->hasFile) {
+            return $__response;
+        }
+        DB::commit();
+        if ($this->hasFile) {
+            $poll = $this->pollRepository->find($poll->id);
+            $mediaItems = $poll->getMedia($this->collectionName);
+            $input['url'] = $mediaItems[0]->getFullUrl();
+            $poll = $this->pollRepository->update($input, $poll->id);
+        }
         return $this->sendResponse(new PollResource($poll), 'Poll saved successfully');
     }
 
@@ -113,9 +138,9 @@ class PollAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {
@@ -126,6 +151,7 @@ class PollAPIController extends AppBaseController
             return $this->sendError('Poll not found');
         }
 
+        $this->deleteOneFile($poll, $this->collectionName);
         $poll->delete();
 
         return $this->sendSuccess('Poll deleted successfully');

@@ -33,12 +33,50 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (200):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "name": "General Opinion",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "name": "Lifestyle",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "name": "Politics",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "name": "Entertainment",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 5,
+            "name": "Sports",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "name": "Technology",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "message": "Categories retrieved successfully"
 }
 ```
 <div id="execution-results-GETapi-categories" hidden>
@@ -75,7 +113,7 @@ curl -X POST \
     "http://localhost/api/categories" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"nemo","created_at":{},"updated_at":{}}'
+    -d '{"name":"sint","created_at":{},"updated_at":{}}'
 
 ```
 
@@ -90,7 +128,7 @@ let headers = {
 };
 
 let body = {
-    "name": "nemo",
+    "name": "sint",
     "created_at": {},
     "updated_at": {}
 }
@@ -154,14 +192,14 @@ GET|HEAD /categories/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/categories/incidunt" \
+    -G "http://localhost/api/categories/suscipit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories/incidunt"
+    "http://localhost/api/categories/suscipit"
 );
 
 let headers = {
@@ -177,12 +215,12 @@ fetch(url, {
 ```
 
 
-> Example response (401):
+> Example response (404):
 
 ```json
 {
-    "message": "Unauthorized",
-    "status": 401
+    "success": false,
+    "message": "Category not found"
 }
 ```
 <div id="execution-results-GETapi-categories--category-" hidden>
@@ -223,16 +261,16 @@ PUT/PATCH /categories/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/categories/eos" \
+    "http://localhost/api/categories/accusantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"corporis","created_at":{},"updated_at":{}}'
+    -d '{"name":"labore","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories/eos"
+    "http://localhost/api/categories/accusantium"
 );
 
 let headers = {
@@ -241,7 +279,7 @@ let headers = {
 };
 
 let body = {
-    "name": "corporis",
+    "name": "labore",
     "created_at": {},
     "updated_at": {}
 }
@@ -316,14 +354,14 @@ DELETE /categories/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/categories/nesciunt" \
+    "http://localhost/api/categories/totam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories/nesciunt"
+    "http://localhost/api/categories/totam"
 );
 
 let headers = {

@@ -39,19 +39,14 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
-
-
-        Route::resource('polls', App\Http\Controllers\API\PollAPIController::class);
-
-        Route::resource('categories', App\Http\Controllers\API\CategoryAPIController::class);
-
-        Route::resource('poll_types', App\Http\Controllers\API\PollTypeAPIController::class);
-
-        Route::resource('votes', App\Http\Controllers\API\VoteAPIController::class);
-
-        Route::resource('vote_values', App\Http\Controllers\API\VoteValueAPIController::class);
-
     });
+
+
+    Route::resource('polls', App\Http\Controllers\API\PollAPIController::class);
+    Route::resource('categories', App\Http\Controllers\API\CategoryAPIController::class);
+    Route::resource('poll_types', App\Http\Controllers\API\PollTypeAPIController::class);
+    Route::resource('votes', App\Http\Controllers\API\VoteAPIController::class);
+    Route::resource('vote_values', App\Http\Controllers\API\VoteValueAPIController::class);
 
 });
 
@@ -65,3 +60,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
 
+
+
+Route::resource('poll_options', App\Http\Controllers\API\PollOptionAPIController::class);
