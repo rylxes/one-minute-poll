@@ -59,12 +59,12 @@ trait FilesTrait
         return $xstring;
     }
 
-    public function nextCode()
+    public function nextCode($model)
     {
         $code = $this->generateRandomString(10, 'ALPHANUM');
-        $poll = Poll::where('code', $code)->get();
+        $poll = $model->where('code', $code)->get();
         if (!$poll->isEmpty()) {
-            return $this->nextCode();
+            return $this->nextCode($model);
         }
         return $code;
     }
@@ -73,8 +73,11 @@ trait FilesTrait
     {
         $user = User::where('email', $data['email'])->first();
         if (empty($user)) {
+            $user = new User();
+            $code = $this->nextCode($user);
             $array = [
                 'name' => $data['name'],
+                'code' => $code,
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
             ];

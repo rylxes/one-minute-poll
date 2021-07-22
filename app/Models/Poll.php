@@ -88,4 +88,20 @@ class Poll extends AppModel
 
     }
 
+
+    public function pollOptions()
+    {
+        return $this->hasOne(PollOption::class, 'poll_id');
+    }
+
+    public function votes()
+    {
+        return $this->hasOne(Vote::class, 'poll_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
 }

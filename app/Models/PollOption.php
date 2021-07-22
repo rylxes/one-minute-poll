@@ -22,11 +22,9 @@ class PollOption extends Model
     use HasFactory;
 
     public $table = 'poll_options';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
-
-
 
 
     public $fillable = [
@@ -63,5 +61,10 @@ class PollOption extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+    public function poll()
+    {
+        return $this->belongsTo(Poll::Class, 'poll_id');
+    }
+
+
 }

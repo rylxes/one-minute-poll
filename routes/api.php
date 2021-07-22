@@ -20,10 +20,12 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     });
 
 
+
 /// AUTH ROUTES
 
 
     Route::post('login', 'App\Http\Controllers\API\Auth\LoginController@login');
+    Route::post('codeLogin', 'App\Http\Controllers\API\Auth\LoginController@codeLogin');
     Route::post('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('logout');
     Route::get('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('api.logout');
     Route::post('register', 'App\Http\Controllers\API\Auth\RegisterController@register');
@@ -42,6 +44,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     });
 
 
+    Route::post('polls/mine', 'App\Http\Controllers\API\PollAPIController@mine');
     Route::resource('polls', App\Http\Controllers\API\PollAPIController::class);
     Route::resource('categories', App\Http\Controllers\API\CategoryAPIController::class);
     Route::resource('poll_types', App\Http\Controllers\API\PollTypeAPIController::class);
@@ -49,17 +52,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::resource('vote_values', App\Http\Controllers\API\VoteValueAPIController::class);
 
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 Route::resource('poll_options', App\Http\Controllers\API\PollOptionAPIController::class);

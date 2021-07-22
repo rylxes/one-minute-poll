@@ -21,7 +21,7 @@ class Vote extends Model
     use HasFactory;
 
     public $table = 'votes';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -59,5 +59,10 @@ class Vote extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+
+    public function pollValue()
+    {
+        return $this->belongsTo(VoteValue::class, 'poll_value_id');
+    }
+
 }

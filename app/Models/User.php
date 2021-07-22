@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\CustomVerifyEmail;
 use App\Notifications\ResetPasswordNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,7 +13,7 @@ use Spatie\Permission\Traits\HasRoles;
 use Laravel\Passport\HasApiTokens;
 use Rinvex\Subscriptions\Traits\HasSubscriptions;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
     use HasRoles;
@@ -27,6 +28,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'code',
         'two_factor_secret',
         'has2fa',
         'email',
@@ -50,7 +52,7 @@ class User extends Authenticatable
     /**
      * Ecrypt the user's google_2fa secret.
      *
-     * @param  string  $value
+     * @param string $value
      * @return string
      */
     public function setTwoFactorSecretAttribute($value)
@@ -62,7 +64,7 @@ class User extends Authenticatable
     /**
      * Decrypt the user's google_2fa secret.
      *
-     * @param  string  $value
+     * @param string $value
      * @return string
      */
     public function getTwoFactorAttribute()
@@ -74,7 +76,7 @@ class User extends Authenticatable
     /**
      * Decrypt the user's google_2fa secret.
      *
-     * @param  string  $value
+     * @param string $value
      * @return string
      */
     public function getTwoFactorSecretAttribute($value)
@@ -114,7 +116,12 @@ class User extends Authenticatable
 
     public function sendPasswordResetNotification($token)
     {
-       // $url = 'https://example.com/reset-password?token='.$token;
+        // $url = 'https://example.com/reset-password?token='.$token;
         $this->notify(new ResetPasswordNotification($token));
+    }
+
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new CustomVerifyEmail);
     }
 }

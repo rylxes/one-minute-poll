@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\API\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\API\CodeLoginRequest;
 use App\Http\Requests\API\LoginRequest;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Traits\ResponseTrait;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -98,6 +100,33 @@ class LoginController extends Controller
     }
 
 
+    //public function login(Request $request)
+    public function codeLogin(CodeLoginRequest $request)
+    {
+
+        if (method_exists($this, 'hasTooManyLoginAttempts') &&
+            $this->hasTooManyLoginAttempts($request)) {
+            $this->fireLockoutEvent($request);
+
+            return $this->sendLockoutResponse($request);
+        }
+
+        $input = $request->input();
+        $user = User::where('code', $input['code'])->first();
+        if (!empty($user)) {
+            Auth::login($user);
+            return $this->sendLoginResponse($request);
+        }
+
+        // If the login attempt was unsuccessful we will increment the number of attempts
+        // to login and redirect the user back to the login form. Of course, when this
+        // user surpasses their maximum number of attempts they will get locked out.
+        $this->incrementLoginAttempts($request);
+
+        return $this->sendFailedLoginResponse($request);
+    }
+
+
     /**
      * Log the user out of the application.
      *
@@ -124,28 +153,22 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        if(!$user->theCompany()->exists()){
-            throw ValidationException::withMessages([
-                $this->username() => ['You are not attached to a company'],
-            ]);
-        }
-
         // 0 = inActive
         // 2 = Locked
         // 3 = Deleted
-        if($user->status == 0){
+        if ($user->status == 0) {
             throw ValidationException::withMessages([
                 $this->username() => ['This user is inactive'],
             ]);
         }
 
-        if($user->status == 2){
+        if ($user->status == 2) {
             throw ValidationException::withMessages([
                 $this->username() => ['This user is locked'],
             ]);
         }
 
-        if($user->status == 3){
+        if ($user->status == 3) {
             throw ValidationException::withMessages([
                 $this->username() => ['This user has been deleted'],
             ]);
@@ -169,7 +192,7 @@ class LoginController extends Controller
             $secret = $request->input('secret');
             $window = 8; // 8 keys (respectively 4 minutes) past and future
             $valid = $google2fa->verifyKey($user->two_factor_secret, $secret, $window);
-            if(!$valid){
+            if (!$valid) {
                 $message = "Invalid Authentication code !";
                 return $this->sendError($message);
             }
@@ -181,9 +204,7 @@ class LoginController extends Controller
 
         $data = new \stdClass();
         $data->user = $user;
-        $data->companies = $user->theCompany;
         $data->accessToken = $this->accessToken;
-
         $message = 'Successful Login';
         return $this->sendResponse($data, $message);
     }
