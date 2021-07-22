@@ -104,4 +104,14 @@ class Poll extends AppModel
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function pollType()
+    {
+        return $this->belongsTo(PollType::class, 'poll_type_id');
+    }
+
 }
