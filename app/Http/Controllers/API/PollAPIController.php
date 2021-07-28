@@ -53,6 +53,7 @@ class PollAPIController extends AppBaseController
 
     public function mine(Request $request)
     {
+
         $userCheck = Auth::guard('api')->check();
         if (!$userCheck) {
             return $this->sendResponse([], 'Polls retrieved successfully');
