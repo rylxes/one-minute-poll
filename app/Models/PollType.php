@@ -19,7 +19,7 @@ class PollType extends Model
     use HasFactory;
 
     public $table = 'poll_types';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -51,5 +51,11 @@ class PollType extends Model
         'updated_at' => 'nullable'
     ];
 
-    
+
+    public function valueVote()
+    {
+        return $this->hasMany(VoteValue::class, 'poll_type_id');
+    }
+
+
 }

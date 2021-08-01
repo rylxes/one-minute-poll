@@ -5,6 +5,8 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
+use Maher\Counters\Traits\HasCounter;
 
 /**
  * Class Vote
@@ -26,12 +28,11 @@ class Vote extends Model
     const UPDATED_AT = 'updated_at';
 
 
-
-
     public $fillable = [
         'poll_id',
-        'unique_id',
-        'poll_value_id'
+        'uuid',
+        'user_id',
+        'value'
     ];
 
     /**
@@ -43,7 +44,7 @@ class Vote extends Model
         'id' => 'integer',
         'poll_id' => 'integer',
         'unique_id' => 'string',
-        'poll_value_id' => 'integer'
+        'value' => 'string'
     ];
 
     /**
@@ -52,12 +53,25 @@ class Vote extends Model
      * @var array
      */
     public static $rules = [
-        'poll_id' => 'required|integer',
-        'unique_id' => 'nullable|string|max:255',
-        'poll_value_id' => 'required|integer',
-        'created_at' => 'nullable',
-        'updated_at' => 'nullable'
+        'poll_id' => 'required',
+        'uuid' => 'nullable|string|max:255',
+        'value' => 'required',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        self::creating(function ($model) {
+            if (Auth::guard('api')->check()) {
+                $model->user_id = Auth::guard('api')->user()->id;
+            }
+        });
+        self::saving(function ($model) {
+            if (Auth::guard('api')->check()) {
+                $model->user_id = Auth::guard('api')->user()->id;
+            }
+        });
+    }
 
 
     public function pollValue()

@@ -10,14 +10,14 @@ GET|HEAD /pollTypes
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/poll_types" \
+    -G "http://poll.loc/api/poll_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types"
+    "http://poll.loc/api/poll_types"
 );
 
 let headers = {
@@ -92,16 +92,16 @@ POST /pollTypes
 
 ```bash
 curl -X POST \
-    "http://localhost/api/poll_types" \
+    "http://poll.loc/api/poll_types" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"itaque","created_at":{},"updated_at":{}}'
+    -d '{"name":"sit","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types"
+    "http://poll.loc/api/poll_types"
 );
 
 let headers = {
@@ -110,7 +110,7 @@ let headers = {
 };
 
 let body = {
-    "name": "itaque",
+    "name": "sit",
     "created_at": {},
     "updated_at": {}
 }
@@ -174,14 +174,14 @@ GET|HEAD /pollTypes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/poll_types/maiores" \
+    -G "http://poll.loc/api/poll_types/accusantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types/maiores"
+    "http://poll.loc/api/poll_types/accusantium"
 );
 
 let headers = {
@@ -243,16 +243,16 @@ PUT/PATCH /pollTypes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/poll_types/quia" \
+    "http://poll.loc/api/poll_types/tempora" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"veniam","created_at":{},"updated_at":{}}'
+    -d '{"name":"rerum","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types/quia"
+    "http://poll.loc/api/poll_types/tempora"
 );
 
 let headers = {
@@ -261,7 +261,7 @@ let headers = {
 };
 
 let body = {
-    "name": "veniam",
+    "name": "rerum",
     "created_at": {},
     "updated_at": {}
 }
@@ -336,14 +336,14 @@ DELETE /pollTypes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/poll_types/rerum" \
+    "http://poll.loc/api/poll_types/molestias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_types/rerum"
+    "http://poll.loc/api/poll_types/molestias"
 );
 
 let headers = {

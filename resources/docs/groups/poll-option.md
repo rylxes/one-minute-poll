@@ -1,23 +1,23 @@
 # Poll Option
 
 
-## Display a listing of the PollOption.
+## api/poll_options/byPoll/{id}
 
 
-GET|HEAD /pollOptions
+
 
 > Example request:
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/poll_options" \
+    -G "http://poll.loc/api/poll_options/byPoll/molestiae" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_options"
+    "http://poll.loc/api/poll_options/byPoll/molestiae"
 );
 
 let headers = {
@@ -39,6 +39,179 @@ fetch(url, {
 {
     "success": true,
     "data": [],
+    "message": "Poll retrieved successfully"
+}
+```
+<div id="execution-results-GETapi-poll_options-byPoll--id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-poll_options-byPoll--id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-poll_options-byPoll--id-"></code></pre>
+</div>
+<div id="execution-error-GETapi-poll_options-byPoll--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-poll_options-byPoll--id-"></code></pre>
+</div>
+<form id="form-GETapi-poll_options-byPoll--id-" data-method="GET" data-path="api/poll_options/byPoll/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-poll_options-byPoll--id-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-poll_options-byPoll--id-" onclick="tryItOut('GETapi-poll_options-byPoll--id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-poll_options-byPoll--id-" onclick="cancelTryOut('GETapi-poll_options-byPoll--id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-poll_options-byPoll--id-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/poll_options/byPoll/{id}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-poll_options-byPoll--id-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+
+
+## Display a listing of the PollOption.
+
+
+GET|HEAD /pollOptions
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/api/poll_options" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/api/poll_options"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "counters": null,
+            "poll_id": 1,
+            "name": "A",
+            "value": "qq",
+            "count": 0,
+            "created_at": "2021-07-31T23:22:12.000000Z",
+            "updated_at": "2021-07-31T23:22:12.000000Z"
+        },
+        {
+            "id": 2,
+            "counters": null,
+            "poll_id": 1,
+            "name": "B",
+            "value": "ww",
+            "count": 0,
+            "created_at": "2021-07-31T23:22:12.000000Z",
+            "updated_at": "2021-07-31T23:22:12.000000Z"
+        },
+        {
+            "id": 3,
+            "counters": null,
+            "poll_id": 1,
+            "name": "C",
+            "value": "ee",
+            "count": 0,
+            "created_at": "2021-07-31T23:22:12.000000Z",
+            "updated_at": "2021-07-31T23:22:12.000000Z"
+        },
+        {
+            "id": 4,
+            "counters": null,
+            "poll_id": 1,
+            "name": "D",
+            "value": "bb",
+            "count": 0,
+            "created_at": "2021-07-31T23:22:12.000000Z",
+            "updated_at": "2021-07-31T23:22:12.000000Z"
+        },
+        {
+            "id": 5,
+            "counters": {
+                "counterable_id": 5,
+                "counter_id": 1,
+                "counterable_type": "App\\Models\\PollOption",
+                "value": 3,
+                "id": 1
+            },
+            "poll_id": 8,
+            "name": "1",
+            "value": "1",
+            "count": 0,
+            "created_at": "2021-07-31T23:28:53.000000Z",
+            "updated_at": "2021-07-31T23:28:53.000000Z"
+        },
+        {
+            "id": 6,
+            "counters": {
+                "counterable_id": 6,
+                "counter_id": 1,
+                "counterable_type": "App\\Models\\PollOption",
+                "value": 1,
+                "id": 3
+            },
+            "poll_id": 8,
+            "name": "2",
+            "value": "2",
+            "count": 0,
+            "created_at": "2021-07-31T23:28:53.000000Z",
+            "updated_at": "2021-07-31T23:28:53.000000Z"
+        },
+        {
+            "id": 7,
+            "counters": null,
+            "poll_id": 8,
+            "name": "3",
+            "value": "3",
+            "count": 0,
+            "created_at": "2021-07-31T23:28:53.000000Z",
+            "updated_at": "2021-07-31T23:28:53.000000Z"
+        },
+        {
+            "id": 8,
+            "counters": null,
+            "poll_id": 8,
+            "name": "4",
+            "value": "4",
+            "count": 0,
+            "created_at": "2021-07-31T23:28:53.000000Z",
+            "updated_at": "2021-07-31T23:28:53.000000Z"
+        },
+        {
+            "id": 9,
+            "counters": null,
+            "poll_id": 8,
+            "name": "5",
+            "value": "5",
+            "count": 0,
+            "created_at": "2021-07-31T23:28:53.000000Z",
+            "updated_at": "2021-07-31T23:28:53.000000Z"
+        }
+    ],
     "message": "Poll Options retrieved successfully"
 }
 ```
@@ -73,16 +246,16 @@ POST /pollOptions
 
 ```bash
 curl -X POST \
-    "http://localhost/api/poll_options" \
+    "http://poll.loc/api/poll_options" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":20,"name":"repellendus","value":"molestias","count":9,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":17,"name":"porro","value":"debitis","count":18,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_options"
+    "http://poll.loc/api/poll_options"
 );
 
 let headers = {
@@ -91,10 +264,10 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 20,
-    "name": "repellendus",
-    "value": "molestias",
-    "count": 9,
+    "poll_id": 17,
+    "name": "porro",
+    "value": "debitis",
+    "count": 18,
     "created_at": {},
     "updated_at": {}
 }
@@ -176,14 +349,14 @@ GET|HEAD /pollOptions/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/poll_options/fugit" \
+    -G "http://poll.loc/api/poll_options/nobis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_options/fugit"
+    "http://poll.loc/api/poll_options/nobis"
 );
 
 let headers = {
@@ -245,16 +418,16 @@ PUT/PATCH /pollOptions/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/poll_options/sint" \
+    "http://poll.loc/api/poll_options/sit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":19,"name":"est","value":"aut","count":14,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":17,"name":"odio","value":"est","count":2,"created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_options/sint"
+    "http://poll.loc/api/poll_options/sit"
 );
 
 let headers = {
@@ -263,10 +436,10 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 19,
-    "name": "est",
-    "value": "aut",
-    "count": 14,
+    "poll_id": 17,
+    "name": "odio",
+    "value": "est",
+    "count": 2,
     "created_at": {},
     "updated_at": {}
 }
@@ -359,14 +532,14 @@ DELETE /pollOptions/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/poll_options/quia" \
+    "http://poll.loc/api/poll_options/velit" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/poll_options/quia"
+    "http://poll.loc/api/poll_options/velit"
 );
 
 let headers = {

@@ -1,6 +1,340 @@
 # Endpoints
 
 
+## counters/increment/{counter}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/counters/increment/labore" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/counters/increment/labore"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (500):
+
+```json
+{
+    "message": "Whoops, looks like something went wrong",
+    "status": 500
+}
+```
+<div id="execution-results-GETcounters-increment--counter-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETcounters-increment--counter-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETcounters-increment--counter-"></code></pre>
+</div>
+<div id="execution-error-GETcounters-increment--counter-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETcounters-increment--counter-"></code></pre>
+</div>
+<form id="form-GETcounters-increment--counter-" data-method="GET" data-path="counters/increment/{counter}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETcounters-increment--counter-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETcounters-increment--counter-" onclick="tryItOut('GETcounters-increment--counter-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETcounters-increment--counter-" onclick="cancelTryOut('GETcounters-increment--counter-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETcounters-increment--counter-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>counters/increment/{counter}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>counter</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="counter" data-endpoint="GETcounters-increment--counter-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+
+
+## counters/decrement/{counter}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/counters/decrement/earum" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/counters/decrement/earum"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (500):
+
+```json
+{
+    "message": "Whoops, looks like something went wrong",
+    "status": 500
+}
+```
+<div id="execution-results-GETcounters-decrement--counter-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETcounters-decrement--counter-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETcounters-decrement--counter-"></code></pre>
+</div>
+<div id="execution-error-GETcounters-decrement--counter-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETcounters-decrement--counter-"></code></pre>
+</div>
+<form id="form-GETcounters-decrement--counter-" data-method="GET" data-path="counters/decrement/{counter}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETcounters-decrement--counter-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETcounters-decrement--counter-" onclick="tryItOut('GETcounters-decrement--counter-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETcounters-decrement--counter-" onclick="cancelTryOut('GETcounters-decrement--counter-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETcounters-decrement--counter-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>counters/decrement/{counter}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>counter</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="counter" data-endpoint="GETcounters-decrement--counter-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+
+
+## counters/counterable/increment/{counterable}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/counters/counterable/increment/sint" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/counters/counterable/increment/sint"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (400):
+
+```json
+{
+    "counter Not Found": true
+}
+```
+<div id="execution-results-GETcounters-counterable-increment--counterable-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETcounters-counterable-increment--counterable-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETcounters-counterable-increment--counterable-"></code></pre>
+</div>
+<div id="execution-error-GETcounters-counterable-increment--counterable-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETcounters-counterable-increment--counterable-"></code></pre>
+</div>
+<form id="form-GETcounters-counterable-increment--counterable-" data-method="GET" data-path="counters/counterable/increment/{counterable}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETcounters-counterable-increment--counterable-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETcounters-counterable-increment--counterable-" onclick="tryItOut('GETcounters-counterable-increment--counterable-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETcounters-counterable-increment--counterable-" onclick="cancelTryOut('GETcounters-counterable-increment--counterable-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETcounters-counterable-increment--counterable-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>counters/counterable/increment/{counterable}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>counterable</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="counterable" data-endpoint="GETcounters-counterable-increment--counterable-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+
+
+## counters/counterable/decrement/{counterable}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/counters/counterable/decrement/enim" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/counters/counterable/decrement/enim"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (400):
+
+```json
+{
+    "counter Not Found": true
+}
+```
+<div id="execution-results-GETcounters-counterable-decrement--counterable-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETcounters-counterable-decrement--counterable-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETcounters-counterable-decrement--counterable-"></code></pre>
+</div>
+<div id="execution-error-GETcounters-counterable-decrement--counterable-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETcounters-counterable-decrement--counterable-"></code></pre>
+</div>
+<form id="form-GETcounters-counterable-decrement--counterable-" data-method="GET" data-path="counters/counterable/decrement/{counterable}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETcounters-counterable-decrement--counterable-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETcounters-counterable-decrement--counterable-" onclick="tryItOut('GETcounters-counterable-decrement--counterable-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETcounters-counterable-decrement--counterable-" onclick="cancelTryOut('GETcounters-counterable-decrement--counterable-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETcounters-counterable-decrement--counterable-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>counters/counterable/decrement/{counterable}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>counterable</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="counterable" data-endpoint="GETcounters-counterable-decrement--counterable-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+
+
+## counters
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/counters" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/counters"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+
+<h3>Hello From Counters package</h3>
+```
+<div id="execution-results-GETcounters" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETcounters"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETcounters"></code></pre>
+</div>
+<div id="execution-error-GETcounters" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETcounters"></code></pre>
+</div>
+<form id="form-GETcounters" data-method="GET" data-path="counters" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETcounters', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETcounters" onclick="tryItOut('GETcounters');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETcounters" onclick="cancelTryOut('GETcounters');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETcounters" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>counters</code></b>
+</p>
+</form>
+
+
 ## Authorize a client to access the user&#039;s account.
 
 
@@ -10,14 +344,14 @@
 
 ```bash
 curl -X GET \
-    -G "http://localhost/oauth/authorize" \
+    -G "http://poll.loc/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/authorize"
+    "http://poll.loc/oauth/authorize"
 );
 
 let headers = {
@@ -72,14 +406,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/oauth/authorize" \
+    "http://poll.loc/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/authorize"
+    "http://poll.loc/oauth/authorize"
 );
 
 let headers = {
@@ -126,14 +460,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/authorize" \
+    "http://poll.loc/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/authorize"
+    "http://poll.loc/oauth/authorize"
 );
 
 let headers = {
@@ -180,14 +514,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/oauth/token" \
+    "http://poll.loc/oauth/token" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/token"
+    "http://poll.loc/oauth/token"
 );
 
 let headers = {
@@ -234,14 +568,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/oauth/tokens" \
+    -G "http://poll.loc/oauth/tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/tokens"
+    "http://poll.loc/oauth/tokens"
 );
 
 let headers = {
@@ -296,14 +630,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/tokens/possimus" \
+    "http://poll.loc/oauth/tokens/aperiam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/tokens/possimus"
+    "http://poll.loc/oauth/tokens/aperiam"
 );
 
 let headers = {
@@ -357,14 +691,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/oauth/token/refresh" \
+    "http://poll.loc/oauth/token/refresh" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/token/refresh"
+    "http://poll.loc/oauth/token/refresh"
 );
 
 let headers = {
@@ -411,14 +745,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/oauth/clients" \
+    -G "http://poll.loc/oauth/clients" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients"
+    "http://poll.loc/oauth/clients"
 );
 
 let headers = {
@@ -473,14 +807,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/oauth/clients" \
+    "http://poll.loc/oauth/clients" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients"
+    "http://poll.loc/oauth/clients"
 );
 
 let headers = {
@@ -527,14 +861,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost/oauth/clients/laborum" \
+    "http://poll.loc/oauth/clients/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/laborum"
+    "http://poll.loc/oauth/clients/qui"
 );
 
 let headers = {
@@ -588,14 +922,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/clients/labore" \
+    "http://poll.loc/oauth/clients/assumenda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/clients/labore"
+    "http://poll.loc/oauth/clients/assumenda"
 );
 
 let headers = {
@@ -649,14 +983,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/oauth/scopes" \
+    -G "http://poll.loc/oauth/scopes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/scopes"
+    "http://poll.loc/oauth/scopes"
 );
 
 let headers = {
@@ -711,14 +1045,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/oauth/personal-access-tokens" \
+    -G "http://poll.loc/oauth/personal-access-tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens"
+    "http://poll.loc/oauth/personal-access-tokens"
 );
 
 let headers = {
@@ -773,14 +1107,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/oauth/personal-access-tokens" \
+    "http://poll.loc/oauth/personal-access-tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens"
+    "http://poll.loc/oauth/personal-access-tokens"
 );
 
 let headers = {
@@ -827,14 +1161,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost/oauth/personal-access-tokens/alias" \
+    "http://poll.loc/oauth/personal-access-tokens/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/oauth/personal-access-tokens/alias"
+    "http://poll.loc/oauth/personal-access-tokens/et"
 );
 
 let headers = {
@@ -888,14 +1222,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/user" \
+    -G "http://poll.loc/api/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user"
+    "http://poll.loc/api/user"
 );
 
 let headers = {
@@ -950,14 +1284,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/" \
+    -G "http://poll.loc/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/"
+    "http://poll.loc/"
 );
 
 let headers = {
@@ -1012,14 +1346,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/home" \
+    -G "http://poll.loc/home" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/home"
+    "http://poll.loc/home"
 );
 
 let headers = {
@@ -1061,6 +1395,197 @@ fetch(url, {
 <p>
 <small class="badge badge-green">GET</small>
  <b><code>home</code></b>
+</p>
+</form>
+
+
+## email/verify
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/email/verify" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/email/verify"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETemail-verify" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETemail-verify"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETemail-verify"></code></pre>
+</div>
+<div id="execution-error-GETemail-verify" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETemail-verify"></code></pre>
+</div>
+<form id="form-GETemail-verify" data-method="GET" data-path="email/verify" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETemail-verify', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETemail-verify" onclick="tryItOut('GETemail-verify');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETemail-verify" onclick="cancelTryOut('GETemail-verify');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETemail-verify" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>email/verify</code></b>
+</p>
+</form>
+
+
+## email/verify/{id}/{hash}
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://poll.loc/email/verify/consequatur/dolorum" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/email/verify/consequatur/dolorum"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthorized",
+    "status": 401
+}
+```
+<div id="execution-results-GETemail-verify--id---hash-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETemail-verify--id---hash-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETemail-verify--id---hash-"></code></pre>
+</div>
+<div id="execution-error-GETemail-verify--id---hash-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETemail-verify--id---hash-"></code></pre>
+</div>
+<form id="form-GETemail-verify--id---hash-" data-method="GET" data-path="email/verify/{id}/{hash}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETemail-verify--id---hash-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETemail-verify--id---hash-" onclick="tryItOut('GETemail-verify--id---hash-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETemail-verify--id---hash-" onclick="cancelTryOut('GETemail-verify--id---hash-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETemail-verify--id---hash-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>email/verify/{id}/{hash}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETemail-verify--id---hash-" data-component="url" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>hash</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="hash" data-endpoint="GETemail-verify--id---hash-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+
+
+## email/verification-notification
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://poll.loc/email/verification-notification" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/email/verification-notification"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTemail-verification-notification" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTemail-verification-notification"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTemail-verification-notification"></code></pre>
+</div>
+<div id="execution-error-POSTemail-verification-notification" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTemail-verification-notification"></code></pre>
+</div>
+<form id="form-POSTemail-verification-notification" data-method="POST" data-path="email/verification-notification" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTemail-verification-notification', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTemail-verification-notification" onclick="tryItOut('POSTemail-verification-notification');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTemail-verification-notification" onclick="cancelTryOut('POSTemail-verification-notification');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTemail-verification-notification" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>email/verification-notification</code></b>
 </p>
 </form>
 

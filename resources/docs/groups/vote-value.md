@@ -10,14 +10,14 @@ GET|HEAD /voteValues
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/vote_values" \
+    -G "http://poll.loc/api/vote_values" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values"
+    "http://poll.loc/api/vote_values"
 );
 
 let headers = {
@@ -170,16 +170,16 @@ POST /voteValues
 
 ```bash
 curl -X POST \
-    "http://localhost/api/vote_values" \
+    "http://poll.loc/api/vote_values" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_type_id":2,"name":"voluptatum","value":"est","created_at":{},"updated_at":{}}'
+    -d '{"poll_type_id":5,"name":"repellendus","value":"sed","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values"
+    "http://poll.loc/api/vote_values"
 );
 
 let headers = {
@@ -188,9 +188,9 @@ let headers = {
 };
 
 let body = {
-    "poll_type_id": 2,
-    "name": "voluptatum",
-    "value": "est",
+    "poll_type_id": 5,
+    "name": "repellendus",
+    "value": "sed",
     "created_at": {},
     "updated_at": {}
 }
@@ -266,14 +266,14 @@ GET|HEAD /voteValues/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/vote_values/dignissimos" \
+    -G "http://poll.loc/api/vote_values/porro" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values/dignissimos"
+    "http://poll.loc/api/vote_values/porro"
 );
 
 let headers = {
@@ -335,7 +335,7 @@ PUT/PATCH /voteValues/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/vote_values/sed" \
+    "http://poll.loc/api/vote_values/placeat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"poll_type_id":5,"name":"molestiae","value":"est","created_at":{},"updated_at":{}}'
@@ -344,7 +344,7 @@ curl -X PUT \
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values/sed"
+    "http://poll.loc/api/vote_values/placeat"
 );
 
 let headers = {
@@ -442,14 +442,14 @@ DELETE /voteValues/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/vote_values/vitae" \
+    "http://poll.loc/api/vote_values/explicabo" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/vote_values/vitae"
+    "http://poll.loc/api/vote_values/explicabo"
 );
 
 let headers = {

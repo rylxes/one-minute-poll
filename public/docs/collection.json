@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "localhost"
+            "value": "poll.loc"
         }
     ],
     "info": {
         "name": "One minute poll API Documentation",
-        "_postman_id": "18081150-06aa-4aef-868c-74b2d690e2d8",
+        "_postman_id": "7dddd5c7-5658-4189-9b1b-15a93a99c702",
         "description": "One minute poll API Documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,39 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"keira92@example.org\",\n    \"secret\": {},\n    \"password\": \"aut\"\n}"
+                            "raw": "{\n    \"email\": \"kgrimes@example.net\",\n    \"secret\": {},\n    \"password\": \"aut\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/codeLogin",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/codeLogin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/codeLogin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"code\": \"aut\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -164,7 +196,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"first_name\": \"laborum\",\n    \"last_name\": \"omnis\",\n    \"company_name\": \"qui\",\n    \"company_phone\": \"alias\",\n    \"company_description\": \"nihil\",\n    \"has2fa\": false,\n    \"email\": \"brock39@example.net\",\n    \"password\": \"accusamus\",\n    \"password_confirmation\": \"non\"\n}"
+                            "raw": "{\n    \"first_name\": \"et\",\n    \"last_name\": \"qui\",\n    \"company_name\": \"sequi\",\n    \"company_phone\": \"labore\",\n    \"company_description\": \"itaque\",\n    \"has2fa\": false,\n    \"email\": \"rogahn.mona@example.net\",\n    \"password\": \"voluptas\",\n    \"password_confirmation\": \"in\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -186,7 +218,7 @@
                                 {
                                     "id": "token",
                                     "key": "token",
-                                    "value": "tenetur",
+                                    "value": "facere",
                                     "description": ""
                                 }
                             ]
@@ -222,7 +254,7 @@
                                         {
                                             "id": "token",
                                             "key": "token",
-                                            "value": "tenetur",
+                                            "value": "facere",
                                             "description": ""
                                         }
                                     ]
@@ -292,13 +324,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "fugit",
+                                    "value": "adipisci",
                                     "description": ""
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "eveniet",
+                                    "value": "tempore",
                                     "description": ""
                                 }
                             ]
@@ -334,13 +366,13 @@
                                         {
                                             "id": "id",
                                             "key": "id",
-                                            "value": "fugit",
+                                            "value": "adipisci",
                                             "description": ""
                                         },
                                         {
                                             "id": "hash",
                                             "key": "hash",
-                                            "value": "eveniet",
+                                            "value": "tempore",
                                             "description": ""
                                         }
                                     ]
@@ -420,7 +452,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"jalyn74@example.com\",\n    \"base_url\": \"et\"\n}"
+                            "raw": "{\n    \"email\": \"bednar.lawrence@example.org\",\n    \"base_url\": \"architecto\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -452,7 +484,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"token\": \"ut\",\n    \"email\": \"ullrich.grover@example.com\",\n    \"password\": \"quaerat\"\n}"
+                            "raw": "{\n    \"token\": \"dolor\",\n    \"email\": \"dion45@example.org\",\n    \"password\": \"nostrum\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -484,7 +516,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"company_id\": \"commodi\",\n    \"user_id\": {},\n    \"is_user\": false,\n    \"name\": \"cum\",\n    \"has2fa\": false,\n    \"email\": \"gardner.heller@example.net\",\n    \"password\": \"adipisci\",\n    \"password_confirmation\": \"numquam\"\n}"
+                            "raw": "{\n    \"company_id\": \"quia\",\n    \"user_id\": {},\n    \"is_user\": false,\n    \"name\": \"aut\",\n    \"has2fa\": false,\n    \"email\": \"ncasper@example.org\",\n    \"password\": \"ut\",\n    \"password_confirmation\": \"nostrum\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -516,7 +548,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"berneice96@example.net\",\n    \"old_password\": \"quod\",\n    \"password\": \"quis\"\n}"
+                            "raw": "{\n    \"email\": \"bgreenholt@example.com\",\n    \"old_password\": \"sunt\",\n    \"password\": \"non\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -615,7 +647,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sint\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"name\": \"quo\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "POST \/categories",
                         "auth": {
@@ -637,7 +669,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "suscipit",
+                                    "value": "veritatis",
                                     "description": ""
                                 }
                             ]
@@ -673,7 +705,7 @@
                                         {
                                             "id": "category",
                                             "key": "category",
-                                            "value": "suscipit",
+                                            "value": "veritatis",
                                             "description": ""
                                         }
                                     ]
@@ -714,7 +746,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "accusantium",
+                                    "value": "corporis",
                                     "description": ""
                                 }
                             ]
@@ -732,7 +764,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"labore\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"name\": \"magni\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "PUT\/PATCH \/categories\/{id}",
                         "auth": {
@@ -754,7 +786,7 @@
                                 {
                                     "id": "category",
                                     "key": "category",
-                                    "value": "totam",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -784,6 +816,375 @@
             "name": "Endpoints",
             "description": "",
             "item": [
+                {
+                    "name": "counters\/increment\/{counter}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "counters\/increment\/:counter",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/counters\/increment\/:counter",
+                            "variable": [
+                                {
+                                    "id": "counter",
+                                    "key": "counter",
+                                    "value": "labore",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "counters\/increment\/{counter} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "counters\/increment\/:counter",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/counters\/increment\/:counter",
+                                    "variable": [
+                                        {
+                                            "id": "counter",
+                                            "key": "counter",
+                                            "value": "labore",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Whoops, looks like something went wrong\",\n    \"status\": 500\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "counters\/decrement\/{counter}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "counters\/decrement\/:counter",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/counters\/decrement\/:counter",
+                            "variable": [
+                                {
+                                    "id": "counter",
+                                    "key": "counter",
+                                    "value": "earum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "counters\/decrement\/{counter} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "counters\/decrement\/:counter",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/counters\/decrement\/:counter",
+                                    "variable": [
+                                        {
+                                            "id": "counter",
+                                            "key": "counter",
+                                            "value": "earum",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Whoops, looks like something went wrong\",\n    \"status\": 500\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "counters\/counterable\/increment\/{counterable}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "counters\/counterable\/increment\/:counterable",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/counters\/counterable\/increment\/:counterable",
+                            "variable": [
+                                {
+                                    "id": "counterable",
+                                    "key": "counterable",
+                                    "value": "sint",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "counters\/counterable\/increment\/{counterable} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "counters\/counterable\/increment\/:counterable",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/counters\/counterable\/increment\/:counterable",
+                                    "variable": [
+                                        {
+                                            "id": "counterable",
+                                            "key": "counterable",
+                                            "value": "sint",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"counter Not Found\": true\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "counters\/counterable\/decrement\/{counterable}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "counters\/counterable\/decrement\/:counterable",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/counters\/counterable\/decrement\/:counterable",
+                            "variable": [
+                                {
+                                    "id": "counterable",
+                                    "key": "counterable",
+                                    "value": "enim",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "counters\/counterable\/decrement\/{counterable} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "counters\/counterable\/decrement\/:counterable",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/counters\/counterable\/decrement\/:counterable",
+                                    "variable": [
+                                        {
+                                            "id": "counterable",
+                                            "key": "counterable",
+                                            "value": "enim",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"counter Not Found\": true\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "counters",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "counters",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/counters"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "counters Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "counters",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/counters"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        }
+                    ]
+                },
                 {
                     "name": "Authorize a client to access the user's account.",
                     "request": {
@@ -1006,7 +1407,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "possimus",
+                                    "value": "aperiam",
                                     "description": ""
                                 }
                             ]
@@ -1162,7 +1563,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "laborum",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -1199,7 +1600,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "labore",
+                                    "value": "assumenda",
                                     "description": ""
                                 }
                             ]
@@ -1387,7 +1788,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "alias",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1593,6 +1994,185 @@
                             "body": "{\n    \"message\": \"Unauthorized\",\n    \"status\": 401\n}"
                         }
                     ]
+                },
+                {
+                    "name": "email\/verify",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "email\/verify",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/email\/verify"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "email\/verify Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "email\/verify",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/email\/verify"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Unauthorized\",\n    \"status\": 401\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "email\/verify\/{id}\/{hash}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "email\/verify\/:id\/:hash",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/email\/verify\/:id\/:hash",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "consequatur",
+                                    "description": ""
+                                },
+                                {
+                                    "id": "hash",
+                                    "key": "hash",
+                                    "value": "dolorum",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "email\/verify\/{id}\/{hash} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "email\/verify\/:id\/:hash",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/email\/verify\/:id\/:hash",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "consequatur",
+                                            "description": ""
+                                        },
+                                        {
+                                            "id": "hash",
+                                            "key": "hash",
+                                            "value": "dolorum",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Unauthorized\",\n    \"status\": 401\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "email\/verification-notification",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "email\/verification-notification",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/email\/verification-notification"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 }
             ]
         },
@@ -1600,6 +2180,67 @@
             "name": "Poll",
             "description": "",
             "item": [
+                {
+                    "name": "By Branch.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/polls\/search",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/polls\/search"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"alias\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/polls\/mine",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/polls\/mine",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/polls\/mine"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
                 {
                     "name": "Display a listing of the Poll.",
                     "request": {
@@ -1657,7 +2298,7 @@
                             },
                             "header": null,
                             "cookie": [],
-                            "body": "{\n    \"success\": true,\n    \"data\": [],\n    \"message\": \"Polls retrieved successfully\"\n}"
+                            "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"counters\": null,\n            \"title\": \"A_E\",\n            \"user\": null,\n            \"pollOptions\": [\n                {\n                    \"id\": 1,\n                    \"poll_id\": 1,\n                    \"name\": \"A\",\n                    \"value\": \"qq\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"vote_value_id\": 8\n                },\n                {\n                    \"id\": 2,\n                    \"poll_id\": 1,\n                    \"name\": \"B\",\n                    \"value\": \"ww\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"vote_value_id\": 9\n                },\n                {\n                    \"id\": 3,\n                    \"poll_id\": 1,\n                    \"name\": \"C\",\n                    \"value\": \"ee\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"vote_value_id\": 10\n                },\n                {\n                    \"id\": 4,\n                    \"poll_id\": 1,\n                    \"name\": \"D\",\n                    \"value\": \"bb\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:22:12.000000Z\",\n                    \"vote_value_id\": 11\n                }\n            ],\n            \"votes\": null,\n            \"pollValue\": null,\n            \"pollType\": {\n                \"id\": 3,\n                \"name\": \"A - E Options\",\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"value_vote\": [\n                    {\n                        \"id\": 8,\n                        \"poll_type_id\": 3,\n                        \"name\": \"A\",\n                        \"value\": \"A\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 9,\n                        \"poll_type_id\": 3,\n                        \"name\": \"B\",\n                        \"value\": \"B\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 10,\n                        \"poll_type_id\": 3,\n                        \"name\": \"C\",\n                        \"value\": \"C\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 11,\n                        \"poll_type_id\": 3,\n                        \"name\": \"D\",\n                        \"value\": \"D\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 12,\n                        \"poll_type_id\": 3,\n                        \"name\": \"E\",\n                        \"value\": \"E\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                ]\n            },\n            \"valueVote\": [\n                {\n                    \"id\": 8,\n                    \"poll_type_id\": 3,\n                    \"name\": \"A\",\n                    \"value\": \"A\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 9,\n                    \"poll_type_id\": 3,\n                    \"name\": \"B\",\n                    \"value\": \"B\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 10,\n                    \"poll_type_id\": 3,\n                    \"name\": \"C\",\n                    \"value\": \"C\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 11,\n                    \"poll_type_id\": 3,\n                    \"name\": \"D\",\n                    \"value\": \"D\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 12,\n                    \"poll_type_id\": 3,\n                    \"name\": \"E\",\n                    \"value\": \"E\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ],\n            \"url\": \"http:\\\/\\\/poll.loc\\\/storage\\\/15\\\/ac62631a-15f3-4b2f-8fc4-7769353b76e8.jpeg\",\n            \"code\": \"QC9LQ18HX9\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"General Opinion\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"user_id\": null,\n            \"poll_type_id\": 3,\n            \"open_to_everyone\": 0,\n            \"question\": \"A_E\",\n            \"close_date\": \"2021-08-01T00:00:00.000000Z\",\n            \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n            \"updated_at\": \"2021-07-31T23:22:12.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"counters\": null,\n            \"title\": \"Star\",\n            \"user\": null,\n            \"pollOptions\": [],\n            \"votes\": null,\n            \"pollValue\": null,\n            \"pollType\": {\n                \"id\": 2,\n                \"name\": \"1 - 5 Stars\",\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"value_vote\": [\n                    {\n                        \"id\": 3,\n                        \"poll_type_id\": 2,\n                        \"name\": \"1\",\n                        \"value\": \"1\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 4,\n                        \"poll_type_id\": 2,\n                        \"name\": \"2\",\n                        \"value\": \"2\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 5,\n                        \"poll_type_id\": 2,\n                        \"name\": \"3\",\n                        \"value\": \"3\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 6,\n                        \"poll_type_id\": 2,\n                        \"name\": \"4\",\n                        \"value\": \"4\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 7,\n                        \"poll_type_id\": 2,\n                        \"name\": \"5\",\n                        \"value\": \"5\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                ]\n            },\n            \"valueVote\": [\n                {\n                    \"id\": 3,\n                    \"poll_type_id\": 2,\n                    \"name\": \"1\",\n                    \"value\": \"1\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 4,\n                    \"poll_type_id\": 2,\n                    \"name\": \"2\",\n                    \"value\": \"2\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 5,\n                    \"poll_type_id\": 2,\n                    \"name\": \"3\",\n                    \"value\": \"3\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 6,\n                    \"poll_type_id\": 2,\n                    \"name\": \"4\",\n                    \"value\": \"4\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 7,\n                    \"poll_type_id\": 2,\n                    \"name\": \"5\",\n                    \"value\": \"5\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ],\n            \"url\": \"http:\\\/\\\/poll.loc\\\/storage\\\/16\\\/3cb60f8a-424f-4dd8-89b6-61720b48a248.png\",\n            \"code\": \"7K9XXT832L\",\n            \"category\": {\n                \"id\": 3,\n                \"name\": \"Politics\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"user_id\": null,\n            \"poll_type_id\": 2,\n            \"open_to_everyone\": 1,\n            \"question\": \"Star\",\n            \"close_date\": \"2021-08-01T00:00:00.000000Z\",\n            \"created_at\": \"2021-07-31T23:24:55.000000Z\",\n            \"updated_at\": \"2021-07-31T23:24:55.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"counters\": null,\n            \"title\": \"111\",\n            \"user\": null,\n            \"pollOptions\": [],\n            \"votes\": null,\n            \"pollValue\": null,\n            \"pollType\": {\n                \"id\": 2,\n                \"name\": \"1 - 5 Stars\",\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"value_vote\": [\n                    {\n                        \"id\": 3,\n                        \"poll_type_id\": 2,\n                        \"name\": \"1\",\n                        \"value\": \"1\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 4,\n                        \"poll_type_id\": 2,\n                        \"name\": \"2\",\n                        \"value\": \"2\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 5,\n                        \"poll_type_id\": 2,\n                        \"name\": \"3\",\n                        \"value\": \"3\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 6,\n                        \"poll_type_id\": 2,\n                        \"name\": \"4\",\n                        \"value\": \"4\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 7,\n                        \"poll_type_id\": 2,\n                        \"name\": \"5\",\n                        \"value\": \"5\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                ]\n            },\n            \"valueVote\": [\n                {\n                    \"id\": 3,\n                    \"poll_type_id\": 2,\n                    \"name\": \"1\",\n                    \"value\": \"1\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 4,\n                    \"poll_type_id\": 2,\n                    \"name\": \"2\",\n                    \"value\": \"2\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 5,\n                    \"poll_type_id\": 2,\n                    \"name\": \"3\",\n                    \"value\": \"3\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 6,\n                    \"poll_type_id\": 2,\n                    \"name\": \"4\",\n                    \"value\": \"4\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 7,\n                    \"poll_type_id\": 2,\n                    \"name\": \"5\",\n                    \"value\": \"5\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ],\n            \"url\": \"http:\\\/\\\/poll.loc\\\/storage\\\/17\\\/ddf84dcd-2811-41ef-bc19-28db621a1b57.jpeg\",\n            \"code\": \"2WY4VPEV1L\",\n            \"category\": {\n                \"id\": 4,\n                \"name\": \"Entertainment\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"user_id\": null,\n            \"poll_type_id\": 2,\n            \"open_to_everyone\": 1,\n            \"question\": \"111\",\n            \"close_date\": \"2021-08-02T00:00:00.000000Z\",\n            \"created_at\": \"2021-07-31T23:26:00.000000Z\",\n            \"updated_at\": \"2021-07-31T23:26:00.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"counters\": null,\n            \"title\": \"222\",\n            \"user\": null,\n            \"pollOptions\": [],\n            \"votes\": null,\n            \"pollValue\": null,\n            \"pollType\": {\n                \"id\": 2,\n                \"name\": \"1 - 5 Stars\",\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"value_vote\": [\n                    {\n                        \"id\": 3,\n                        \"poll_type_id\": 2,\n                        \"name\": \"1\",\n                        \"value\": \"1\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 4,\n                        \"poll_type_id\": 2,\n                        \"name\": \"2\",\n                        \"value\": \"2\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 5,\n                        \"poll_type_id\": 2,\n                        \"name\": \"3\",\n                        \"value\": \"3\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 6,\n                        \"poll_type_id\": 2,\n                        \"name\": \"4\",\n                        \"value\": \"4\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 7,\n                        \"poll_type_id\": 2,\n                        \"name\": \"5\",\n                        \"value\": \"5\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                ]\n            },\n            \"valueVote\": [\n                {\n                    \"id\": 3,\n                    \"poll_type_id\": 2,\n                    \"name\": \"1\",\n                    \"value\": \"1\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 4,\n                    \"poll_type_id\": 2,\n                    \"name\": \"2\",\n                    \"value\": \"2\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 5,\n                    \"poll_type_id\": 2,\n                    \"name\": \"3\",\n                    \"value\": \"3\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 6,\n                    \"poll_type_id\": 2,\n                    \"name\": \"4\",\n                    \"value\": \"4\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 7,\n                    \"poll_type_id\": 2,\n                    \"name\": \"5\",\n                    \"value\": \"5\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ],\n            \"url\": \"http:\\\/\\\/poll.loc\\\/storage\\\/18\\\/6a5e55fa-a5e2-4b0f-aeef-fafa93f72961.jpeg\",\n            \"code\": \"6TK26KEWVQ\",\n            \"category\": {\n                \"id\": 4,\n                \"name\": \"Entertainment\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"user_id\": null,\n            \"poll_type_id\": 2,\n            \"open_to_everyone\": 1,\n            \"question\": \"222\",\n            \"close_date\": \"2021-08-02T00:00:00.000000Z\",\n            \"created_at\": \"2021-07-31T23:26:44.000000Z\",\n            \"updated_at\": \"2021-07-31T23:26:44.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"counters\": {\n                \"counterable_id\": 8,\n                \"counter_id\": 1,\n                \"counterable_type\": \"App\\\\Models\\\\Poll\",\n                \"value\": 4,\n                \"id\": 2\n            },\n            \"title\": \"333\",\n            \"user\": null,\n            \"pollOptions\": [\n                {\n                    \"id\": 5,\n                    \"poll_id\": 8,\n                    \"name\": \"1\",\n                    \"value\": \"1\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"vote_value_id\": 3\n                },\n                {\n                    \"id\": 6,\n                    \"poll_id\": 8,\n                    \"name\": \"2\",\n                    \"value\": \"2\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"vote_value_id\": 4\n                },\n                {\n                    \"id\": 7,\n                    \"poll_id\": 8,\n                    \"name\": \"3\",\n                    \"value\": \"3\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"vote_value_id\": 5\n                },\n                {\n                    \"id\": 8,\n                    \"poll_id\": 8,\n                    \"name\": \"4\",\n                    \"value\": \"4\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"vote_value_id\": 6\n                },\n                {\n                    \"id\": 9,\n                    \"poll_id\": 8,\n                    \"name\": \"5\",\n                    \"value\": \"5\",\n                    \"count\": 0,\n                    \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"updated_at\": \"2021-07-31T23:28:53.000000Z\",\n                    \"vote_value_id\": 7\n                }\n            ],\n            \"votes\": {\n                \"id\": 1,\n                \"poll_id\": 8,\n                \"created_at\": \"2021-07-31T23:53:11.000000Z\",\n                \"updated_at\": \"2021-07-31T23:53:11.000000Z\",\n                \"uuid\": \"8b43136c-165b-4b05-8332-45b8b326ed0e\",\n                \"user_id\": null,\n                \"value\": \"3\",\n                \"poll_value\": null\n            },\n            \"pollValue\": null,\n            \"pollType\": {\n                \"id\": 2,\n                \"name\": \"1 - 5 Stars\",\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"value_vote\": [\n                    {\n                        \"id\": 3,\n                        \"poll_type_id\": 2,\n                        \"name\": \"1\",\n                        \"value\": \"1\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 4,\n                        \"poll_type_id\": 2,\n                        \"name\": \"2\",\n                        \"value\": \"2\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 5,\n                        \"poll_type_id\": 2,\n                        \"name\": \"3\",\n                        \"value\": \"3\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 6,\n                        \"poll_type_id\": 2,\n                        \"name\": \"4\",\n                        \"value\": \"4\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    },\n                    {\n                        \"id\": 7,\n                        \"poll_type_id\": 2,\n                        \"name\": \"5\",\n                        \"value\": \"5\",\n                        \"created_at\": null,\n                        \"updated_at\": null\n                    }\n                ]\n            },\n            \"valueVote\": [\n                {\n                    \"id\": 3,\n                    \"poll_type_id\": 2,\n                    \"name\": \"1\",\n                    \"value\": \"1\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 4,\n                    \"poll_type_id\": 2,\n                    \"name\": \"2\",\n                    \"value\": \"2\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 5,\n                    \"poll_type_id\": 2,\n                    \"name\": \"3\",\n                    \"value\": \"3\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 6,\n                    \"poll_type_id\": 2,\n                    \"name\": \"4\",\n                    \"value\": \"4\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                },\n                {\n                    \"id\": 7,\n                    \"poll_type_id\": 2,\n                    \"name\": \"5\",\n                    \"value\": \"5\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ],\n            \"url\": \"http:\\\/\\\/poll.loc:82\\\/storage\\\/22\\\/cb22ff74-136d-413f-a9fa-182b803c6f06.jpeg\",\n            \"code\": \"8X76N515LN\",\n            \"category\": {\n                \"id\": 4,\n                \"name\": \"Entertainment\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"user_id\": null,\n            \"poll_type_id\": 2,\n            \"open_to_everyone\": 1,\n            \"question\": \"333\",\n            \"close_date\": \"2021-08-02T00:00:00.000000Z\",\n            \"created_at\": \"2021-07-31T23:28:52.000000Z\",\n            \"updated_at\": \"2021-07-31T23:28:53.000000Z\"\n        }\n    ],\n    \"message\": \"Polls retrieved successfully\"\n}"
                         }
                     ]
                 },
@@ -1684,7 +2325,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"inventore\",\n    \"options\": {\n        \"A\": \"omnis\",\n        \"B\": \"fugiat\",\n        \"C\": \"magnam\",\n        \"D\": \"nam\",\n        \"E\": \"vitae\"\n    },\n    \"email\": \"dach.cornell@example.com\",\n    \"category_id\": 12,\n    \"user_id\": 11,\n    \"poll_type_id\": 6,\n    \"open_to_everyone\": \"eius\",\n    \"question\": \"aut\",\n    \"close_date\": {}\n}"
+                            "raw": "{\n    \"title\": \"veritatis\",\n    \"options\": {\n        \"A\": \"illum\",\n        \"B\": \"nostrum\",\n        \"C\": \"illo\",\n        \"D\": \"dolores\",\n        \"E\": \"unde\"\n    },\n    \"email\": \"yjacobson@example.org\",\n    \"category_id\": 15,\n    \"user_id\": 13,\n    \"poll_type_id\": 14,\n    \"open_to_everyone\": \"dolorem\",\n    \"question\": \"et\",\n    \"close_date\": {}\n}"
                         },
                         "description": "POST \/polls",
                         "auth": {
@@ -1706,7 +2347,7 @@
                                 {
                                     "id": "poll",
                                     "key": "poll",
-                                    "value": "hic",
+                                    "value": "et",
                                     "description": ""
                                 }
                             ]
@@ -1742,7 +2383,7 @@
                                         {
                                             "id": "poll",
                                             "key": "poll",
-                                            "value": "hic",
+                                            "value": "et",
                                             "description": ""
                                         }
                                     ]
@@ -1783,7 +2424,7 @@
                                 {
                                     "id": "poll",
                                     "key": "poll",
-                                    "value": "animi",
+                                    "value": "modi",
                                     "description": ""
                                 }
                             ]
@@ -1801,7 +2442,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"title\": \"accusantium\",\n    \"url\": \"quod\",\n    \"code\": \"minima\",\n    \"category_id\": 15,\n    \"user_id\": 14,\n    \"poll_type_id\": 20,\n    \"open_to_everyone\": \"eius\",\n    \"question\": \"at\",\n    \"close_date\": {},\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"title\": \"et\",\n    \"url\": \"voluptas\",\n    \"code\": \"voluptates\",\n    \"category_id\": 12,\n    \"user_id\": 10,\n    \"poll_type_id\": 15,\n    \"open_to_everyone\": \"eos\",\n    \"question\": \"blanditiis\",\n    \"close_date\": {},\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "PUT\/PATCH \/polls\/{id}",
                         "auth": {
@@ -1823,7 +2464,7 @@
                                 {
                                     "id": "poll",
                                     "key": "poll",
-                                    "value": "inventore",
+                                    "value": "quo",
                                     "description": ""
                                 }
                             ]
@@ -1853,6 +2494,83 @@
             "name": "Poll Option",
             "description": "",
             "item": [
+                {
+                    "name": "api\/poll_options\/byPoll\/{id}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/poll_options\/byPoll\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/poll_options\/byPoll\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "molestiae",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "api\/poll_options\/byPoll\/{id} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/poll_options\/byPoll\/:id",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/poll_options\/byPoll\/:id",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "molestiae",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"success\": true,\n    \"data\": [],\n    \"message\": \"Poll retrieved successfully\"\n}"
+                        }
+                    ]
+                },
                 {
                     "name": "Display a listing of the PollOption.",
                     "request": {
@@ -1910,7 +2628,7 @@
                             },
                             "header": null,
                             "cookie": [],
-                            "body": "{\n    \"success\": true,\n    \"data\": [],\n    \"message\": \"Poll Options retrieved successfully\"\n}"
+                            "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"counters\": null,\n            \"poll_id\": 1,\n            \"name\": \"A\",\n            \"value\": \"qq\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n            \"updated_at\": \"2021-07-31T23:22:12.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"counters\": null,\n            \"poll_id\": 1,\n            \"name\": \"B\",\n            \"value\": \"ww\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n            \"updated_at\": \"2021-07-31T23:22:12.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"counters\": null,\n            \"poll_id\": 1,\n            \"name\": \"C\",\n            \"value\": \"ee\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n            \"updated_at\": \"2021-07-31T23:22:12.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"counters\": null,\n            \"poll_id\": 1,\n            \"name\": \"D\",\n            \"value\": \"bb\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:22:12.000000Z\",\n            \"updated_at\": \"2021-07-31T23:22:12.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"counters\": {\n                \"counterable_id\": 5,\n                \"counter_id\": 1,\n                \"counterable_type\": \"App\\\\Models\\\\PollOption\",\n                \"value\": 3,\n                \"id\": 1\n            },\n            \"poll_id\": 8,\n            \"name\": \"1\",\n            \"value\": \"1\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n            \"updated_at\": \"2021-07-31T23:28:53.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"counters\": {\n                \"counterable_id\": 6,\n                \"counter_id\": 1,\n                \"counterable_type\": \"App\\\\Models\\\\PollOption\",\n                \"value\": 1,\n                \"id\": 3\n            },\n            \"poll_id\": 8,\n            \"name\": \"2\",\n            \"value\": \"2\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n            \"updated_at\": \"2021-07-31T23:28:53.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"counters\": null,\n            \"poll_id\": 8,\n            \"name\": \"3\",\n            \"value\": \"3\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n            \"updated_at\": \"2021-07-31T23:28:53.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"counters\": null,\n            \"poll_id\": 8,\n            \"name\": \"4\",\n            \"value\": \"4\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n            \"updated_at\": \"2021-07-31T23:28:53.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"counters\": null,\n            \"poll_id\": 8,\n            \"name\": \"5\",\n            \"value\": \"5\",\n            \"count\": 0,\n            \"created_at\": \"2021-07-31T23:28:53.000000Z\",\n            \"updated_at\": \"2021-07-31T23:28:53.000000Z\"\n        }\n    ],\n    \"message\": \"Poll Options retrieved successfully\"\n}"
                         }
                     ]
                 },
@@ -1937,7 +2655,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"poll_id\": 20,\n    \"name\": \"repellendus\",\n    \"value\": \"molestias\",\n    \"count\": 9,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"poll_id\": 17,\n    \"name\": \"porro\",\n    \"value\": \"debitis\",\n    \"count\": 18,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "POST \/pollOptions",
                         "auth": {
@@ -1959,7 +2677,7 @@
                                 {
                                     "id": "poll_option",
                                     "key": "poll_option",
-                                    "value": "fugit",
+                                    "value": "nobis",
                                     "description": ""
                                 }
                             ]
@@ -1995,7 +2713,7 @@
                                         {
                                             "id": "poll_option",
                                             "key": "poll_option",
-                                            "value": "fugit",
+                                            "value": "nobis",
                                             "description": ""
                                         }
                                     ]
@@ -2036,7 +2754,7 @@
                                 {
                                     "id": "poll_option",
                                     "key": "poll_option",
-                                    "value": "sint",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -2054,7 +2772,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"poll_id\": 19,\n    \"name\": \"est\",\n    \"value\": \"aut\",\n    \"count\": 14,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"poll_id\": 17,\n    \"name\": \"odio\",\n    \"value\": \"est\",\n    \"count\": 2,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "PUT\/PATCH \/pollOptions\/{id}",
                         "auth": {
@@ -2076,7 +2794,7 @@
                                 {
                                     "id": "poll_option",
                                     "key": "poll_option",
-                                    "value": "quia",
+                                    "value": "velit",
                                     "description": ""
                                 }
                             ]
@@ -2190,7 +2908,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"itaque\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"name\": \"sit\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "POST \/pollTypes",
                         "auth": {
@@ -2212,7 +2930,7 @@
                                 {
                                     "id": "poll_type",
                                     "key": "poll_type",
-                                    "value": "maiores",
+                                    "value": "accusantium",
                                     "description": ""
                                 }
                             ]
@@ -2248,7 +2966,7 @@
                                         {
                                             "id": "poll_type",
                                             "key": "poll_type",
-                                            "value": "maiores",
+                                            "value": "accusantium",
                                             "description": ""
                                         }
                                     ]
@@ -2289,7 +3007,7 @@
                                 {
                                     "id": "poll_type",
                                     "key": "poll_type",
-                                    "value": "quia",
+                                    "value": "tempora",
                                     "description": ""
                                 }
                             ]
@@ -2307,7 +3025,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"veniam\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"name\": \"rerum\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "PUT\/PATCH \/pollTypes\/{id}",
                         "auth": {
@@ -2329,7 +3047,7 @@
                                 {
                                     "id": "poll_type",
                                     "key": "poll_type",
-                                    "value": "rerum",
+                                    "value": "molestias",
                                     "description": ""
                                 }
                             ]
@@ -2416,7 +3134,7 @@
                             },
                             "header": null,
                             "cookie": [],
-                            "body": "{\n    \"success\": true,\n    \"data\": [],\n    \"message\": \"Votes retrieved successfully\"\n}"
+                            "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"poll_id\": 8,\n            \"unique_id\": null,\n            \"poll_value_id\": null,\n            \"created_at\": \"2021-07-31T23:53:11.000000Z\",\n            \"updated_at\": \"2021-07-31T23:53:11.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"poll_id\": 8,\n            \"unique_id\": null,\n            \"poll_value_id\": null,\n            \"created_at\": \"2021-07-31T23:53:16.000000Z\",\n            \"updated_at\": \"2021-07-31T23:53:16.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"poll_id\": 8,\n            \"unique_id\": null,\n            \"poll_value_id\": null,\n            \"created_at\": \"2021-07-31T23:53:20.000000Z\",\n            \"updated_at\": \"2021-07-31T23:53:20.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"poll_id\": 8,\n            \"unique_id\": null,\n            \"poll_value_id\": null,\n            \"created_at\": \"2021-07-31T23:53:25.000000Z\",\n            \"updated_at\": \"2021-07-31T23:53:25.000000Z\"\n        }\n    ],\n    \"message\": \"Votes retrieved successfully\"\n}"
                         }
                     ]
                 },
@@ -2443,7 +3161,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"poll_id\": 15,\n    \"unique_id\": \"labore\",\n    \"poll_value_id\": 14,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"poll_id\": \"tenetur\",\n    \"uuid\": \"et\",\n    \"value\": \"quia\"\n}"
                         },
                         "description": "POST \/votes",
                         "auth": {
@@ -2465,7 +3183,7 @@
                                 {
                                     "id": "vote",
                                     "key": "vote",
-                                    "value": "tempora",
+                                    "value": "non",
                                     "description": ""
                                 }
                             ]
@@ -2501,7 +3219,7 @@
                                         {
                                             "id": "vote",
                                             "key": "vote",
-                                            "value": "tempora",
+                                            "value": "non",
                                             "description": ""
                                         }
                                     ]
@@ -2542,7 +3260,7 @@
                                 {
                                     "id": "vote",
                                     "key": "vote",
-                                    "value": "harum",
+                                    "value": "perferendis",
                                     "description": ""
                                 }
                             ]
@@ -2560,7 +3278,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"poll_id\": 13,\n    \"unique_id\": \"sed\",\n    \"poll_value_id\": 3,\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"poll_id\": \"aut\",\n    \"uuid\": \"dicta\",\n    \"value\": \"quo\"\n}"
                         },
                         "description": "PUT\/PATCH \/votes\/{id}",
                         "auth": {
@@ -2582,7 +3300,7 @@
                                 {
                                     "id": "vote",
                                     "key": "vote",
-                                    "value": "eaque",
+                                    "value": "a",
                                     "description": ""
                                 }
                             ]
@@ -2696,7 +3414,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"poll_type_id\": 2,\n    \"name\": \"voluptatum\",\n    \"value\": \"est\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
+                            "raw": "{\n    \"poll_type_id\": 5,\n    \"name\": \"repellendus\",\n    \"value\": \"sed\",\n    \"created_at\": {},\n    \"updated_at\": {}\n}"
                         },
                         "description": "POST \/voteValues",
                         "auth": {
@@ -2718,7 +3436,7 @@
                                 {
                                     "id": "vote_value",
                                     "key": "vote_value",
-                                    "value": "dignissimos",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -2754,7 +3472,7 @@
                                         {
                                             "id": "vote_value",
                                             "key": "vote_value",
-                                            "value": "dignissimos",
+                                            "value": "porro",
                                             "description": ""
                                         }
                                     ]
@@ -2795,7 +3513,7 @@
                                 {
                                     "id": "vote_value",
                                     "key": "vote_value",
-                                    "value": "sed",
+                                    "value": "placeat",
                                     "description": ""
                                 }
                             ]
@@ -2835,7 +3553,7 @@
                                 {
                                     "id": "vote_value",
                                     "key": "vote_value",
-                                    "value": "vitae",
+                                    "value": "explicabo",
                                     "description": ""
                                 }
                             ]

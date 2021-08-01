@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Maher\Counters\Traits\HasCounter;
 
 /**
  * Class Poll
@@ -25,6 +26,7 @@ class Poll extends AppModel
 {
 
     use HasFactory;
+    use HasCounter;
 
     public $table = 'polls';
 
@@ -34,6 +36,7 @@ class Poll extends AppModel
 
     public $fillable = [
         'title',
+        'uuid',
         'url',
         'code',
         'category_id',
@@ -89,9 +92,21 @@ class Poll extends AppModel
     }
 
 
+    public static function findByName($name)
+    {
+        $res = Poll::where(function ($query) use ($name) {
+            $query
+                ->orWhere('title', 'LIKE', '%' . $name . '%')
+                ->orWhere('question', 'LIKE', '%' . $name . '%')
+                ->orWhere('code', 'LIKE', '%' . $name . '%');
+        })->get();
+        return $res;
+    }
+
+
     public function pollOptions()
     {
-        return $this->hasOne(PollOption::class, 'poll_id');
+        return $this->hasMany(PollOption::class, 'poll_id');
     }
 
     public function votes()

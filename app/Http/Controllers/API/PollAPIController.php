@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreatePollAPIRequest;
+use App\Http\Requests\API\SearchAPIRequest;
 use App\Http\Requests\API\UpdatePollAPIRequest;
 use App\Models\Poll;
+use App\Models\Vote;
+use App\Models\VoteValue;
 use App\Repositories\PollRepository;
 use App\Traits\FilesTrait;
+use App\Traits\OptionsTrait;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Resources\PollResource;
@@ -22,6 +26,7 @@ use Response;
 class PollAPIController extends AppBaseController
 {
     use FilesTrait;
+    use OptionsTrait;
 
     /** @var  PollRepository */
     private $pollRepository;
@@ -74,9 +79,6 @@ class PollAPIController extends AppBaseController
     public function store(CreatePollAPIRequest $request)
     {
 
-        //email
-        //   'user_id' => 'nullable|integer',
-
         $userCheck = Auth::guard('api')->check();
         DB::beginTransaction();
         $input = $request->all();
@@ -96,15 +98,7 @@ class PollAPIController extends AppBaseController
         if (!$this->isFileSuccess && $this->hasFile) {
             return $__response;
         }
-        if (!empty(@$input['options'])) {
-            foreach ($input['options'] as $key => $eachOptions) {
-                $poll->pollOptions()->create([
-                    'name' => $key,
-                    'value' => $eachOptions,
-                    'count' => 0
-                ]);
-            }
-        }
+        $this->generateOptions($poll, $input);
         DB::commit();
         if ($this->hasFile) {
             $poll = $this->pollRepository->find($poll->id);
@@ -114,6 +108,17 @@ class PollAPIController extends AppBaseController
         }
         return $this->sendResponse(new PollResource($poll), 'Poll saved successfully');
     }
+
+    /**
+     * By Branch.
+     */
+    public function search(SearchAPIRequest $request)
+    {
+        $input = $request->all();
+        $result = Poll::findByName($input['name']);
+        return $this->sendResponse(PollResource::collection($result), 'Polls retrieved successfully');
+    }
+
 
     /**
      * Display the specified Poll.
@@ -131,11 +136,12 @@ class PollAPIController extends AppBaseController
             $q
                 ->orWhere('id', $id)
                 ->orWhere('code', $id);
-        })->get();
+        })->first();
 
         if (empty($poll)) {
             return $this->sendError('Poll not found');
         }
+        // dd($poll);
 
         return $this->sendResponse(new PollResource($poll), 'Poll retrieved successfully');
     }

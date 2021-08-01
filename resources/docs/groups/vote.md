@@ -10,14 +10,14 @@ GET|HEAD /votes
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/votes" \
+    -G "http://poll.loc/api/votes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes"
+    "http://poll.loc/api/votes"
 );
 
 let headers = {
@@ -38,7 +38,40 @@ fetch(url, {
 ```json
 {
     "success": true,
-    "data": [],
+    "data": [
+        {
+            "id": 1,
+            "poll_id": 8,
+            "unique_id": null,
+            "poll_value_id": null,
+            "created_at": "2021-07-31T23:53:11.000000Z",
+            "updated_at": "2021-07-31T23:53:11.000000Z"
+        },
+        {
+            "id": 2,
+            "poll_id": 8,
+            "unique_id": null,
+            "poll_value_id": null,
+            "created_at": "2021-07-31T23:53:16.000000Z",
+            "updated_at": "2021-07-31T23:53:16.000000Z"
+        },
+        {
+            "id": 3,
+            "poll_id": 8,
+            "unique_id": null,
+            "poll_value_id": null,
+            "created_at": "2021-07-31T23:53:20.000000Z",
+            "updated_at": "2021-07-31T23:53:20.000000Z"
+        },
+        {
+            "id": 4,
+            "poll_id": 8,
+            "unique_id": null,
+            "poll_value_id": null,
+            "created_at": "2021-07-31T23:53:25.000000Z",
+            "updated_at": "2021-07-31T23:53:25.000000Z"
+        }
+    ],
     "message": "Votes retrieved successfully"
 }
 ```
@@ -73,16 +106,16 @@ POST /votes
 
 ```bash
 curl -X POST \
-    "http://localhost/api/votes" \
+    "http://poll.loc/api/votes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":15,"unique_id":"labore","poll_value_id":14,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":"tenetur","uuid":"et","value":"quia"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes"
+    "http://poll.loc/api/votes"
 );
 
 let headers = {
@@ -91,11 +124,9 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 15,
-    "unique_id": "labore",
-    "poll_value_id": 14,
-    "created_at": {},
-    "updated_at": {}
+    "poll_id": "tenetur",
+    "uuid": "et",
+    "value": "quia"
 }
 
 fetch(url, {
@@ -127,32 +158,20 @@ fetch(url, {
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>poll_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="poll_id" data-endpoint="POSTapi-votes" data-component="body" required  hidden>
+<b><code>poll_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="poll_id" data-endpoint="POSTapi-votes" data-component="body" required  hidden>
 <br>
 
 </p>
 <p>
-<b><code>unique_id</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="unique_id" data-endpoint="POSTapi-votes" data-component="body"  hidden>
+<b><code>uuid</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="uuid" data-endpoint="POSTapi-votes" data-component="body"  hidden>
 <br>
 
 </p>
 <p>
-<b><code>poll_value_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="poll_value_id" data-endpoint="POSTapi-votes" data-component="body" required  hidden>
-<br>
-
-</p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="POSTapi-votes" data-component="body"  hidden>
-<br>
-
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="POSTapi-votes" data-component="body"  hidden>
+<b><code>value</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="value" data-endpoint="POSTapi-votes" data-component="body" required  hidden>
 <br>
 
 </p>
@@ -169,14 +188,14 @@ GET|HEAD /votes/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/votes/tempora" \
+    -G "http://poll.loc/api/votes/non" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes/tempora"
+    "http://poll.loc/api/votes/non"
 );
 
 let headers = {
@@ -238,16 +257,16 @@ PUT/PATCH /votes/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/votes/harum" \
+    "http://poll.loc/api/votes/perferendis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"poll_id":13,"unique_id":"sed","poll_value_id":3,"created_at":{},"updated_at":{}}'
+    -d '{"poll_id":"aut","uuid":"dicta","value":"quo"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes/harum"
+    "http://poll.loc/api/votes/perferendis"
 );
 
 let headers = {
@@ -256,11 +275,9 @@ let headers = {
 };
 
 let body = {
-    "poll_id": 13,
-    "unique_id": "sed",
-    "poll_value_id": 3,
-    "created_at": {},
-    "updated_at": {}
+    "poll_id": "aut",
+    "uuid": "dicta",
+    "value": "quo"
 }
 
 fetch(url, {
@@ -303,32 +320,20 @@ fetch(url, {
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>poll_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="poll_id" data-endpoint="PUTapi-votes--vote-" data-component="body" required  hidden>
+<b><code>poll_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="poll_id" data-endpoint="PUTapi-votes--vote-" data-component="body" required  hidden>
 <br>
 
 </p>
 <p>
-<b><code>unique_id</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="unique_id" data-endpoint="PUTapi-votes--vote-" data-component="body"  hidden>
+<b><code>uuid</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+<input type="text" name="uuid" data-endpoint="PUTapi-votes--vote-" data-component="body"  hidden>
 <br>
 
 </p>
 <p>
-<b><code>poll_value_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-<input type="number" name="poll_value_id" data-endpoint="PUTapi-votes--vote-" data-component="body" required  hidden>
-<br>
-
-</p>
-<p>
-<b><code>created_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="created_at" data-endpoint="PUTapi-votes--vote-" data-component="body"  hidden>
-<br>
-
-</p>
-<p>
-<b><code>updated_at</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="updated_at" data-endpoint="PUTapi-votes--vote-" data-component="body"  hidden>
+<b><code>value</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="value" data-endpoint="PUTapi-votes--vote-" data-component="body" required  hidden>
 <br>
 
 </p>
@@ -345,14 +350,14 @@ DELETE /votes/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/votes/eaque" \
+    "http://poll.loc/api/votes/a" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/votes/eaque"
+    "http://poll.loc/api/votes/a"
 );
 
 let headers = {

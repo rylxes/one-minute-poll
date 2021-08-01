@@ -10,14 +10,14 @@ GET|HEAD /categories
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/categories" \
+    -G "http://poll.loc/api/categories" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories"
+    "http://poll.loc/api/categories"
 );
 
 let headers = {
@@ -110,16 +110,16 @@ POST /categories
 
 ```bash
 curl -X POST \
-    "http://localhost/api/categories" \
+    "http://poll.loc/api/categories" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sint","created_at":{},"updated_at":{}}'
+    -d '{"name":"quo","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories"
+    "http://poll.loc/api/categories"
 );
 
 let headers = {
@@ -128,7 +128,7 @@ let headers = {
 };
 
 let body = {
-    "name": "sint",
+    "name": "quo",
     "created_at": {},
     "updated_at": {}
 }
@@ -192,14 +192,14 @@ GET|HEAD /categories/{id}
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/categories/suscipit" \
+    -G "http://poll.loc/api/categories/veritatis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories/suscipit"
+    "http://poll.loc/api/categories/veritatis"
 );
 
 let headers = {
@@ -261,16 +261,16 @@ PUT/PATCH /categories/{id}
 
 ```bash
 curl -X PUT \
-    "http://localhost/api/categories/accusantium" \
+    "http://poll.loc/api/categories/corporis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"labore","created_at":{},"updated_at":{}}'
+    -d '{"name":"magni","created_at":{},"updated_at":{}}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories/accusantium"
+    "http://poll.loc/api/categories/corporis"
 );
 
 let headers = {
@@ -279,7 +279,7 @@ let headers = {
 };
 
 let body = {
-    "name": "labore",
+    "name": "magni",
     "created_at": {},
     "updated_at": {}
 }
@@ -354,14 +354,14 @@ DELETE /categories/{id}
 
 ```bash
 curl -X DELETE \
-    "http://localhost/api/categories/totam" \
+    "http://poll.loc/api/categories/porro" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/categories/totam"
+    "http://poll.loc/api/categories/porro"
 );
 
 let headers = {

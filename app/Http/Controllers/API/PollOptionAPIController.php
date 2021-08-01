@@ -16,7 +16,6 @@ use Response;
  * @group Poll Option
  * @package App\Http\Controllers\API
  */
-
 class PollOptionAPIController extends AppBaseController
 {
     /** @var  PollOptionRepository */
@@ -82,6 +81,17 @@ class PollOptionAPIController extends AppBaseController
         return $this->sendResponse(new PollOptionResource($pollOption), 'Poll Option retrieved successfully');
     }
 
+
+    public function byPoll($id)
+    {
+        $poll = PollOption::where('poll_id', $id)->get();
+        if (empty($poll)) {
+            return $this->sendError('Poll not found');
+        }
+
+        return $this->sendResponse(PollOptionResource::collection($poll), 'Poll retrieved successfully');
+    }
+
     /**
      * Update the specified PollOption in storage.
      * PUT/PATCH /pollOptions/{id}
@@ -113,9 +123,9 @@ class PollOptionAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {

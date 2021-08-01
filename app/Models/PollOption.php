@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Maher\Counters\Traits\HasCounter;
 
 /**
  * Class PollOption
@@ -20,6 +21,7 @@ class PollOption extends Model
 {
 
     use HasFactory;
+    use HasCounter;
 
     public $table = 'poll_options';
 
@@ -30,6 +32,7 @@ class PollOption extends Model
     public $fillable = [
         'poll_id',
         'name',
+        'vote_value_id',
         'value',
         'count'
     ];
@@ -41,6 +44,7 @@ class PollOption extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'vote_value_id' => 'integer',
         'poll_id' => 'integer',
         'name' => 'string',
         'value' => 'string',

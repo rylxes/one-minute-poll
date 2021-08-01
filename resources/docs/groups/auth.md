@@ -10,16 +10,16 @@
 
 ```bash
 curl -X POST \
-    "http://localhost/api/login" \
+    "http://poll.loc/api/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"keira92@example.org","secret":{},"password":"aut"}'
+    -d '{"email":"kgrimes@example.net","secret":{},"password":"aut"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/login"
+    "http://poll.loc/api/login"
 );
 
 let headers = {
@@ -28,7 +28,7 @@ let headers = {
 };
 
 let body = {
-    "email": "keira92@example.org",
+    "email": "kgrimes@example.net",
     "secret": {},
     "password": "aut"
 }
@@ -83,6 +83,74 @@ The value must be a valid email address.
 </form>
 
 
+## api/codeLogin
+
+
+
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://poll.loc/api/codeLogin" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"code":"aut"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://poll.loc/api/codeLogin"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "code": "aut"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+
+<div id="execution-results-POSTapi-codeLogin" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-codeLogin"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-codeLogin"></code></pre>
+</div>
+<div id="execution-error-POSTapi-codeLogin" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-codeLogin"></code></pre>
+</div>
+<form id="form-POSTapi-codeLogin" data-method="POST" data-path="api/codeLogin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-codeLogin', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-codeLogin" onclick="tryItOut('POSTapi-codeLogin');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-codeLogin" onclick="cancelTryOut('POSTapi-codeLogin');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-codeLogin" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/codeLogin</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>code</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="code" data-endpoint="POSTapi-codeLogin" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+
+
 ## Log the user out of the application.
 
 
@@ -92,14 +160,14 @@ The value must be a valid email address.
 
 ```bash
 curl -X POST \
-    "http://localhost/api/logout" \
+    "http://poll.loc/api/logout" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/logout"
+    "http://poll.loc/api/logout"
 );
 
 let headers = {
@@ -146,14 +214,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/logout" \
+    -G "http://poll.loc/api/logout" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/logout"
+    "http://poll.loc/api/logout"
 );
 
 let headers = {
@@ -209,16 +277,16 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/register" \
+    "http://poll.loc/api/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"first_name":"laborum","last_name":"omnis","company_name":"qui","company_phone":"alias","company_description":"nihil","has2fa":false,"email":"brock39@example.net","password":"accusamus","password_confirmation":"non"}'
+    -d '{"first_name":"et","last_name":"qui","company_name":"sequi","company_phone":"labore","company_description":"itaque","has2fa":false,"email":"rogahn.mona@example.net","password":"voluptas","password_confirmation":"in"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/register"
+    "http://poll.loc/api/register"
 );
 
 let headers = {
@@ -227,15 +295,15 @@ let headers = {
 };
 
 let body = {
-    "first_name": "laborum",
-    "last_name": "omnis",
-    "company_name": "qui",
-    "company_phone": "alias",
-    "company_description": "nihil",
+    "first_name": "et",
+    "last_name": "qui",
+    "company_name": "sequi",
+    "company_phone": "labore",
+    "company_description": "itaque",
     "has2fa": false,
-    "email": "brock39@example.net",
-    "password": "accusamus",
-    "password_confirmation": "non"
+    "email": "rogahn.mona@example.net",
+    "password": "voluptas",
+    "password_confirmation": "in"
 }
 
 fetch(url, {
@@ -334,14 +402,14 @@ If no token is present, display the link request form.
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/password/reset/tenetur" \
+    -G "http://poll.loc/api/password/reset/facere" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/reset/tenetur"
+    "http://poll.loc/api/password/reset/facere"
 );
 
 let headers = {
@@ -403,14 +471,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/password/confirm" \
+    "http://poll.loc/api/password/confirm" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/confirm"
+    "http://poll.loc/api/password/confirm"
 );
 
 let headers = {
@@ -457,14 +525,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/email/verify/fugit/eveniet" \
+    -G "http://poll.loc/api/email/verify/adipisci/tempore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/verify/fugit/eveniet"
+    "http://poll.loc/api/email/verify/adipisci/tempore"
 );
 
 let headers = {
@@ -532,14 +600,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/email/resend" \
+    "http://poll.loc/api/email/resend" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/email/resend"
+    "http://poll.loc/api/email/resend"
 );
 
 let headers = {
@@ -586,16 +654,16 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost/api/password/sendEmailLink" \
+    "http://poll.loc/api/password/sendEmailLink" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"jalyn74@example.com","base_url":"et"}'
+    -d '{"email":"bednar.lawrence@example.org","base_url":"architecto"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/sendEmailLink"
+    "http://poll.loc/api/password/sendEmailLink"
 );
 
 let headers = {
@@ -604,8 +672,8 @@ let headers = {
 };
 
 let body = {
-    "email": "jalyn74@example.com",
-    "base_url": "et"
+    "email": "bednar.lawrence@example.org",
+    "base_url": "architecto"
 }
 
 fetch(url, {
@@ -661,16 +729,16 @@ The value must be a valid email address.
 
 ```bash
 curl -X POST \
-    "http://localhost/api/password/resetUser" \
+    "http://poll.loc/api/password/resetUser" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"token":"ut","email":"ullrich.grover@example.com","password":"quaerat"}'
+    -d '{"token":"dolor","email":"dion45@example.org","password":"nostrum"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/resetUser"
+    "http://poll.loc/api/password/resetUser"
 );
 
 let headers = {
@@ -679,9 +747,9 @@ let headers = {
 };
 
 let body = {
-    "token": "ut",
-    "email": "ullrich.grover@example.com",
-    "password": "quaerat"
+    "token": "dolor",
+    "email": "dion45@example.org",
+    "password": "nostrum"
 }
 
 fetch(url, {
@@ -743,16 +811,16 @@ The value must be a valid email address.
 
 ```bash
 curl -X POST \
-    "http://localhost/api/registerInvite" \
+    "http://poll.loc/api/registerInvite" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"company_id":"commodi","user_id":{},"is_user":false,"name":"cum","has2fa":false,"email":"gardner.heller@example.net","password":"adipisci","password_confirmation":"numquam"}'
+    -d '{"company_id":"quia","user_id":{},"is_user":false,"name":"aut","has2fa":false,"email":"ncasper@example.org","password":"ut","password_confirmation":"nostrum"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/registerInvite"
+    "http://poll.loc/api/registerInvite"
 );
 
 let headers = {
@@ -761,14 +829,14 @@ let headers = {
 };
 
 let body = {
-    "company_id": "commodi",
+    "company_id": "quia",
     "user_id": {},
     "is_user": false,
-    "name": "cum",
+    "name": "aut",
     "has2fa": false,
-    "email": "gardner.heller@example.net",
-    "password": "adipisci",
-    "password_confirmation": "numquam"
+    "email": "ncasper@example.org",
+    "password": "ut",
+    "password_confirmation": "nostrum"
 }
 
 fetch(url, {
@@ -862,16 +930,16 @@ The value must be a valid email address.
 
 ```bash
 curl -X POST \
-    "http://localhost/api/password/change" \
+    "http://poll.loc/api/password/change" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"berneice96@example.net","old_password":"quod","password":"quis"}'
+    -d '{"email":"bgreenholt@example.com","old_password":"sunt","password":"non"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/password/change"
+    "http://poll.loc/api/password/change"
 );
 
 let headers = {
@@ -880,9 +948,9 @@ let headers = {
 };
 
 let body = {
-    "email": "berneice96@example.net",
-    "old_password": "quod",
-    "password": "quis"
+    "email": "bgreenholt@example.com",
+    "old_password": "sunt",
+    "password": "non"
 }
 
 fetch(url, {

@@ -20,7 +20,6 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     });
 
 
-
 /// AUTH ROUTES
 
 
@@ -39,22 +38,22 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('registerInvite', 'App\Http\Controllers\API\Auth\RegisterController@registerInvite');
 
 
+    Route::post('polls/search', 'App\Http\Controllers\API\PollAPIController@search');
     Route::post('polls/mine', 'App\Http\Controllers\API\PollAPIController@mine');
+    Route::get('poll_options/byPoll/{id}', 'App\Http\Controllers\API\PollOptionAPIController@byPoll');
     Route::resource('polls', App\Http\Controllers\API\PollAPIController::class);
     Route::resource('categories', App\Http\Controllers\API\CategoryAPIController::class);
     Route::resource('poll_types', App\Http\Controllers\API\PollTypeAPIController::class);
     Route::resource('votes', App\Http\Controllers\API\VoteAPIController::class);
     Route::resource('vote_values', App\Http\Controllers\API\VoteValueAPIController::class);
-
+    Route::resource('poll_options', App\Http\Controllers\API\PollOptionAPIController::class);
 
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
     });
 
 
-
-
 });
 
 
-Route::resource('poll_options', App\Http\Controllers\API\PollOptionAPIController::class);
+

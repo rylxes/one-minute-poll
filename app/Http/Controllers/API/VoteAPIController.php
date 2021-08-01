@@ -4,11 +4,14 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\API\CreateVoteAPIRequest;
 use App\Http\Requests\API\UpdateVoteAPIRequest;
+use App\Models\Poll;
+use App\Models\PollOption;
 use App\Models\Vote;
 use App\Repositories\VoteRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Resources\VoteResource;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 /**
@@ -16,7 +19,6 @@ use Response;
  * @group Vote
  * @package App\Http\Controllers\API
  */
-
 class VoteAPIController extends AppBaseController
 {
     /** @var  VoteRepository */
@@ -56,9 +58,15 @@ class VoteAPIController extends AppBaseController
     public function store(CreateVoteAPIRequest $request)
     {
         $input = $request->all();
-
+        DB::beginTransaction();
         $vote = $this->voteRepository->create($input);
+        $pollOption = PollOption::where('vote_value_id', $input['value'])
+            ->where('poll_id', $input['poll_id'])->first();
+        $pollOption->incrementCounter('vote_count');
 
+        $poll = Poll::find($input['poll_id']);
+        $poll->incrementCounter('vote_count');
+        DB::commit();
         return $this->sendResponse(new VoteResource($vote), 'Vote saved successfully');
     }
 
@@ -113,9 +121,9 @@ class VoteAPIController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {

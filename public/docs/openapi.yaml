@@ -5,7 +5,7 @@ info:
     version: 1.0.0
 servers:
     -
-        url: 'http://localhost'
+        url: 'http://poll.loc'
 paths:
     /api/login:
         post:
@@ -39,7 +39,7 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: keira92@example.org
+                                    example: kgrimes@example.net
                                 secret:
                                     type: string
                                     description: ''
@@ -51,6 +51,42 @@ paths:
                             required:
                                 - email
                                 - password
+            security: []
+    /api/codeLogin:
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Auth
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                code:
+                                    type: string
+                                    description: ''
+                                    example: aut
+                            required:
+                                - code
             security: []
     /api/logout:
         post:
@@ -143,23 +179,23 @@ paths:
                                 first_name:
                                     type: string
                                     description: ''
-                                    example: laborum
+                                    example: et
                                 last_name:
                                     type: string
                                     description: ''
-                                    example: omnis
+                                    example: qui
                                 company_name:
                                     type: string
                                     description: ''
-                                    example: qui
+                                    example: sequi
                                 company_phone:
                                     type: string
                                     description: ''
-                                    example: alias
+                                    example: labore
                                 company_description:
                                     type: string
                                     description: ''
-                                    example: nihil
+                                    example: itaque
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -167,15 +203,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: brock39@example.net
+                                    example: rogahn.mona@example.net
                                 password:
                                     type: string
                                     description: ''
-                                    example: accusamus
+                                    example: voluptas
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: non
+                                    example: in
                             required:
                                 - first_name
                                 - last_name
@@ -225,7 +261,7 @@ paths:
                 in: path
                 name: token
                 description: ''
-                example: tenetur
+                example: facere
                 required: true
                 schema:
                     type: string
@@ -292,7 +328,7 @@ paths:
                 in: path
                 name: id
                 description: ''
-                example: fugit
+                example: adipisci
                 required: true
                 schema:
                     type: string
@@ -300,7 +336,7 @@ paths:
                 in: path
                 name: hash
                 description: ''
-                example: eveniet
+                example: tempore
                 required: true
                 schema:
                     type: string
@@ -359,11 +395,11 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: jalyn74@example.com
+                                    example: bednar.lawrence@example.org
                                 base_url:
                                     type: string
                                     description: ''
-                                    example: et
+                                    example: architecto
                             required:
                                 - email
                                 - base_url
@@ -400,15 +436,15 @@ paths:
                                 token:
                                     type: string
                                     description: ''
-                                    example: ut
+                                    example: dolor
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: ullrich.grover@example.com
+                                    example: dion45@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: quaerat
+                                    example: nostrum
                             required:
                                 - token
                                 - email
@@ -446,7 +482,7 @@ paths:
                                 company_id:
                                     type: string
                                     description: ''
-                                    example: commodi
+                                    example: quia
                                 user_id:
                                     type: string
                                     description: ''
@@ -458,7 +494,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: cum
+                                    example: aut
                                 has2fa:
                                     type: boolean
                                     description: ''
@@ -466,15 +502,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: gardner.heller@example.net
+                                    example: ncasper@example.org
                                 password:
                                     type: string
                                     description: ''
-                                    example: adipisci
+                                    example: ut
                                 password_confirmation:
                                     type: string
                                     description: ''
-                                    example: numquam
+                                    example: nostrum
                             required:
                                 - company_id
                                 - is_user
@@ -511,15 +547,15 @@ paths:
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: berneice96@example.net
+                                    example: bgreenholt@example.com
                                 old_password:
                                     type: string
                                     description: ''
-                                    example: quod
+                                    example: sunt
                                 password:
                                     type: string
                                     description: ''
-                                    example: quis
+                                    example: non
                             required:
                                 - email
                                 - old_password
@@ -593,7 +629,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: sint
+                                    example: quo
                                 created_at:
                                     type: string
                                     description: ''
@@ -671,7 +707,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: labore
+                                    example: magni
                                 created_at:
                                     type: string
                                     description: ''
@@ -710,10 +746,212 @@ paths:
                 in: path
                 name: category
                 description: ''
-                example: suscipit
+                example: veritatis
                 required: true
                 schema:
                     type: string
+    '/counters/increment/{counter}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                500:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'Whoops, looks like something went wrong'
+                                    status: 500
+                                properties:
+                                    message: { type: string, example: 'Whoops, looks like something went wrong' }
+                                    status: { type: integer, example: 500 }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: counter
+                description: ''
+                example: labore
+                required: true
+                schema:
+                    type: string
+    '/counters/decrement/{counter}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                500:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'Whoops, looks like something went wrong'
+                                    status: 500
+                                properties:
+                                    message: { type: string, example: 'Whoops, looks like something went wrong' }
+                                    status: { type: integer, example: 500 }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: counter
+                description: ''
+                example: earum
+                required: true
+                schema:
+                    type: string
+    '/counters/counterable/increment/{counterable}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                400:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    'counter Not Found': true
+                                properties:
+                                    'counter Not Found': { type: boolean, example: true }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: counterable
+                description: ''
+                example: sint
+                required: true
+                schema:
+                    type: string
+    '/counters/counterable/decrement/{counterable}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                400:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    'counter Not Found': true
+                                properties:
+                                    'counter Not Found': { type: boolean, example: true }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: counterable
+                description: ''
+                example: enim
+                required: true
+                schema:
+                    type: string
+    /counters:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        text/plain:
+                            schema:
+                                type: string
+                                example: '<h3>Hello From Counters package</h3>'
+            tags:
+                - Endpoints
+            security: []
     /oauth/authorize:
         get:
             summary: 'Authorize a client to access the user''s account.'
@@ -879,7 +1117,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: possimus
+                example: aperiam
                 required: true
                 schema:
                     type: string
@@ -1013,7 +1251,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: laborum
+                example: qui
                 required: true
                 schema:
                     type: string
@@ -1137,7 +1375,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: alias
+                example: et
                 required: true
                 schema:
                     type: string
@@ -1246,6 +1484,175 @@ paths:
             tags:
                 - Endpoints
             security: []
+    /email/verify:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Endpoints
+            security: []
+    '/email/verify/{id}/{hash}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthorized
+                                    status: 401
+                                properties:
+                                    message: { type: string, example: Unauthorized }
+                                    status: { type: integer, example: 401 }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: consequatur
+                required: true
+                schema:
+                    type: string
+            -
+                in: path
+                name: hash
+                description: ''
+                example: dolorum
+                required: true
+                schema:
+                    type: string
+    /email/verification-notification:
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+    /api/polls/search:
+        post:
+            summary: 'By Branch.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Poll
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: alias
+                            required:
+                                - name
+            security: []
+    /api/polls/mine:
+        post:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Poll
+            security: []
     /api/polls:
         get:
             summary: 'Display a listing of the Poll.'
@@ -1274,11 +1681,11 @@ paths:
                                 type: object
                                 example:
                                     success: true
-                                    data: []
+                                    data: [{ id: 1, counters: null, title: A_E, user: null, pollOptions: [{ id: 1, poll_id: 1, name: A, value: qq, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 8 }, { id: 2, poll_id: 1, name: B, value: ww, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 9 }, { id: 3, poll_id: 1, name: C, value: ee, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 10 }, { id: 4, poll_id: 1, name: D, value: bb, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 11 }], votes: null, pollValue: null, pollType: { id: 3, name: 'A - E Options', created_at: null, updated_at: null, value_vote: [{ id: 8, poll_type_id: 3, name: A, value: A, created_at: null, updated_at: null }, { id: 9, poll_type_id: 3, name: B, value: B, created_at: null, updated_at: null }, { id: 10, poll_type_id: 3, name: C, value: C, created_at: null, updated_at: null }, { id: 11, poll_type_id: 3, name: D, value: D, created_at: null, updated_at: null }, { id: 12, poll_type_id: 3, name: E, value: E, created_at: null, updated_at: null }] }, valueVote: [{ id: 8, poll_type_id: 3, name: A, value: A, created_at: null, updated_at: null }, { id: 9, poll_type_id: 3, name: B, value: B, created_at: null, updated_at: null }, { id: 10, poll_type_id: 3, name: C, value: C, created_at: null, updated_at: null }, { id: 11, poll_type_id: 3, name: D, value: D, created_at: null, updated_at: null }, { id: 12, poll_type_id: 3, name: E, value: E, created_at: null, updated_at: null }], url: 'http://poll.loc/storage/15/ac62631a-15f3-4b2f-8fc4-7769353b76e8.jpeg', code: QC9LQ18HX9, category: { id: 1, name: 'General Opinion', created_at: null, updated_at: null }, user_id: null, poll_type_id: 3, open_to_everyone: 0, question: A_E, close_date: '2021-08-01T00:00:00.000000Z', created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 2, counters: null, title: Star, user: null, pollOptions: [], votes: null, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc/storage/16/3cb60f8a-424f-4dd8-89b6-61720b48a248.png', code: 7K9XXT832L, category: { id: 3, name: Politics, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: Star, close_date: '2021-08-01T00:00:00.000000Z', created_at: '2021-07-31T23:24:55.000000Z', updated_at: '2021-07-31T23:24:55.000000Z' }, { id: 3, counters: null, title: '111', user: null, pollOptions: [], votes: null, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc/storage/17/ddf84dcd-2811-41ef-bc19-28db621a1b57.jpeg', code: 2WY4VPEV1L, category: { id: 4, name: Entertainment, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: '111', close_date: '2021-08-02T00:00:00.000000Z', created_at: '2021-07-31T23:26:00.000000Z', updated_at: '2021-07-31T23:26:00.000000Z' }, { id: 4, counters: null, title: '222', user: null, pollOptions: [], votes: null, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc/storage/18/6a5e55fa-a5e2-4b0f-aeef-fafa93f72961.jpeg', code: 6TK26KEWVQ, category: { id: 4, name: Entertainment, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: '222', close_date: '2021-08-02T00:00:00.000000Z', created_at: '2021-07-31T23:26:44.000000Z', updated_at: '2021-07-31T23:26:44.000000Z' }, { id: 8, counters: { counterable_id: 8, counter_id: 1, counterable_type: App\Models\Poll, value: 4, id: 2 }, title: '333', user: null, pollOptions: [{ id: 5, poll_id: 8, name: '1', value: '1', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 3 }, { id: 6, poll_id: 8, name: '2', value: '2', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 4 }, { id: 7, poll_id: 8, name: '3', value: '3', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 5 }, { id: 8, poll_id: 8, name: '4', value: '4', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 6 }, { id: 9, poll_id: 8, name: '5', value: '5', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 7 }], votes: { id: 1, poll_id: 8, created_at: '2021-07-31T23:53:11.000000Z', updated_at: '2021-07-31T23:53:11.000000Z', uuid: 8b43136c-165b-4b05-8332-45b8b326ed0e, user_id: null, value: '3', poll_value: null }, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc:82/storage/22/cb22ff74-136d-413f-a9fa-182b803c6f06.jpeg', code: 8X76N515LN, category: { id: 4, name: Entertainment, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: '333', close_date: '2021-08-02T00:00:00.000000Z', created_at: '2021-07-31T23:28:52.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }]
                                     message: 'Polls retrieved successfully'
                                 properties:
                                     success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
+                                    data: { type: array, example: [{ id: 1, counters: null, title: A_E, user: null, pollOptions: [{ id: 1, poll_id: 1, name: A, value: qq, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 8 }, { id: 2, poll_id: 1, name: B, value: ww, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 9 }, { id: 3, poll_id: 1, name: C, value: ee, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 10 }, { id: 4, poll_id: 1, name: D, value: bb, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z', vote_value_id: 11 }], votes: null, pollValue: null, pollType: { id: 3, name: 'A - E Options', created_at: null, updated_at: null, value_vote: [{ id: 8, poll_type_id: 3, name: A, value: A, created_at: null, updated_at: null }, { id: 9, poll_type_id: 3, name: B, value: B, created_at: null, updated_at: null }, { id: 10, poll_type_id: 3, name: C, value: C, created_at: null, updated_at: null }, { id: 11, poll_type_id: 3, name: D, value: D, created_at: null, updated_at: null }, { id: 12, poll_type_id: 3, name: E, value: E, created_at: null, updated_at: null }] }, valueVote: [{ id: 8, poll_type_id: 3, name: A, value: A, created_at: null, updated_at: null }, { id: 9, poll_type_id: 3, name: B, value: B, created_at: null, updated_at: null }, { id: 10, poll_type_id: 3, name: C, value: C, created_at: null, updated_at: null }, { id: 11, poll_type_id: 3, name: D, value: D, created_at: null, updated_at: null }, { id: 12, poll_type_id: 3, name: E, value: E, created_at: null, updated_at: null }], url: 'http://poll.loc/storage/15/ac62631a-15f3-4b2f-8fc4-7769353b76e8.jpeg', code: QC9LQ18HX9, category: { id: 1, name: 'General Opinion', created_at: null, updated_at: null }, user_id: null, poll_type_id: 3, open_to_everyone: 0, question: A_E, close_date: '2021-08-01T00:00:00.000000Z', created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 2, counters: null, title: Star, user: null, pollOptions: [], votes: null, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc/storage/16/3cb60f8a-424f-4dd8-89b6-61720b48a248.png', code: 7K9XXT832L, category: { id: 3, name: Politics, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: Star, close_date: '2021-08-01T00:00:00.000000Z', created_at: '2021-07-31T23:24:55.000000Z', updated_at: '2021-07-31T23:24:55.000000Z' }, { id: 3, counters: null, title: '111', user: null, pollOptions: [], votes: null, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc/storage/17/ddf84dcd-2811-41ef-bc19-28db621a1b57.jpeg', code: 2WY4VPEV1L, category: { id: 4, name: Entertainment, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: '111', close_date: '2021-08-02T00:00:00.000000Z', created_at: '2021-07-31T23:26:00.000000Z', updated_at: '2021-07-31T23:26:00.000000Z' }, { id: 4, counters: null, title: '222', user: null, pollOptions: [], votes: null, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc/storage/18/6a5e55fa-a5e2-4b0f-aeef-fafa93f72961.jpeg', code: 6TK26KEWVQ, category: { id: 4, name: Entertainment, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: '222', close_date: '2021-08-02T00:00:00.000000Z', created_at: '2021-07-31T23:26:44.000000Z', updated_at: '2021-07-31T23:26:44.000000Z' }, { id: 8, counters: { counterable_id: 8, counter_id: 1, counterable_type: App\Models\Poll, value: 4, id: 2 }, title: '333', user: null, pollOptions: [{ id: 5, poll_id: 8, name: '1', value: '1', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 3 }, { id: 6, poll_id: 8, name: '2', value: '2', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 4 }, { id: 7, poll_id: 8, name: '3', value: '3', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 5 }, { id: 8, poll_id: 8, name: '4', value: '4', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 6 }, { id: 9, poll_id: 8, name: '5', value: '5', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z', vote_value_id: 7 }], votes: { id: 1, poll_id: 8, created_at: '2021-07-31T23:53:11.000000Z', updated_at: '2021-07-31T23:53:11.000000Z', uuid: 8b43136c-165b-4b05-8332-45b8b326ed0e, user_id: null, value: '3', poll_value: null }, pollValue: null, pollType: { id: 2, name: '1 - 5 Stars', created_at: null, updated_at: null, value_vote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }] }, valueVote: [{ id: 3, poll_type_id: 2, name: '1', value: '1', created_at: null, updated_at: null }, { id: 4, poll_type_id: 2, name: '2', value: '2', created_at: null, updated_at: null }, { id: 5, poll_type_id: 2, name: '3', value: '3', created_at: null, updated_at: null }, { id: 6, poll_type_id: 2, name: '4', value: '4', created_at: null, updated_at: null }, { id: 7, poll_type_id: 2, name: '5', value: '5', created_at: null, updated_at: null }], url: 'http://poll.loc:82/storage/22/cb22ff74-136d-413f-a9fa-182b803c6f06.jpeg', code: 8X76N515LN, category: { id: 4, name: Entertainment, created_at: null, updated_at: null }, user_id: null, poll_type_id: 2, open_to_everyone: 1, question: '333', close_date: '2021-08-02T00:00:00.000000Z', created_at: '2021-07-31T23:28:52.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }], items: { type: object } }
                                     message: { type: string, example: 'Polls retrieved successfully' }
             tags:
                 - Poll
@@ -1314,36 +1721,36 @@ paths:
                                 title:
                                     type: string
                                     description: ''
-                                    example: inventore
+                                    example: veritatis
                                 options:
                                     type: object
                                     description: ''
                                     example: []
-                                    properties: { A: { type: string, description: '', example: omnis }, B: { type: string, description: '', example: fugiat }, C: { type: string, description: '', example: magnam }, D: { type: string, description: '', example: nam }, E: { type: string, description: '', example: vitae } }
+                                    properties: { A: { type: string, description: '', example: illum }, B: { type: string, description: '', example: nostrum }, C: { type: string, description: '', example: illo }, D: { type: string, description: '', example: dolores }, E: { type: string, description: '', example: unde } }
                                 email:
                                     type: string
                                     description: 'The value must be a valid email address.'
-                                    example: dach.cornell@example.com
+                                    example: yjacobson@example.org
                                 category_id:
                                     type: integer
                                     description: ''
-                                    example: 12
+                                    example: 15
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 11
+                                    example: 13
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 6
+                                    example: 14
                                 open_to_everyone:
                                     type: string
                                     description: ''
-                                    example: eius
+                                    example: dolorem
                                 question:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: et
                                 close_date:
                                     type: string
                                     description: ''
@@ -1421,35 +1828,35 @@ paths:
                                 title:
                                     type: string
                                     description: ''
-                                    example: accusantium
+                                    example: et
                                 url:
                                     type: string
                                     description: ''
-                                    example: quod
+                                    example: voluptas
                                 code:
                                     type: string
                                     description: ''
-                                    example: minima
+                                    example: voluptates
                                 category_id:
                                     type: integer
                                     description: ''
-                                    example: 15
+                                    example: 12
                                 user_id:
                                     type: integer
                                     description: ''
-                                    example: 14
+                                    example: 10
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 20
+                                    example: 15
                                 open_to_everyone:
                                     type: string
                                     description: ''
-                                    example: eius
+                                    example: eos
                                 question:
                                     type: string
                                     description: ''
-                                    example: at
+                                    example: blanditiis
                                 close_date:
                                     type: string
                                     description: ''
@@ -1497,7 +1904,53 @@ paths:
                 in: path
                 name: poll
                 description: ''
-                example: hic
+                example: et
+                required: true
+                schema:
+                    type: string
+    '/api/poll_options/byPoll/{id}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    success: true
+                                    data: []
+                                    message: 'Poll retrieved successfully'
+                                properties:
+                                    success: { type: boolean, example: true }
+                                    data: { type: array, example: [] }
+                                    message: { type: string, example: 'Poll retrieved successfully' }
+            tags:
+                - 'Poll Option'
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: molestiae
                 required: true
                 schema:
                     type: string
@@ -1529,11 +1982,11 @@ paths:
                                 type: object
                                 example:
                                     success: true
-                                    data: []
+                                    data: [{ id: 1, counters: null, poll_id: 1, name: A, value: qq, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 2, counters: null, poll_id: 1, name: B, value: ww, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 3, counters: null, poll_id: 1, name: C, value: ee, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 4, counters: null, poll_id: 1, name: D, value: bb, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 5, counters: { counterable_id: 5, counter_id: 1, counterable_type: App\Models\PollOption, value: 3, id: 1 }, poll_id: 8, name: '1', value: '1', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 6, counters: { counterable_id: 6, counter_id: 1, counterable_type: App\Models\PollOption, value: 1, id: 3 }, poll_id: 8, name: '2', value: '2', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 7, counters: null, poll_id: 8, name: '3', value: '3', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 8, counters: null, poll_id: 8, name: '4', value: '4', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 9, counters: null, poll_id: 8, name: '5', value: '5', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }]
                                     message: 'Poll Options retrieved successfully'
                                 properties:
                                     success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
+                                    data: { type: array, example: [{ id: 1, counters: null, poll_id: 1, name: A, value: qq, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 2, counters: null, poll_id: 1, name: B, value: ww, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 3, counters: null, poll_id: 1, name: C, value: ee, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 4, counters: null, poll_id: 1, name: D, value: bb, count: 0, created_at: '2021-07-31T23:22:12.000000Z', updated_at: '2021-07-31T23:22:12.000000Z' }, { id: 5, counters: { counterable_id: 5, counter_id: 1, counterable_type: App\Models\PollOption, value: 3, id: 1 }, poll_id: 8, name: '1', value: '1', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 6, counters: { counterable_id: 6, counter_id: 1, counterable_type: App\Models\PollOption, value: 1, id: 3 }, poll_id: 8, name: '2', value: '2', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 7, counters: null, poll_id: 8, name: '3', value: '3', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 8, counters: null, poll_id: 8, name: '4', value: '4', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }, { id: 9, counters: null, poll_id: 8, name: '5', value: '5', count: 0, created_at: '2021-07-31T23:28:53.000000Z', updated_at: '2021-07-31T23:28:53.000000Z' }], items: { type: object } }
                                     message: { type: string, example: 'Poll Options retrieved successfully' }
             tags:
                 - 'Poll Option'
@@ -1569,19 +2022,19 @@ paths:
                                 poll_id:
                                     type: integer
                                     description: ''
-                                    example: 20
+                                    example: 17
                                 name:
                                     type: string
                                     description: ''
-                                    example: repellendus
+                                    example: porro
                                 value:
                                     type: string
                                     description: ''
-                                    example: molestias
+                                    example: debitis
                                 count:
                                     type: integer
                                     description: ''
-                                    example: 9
+                                    example: 18
                                 created_at:
                                     type: string
                                     description: ''
@@ -1662,19 +2115,19 @@ paths:
                                 poll_id:
                                     type: integer
                                     description: ''
-                                    example: 19
+                                    example: 17
                                 name:
                                     type: string
                                     description: ''
-                                    example: est
+                                    example: odio
                                 value:
                                     type: string
                                     description: ''
-                                    example: aut
+                                    example: est
                                 count:
                                     type: integer
                                     description: ''
-                                    example: 14
+                                    example: 2
                                 created_at:
                                     type: string
                                     description: ''
@@ -1716,7 +2169,7 @@ paths:
                 in: path
                 name: poll_option
                 description: ''
-                example: fugit
+                example: nobis
                 required: true
                 schema:
                     type: string
@@ -1788,7 +2241,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: itaque
+                                    example: sit
                                 created_at:
                                     type: string
                                     description: ''
@@ -1866,7 +2319,7 @@ paths:
                                 name:
                                     type: string
                                     description: ''
-                                    example: veniam
+                                    example: rerum
                                 created_at:
                                     type: string
                                     description: ''
@@ -1905,7 +2358,7 @@ paths:
                 in: path
                 name: poll_type
                 description: ''
-                example: maiores
+                example: accusantium
                 required: true
                 schema:
                     type: string
@@ -1937,11 +2390,11 @@ paths:
                                 type: object
                                 example:
                                     success: true
-                                    data: []
+                                    data: [{ id: 1, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:11.000000Z', updated_at: '2021-07-31T23:53:11.000000Z' }, { id: 2, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:16.000000Z', updated_at: '2021-07-31T23:53:16.000000Z' }, { id: 3, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:20.000000Z', updated_at: '2021-07-31T23:53:20.000000Z' }, { id: 4, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:25.000000Z', updated_at: '2021-07-31T23:53:25.000000Z' }]
                                     message: 'Votes retrieved successfully'
                                 properties:
                                     success: { type: boolean, example: true }
-                                    data: { type: array, example: [] }
+                                    data: { type: array, example: [{ id: 1, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:11.000000Z', updated_at: '2021-07-31T23:53:11.000000Z' }, { id: 2, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:16.000000Z', updated_at: '2021-07-31T23:53:16.000000Z' }, { id: 3, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:20.000000Z', updated_at: '2021-07-31T23:53:20.000000Z' }, { id: 4, poll_id: 8, unique_id: null, poll_value_id: null, created_at: '2021-07-31T23:53:25.000000Z', updated_at: '2021-07-31T23:53:25.000000Z' }], items: { type: object } }
                                     message: { type: string, example: 'Votes retrieved successfully' }
             tags:
                 - Vote
@@ -1975,28 +2428,20 @@ paths:
                             type: object
                             properties:
                                 poll_id:
-                                    type: integer
-                                    description: ''
-                                    example: 15
-                                unique_id:
                                     type: string
                                     description: ''
-                                    example: labore
-                                poll_value_id:
-                                    type: integer
-                                    description: ''
-                                    example: 14
-                                created_at:
+                                    example: tenetur
+                                uuid:
                                     type: string
                                     description: ''
-                                    example: {  }
-                                updated_at:
+                                    example: et
+                                value:
                                     type: string
                                     description: ''
-                                    example: {  }
+                                    example: quia
                             required:
                                 - poll_id
-                                - poll_value_id
+                                - value
             security: []
     '/api/votes/{vote}':
         get:
@@ -2062,28 +2507,20 @@ paths:
                             type: object
                             properties:
                                 poll_id:
-                                    type: integer
-                                    description: ''
-                                    example: 13
-                                unique_id:
                                     type: string
                                     description: ''
-                                    example: sed
-                                poll_value_id:
-                                    type: integer
-                                    description: ''
-                                    example: 3
-                                created_at:
+                                    example: aut
+                                uuid:
                                     type: string
                                     description: ''
-                                    example: {  }
-                                updated_at:
+                                    example: dicta
+                                value:
                                     type: string
                                     description: ''
-                                    example: {  }
+                                    example: quo
                             required:
                                 - poll_id
-                                - poll_value_id
+                                - value
             security: []
         delete:
             summary: 'Remove the specified Vote from storage.'
@@ -2112,7 +2549,7 @@ paths:
                 in: path
                 name: vote
                 description: ''
-                example: tempora
+                example: non
                 required: true
                 schema:
                     type: string
@@ -2184,15 +2621,15 @@ paths:
                                 poll_type_id:
                                     type: integer
                                     description: ''
-                                    example: 2
+                                    example: 5
                                 name:
                                     type: string
                                     description: ''
-                                    example: voluptatum
+                                    example: repellendus
                                 value:
                                     type: string
                                     description: ''
-                                    example: est
+                                    example: sed
                                 created_at:
                                     type: string
                                     description: ''
@@ -2321,7 +2758,7 @@ paths:
                 in: path
                 name: vote_value
                 description: ''
-                example: dignissimos
+                example: porro
                 required: true
                 schema:
                     type: string
