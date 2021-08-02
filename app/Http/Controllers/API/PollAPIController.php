@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\PollCreated;
 use App\Http\Requests\API\CreatePollAPIRequest;
 use App\Http\Requests\API\SearchAPIRequest;
 use App\Http\Requests\API\UpdatePollAPIRequest;
@@ -110,6 +111,7 @@ class PollAPIController extends AppBaseController
             $input['url'] = $mediaItems[0]->getFullUrl();
             $poll = $this->pollRepository->update($input, $poll->id);
         }
+        event(new PollCreated($poll));
         return $this->sendResponse(new PollResource($poll), 'Poll saved successfully');
     }
 
