@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Maher\Counters\Models\Counter;
 use Maher\Counters\Traits\HasCounter;
 
 /**
@@ -107,6 +108,12 @@ class Poll extends AppModel
     public function pollOptions()
     {
         return $this->hasMany(PollOption::class, 'poll_id');
+    }
+
+
+    public function pollOptionsWithCounter()
+    {
+       return $this->hasMany(PollOption::class, 'poll_id')->with('counters');
     }
 
     public function votes()

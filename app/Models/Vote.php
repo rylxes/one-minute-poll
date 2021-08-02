@@ -58,20 +58,7 @@ class Vote extends Model
         'value' => 'required',
     ];
 
-    protected static function boot()
-    {
-        parent::boot();
-        self::creating(function ($model) {
-            if (Auth::guard('api')->check()) {
-                $model->user_id = Auth::guard('api')->user()->id;
-            }
-        });
-        self::saving(function ($model) {
-            if (Auth::guard('api')->check()) {
-                $model->user_id = Auth::guard('api')->user()->id;
-            }
-        });
-    }
+
 
 
     public function pollValue()

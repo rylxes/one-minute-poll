@@ -19,7 +19,7 @@ class PollResource extends JsonResource
             return [
                 'id' => $this->id,
                 'counters' => @$this->counters->first()->pivot,
-              //  'pollCounters' => @$this->pollOptions->counters,
+                'pollCounters' => @$this->pollOptionsWithCounter,
                 'title' => $this->title,
                 'user' => $this->user,
                 'pollOptions' => $this->pollOptions,
@@ -39,6 +39,7 @@ class PollResource extends JsonResource
                 'updated_at' => $this->updated_at
             ];
         } catch (\Throwable $exception) {
+            dd($exception->getMessage());
             return [];
         }
 

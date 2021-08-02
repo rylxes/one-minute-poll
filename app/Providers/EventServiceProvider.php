@@ -2,6 +2,13 @@
 
 namespace App\Providers;
 
+use App\Models\Poll;
+use App\Models\PollOption;
+use App\Models\Vote;
+use App\Models\VoteValue;
+use App\Observers\pollObserver;
+use App\Observers\pollOptionObserver;
+use App\Observers\voteObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -30,6 +37,8 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Poll::observe(pollObserver::class);
+        PollOption::observe(pollOptionObserver::class);
+        Vote::observe(voteObserver::class);
     }
 }

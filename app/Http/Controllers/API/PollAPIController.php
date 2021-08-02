@@ -52,7 +52,11 @@ class PollAPIController extends AppBaseController
             $request->get('limit')
         );
 
-        return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
+
+        $res = PollResource::collection($polls);
+      //  $res = $res->
+
+        return $this->sendResponse($res, 'Polls retrieved successfully');
     }
 
 

@@ -44,14 +44,14 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
-            if(config('app.env') == 'local' && !($exception instanceof ValidationException)){
-                dd($exception->getMessage(),$exception->getFile(), $exception->getLine(), $exception->getPrevious(),);
-            }
-            if ($request->wantsJson()) {   //add Accept: application/json in request
-                return $this->handleApiException($request, $exception);
-            } else {
-                $retval = parent::render($request, $exception);
-            }
+        if (config('app.env') == 'local' && !($exception instanceof ValidationException)) {
+            //dd($exception->getMessage(), $exception->getFile(), $exception->getLine(), $exception->getPrevious(),);
+        }
+        if ($request->wantsJson()) {   //add Accept: application/json in request
+            return $this->handleApiException($request, $exception);
+        } else {
+            $retval = parent::render($request, $exception);
+        }
 
         return $retval;
     }
@@ -68,6 +68,10 @@ class Handler extends ExceptionHandler
             $exception = $this->unauthenticated($request, $exception);
         }
 
+        if ($exception instanceof OneMinutePollException) {
+            $exception = $this->custom($request, $exception);
+        }
+
         if ($exception instanceof \Illuminate\Validation\ValidationException) {
             $exception = $this->convertValidationExceptionToResponse($exception, $request);
         }
@@ -75,11 +79,20 @@ class Handler extends ExceptionHandler
         return $this->customApiResponse($exception);
     }
 
+    protected function custom($request, OneMinutePollException $exception)
+    {
+        if ($request->wantsJson()) {   //add Accept: application/json in request
+            $data = [];
+            $message = $exception->getMessage();
+            return response()->json(compact('data', 'message'), 501);
+        }
+    }
+
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         $data = [];
         $message = $exception->getMessage();
-        return response()->json(compact('data', 'message'),401);
+        return response()->json(compact('data', 'message'), 401);
 
     }
 
@@ -112,6 +125,9 @@ class Handler extends ExceptionHandler
                 $errors = $exception->original['errors'];
                 $data = collect($errors);
                 $response['errors'] = $data->flatten();
+                break;
+            case 501:
+                $response['message'] = $exception->original['message'];
                 break;
             default:
                 $response['message'] = ($statusCode == 500) ? 'Whoops, looks like something went wrong' : $exception->getMessage();

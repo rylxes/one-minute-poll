@@ -5,6 +5,7 @@ namespace App\Models;
 use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Maher\Counters\Models\Counter;
 use Maher\Counters\Traits\HasCounter;
 
 /**
@@ -64,6 +65,12 @@ class PollOption extends Model
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
     ];
+
+
+    public function scopeRecord($query)
+    {
+        return $query->where('1', '1')->first();
+    }
 
     public function poll()
     {
