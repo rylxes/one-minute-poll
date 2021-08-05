@@ -55,7 +55,7 @@ class PollAPIController extends AppBaseController
 
 
         $res = PollResource::collection($polls);
-      //  $res = $res->
+        //  $res = $res->
 
         return $this->sendResponse($res, 'Polls retrieved successfully');
     }
@@ -65,6 +65,7 @@ class PollAPIController extends AppBaseController
     {
 
         $userCheck = Auth::guard('api')->check();
+        // dd(Auth::user());
         if (!$userCheck) {
             return $this->sendResponse([], 'Polls retrieved successfully');
         }
@@ -164,16 +165,32 @@ class PollAPIController extends AppBaseController
     public function update($id, UpdatePollAPIRequest $request)
     {
         $input = $request->all();
-
+       // dd($newInput, $input, $id);
         /** @var Poll $poll */
         $poll = $this->pollRepository->find($id);
-
         if (empty($poll)) {
             return $this->sendError('Poll not found');
         }
-
-        $poll = $this->pollRepository->update($input, $id);
-
+        foreach ($input as $key => $eachInput) {
+            if (!empty($eachInput)) {
+                $newInput[$key] = $eachInput;
+            }
+        }
+        unset($newInput['email']);
+        DB::beginTransaction();
+        $poll = $this->pollRepository->update($newInput, $id);
+        $__response = $this->uploadOneFile($request, $poll, $this->collectionName, 'file');
+        if (!$this->isFileSuccess && $this->hasFile) {
+            return $__response;
+        }
+        DB::commit();
+        if ($this->hasFile) {
+            $poll = $this->pollRepository->find($poll->id);
+            $mediaItems = $poll->getMedia($this->collectionName);
+            $input['url'] = $mediaItems[0]->getFullUrl();
+            $poll = $this->pollRepository->update($input, $poll->id);
+        }
+        //event(new PollCreated($poll));
         return $this->sendResponse(new PollResource($poll), 'Poll updated successfully');
     }
 

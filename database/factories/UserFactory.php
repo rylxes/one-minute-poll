@@ -32,7 +32,8 @@ class UserFactory extends Factory
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s'),
         'has2fa' => $this->faker->word,
-        'status' => $this->faker->randomDigitNotNull
+        'status' => $this->faker->randomDigitNotNull,
+        'code' => $this->faker->word
         ];
     }
 }

@@ -47,13 +47,15 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::resource('votes', App\Http\Controllers\API\VoteAPIController::class);
     Route::resource('vote_values', App\Http\Controllers\API\VoteValueAPIController::class);
     Route::resource('poll_options', App\Http\Controllers\API\PollOptionAPIController::class);
-
+    Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
     Route::middleware('auth:api')->group(function () {
         Route::post('password/change', 'App\Http\Controllers\API\Auth\ChangePasswordController@reset');
     });
 
 
 });
+
+
 
 
 

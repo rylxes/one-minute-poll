@@ -142,5 +142,17 @@
         "inForm": true,
         "inIndex": true,
         "inView": true
+    },
+    {
+        "name": "code",
+        "dbType": "string,255",
+        "htmlType": "text",
+        "validations": "required|string|max:255|string|max:255",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     }
 ]

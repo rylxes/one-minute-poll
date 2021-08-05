@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\API;
 
-use App\Models\Poll;
+use App\Models\User;
 use InfyOm\Generator\Request\APIRequest;
 
-class UpdatePollAPIRequest extends APIRequest
+class UpdateUserAPIRequest extends APIRequest
 {
     /**
      * Determine if the user is authorized to make this request.
