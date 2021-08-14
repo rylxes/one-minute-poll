@@ -36,7 +36,8 @@ class voteObserver
         })->orWhere('poll_id', $model->poll_id)
             ->get();
         if (!$res->isEmpty()) {
-            throw new VoteException("You cannot vote on this poll");
+            //throw new VoteException("You cannot vote on this poll");
+            throw new VoteException("You have already voted in this poll");
         }
     }
 
