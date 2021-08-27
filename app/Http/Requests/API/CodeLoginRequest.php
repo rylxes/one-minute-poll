@@ -25,6 +25,7 @@ class CodeLoginRequest extends FormRequest
     {
         return [
             'code' => 'required',
+            'uuid' => 'required',
         ];
     }
 }

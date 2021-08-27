@@ -53,6 +53,7 @@ class PollAPIController extends AppBaseController
 //            $request->get('limit')
 //        );
 
+
         $polls = Poll::orderBy('created_at', 'desc')
             ->get();
 
@@ -66,15 +67,36 @@ class PollAPIController extends AppBaseController
     public function mine(Request $request)
     {
 
+        $uuid = $request->header("UUID");
+        $hasAuth = @$request->header("HasAuth");
+
         $userCheck = Auth::guard('api')->check();
         // dd(Auth::user());
-        if (!$userCheck) {
+        if (!$userCheck && ($hasAuth != "YES")) {
             return $this->sendResponse([], 'Polls retrieved successfully');
         }
-        $userID = Auth::guard('api')->user()->id;
-        $polls = Poll::where('user_id', $userID)
+
+
+        //$userID = Auth::guard('api')->user()->id;
+//        $polls = Poll::where('user_id', $userID)
+//            ->orderBy('created_at', 'desc')
+//            ->get();
+
+
+        $polls = Poll::where(function ($query) use ($uuid) {
+            if (Auth::guard('api')->check()) {
+                $query
+                    ->orWhere('user_id', Auth::guard('api')->user()->id);
+            }
+            if (!empty($uuid)) {
+                $query
+                    ->orWhere('uuid', $uuid);
+            }
+        })
             ->orderBy('created_at', 'desc')
             ->get();
+
+        //dd($uuid, $polls);
         return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
     }
 
@@ -169,7 +191,7 @@ class PollAPIController extends AppBaseController
     public function update($id, UpdatePollAPIRequest $request)
     {
         $input = $request->all();
-       // dd($newInput, $input, $id);
+        // dd($newInput, $input, $id);
         /** @var Poll $poll */
         $poll = $this->pollRepository->find($id);
         if (empty($poll)) {

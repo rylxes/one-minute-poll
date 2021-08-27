@@ -21,21 +21,22 @@ class voteObserver
 
     public function validate(Vote $model)
     {
+
         $res = Vote::where(function ($query) use ($model) {
 
-            if (!empty(@$model->user_id)) {
+            if (Auth::guard('api')->check()) {
                 $query
-                    ->orWhere('user_id', $model->user_id);
+                ->orWhere('user_id', Auth::guard('api')->user()->id);
             }
-
-            if (!empty(@$model->uuid)) {
+            if (!empty($model->uuid)) {
                 $query
                     ->orWhere('uuid', $model->uuid);
             }
 
-
-        })->orWhere('poll_id', $model->poll_id)
+        })->where('poll_id', $model->poll_id)
             ->get();
+
+        //dd($res, $model->uuid, $model->poll_id);
         if (!$res->isEmpty()) {
             //throw new VoteException("You cannot vote on this poll");
             throw new VoteException("You have already voted in this poll");

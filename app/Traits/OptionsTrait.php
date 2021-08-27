@@ -20,7 +20,7 @@ trait OptionsTrait
                     $poll->pollOptions()->create([
                         'name' => $key,
                         'vote_value_id' => $vote->id,
-                        'value' => $eachOptions,
+                        'value' => $eachOptions . " Star",
                         'count' => 0
                     ]);
                 }

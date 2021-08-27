@@ -115,6 +115,8 @@ class LoginController extends Controller
         $user = User::where('code', $input['code'])->first();
         if (!empty($user)) {
             Auth::login($user);
+            $user->uuid = $input['uuid'];
+            $user->save();
             return $this->sendLoginResponse($request);
         }
 
@@ -186,17 +188,17 @@ class LoginController extends Controller
             return $response;
         }
         $user = Auth::user();
-        if ($user->has2fa) {
-            $this->validate2FA($request);
-            $google2fa = app('pragmarx.google2fa');
-            $secret = $request->input('secret');
-            $window = 8; // 8 keys (respectively 4 minutes) past and future
-            $valid = $google2fa->verifyKey($user->two_factor_secret, $secret, $window);
-            if (!$valid) {
-                $message = "Invalid Authentication code !";
-                return $this->sendError($message);
-            }
-        }
+//        if ($user->has2fa) {
+//            $this->validate2FA($request);
+//            $google2fa = app('pragmarx.google2fa');
+//            $secret = $request->input('secret');
+//            $window = 8; // 8 keys (respectively 4 minutes) past and future
+//            $valid = $google2fa->verifyKey($user->two_factor_secret, $secret, $window);
+//            if (!$valid) {
+//                $message = "Invalid Authentication code !";
+//                return $this->sendError($message);
+//            }
+//        }
 
 
         //dd(Auth::user());
