@@ -22,6 +22,7 @@ class voteObserver
     public function validate(Vote $model)
     {
         $res = Vote::where(function ($query) use ($model) {
+
             if (!empty(@$model->user_id)) {
                 $query
                     ->orWhere('user_id', $model->user_id);

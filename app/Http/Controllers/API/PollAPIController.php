@@ -47,12 +47,14 @@ class PollAPIController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $polls = $this->pollRepository->all(
-            $request->except(['skip', 'limit']),
-            $request->get('skip'),
-            $request->get('limit')
-        );
+//        $polls = $this->pollRepository->all(
+//            $request->except(['skip', 'limit']),
+//            $request->get('skip'),
+//            $request->get('limit')
+//        );
 
+        $polls = Poll::orderBy('created_at', 'desc')
+            ->get();
 
         $res = PollResource::collection($polls);
         //  $res = $res->
@@ -70,7 +72,9 @@ class PollAPIController extends AppBaseController
             return $this->sendResponse([], 'Polls retrieved successfully');
         }
         $userID = Auth::guard('api')->user()->id;
-        $polls = Poll::where('user_id', $userID)->get();
+        $polls = Poll::where('user_id', $userID)
+            ->orderBy('created_at', 'desc')
+            ->get();
         return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
     }
 
