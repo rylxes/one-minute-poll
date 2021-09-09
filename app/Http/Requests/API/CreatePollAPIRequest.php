@@ -38,6 +38,7 @@ class CreatePollAPIRequest extends APIRequest
             'poll_type_id' => 'required|integer',
             'open_to_everyone' => 'required',
             'question' => 'required|string',
+            'uuid' => 'nullable',
             'close_date' => 'nullable',
         ];
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Stevebauman\Location\Facades\Location;
 
 class HomeController extends Controller
 {
@@ -13,6 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+       // dd(\request()->ip());
+      //  dd(Location::get('129.56.36.102'));
         $this->middleware('auth');
     }
 
@@ -23,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('home');
     }
 

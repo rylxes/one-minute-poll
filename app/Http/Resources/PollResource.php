@@ -22,6 +22,7 @@ class PollResource extends JsonResource
                 'pollCounters' => @$this->pollOptionsWithCounter,
                 'title' => $this->title,
                 'user' => $this->user,
+                'UserUuid' => $this->uuidUser,
                 'pollOptions' => $this->pollOptions,
                 'votes' => $this->votes,
                 'pollValue' => @$this->votes->pollValue,

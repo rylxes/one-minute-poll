@@ -39,6 +39,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
     Route::post('polls/search', 'App\Http\Controllers\API\PollAPIController@search');
+    Route::post('polls/listAll', 'App\Http\Controllers\API\PollAPIController@listAll');
     Route::post('polls/mine', 'App\Http\Controllers\API\PollAPIController@mine');
     Route::get('poll_options/byPoll/{id}', 'App\Http\Controllers\API\PollOptionAPIController@byPoll');
     Route::resource('polls', App\Http\Controllers\API\PollAPIController::class);

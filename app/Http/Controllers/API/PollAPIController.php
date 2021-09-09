@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Events\PollCreated;
 use App\Http\Requests\API\CreatePollAPIRequest;
+use App\Http\Requests\API\ListPollAPIRequest;
 use App\Http\Requests\API\SearchAPIRequest;
 use App\Http\Requests\API\UpdatePollAPIRequest;
 use App\Models\Poll;
@@ -18,6 +19,7 @@ use App\Http\Resources\PollResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Response;
+use Stevebauman\Location\Facades\Location;
 
 /**
  * Class PollController
@@ -31,6 +33,7 @@ class PollAPIController extends AppBaseController
 
     /** @var  PollRepository */
     private $pollRepository;
+    private $polls;
     private $collectionName = 'Poll Picture';
 
     public function __construct(PollRepository $pollRepo)
@@ -61,6 +64,37 @@ class PollAPIController extends AppBaseController
         //  $res = $res->
 
         return $this->sendResponse($res, 'Polls retrieved successfully');
+    }
+
+
+    public function listAll(ListPollAPIRequest $request)
+    {
+        $input = $request->all();
+        $lat = $input['lat'];
+        $lon = $input['long'];
+
+        $tbl = DB::table("polls");
+        $tbl = $tbl->whereNotNull('lat');
+        $tbl = $tbl->whereNotNull('long');
+        $tbl = $tbl->select("polls.id", DB::raw("6371 * acos(cos(radians(" . $lat . "))
+                                * cos(radians(polls.lat)) * cos(radians(polls.long) - radians(" . $lon . "))
+                                + sin(radians(" . $lat . ")) * sin(radians(polls.lat))) AS distance"));
+        $tbl = $tbl->orderBy('distance');
+        $tbl = $tbl->orderBy('created_at', 'desc');
+        $tbl = $tbl->limit(6);
+        $tbl = $tbl->get();
+        //dd($tbl);
+        $this->polls = $p = collect([]);
+        $tbl->map(function ($val) {
+            if (!empty($val->distance)) {
+                $poll = Poll::find($val->id);
+                $poll->distance = $val->distance;
+                $this->polls->add($poll);
+                //return $poll;
+            }
+        });
+        $tbl = PollResource::collection($this->polls);
+        return $this->sendResponse($tbl, 'Polls retrieved successfully');
     }
 
 
@@ -100,6 +134,7 @@ class PollAPIController extends AppBaseController
         return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
     }
 
+
     /**
      * Store a newly created Poll in storage.
      * POST /polls
@@ -121,10 +156,19 @@ class PollAPIController extends AppBaseController
             $input['user_id'] = $user->id;
         }
         if ($userCheck) {
-            $input['user_id'] = Auth::guard('api')->user()->id;
+            $user = Auth::guard('api')->user();
+            $input['user_id'] = $user->id;
+            if (empty($user->uuid)) {
+                $user->uuid = $input['uuid'];
+                $user->save();
+            }
         }
         $poll = new Poll();
         $input['code'] = $this->nextCode($poll);
+        if ($position = Location::get($request->ip())) {
+            $input['ip_country'] = $position->countryName;
+            $input['ip_address'] = $position->ip;
+        }
         $poll = $this->pollRepository->create($input);
         $__response = $this->uploadOneFile($request, $poll, $this->collectionName, 'file');
         if (!$this->isFileSuccess && $this->hasFile) {

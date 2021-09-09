@@ -39,6 +39,11 @@ class Poll extends AppModel
         'title',
         'uuid',
         'url',
+        'device_id',
+        'ip_address',
+        'ip_country',
+        'lat',
+        'long',
         'code',
         'category_id',
         'user_id',
@@ -113,7 +118,7 @@ class Poll extends AppModel
 
     public function pollOptionsWithCounter()
     {
-       return $this->hasMany(PollOption::class, 'poll_id')->with('counters');
+        return $this->hasMany(PollOption::class, 'poll_id')->with('counters');
     }
 
     public function votes()
@@ -124,6 +129,11 @@ class Poll extends AppModel
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function uuidUser()
+    {
+        return $this->belongsTo(User::class, 'uuid', 'uuid');
     }
 
     public function category()

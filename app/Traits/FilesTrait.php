@@ -79,6 +79,7 @@ trait FilesTrait
                 'name' => $data['name'],
                 'code' => $code,
                 'email' => $data['email'],
+                'uuid' => $data['uuid'],
                 'password' => Hash::make($data['password']),
             ];
             //$role = Role::findByName($role, 'api');
