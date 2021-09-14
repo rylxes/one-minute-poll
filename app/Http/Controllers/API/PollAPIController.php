@@ -70,12 +70,23 @@ class PollAPIController extends AppBaseController
     public function listAll(ListPollAPIRequest $request)
     {
         $input = $request->all();
+        $uuid = $request->header("UUID");
         $lat = $input['lat'];
         $lon = $input['long'];
 
         $tbl = DB::table("polls");
         $tbl = $tbl->whereNotNull('lat');
         $tbl = $tbl->whereNotNull('long');
+        $tbl = $tbl->where(function ($query) use ($uuid) {
+            if (Auth::guard('api')->check()) {
+                $query
+                    ->where('user_id', '!=', Auth::guard('api')->user()->id);
+            }
+            if (!empty($uuid)) {
+                $query
+                    ->where('uuid', '!=', $uuid);
+            }
+        });
         $tbl = $tbl->select("polls.id", DB::raw("6371 * acos(cos(radians(" . $lat . "))
                                 * cos(radians(polls.lat)) * cos(radians(polls.long) - radians(" . $lon . "))
                                 + sin(radians(" . $lat . ")) * sin(radians(polls.lat))) AS distance"));
@@ -83,15 +94,11 @@ class PollAPIController extends AppBaseController
         $tbl = $tbl->orderBy('created_at', 'desc');
         $tbl = $tbl->limit(6);
         $tbl = $tbl->get();
-        //dd($tbl);
         $this->polls = $p = collect([]);
         $tbl->map(function ($val) {
-            if (!empty($val->distance)) {
-                $poll = Poll::find($val->id);
-                $poll->distance = $val->distance;
-                $this->polls->add($poll);
-                //return $poll;
-            }
+            $poll = Poll::find($val->id);
+            $poll->distance = $val->distance;
+            $this->polls->add($poll);
         });
         $tbl = PollResource::collection($this->polls);
         return $this->sendResponse($tbl, 'Polls retrieved successfully');
