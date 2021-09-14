@@ -5,8 +5,10 @@ namespace App\Http\Controllers\API\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\CodeLoginRequest;
 use App\Http\Requests\API\LoginRequest;
+use App\Http\Requests\API\OnlyEmail;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use App\Traits\FilesTrait;
 use App\Traits\ResponseTrait;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -34,6 +36,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
     use ResponseTrait;
+    use FilesTrait;
 
     /**
      * Where to redirect users after login.
@@ -99,6 +102,15 @@ class LoginController extends Controller
         return $this->sendFailedLoginResponse($request);
     }
 
+
+    public function authenticate(OnlyEmail $request)
+    {
+        $input = $request->all();
+        $input['name'] = 'New User';
+        $input['password'] = 'password';
+        $user = $this->createUser($input);
+        return $this->sendResponse($user, 'success');
+    }
 
     //public function login(Request $request)
     public function codeLogin(CodeLoginRequest $request)

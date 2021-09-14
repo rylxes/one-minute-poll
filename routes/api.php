@@ -25,6 +25,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
     Route::post('login', 'App\Http\Controllers\API\Auth\LoginController@login');
     Route::post('codeLogin', 'App\Http\Controllers\API\Auth\LoginController@codeLogin');
+    Route::post('authenticate', 'App\Http\Controllers\API\Auth\LoginController@authenticate');
     Route::post('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('logout');
     Route::get('logout', 'App\Http\Controllers\API\Auth\LoginController@logout')->name('api.logout');
     Route::post('register', 'App\Http\Controllers\API\Auth\RegisterController@register');
