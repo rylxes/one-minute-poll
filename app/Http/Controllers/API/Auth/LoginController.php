@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use App\Traits\FilesTrait;
 use App\Traits\ResponseTrait;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,7 +37,6 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
     use ResponseTrait;
-    use FilesTrait;
 
     /**
      * Where to redirect users after login.
@@ -110,6 +110,27 @@ class LoginController extends Controller
         $input['password'] = 'password';
         $user = $this->createUser($input);
         return $this->sendResponse($user, 'success');
+    }
+
+    protected function createUser(array $data)
+    {
+        $user = User::where('email', $data['email'])->first();
+        if (empty($user)) {
+            $user = new User();
+            $code = $this->nextCode($user);
+            $array = [
+                'name' => $data['name'],
+                'code' => $code,
+                'email' => $data['email'],
+                'uuid' => $data['uuid'],
+                'password' => Hash::make($data['password']),
+            ];
+            //$role = Role::findByName($role, 'api');
+            $user = User::create($array);
+            // $user->assignRole($role);
+        }
+        event(new Registered($user));
+        return $user;
     }
 
     //public function login(Request $request)
