@@ -37,6 +37,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
     use ResponseTrait;
+    use FilesTrait;
 
     /**
      * Where to redirect users after login.
@@ -108,11 +109,11 @@ class LoginController extends Controller
         $input = $request->all();
         $input['name'] = 'New User';
         $input['password'] = 'password';
-        $user = $this->createUser($input);
+        $user = $this->createLocalUser($input);
         return $this->sendResponse($user, 'success');
     }
 
-    protected function createUser(array $data)
+    protected function createLocalUser(array $data)
     {
         $user = User::where('email', $data['email'])->first();
         if (empty($user)) {
