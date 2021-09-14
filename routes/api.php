@@ -40,6 +40,8 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
 
 
     Route::post('polls/search', 'App\Http\Controllers\API\PollAPIController@search');
+    Route::post('polls/share', 'App\Http\Controllers\API\PollAPIController@share');
+    Route::post('polls/sharedPolls', 'App\Http\Controllers\API\PollAPIController@sharedPolls');
     Route::post('polls/listAll', 'App\Http\Controllers\API\PollAPIController@listAll');
     Route::post('polls/mine', 'App\Http\Controllers\API\PollAPIController@mine');
     Route::get('poll_options/byPoll/{id}', 'App\Http\Controllers\API\PollOptionAPIController@byPoll');

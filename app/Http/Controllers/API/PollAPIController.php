@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Events\PollCreated;
 use App\Http\Requests\API\CreatePollAPIRequest;
 use App\Http\Requests\API\ListPollAPIRequest;
+use App\Http\Requests\API\OnlyEmails;
 use App\Http\Requests\API\SearchAPIRequest;
 use App\Http\Requests\API\UpdatePollAPIRequest;
 use App\Models\Poll;
@@ -102,6 +103,47 @@ class PollAPIController extends AppBaseController
         });
         $tbl = PollResource::collection($this->polls);
         return $this->sendResponse($tbl, 'Polls retrieved successfully');
+    }
+
+    public function share(OnlyEmails $request)
+    {
+
+    }
+
+    public function sharedPolls(Request $request)
+    {
+        $uuid = $request->header("UUID");
+        $hasAuth = @$request->header("HasAuth");
+
+        $userCheck = Auth::guard('api')->check();
+        // dd(Auth::user());
+        if (!$userCheck && ($hasAuth != "YES")) {
+            return $this->sendResponse([], 'Polls retrieved successfully');
+        }
+
+        return $this->sendResponse([], 'Polls retrieved successfully');
+//
+//        //$userID = Auth::guard('api')->user()->id;
+////        $polls = Poll::where('user_id', $userID)
+////            ->orderBy('created_at', 'desc')
+////            ->get();
+//
+//
+//        $polls = Poll::where(function ($query) use ($uuid) {
+//            if (Auth::guard('api')->check()) {
+//                $query
+//                    ->orWhere('user_id', Auth::guard('api')->user()->id);
+//            }
+//            if (!empty($uuid)) {
+//                $query
+//                    ->orWhere('uuid', $uuid);
+//            }
+//        })
+//            ->orderBy('created_at', 'desc')
+//            ->get();
+
+        //dd($uuid, $polls);
+      //  return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
     }
 
 
