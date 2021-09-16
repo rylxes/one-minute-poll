@@ -115,11 +115,21 @@ class Poll extends AppModel
         return $this->hasMany(PollOption::class, 'poll_id');
     }
 
-
     public function pollOptionsWithCounter()
     {
         return $this->hasMany(PollOption::class, 'poll_id')->with('counters');
     }
+
+    public function shared()
+    {
+        return $this->hasMany(SharedPoll::class, 'poll_id');
+    }
+
+    public function sharedPoll()
+    {
+        return $this->belongsToMany(User::class, 'share_polls', 'email', 'email');
+    }
+
 
     public function votes()
     {
@@ -136,6 +146,7 @@ class Poll extends AppModel
         return $this->belongsTo(User::class, 'uuid', 'uuid');
     }
 
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');
@@ -145,5 +156,6 @@ class Poll extends AppModel
     {
         return $this->belongsTo(PollType::class, 'poll_type_id');
     }
+
 
 }

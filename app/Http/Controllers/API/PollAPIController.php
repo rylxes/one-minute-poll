@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\AccountInvitation;
 use App\Events\PollCreated;
+use App\Events\PollInvitation;
+use App\Events\PollShared;
 use App\Http\Requests\API\CreatePollAPIRequest;
 use App\Http\Requests\API\ListPollAPIRequest;
 use App\Http\Requests\API\OnlyEmails;
 use App\Http\Requests\API\SearchAPIRequest;
+use App\Http\Requests\API\SharePolls;
 use App\Http\Requests\API\UpdatePollAPIRequest;
 use App\Models\Poll;
+use App\Models\User;
 use App\Models\Vote;
 use App\Models\VoteValue;
 use App\Repositories\PollRepository;
@@ -105,45 +110,55 @@ class PollAPIController extends AppBaseController
         return $this->sendResponse($tbl, 'Polls retrieved successfully');
     }
 
-    public function share(OnlyEmails $request)
+
+    public function sharedWithMe(Request $request)
     {
 
-    }
-
-    public function sharedPolls(Request $request)
-    {
         $uuid = $request->header("UUID");
-        $hasAuth = @$request->header("HasAuth");
-
-        $userCheck = Auth::guard('api')->check();
-        // dd(Auth::user());
-        if (!$userCheck && ($hasAuth != "YES")) {
+        $user = User::where('uuid', $uuid)->first();
+        if (empty($user)) {
             return $this->sendResponse([], 'Polls retrieved successfully');
         }
 
-        return $this->sendResponse([], 'Polls retrieved successfully');
-//
-//        //$userID = Auth::guard('api')->user()->id;
-////        $polls = Poll::where('user_id', $userID)
-////            ->orderBy('created_at', 'desc')
-////            ->get();
-//
-//
-//        $polls = Poll::where(function ($query) use ($uuid) {
-//            if (Auth::guard('api')->check()) {
-//                $query
-//                    ->orWhere('user_id', Auth::guard('api')->user()->id);
-//            }
-//            if (!empty($uuid)) {
-//                $query
-//                    ->orWhere('uuid', $uuid);
-//            }
-//        })
-//            ->orderBy('created_at', 'desc')
-//            ->get();
-
+        $polls = Poll::whereHas('shared', function ($q) use ($user) {
+            $q->where('share_polls.email', $user->email);
+        })
+            ->orderBy('created_at', 'desc')
+            ->get();
         //dd($uuid, $polls);
-      //  return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
+        return $this->sendResponse(PollResource::collection($polls), 'Polls retrieved successfully');
+    }
+
+    private $allInvited;
+    private $unRegistered;
+
+    public function sharePolls(SharePolls $request)
+    {
+        //$uuid = $request->header("UUID");
+        //$hasAuth = @$request->header("HasAuth");
+        $input = $request->all();
+        $email = collect(explode(",", $input['emails']));
+        //$userCheck = Auth::guard('api')->check();
+        // dd(Auth::user());
+        $this->allInvited = collect([]);
+        $this->unRegistered = collect([]);
+        $poll = Poll::find($input['poll_id']);
+        $email->each(function ($val) use ($poll) {
+            $user = User::where('email', $val)->first();
+            $this->allInvited->add($val);
+            if (empty($user)) {
+                $this->unRegistered->add($val);
+            }
+            $poll->shared()->create(['email' => $val]);
+        });
+        // event(new AccountInvitation($this->unRegistered));
+        // event(new PollShared($poll, $this->allInvited));
+
+        return $this->sendResponse([
+            'shared' => $this->allInvited->toArray(),
+            'unregistered' => $this->unRegistered->toArray(),
+        ], 'Polls shared successfully');
+
     }
 
 

@@ -31,6 +31,12 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\PollCreated' => [
             'App\Listeners\PollCreatedListener',
         ],
+        'App\Events\PollShared' => [
+            'App\Listeners\PollSharedListener',
+        ],
+        'App\Events\AccountInvitation' => [
+            'App\Listeners\AccountInvitationListener',
+        ],
     ];
 
     /**

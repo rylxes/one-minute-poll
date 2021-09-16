@@ -1,7 +1,9 @@
 @component('mail::message')
-    Hello, You have an invitation to join {{config('app.name')}}
+    Hello, a Poll has been shared with you ,
 
     Click on this URL to Continue : {{$url}}
+
+    ... or search for this Poll ID : {{$poll->code}}
 
     Thanks,
     {{ config('app.name') }}
